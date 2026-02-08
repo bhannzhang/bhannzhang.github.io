@@ -34,15 +34,15 @@ export const siteContent = {
   // ==========================================
   personal: {
     // 您的姓名 (Your name)
-    name: "Your Name",
+    name: "Zhang Bihan",
     // 英文昵称 (English nickname)
-    nickname: "Nickname",
+    nickname: "Bhann",
     // 您的职位/身份 (Your position/title)
-    title: "PhD Candidate / Researcher / Designer",
+    title: "PhD Applicant in HCI & Cognitive Psychology",
     // 您所在的学校/机构 (Your school/organization)
-    institution: "University Name / Organization",
+    institution: "Tongji University",
     // 位置 (Your location)
-    location: "City, Country",
+    location: "Shanghai, China",
     
     // 您的头像图片路径 (Your avatar image path)
     // -----------------------------------------------------------
@@ -56,7 +56,7 @@ export const siteContent = {
     // -----------------------------------------------------------
     
     // 您的邮箱地址 (Your email address)
-    email: "your.email@example.com",
+    email: "Zhangbihan621@outlook.com",
   },
 
   // ==========================================
@@ -67,7 +67,7 @@ export const siteContent = {
   socialLinks: [
     {
       platform: "github",
-      url: "https://github.com/yourusername",
+      url: "https://github.com/bhannzhang",
       label: "GitHub",
     },
     {
@@ -94,12 +94,12 @@ export const siteContent = {
     // 欢迎语 (Welcome message)
     welcome: "Welcome to my academic portfolio.",
     // 主要描述 (Main description)
-    description: "I am a [Your Position], focusing on [Research Area 1], [Research Area 2], and [Research Area 3].",
+    description: "I am a PhD Applicant in HCI & Cognitive Psychology, Focusing on Intelligent Cockpit Interaction, Multimodal Feedback, and Driver Cognition",
     // 注释（可选） (Note (optional))
-    note: "(Optional: Open for collaborations)",
+    note: "(文本后续可能会改)",
     // 背景信息 (Background information)
-    background: "Background in [Major/Field] | Research interest in [Topic]",
-    backgroundNote: "",
+    background: "Background in Interaction Design & Electrical Engineering | Research interest in Human-AI Interaction",
+    backgroundNote: "(文本后续可能会改)",
     // 按钮 (Buttons)
     buttons: [
       {
@@ -110,7 +110,7 @@ export const siteContent = {
       },
       {
         text: "Get in Touch",
-        link: "mailto:your.email@example.com",
+        link: "mailto:Zhangbihan621@outlook.com",
         style: "secondary",
         icon: "mail",
       },
@@ -125,22 +125,22 @@ export const siteContent = {
     coreResearch: {
       title: "Core Research Area",
       items: [
-        "Research Topic 1 (e.g., Human-Computer Interaction)",
-        "Research Topic 2 (e.g., Artificial Intelligence)",
-        "Research Topic 3 (e.g., Sustainable Design)",
-        "Research Topic 4",
+        "Intelligent Cockpit HMI & Human-AI Interaction",
+        "Driver cognition & trust in L2-L3 automated driving",
+        "Multimodal interaction feedback (visual, auditory, haptic...)",
+        "Explainable & emotional AI in safety-critical interfaces",
       ],
     },
     currentStatus: {
       title: "My Current Status",
       items: [
-        "Current Degree / Position",
-        "Looking for Internship / Job",
-        "Writing Thesis",
-        "Open to collaborations",
+        "SAIC Volkswagen HMI Framework",
+        "designer for 5 Years",
+        "Preparing PhD applications for Fall 2026",
+        "文字应该会改",
       ],
     },
-    keywords: ["Keyword 1", "Keyword 2", "Keyword 3", "Keyword 4"],
+    keywords: ["HCI", "HMI", "Cognitive Psychology", "Hardware Develop"],
   },
 
   // ==========================================
@@ -150,33 +150,33 @@ export const siteContent = {
     sectionTitle: "My core research interests",
     interests: [
       {
-        title: "Interest Area 1",
+        title: "Human Cognition in Automated Driving",
         descriptions: [
-          "Description point 1 about this interest.",
-          "Description point 2 about this interest.",
+          "Driver mental models during L2-L3 transitions",
+          "Attention, trust, and over-reliance in intelligent cockpits",
         ],
       },
       {
-        title: "Interest Area 2",
+        title: "Multimodal Interaction & Feedback",
         descriptions: [
-          "Description point 1 about this interest.",
-          "Description point 2 about this interest.",
+          "Design patterns for visual / auditory / haptic feedback",
+          "Reducing cognitive load in safety-critical contexts",
         ],
       },
       {
-        title: "Interest Area 3",
+        title: "Emotional & Explainable AI Interfaces",
         descriptions: [
-          "Description point 1 about this interest.",
-          "Description point 2 about this interest.",
+          "Avatar-based voice assistants",
+          "Making AI intentions legible to users",
         ],
       },
     ],
     // 研究问题（斜体显示）
     // Research questions (italicized)
     researchQuestions: [
-      "Research Question 1: How can we...?",
-      "Research Question 2: What is the impact of...?",
-      "Research Question 3: Why do we...?",
+      "How do drivers interpret AI intentions in partially automated driving?",
+      "How can multimodal feedback reduce anxiety and improve trust?",
+      "What makes an AI interface \"understandable\" in time-critical scenarios?",
     ],
   },
 
@@ -187,36 +187,37 @@ export const siteContent = {
     sectionTitle: "Education",
     items: [
       {
-        degree: "Master of Science in [Major]",
-        school: "[University Name]",
-        location: "[City, Country]",
-        period: "20XX - 20XX",
-        gpa: "X.X/4.0",
+        degree: "Master of Science in [Your Field]",
+        school: "TongJi University",
+        location: "Shanghai, China",
+        period: "2018 - 2021",
+        gpa: "4.73/5.0",
         status: "Completed",
-        thesis: "Thesis: [Title of your thesis]. Specialized in [Area].",
+        thesis: "Thesis: [Your Thesis Title]. Specialized in [Specialization Area] with coursework in [Relevant Courses].",
         achievements: [
-          "Award / Scholarship 1",
-          "Award / Scholarship 2",
-          "Achievement 3",
+          "Magna Cum Laude",
+          "Graduate Student Excellence Award",
+          "Research Excellence Recognition",
         ],
       },
       {
-        degree: "Bachelor of Science in [Major]",
-        school: "[University Name]",
-        location: "[City, Country]",
-        period: "20XX - 20XX",
-        gpa: "X.X/4.0",
+        degree: "Bachelor of Science in [Your Field]",
+        school: "Hohai University",
+        location: "Nanjing, China",
+        period: "2012 - 2016",
+        gpa: "4.08/5.0",
         status: "Completed",
-        thesis: "Major in [Major]. Senior capstone project on [Topic].",
+        thesis: "Major in [Major] with minor in [Minor]. Senior capstone project on [Project Title].",
         achievements: [
-          "Dean's List",
-          "Scholarship Name",
-          "Competition Award",
+          "Dean's List (6 semesters)",
+          "Undergraduate Research Award",
+          "Academic Excellence Scholarship",
         ],
       },
     ],
-    intro: "A comprehensive overview of my academic background and research training."
+    intro: "A comprehensive overview of my academic, teaching, industry, and individual projects that have shaped my professional development and research expertise."
   },
+
 
   // ==========================================
   // 📌 研究项目（Projects Section）
@@ -226,42 +227,67 @@ export const siteContent = {
     viewMoreText: "View more",
     items: [
       {
-        category: "Category 1",
+        category: "Cybersecurity",
         status: "completed",
-        title: "Project Title A",
-        description: "Brief description of the project, its goals, and your contribution.",
-        tags: ["Tag1", "Tag2"],
-        
-        // [Method 1] Local file:
-        // image: import.meta.env.BASE_URL + 'images/projects/project1.jpg',
-        // [Method 2] Placeholder:
-        image: "https://placehold.co/600x400?text=Project+A",
-        
-        link: "https://github.com/yourusername/project",
+        title: "Distributed Systems Security Framework",
+        description: "Novel approaches to securing microservices architectures and cloud-native applications against emerging threats.",
+        tags: ["Security", "Distributed Systems", "Cloud"],
+        image: import.meta.env.BASE_URL + 'images/projects/project1.jpg',
+        link: "https://github.com/bhannzhang",
       },
       {
-        category: "Category 2",
+        category: "Cybersecurity",
         status: "in progress",
-        title: "Project Title B",
-        description: "Brief description of the project, its goals, and your contribution.",
-        tags: ["Tag1", "Tag2"],
-        
-        // image: import.meta.env.BASE_URL + 'images/projects/project2.jpg',
-        image: "https://placehold.co/600x400?text=Project+B",
-        
-        link: "https://github.com/yourusername/project",
+        title: "Distributed Systems Security Framework",
+        description: "Novel approaches to securing microservices architectures and cloud-native applications against emerging threats.",
+        tags: ["Security", "Distributed Systems", "Cloud"],
+        image: import.meta.env.BASE_URL + 'images/projects/project2.jpg',
+        link: "https://github.com/bhannzhang",
       },
       {
-        category: "Category 3",
+        category: "Cybersecurity",
         status: "completed",
-        title: "Project Title C",
-        description: "Brief description of the project, its goals, and your contribution.",
-        tags: ["Tag1", "Tag2"],
-        
-        // image: import.meta.env.BASE_URL + 'images/projects/project3.jpg',
-        image: "https://placehold.co/600x400?text=Project+C",
-        
-        link: "https://github.com/yourusername/project",
+        title: "Distributed Systems Security Framework",
+        description: "Novel approaches to securing microservices architectures and cloud-native applications against emerging threats.",
+        tags: ["Security", "Distributed Systems", "Cloud"],
+        image: import.meta.env.BASE_URL + 'images/projects/project3.jpg',
+        link: "https://github.com/bhannzhang",
+      },
+      {
+        category: "Cybersecurity",
+        status: "completed",
+        title: "Distributed Systems Security Framework",
+        description: "Novel approaches to securing microservices architectures and cloud-native applications against emerging threats.",
+        tags: ["Security", "Distributed Systems", "Cloud"],
+        image: import.meta.env.BASE_URL + 'images/projects/project4.jpg',
+        link: "https://github.com/bhannzhang",
+      },
+      {
+        category: "Cybersecurity",
+        status: "completed",
+        title: "Distributed Systems Security Framework",
+        description: "Novel approaches to securing microservices architectures and cloud-native applications against emerging threats.",
+        tags: ["Security", "Distributed Systems", "Cloud"],
+        image: import.meta.env.BASE_URL + 'images/projects/project5.jpg',
+        link: "https://github.com/bhannzhang",
+      },
+      {
+        category: "Cybersecurity",
+        status: "completed",
+        title: "Distributed Systems Security Framework",
+        description: "Novel approaches to securing microservices architectures and cloud-native applications against emerging threats.",
+        tags: ["Security", "Distributed Systems", "Cloud"],
+        image: import.meta.env.BASE_URL + 'images/projects/project6.jpg',
+        link: "https://github.com/bhannzhang",
+      },
+      {
+        category: "Cybersecurity",
+        status: "completed",
+        title: "Distributed Systems Security Framework",
+        description: "Novel approaches to securing microservices architectures and cloud-native applications against emerging threats.",
+        tags: ["Security", "Distributed Systems", "Cloud"],
+        image: import.meta.env.BASE_URL + 'images/projects/project7.jpg',
+        link: "https://github.com/bhannzhang",
       },
     ],
   },
@@ -276,12 +302,20 @@ export const siteContent = {
         name: "Journal Articles",
         items: [
           {
-            title: "Title of Your Journal Paper",
-            authors: "Your Name, Co-author A, Co-author B",
-            venue: "Journal Name",
-            year: "20XX",
-            tags: ["SCI", "Q1"],
-            link: "https://doi.org/...",
+            title: "Research on Vehicle Exterior Interaction Design Based on Automation Acceptance Model",
+            authors: "Zhang, B., & You, F.",
+            venue: "Journal of Graphics",
+            year: "2020",
+            tags: ["CCF-C", "Core Journal"],
+            link: "https://github.com/bhannzhang",
+          },
+          {
+            title: "Human-Machine Interface Design of External Displays for Unmanned Logistics Vehicles",
+            authors: "Wang, W., Zhang, B., Fu, M., Lin, Z., Pei, J., & Wang, J.",
+            venue: "Journal of Graphics",
+            year: "2019",
+            tags: ["CCF-C", "Core Journal"],
+            link: "https://github.com/bhannzhang",
           },
         ],
       },
@@ -289,12 +323,41 @@ export const siteContent = {
         name: "Conference Papers",
         items: [
           {
-            title: "Title of Your Conference Paper",
-            authors: "Your Name, Co-author A",
-            venue: "Conference Name (e.g., CHI 20XX)",
-            year: "20XX",
-            tags: ["Best Paper Award"],
-            link: "https://doi.org/...",
+            title: "Designing Communication Strategies of Autonomous Vehicles with Pedestrians: An Intercultural Study",
+            authors: "Lanzer, M., Babel, F., Yan, F., Zhang, B., You, F., Wang, J., & Baumann, M.",
+            venue: "AutomotiveUI 2020",
+            year: "2020",
+            tags: ["SIGCHI"],
+            link: "https://github.com/bhannzhang",
+          },
+          {
+            title: "Study on Pedestrian Interaction with Unmanned Logistics Vehicles Based on Cognitive Acceptance",
+            authors: "Zhang, B., You, F., Yan, F., & Wang, J.",
+            venue: "HHME 2019",
+            year: "2019",
+            tags: [],
+            link: "https://github.com/bhannzhang",
+          },
+        ],
+      },
+      {
+        name: "Books & Chapters",
+        items: [
+          {
+            title: "Research on Intelligent Vehicle Interaction Design Methodology",
+            authors: "Zhang, B. (Contributing Author)",
+            venue: "Published monograph",
+            year: "",
+            tags: [],
+            link: "https://github.com/bhannzhang",
+          },
+          {
+            title: "Human-Machine Interface for Intelligent Vehicles — Design Methodology and Cognitive Evaluation",
+            authors: "Zhang, B. (Chapter author)",
+            venue: "Authored Chapter 2",
+            year: "",
+            tags: [],
+            link: "https://github.com/bhannzhang",
           },
         ],
       },
@@ -310,39 +373,45 @@ export const siteContent = {
       {
         name: "Research Methods",
         skills: [
-          "User Interview",
+          "User Research",
+          "A/B Testing",
+          "Usability Testing",
+          "Eye Tracking",
           "Survey Design",
-          "Experimental Design",
-          "Data Analysis",
+          "Interview Analysis",
         ],
       },
       {
-        name: "Design Tools",
+        name: "Design Skills",
         skills: [
           "Figma",
           "Sketch",
-          "Adobe Suite",
+          "Adobe XD",
           "Prototyping",
+          "UI/UX Design",
+          "Interaction Design",
         ],
       },
       {
-        name: "Programming",
+        name: "Technical Skills",
         skills: [
           "Python",
-          "JavaScript / Vue",
-          "MATLAB",
-          "R",
+          "Arduino",
+          "Hardware Prototyping",
+          "Data Analysis",
+          "SPSS",
+          "Technical Writing",
         ],
       },
     ],
     additionalExperience: [
       {
-        title: "Internship / Work",
-        description: "Brief description of your industry experience.",
+        title: "International Collaboration",
+        description: "Cross-cultural research projects with European and American partners",
       },
       {
-        title: "Collaboration",
-        description: "Experience working with international teams or labs.",
+        title: "Industry Experience",
+        description: "SAIC Volkswagen HMI Framework designer for 5 years",
       },
     ],
   },
@@ -356,36 +425,44 @@ export const siteContent = {
     // Featured awards (displayed in cards with image placeholders)
     featured: [
       {
-        title: "Design Award Name",
-        description: "Description of the award and what it was for.",
-        
-        // [Method 1] Local file:
-        // image: import.meta.env.BASE_URL + 'images/awards/award1.jpg',
-        // [Method 2] Placeholder:
-        image: "https://placehold.co/400x300?text=Award",
-        
-        link: 'https://example.com',
+        title: "Muse Design\nSilver Award",
+        description: "Novel approaches to securing microservices architectures and cloud-native applications against emerging threats.",
+        image: import.meta.env.BASE_URL + 'images/awards/muse.jpg',
+        link: 'https://design.museaward.com/winner-info.php?id=25358',
       },
       {
-        title: "Research Award Name",
-        description: "Description of the award and what it was for.",
-        
-        // image: import.meta.env.BASE_URL + 'images/awards/award2.jpg',
-        image: "https://placehold.co/400x300?text=Award",
-        
-        link: 'https://example.com',
+        title: "American Good Design\nGold Award",
+        description: "Novel approaches to securing microservices architectures and cloud-native applications against emerging threats.",
+        image: import.meta.env.BASE_URL + 'images/awards/award2.jpg',
+        link: 'https://www.american-good-design.com/winnerDetails?id=1422',
+      },
+      {
+        title: "Outstanding Master's Thesis\n& 毕业生 Award",
+        description: "Novel approaches to securing microservices architectures and cloud-native applications against emerging threats.",
+        image: import.meta.env.BASE_URL + 'images/awards/award3.jpg',
+        link: 'https://example.com/award3',
+      },
+      {
+        title: "Patents Collection",
+        description: "Novel approaches to securing microservices architectures and cloud-native applications against emerging threats.",
+        image: import.meta.env.BASE_URL + 'images/awards/award4.jpg',
+        link: 'https://example.com/patents',
       },
     ],
     // 其他奖项（展示在列表中）
     // Other awards (displayed in a list)
     other: [
       {
-        title: "Scholarship Name (Top X%)",
-        year: "20XX",
+        title: "Hongda Scholarship & Excellent Master's Scholarship (Top 2-3%)",
+        year: "2018-2020",
       },
       {
-        title: "Competition Name - First Prize",
-        year: "20XX",
+        title: "National Third Prize, UXPA China | UXDA International User Experience Innovation Competition",
+        year: "2019",
+      },
+      {
+        title: "National Second Prize, National College New Energy Vehicle Big Data Innovation Competition",
+        year: "2018",
       },
     ],
   },
@@ -394,7 +471,7 @@ export const siteContent = {
   // 📌 导航菜单 (Navigation Menu)
   // ==========================================
   navigation: {
-    brand: "My Portfolio", // Menu brand text
+    brand: "Bhann's website",
     items: [
       { label: "Home", href: "#home" },
       { label: "Education", href: "#education" },
@@ -410,10 +487,10 @@ export const siteContent = {
   // 📌 页脚信息 (Footer Information)
   // ==========================================
   footer: {
-    copyright: "© 20XX Your Name. All rights reserved.",
+    copyright: "© 2026 Zhang Bihan. All rights reserved.",
     links: [
       { label: "GitHub", url: "https://github.com/yourusername" },
-      { label: "Email", url: "mailto:your.email@example.com" },
+      { label: "Email", url: "mailto:Zhangbihan621@outlook.com" },
       { label: "Twitter", url: "https://twitter.com/yourusername" },
     ],
   },
@@ -422,9 +499,9 @@ export const siteContent = {
   // 📌 SEO 和元数据 (SEO and Metadata)
   // ==========================================
   meta: {
-    title: "My Academic Portfolio - Your Name",
-    description: "PhD Student / Researcher in [Field]. Portfolio website.",
-    keywords: "Academic, Research, Portfolio, [Your Field]",
+    title: "Bhann's Website - Zhang Bihan",
+    description: "PhD Applicant in HCI & Cognitive Psychology, Focusing on Intelligent Cockpit Interaction, Multimodal Feedback, and Driver Cognition",
+    keywords: "HCI, Human-Computer Interaction, Cognitive Psychology, Autonomous Driving, UX Research",
     
     // [Method 1] Local file:
     // ogImage: import.meta.env.BASE_URL + 'images/og-image.jpg',
