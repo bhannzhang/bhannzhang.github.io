@@ -48,11 +48,11 @@ export const siteContent = {
     // -----------------------------------------------------------
     // [方式 1]: 使用本地文件 (推荐) - 请将图片命名为 avatar.jpg 并放在 public/images/ 目录下
     // [Method 1]: Use local file (Recommended) - Name image avatar.jpg in public/images/
-    // avatar: import.meta.env.BASE_URL + 'images/avatar.jpg',
+    avatar: import.meta.env.BASE_URL + 'images/avatar.jpg',
     
     // [方式 2]: 使用在线图片占位符 (默认，用于预览)
     // [Method 2]: Use online placeholder (Default for preview)
-    avatar: "https://placehold.co/400x400?text=Avatar",
+    // avatar: "https://placehold.co/400x400?text=Avatar",
     // -----------------------------------------------------------
     
     // 您的邮箱地址 (Your email address)
