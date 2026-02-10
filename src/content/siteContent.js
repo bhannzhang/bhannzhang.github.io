@@ -72,17 +72,17 @@ export const siteContent = {
     },
     {
       platform: "twitter",
-      url: "https://twitter.com/yourusername",
+      url: "https://x.com/haideezhang?s=11",
       label: "Twitter",
     },
     {
       platform: "linkedin",
-      url: "https://linkedin.com/in/yourusername",
+      url: "",
       label: "LinkedIn",
     },
     {
       platform: "googleScholar",
-      url: "https://scholar.google.com/citations?user=yourid",
+      url: "",
       label: "Google Scholar",
     },
   ],
@@ -134,8 +134,8 @@ export const siteContent = {
     currentStatus: {
       title: "My Current Status",
       items: [
-        "SAIC Volkswagen HMI Framework",
-        "designer for 5 Years",
+        "SAIC Volkswagen HMI Framework designer for 5 years",
+        "需要加职责",
         "Preparing PhD applications for Fall 2026",
         "文字应该会改",
       ],
@@ -187,11 +187,11 @@ export const siteContent = {
     sectionTitle: "Education",
     items: [
       {
-        degree: "Master of Science in [Your Field]",
+        degree: "Master of Interaction Design in HMI & HCI ",
         school: "TongJi University",
         location: "Shanghai, China",
         period: "2018 - 2021",
-        gpa: "4.73/5.0",
+        gpa: "4.73/5.0(1st Rank)",
         status: "Completed",
         thesis: "Thesis: [Your Thesis Title]. Specialized in [Specialization Area] with coursework in [Relevant Courses].",
         achievements: [
@@ -201,7 +201,7 @@ export const siteContent = {
         ],
       },
       {
-        degree: "Bachelor of Science in [Your Field]",
+        degree: "Bachelor of Electrical Engineer",
         school: "Hohai University",
         location: "Nanjing, China",
         period: "2012 - 2016",
