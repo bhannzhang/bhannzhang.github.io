@@ -96,10 +96,10 @@ export const siteContent = {
     // 主要描述 (Main description)
     description: "I am a PhD Applicant in HCI & Cognitive Psychology, Focusing on Intelligent Cockpit Interaction, Multimodal Feedback, and Driver Cognition",
     // 注释（可选） (Note (optional))
-    note: "(文本后续可能会改)",
+    note: "",
     // 背景信息 (Background information)
     background: "Background in Interaction Design & Electrical Engineering | Research interest in Human-AI Interaction",
-    backgroundNote: "(文本后续可能会改)",
+    backgroundNote: "",
     // 按钮 (Buttons)
     buttons: [
       {
@@ -134,13 +134,12 @@ export const siteContent = {
     currentStatus: {
       title: "My Current Status",
       items: [
-        "SAIC Volkswagen HMI Framework designer for 5 years",
-        "需要加职责",
+        "Industry researcher in intelligent cockpit HMI for 5 years",
+        "Research-led HMI framework development in automotive context",
         "Preparing PhD applications for Fall 2026",
-        "文字应该会改",
       ],
     },
-    keywords: ["HCI", "HMI", "Cognitive Psychology", "Hardware Develop"],
+    keywords: ["HCI", "HMI", "Cognitive Psychology", "Human-AI Trust","Safety-Critical Systems","Hardware Development"],
   },
 
   // ==========================================
@@ -193,11 +192,11 @@ export const siteContent = {
         period: "2018 - 2021",
         gpa: "4.73/5.0(1st Rank)",
         status: "Completed",
-        thesis: "Thesis: [Your Thesis Title]. Specialized in [Specialization Area] with coursework in [Relevant Courses].",
+        thesis: "Interaction Design, Concentrations in Human computer interaction and cognition",
         achievements: [
-          "Magna Cum Laude",
-          "Graduate Student Excellence Award",
-          "Research Excellence Recognition",
+          "Outstanding Graduate of Tongji University,2021(Top 2%)",
+          "Outstanding Master's Thesis Award, Tongji University (sole recipient,2021)",
+          "Hongda Scholarship(2018 ,2019) & Excellent Master’s Scholarship (2020), Tongji University (Top 2-3%)",
         ],
       },
       {
@@ -207,11 +206,11 @@ export const siteContent = {
         period: "2012 - 2016",
         gpa: "4.08/5.0",
         status: "Completed",
-        thesis: "Major in [Major] with minor in [Minor]. Senior capstone project on [Project Title].",
-        achievements: [
-          "Dean's List (6 semesters)",
-          "Undergraduate Research Award",
-          "Academic Excellence Scholarship",
+        thesis: "Major in Electrical Engineering and Automation.",
+        //achievements: [
+         // "Dean's List (6 semesters)",
+          //"Undergraduate Research Award",
+          //"Academic Excellence Scholarship",
         ],
       },
     ],
@@ -327,16 +326,16 @@ export const siteContent = {
             authors: "Lanzer, M., Babel, F., Yan, F., Zhang, B., You, F., Wang, J., & Baumann, M.",
             venue: "AutomotiveUI 2020",
             year: "2020",
-            tags: ["SIGCHI"],
-            link: "https://github.com/bhannzhang",
+            tags: ["AutomotiveUI 2020 SIGCHI"],
+            link: "",
           },
           {
             title: "Study on Pedestrian Interaction with Unmanned Logistics Vehicles Based on Cognitive Acceptance",
             authors: "Zhang, B., You, F., Yan, F., & Wang, J.",
             venue: "HHME 2019",
             year: "2019",
-            tags: [],
-            link: "https://github.com/bhannzhang",
+            tags: ["HHME"],
+            link: "",
           },
         ],
       },
@@ -349,7 +348,7 @@ export const siteContent = {
             venue: "Published monograph",
             year: "",
             tags: [],
-            link: "https://github.com/bhannzhang",
+            link: "",
           },
           {
             title: "Human-Machine Interface for Intelligent Vehicles — Design Methodology and Cognitive Evaluation",
@@ -357,7 +356,7 @@ export const siteContent = {
             venue: "Authored Chapter 2",
             year: "",
             tags: [],
-            link: "https://github.com/bhannzhang",
+            link: "",
           },
         ],
       },
@@ -395,7 +394,7 @@ export const siteContent = {
       {
         name: "Technical Skills",
         skills: [
-          "Python",
+          "C programming language",
           "Arduino",
           "Hardware Prototyping",
           "Data Analysis",
@@ -435,18 +434,6 @@ export const siteContent = {
         description: "Novel approaches to securing microservices architectures and cloud-native applications against emerging threats.",
         image: import.meta.env.BASE_URL + 'images/awards/award2.jpg',
         link: 'https://www.american-good-design.com/winnerDetails?id=1422',
-      },
-      {
-        title: "Outstanding Master's Thesis\n& 毕业生 Award",
-        description: "Novel approaches to securing microservices architectures and cloud-native applications against emerging threats.",
-        image: import.meta.env.BASE_URL + 'images/awards/award3.jpg',
-        link: 'https://example.com/award3',
-      },
-      {
-        title: "Patents Collection",
-        description: "Novel approaches to securing microservices architectures and cloud-native applications against emerging threats.",
-        image: import.meta.env.BASE_URL + 'images/awards/award4.jpg',
-        link: 'https://example.com/patents',
       },
     ],
     // 其他奖项（展示在列表中）
