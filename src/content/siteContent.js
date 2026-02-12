@@ -222,17 +222,17 @@ export const siteContent = {
   // 📌 研究项目（Projects Section）
   // ==========================================
   projects: {
-    sectionTitle: "My Projects",
+    sectionTitle: "Academic Research Experience",
     viewMoreText: "View more",
     items: [
       {
-        category: "Cybersecurity",
+        category: "",
         status: "completed",
-        title: "Distributed Systems Security Framework",
-        description: "Novel approaches to securing microservices architectures and cloud-native applications against emerging threats.",
-        tags: ["Security", "Distributed Systems", "Cloud"],
+        title: "Research on social acceptance and HMI for L4+ AV car",
+        description: "Led joint research on social acceptance and HMI for L4+ autonomous campus vehicles, from concept design to UX evaluation.Published findings in a core journal (CCF-C) and presented at HHME academic conference.",
+        tags: ["Principal Investigator (Student PI)"],
         image: import.meta.env.BASE_URL + 'images/projects/project1.jpg',
-        link: "https://github.com/bhannzhang",
+        link: "",
       },
       {
         category: "Cybersecurity",
