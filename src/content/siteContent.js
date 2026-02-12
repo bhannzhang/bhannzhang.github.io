@@ -364,7 +364,47 @@ export const siteContent = {
     ],
   },
 
+  
+
   // ==========================================
+  // 📌 获奖与荣誉（Awards Section）
+  // ==========================================
+  awards: {
+    sectionTitle: "My Awards",
+    // 特色奖项（展示在卡片中，包含图片占位区域）
+    // Featured awards (displayed in cards with image placeholders)
+    featured: [
+      {
+        title: "Muse Design\nSilver Award",
+        description: "",
+        image: import.meta.env.BASE_URL + 'images/awards/muse.jpg',
+        link: 'https://design.museaward.com/winner-info.php?id=25358',
+      },
+      {
+        title: "American Good Design\nGold Award",
+        description: "",
+        image: import.meta.env.BASE_URL + 'images/awards/agd.jpg',
+        link: 'https://www.american-good-design.com/winnerDetails?id=1422',
+      },
+    ],
+    // 其他奖项（展示在列表中）
+    // Other awards (displayed in a list)
+    other: [
+      {
+        title: "Hongda Scholarship & Excellent Master's Scholarship (Top 2-3%)",
+        year: "2018-2020",
+      },
+      {
+        title: "National Third Prize, UXPA China | UXDA International User Experience Innovation Competition",
+        year: "2019",
+      },
+      {
+        title: "National Second Prize, National College New Energy Vehicle Big Data Innovation Competition",
+        year: "2018",
+      },
+    ],
+  },
+// ==========================================
   // 📌 方法与技能（Method & Skills）
   // ==========================================
   methodSkills: {
@@ -415,46 +455,7 @@ export const siteContent = {
       },
     ],
   },
-
-  // ==========================================
-  // 📌 获奖与荣誉（Awards Section）
-  // ==========================================
-  awards: {
-    sectionTitle: "My Awards",
-    // 特色奖项（展示在卡片中，包含图片占位区域）
-    // Featured awards (displayed in cards with image placeholders)
-    featured: [
-      {
-        title: "Muse Design\nSilver Award",
-        description: "Novel approaches to securing microservices architectures and cloud-native applications against emerging threats.",
-        image: import.meta.env.BASE_URL + 'images/awards/muse.jpg',
-        link: 'https://design.museaward.com/winner-info.php?id=25358',
-      },
-      {
-        title: "American Good Design\nGold Award",
-        description: "Novel approaches to securing microservices architectures and cloud-native applications against emerging threats.",
-        image: import.meta.env.BASE_URL + 'images/awards/agd.jpg',
-        link: 'https://www.american-good-design.com/winnerDetails?id=1422',
-      },
-    ],
-    // 其他奖项（展示在列表中）
-    // Other awards (displayed in a list)
-    other: [
-      {
-        title: "Hongda Scholarship & Excellent Master's Scholarship (Top 2-3%)",
-        year: "2018-2020",
-      },
-      {
-        title: "National Third Prize, UXPA China | UXDA International User Experience Innovation Competition",
-        year: "2019",
-      },
-      {
-        title: "National Second Prize, National College New Energy Vehicle Big Data Innovation Competition",
-        year: "2018",
-      },
-    ],
-  },
-
+  
   // ==========================================
   // 📌 导航菜单 (Navigation Menu)
   // ==========================================
@@ -465,8 +466,8 @@ export const siteContent = {
       { label: "Education", href: "#education" },
       { label: "Research & Projects", href: "#research-projects" },
       { label: "Publications", href: "#publications" },
-      { label: "Method & Skills", href: "#skills" },
-      { label: "Awards & Experience", href: "#awards" },
+      { label: "Awards & Experience", href: "#awards-experience" },
+      { label: "Method & Skills", href: "#method-skills" },
     ],
     menuButtonLabel: "Menu",
   },
