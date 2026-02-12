@@ -211,7 +211,7 @@ export const siteContent = {
          // "Dean's List (6 semesters)",
           //"Undergraduate Research Award",
           //"Academic Excellence Scholarship",
-        ],
+        //],
       },
     ],
     intro: "A comprehensive overview of my academic, teaching, industry, and individual projects that have shaped my professional development and research expertise."
