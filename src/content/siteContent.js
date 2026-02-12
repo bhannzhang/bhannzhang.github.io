@@ -433,7 +433,7 @@ export const siteContent = {
       {
         title: "American Good Design\nGold Award",
         description: "Novel approaches to securing microservices architectures and cloud-native applications against emerging threats.",
-        image: import.meta.env.BASE_URL + 'images/awards/award2.jpg',
+        image: import.meta.env.BASE_URL + 'images/awards/agd.jpg',
         link: 'https://www.american-good-design.com/winnerDetails?id=1422',
       },
     ],
