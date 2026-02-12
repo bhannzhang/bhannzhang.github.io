@@ -370,7 +370,7 @@ export const siteContent = {
   // 📌 获奖与荣誉（Awards Section）
   // ==========================================
   awards: {
-    sectionTitle: "My Awards",
+    sectionTitle: "My Awards & Work Experience",
     // 特色奖项（展示在卡片中，包含图片占位区域）
     // Featured awards (displayed in cards with image placeholders)
     featured: [
