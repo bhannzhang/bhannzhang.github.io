@@ -34,6 +34,8 @@
               </svg>
               <a :href="`mailto:${content.personal.email}`">{{ content.personal.email }}</a>
             </div>
+          </div>
+          <div class="overview__contact-info">
             <div v-for="link in visibleSocialLinks" :key="link.platform" class="overview__contact-item">
               <component :is="getSocialIcon(link.platform)" />
               <a :href="link.url" target="_blank" rel="noopener noreferrer">{{ link.label.toLowerCase() }}</a>
@@ -240,7 +242,7 @@ const getFilename = (link) => {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem 2rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.2rem;
   }
 
   &__contact-item {

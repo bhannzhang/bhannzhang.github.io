@@ -44,7 +44,10 @@
           
           <p class="education-card__thesis">{{ edu.thesis }}</p>
           
-          <div class="education-card__achievements">
+          <div 
+            v-if="edu.achievements?.length"
+            class="education-card__achievements"
+          >
             <span class="education-card__achievements-label">Key Achievements</span>
             <div class="education-card__tags">
               <span 
