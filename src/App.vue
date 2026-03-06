@@ -8,6 +8,8 @@ import ProjectsSection from './components/ProjectsSection.vue';
 import PublicationsSection from './components/PublicationsSection.vue';
 import SkillsSection from './components/SkillsSection.vue';
 import AwardsSection from './components/AwardsSection.vue';
+import WorkExperienceSection from './components/WorkExperience.vue';
+import IndividualWorkSection from './components/IndividualWork.vue';
 import FooterSection from './components/FooterSection.vue';
 import BackToTopButton from './components/BackToTopButton.vue';
 </script>
@@ -26,9 +28,7 @@ import BackToTopButton from './components/BackToTopButton.vue';
       <OverviewSection />
       
       <!-- Education Section -->
-      <section id="education">
-        <EducationSection />
-      </section>
+      <EducationSection />
       
       <!-- Research & Projects Section -->
       <section id="research-projects">
@@ -37,19 +37,19 @@ import BackToTopButton from './components/BackToTopButton.vue';
       </section>
       
       <!-- Publications Section -->
-      <section id="publications">
-        <PublicationsSection />
-      </section>
-      
-      <!-- Method & Skills Section -->
-      <section id="skills">
-        <SkillsSection />
-      </section>
+      <PublicationsSection />
       
       <!-- Awards & Experience Section -->
-      <section id="awards">
-        <AwardsSection />
-      </section>
+      <AwardsSection />
+
+      <!-- Work Experience Section -->
+      <WorkExperienceSection />
+
+      <!-- Individual Work Section -->
+      <IndividualWorkSection />
+
+      <!-- Method & Skills Section -->
+      <SkillsSection />
     </main>
     
     <!-- Footer -->

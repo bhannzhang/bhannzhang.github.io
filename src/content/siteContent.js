@@ -238,7 +238,7 @@ export const siteContent = {
         category: "",
         status: "completed",
         title: "Baidu Automotive White Paper Research Collaboration Project",
-        description: "Conducted large-scale benchmarking of 26 automotive brands; formalized findings into guidelines. Presented results at Baidu Headquarters; recognized by Apollo Lab.",
+        description: "Conducted large-scale benchmarking of 26 automotive brands; formalized findings into guidelines.Presented results at Baidu Headquarters; recognized by Apollo Lab.",
         tags: ["Principal Investigator (Student PI)"],
         image: import.meta.env.BASE_URL + 'images/projects/project2.jpg',
         link: "",
@@ -457,6 +457,112 @@ export const siteContent = {
   },
   
   // ==========================================
+  // 📌 工作经历（Work Experience Section）
+  // ==========================================
+  workExperience: {
+    // 栏目标题 (Section title)
+    sectionTitle: "Work Experience",
+    // 公司列表 (List of companies)
+    companies: [
+      {
+        // 公司名称 (Company name)
+        name: "[Company Name 1]",
+        // 工作类型 (Work type): FULL TIME / INTERNSHIP / PART TIME
+        type: "FULL TIME",
+        // 地点 (Location)
+        location: "[City, Country]",
+        // 公司 logo 图片路径（可选，留空则显示文字缩写，放在 public/images/ 目录下）
+        // Company logo image path (optional, leave empty to show text abbreviation)
+        // logo: import.meta.env.BASE_URL + 'images/logos/company1.png',
+        logo: "",
+        // logo 文字缩写（当 logo 图片不存在时显示，建议 2-3 个字母）
+        // Logo text abbreviation (shown if logo image is missing, 2-3 letters recommended)
+        logoText: "CO1",
+        // 在该公司的职位列表 (List of roles at this company)
+        roles: [
+          {
+            // 职位名称 (Role title)
+            title: "Senior Interaction Designer, [Department Name]",
+            // 时间段 (Period)
+            period: "20XX – Now",
+            // 职责描述列表 (List of responsibilities)
+            responsibilities: [
+              "Led the core interaction framework design for [Project name], a large-scale user interface system developed to address localized needs.",
+              "Directed HMI framework for [Specific Brand/Product], defining core interaction architecture across multiple functional domains.",
+              "Spearheaded UX/HMI design for [Specific Feature], achieving cross-functional approval and resulting in multiple technical patents.",
+              "Conducted strategic research under [Field Name], producing trend analysis reports that identified key innovation directions.",
+            ],
+          },
+          {
+            title: "Product Engineer, [Department Name]",
+            period: "20XX – 20XX",
+            responsibilities: [
+              "Managed end-to-end HMI design and system definition for [Technical Project], from initial framework to final validation.",
+              "Served as the sole design lead for [High-impact Concept], overseeing software interaction design and live demonstrations.",
+            ],
+          },
+        ],
+      },
+      {
+        name: "[Company Name 2 / Group]",
+        type: "INTERNSHIP",
+        location: "[City, Country]",
+        logo: "",
+        logoText: "CO2",
+        roles: [
+          {
+            title: "Interaction Design Intern, [Lab/Unit Name]",
+            period: "20XX – 20XX",
+            responsibilities: [
+              "Contributed to the design of [Mobile App/System] and the [AI/Avatar] project; conducted usability studies comparing different system versions.",
+            ],
+          },
+        ],
+      },
+    ],
+  },
+
+  // ==========================================
+  // 📌 个人作品（Individual Work Section）
+  // ==========================================
+  individualWork: {
+    // 栏目标题 (Section title)
+    sectionTitle: "Individual Work",
+    // 作品列表（每项包含标题、描述、年份）
+    // Project list (each item has title, description, year)
+    items: [
+      {
+        // 作品标题 (Work title)
+        title: "Scoliosis Sleep Posture Monitoring Wearable",
+        // 作品描述 (Description of the work)
+        description: "Developed an Arduino-based wearable device for posture detection and haptic feedback, supporting continuous sleep posture monitoring.",
+        // 完成年份 (Year of completion)
+        year: "2025",
+      },
+      {
+        title: "Phantom Limb Pain Suppression via EMG Monitoring",
+        description: "Built a multimodal feedback system using EMG sensing and Processing visualization to support pain suppression and affective rehabilitation.",
+        year: "2025",
+      },
+      {
+        title: "Soft Robotic Prototype",
+        description: "Designed and fabricated a pneumatically controlled soft robot using 3D-printed molds, exploring bio-inspired actuation and embodied interaction.",
+        year: "2025",
+      },
+      {
+        title: "L4 Autonomous Logistics Vehicle",
+        description: "Developed an embedded Arduino system for obstacle avoidance and path planning; implemented a VUI for human-vehicle interaction.",
+        year: "2025",
+      },
+      {
+        title: "[Template Work Title]",
+        description: "Briefly describe your project, its technical implementation (e.g., Python/Arduino/Figma), and its core impact or goal.",
+        year: "2024",
+      },
+    ],
+  },
+
+  // ==========================================
   // 📌 导航菜单 (Navigation Menu)
   // ==========================================
   navigation: {
@@ -466,8 +572,10 @@ export const siteContent = {
       { label: "Education", href: "#education" },
       { label: "Research & Projects", href: "#research-projects" },
       { label: "Publications", href: "#publications" },
-      { label: "Awards & Experience", href: "#awards-experience" },
-      { label: "Method & Skills", href: "#method-skills" },
+      { label: "Awards & Experience", href: "#awards" },
+      { label: "Work Experience", href: "#work-experience" },
+      { label: "Individual Work", href: "#individual-work" },
+      { label: "Method & Skills", href: "#skills" },
     ],
     menuButtonLabel: "Menu",
   },

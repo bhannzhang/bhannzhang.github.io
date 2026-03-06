@@ -119,24 +119,71 @@
 <details>
 <summary><b>❓ 我想修改网站的主题色</b></summary>
 
-进入 `src/style.scss` 文件，修改 `:root` 中的颜色变量：
+网站支持高度定制化的主题颜色。如果你想要修改网站的配色，无论是深色模式还是浅色模式，都可以通过修改全局的 CSS 变量来实现！
+
+1. 进入 `src/style.scss` 文件。
+2. 找到最顶部的 `:root` (代表深色模式) 和 `.light` (代表浅色模式) 区域。
+3. 修改对应的颜色参数。即使你不懂代码，只需要找一个 [HEX 颜色选择器](https://htmlcolorcodes.com/)，挑一个你喜欢的颜色，把对应的代码（比如 `#6366f1`）替换进去就行了！
+
+**修改示例：**
 ```css
+/* ========================================
+ * 全局颜色修改指南
+ * ======================================== */
+
+/* 深色模式（默认）变量修改区 */
 :root {
-  --color-primary: #6366f1; /* 把这个改成你喜欢的颜色色值 */
+  /* 1. 主题核心色 (推荐在这里替换成你喜欢的强调色) */
+  --color-primary: #3105a9;        /* 修改这里：网站的核心重点色 */
+  --color-primary-rgb: 139, 92, 246; /* 修改这里：核心色的 RGB 纯数字格式 (用于透明度计算) */
+  --color-primary-light: #a78bfa;    /* 修改这里：核心色的亮色版本 */
+  --color-primary-dark: #7c3aed;     /* 修改这里：核心色的暗色版本 */
+  
+  /* 2. 背景颜色系 */
+  --color-bg: #0a0a0a;             /* 页面的最底层背景色 */
+  --color-bg-card: #1a1a1a;        /* 普通卡片的背景色 */
+  
+  /* 3. 卡片突出颜色 */
+  --color-card-light: #f0e6ff;     /* 带有主题色倾向的卡片底色 */
+  --color-card-border: #e0d0f0;    /* 带有主题色倾向的卡片边框色 */
+  
+  /* 4. 文字颜色 */
+  --color-text: #ffffff;           /* 主标题、重点文字颜色 */
+  --color-text-secondary: #a0a0a0; /* 副标题、描述文字颜色 */
+}
+
+/* 浅色模式（用户点击右上角切换后）变量修改区 */
+.light {
+  /* 浅色模式下的背景 */
+  --color-bg: #ffffff;             /* 浅色模式的页面底层背景色 */
+  --color-bg-card: #ffffff;        /* 浅色模式普通卡片的背景色 */
+  
+  /* 浅色模式下带有主题色倾向的卡片配置 */
+  --color-card-light: #f5f0ff;     /* 浅色模式专属特色卡片底色 */
+  --color-card-border: #e8e0f5;    /* 浅色模式专属卡片边框色 */
+  
+  /* 浅色模式下的文字颜色 */
+  --color-text: #0f172a;           /* 极深的颜色作为主文字 */
+  --color-text-secondary: #64748b; /* 灰色作为副文字 */
 }
 ```
 </details>
 
 <details>
-<summary><b>❓ 我不需要"获奖经历"这一栏怎么办？</b></summary>
+<summary><b>❓ 我不需要"获奖经历"或"工作经历"这一栏怎么办？</b></summary>
 
 在 `siteContent.js` 中，将对应的数组清空即可，页面会自动隐藏该板块：
 ```javascript
 awards: {
   // ...
   items: [] // 留空即可隐藏
+},
+workExperience: {
+  // ...
+  companies: [] // 留空即可隐藏
 }
 ```
+也可以在 `siteContent.js` 最下方的 `navLinks` 配置中，删除对应的导航菜单项，使其不在顶部导航栏中显示。
 </details>
 
 ---
@@ -323,17 +370,58 @@ If you are unsure what to fill in for each field, please check this reference.
 <details>
 <summary><b>❓ I want to change the website's theme color</b></summary>
 
-Enter the `src/style.scss` file and modify the color variables in `:root`:
+The website supports highly customizable theme colors. If you want to change the website's color scheme for either dark mode or light mode, you can do so by modifying global CSS variables!
 
+1. Open the `src/style.scss` file.
+2. Find the `:root` (represents dark mode) and `.light` (represents light mode) blocks at the top.
+3. Replace the hex color codes (like `#6366f1`). If you don't know anything about code, simply use a [HEX Color Picker](https://htmlcolorcodes.com/) to find a color you like and paste its code in!
+
+**Example modification:**
 ```css
+/* ========================================
+ * Global Color Modification Guide
+ * ======================================== */
+
+/* Dark Theme (Default) Variables */
 :root {
-  --color-primary: #6366f1; /* Change this to your preferred color value */
+  /* 1. Primary Colors (Replace with your favorite accent color) */
+  --color-primary: #3105a9;        /* CHANGE HERE: The core primary color of the site */
+  --color-primary-rgb: 139, 92, 246; /* CHANGE HERE: Pure RGB numbers for opacity calculation */
+  --color-primary-light: #a78bfa;    /* CHANGE HERE: Light version of core color */
+  --color-primary-dark: #7c3aed;     /* CHANGE HERE: Dark version of core color */
+  
+  /* 2. Background Colors */
+  --color-bg: #0a0a0a;             /* The deepest background color */
+  --color-bg-card: #1a1a1a;        /* Background color for ordinary cards */
+  
+  /* 3. Accent Card Colors */
+  --color-card-light: #f0e6ff;     /* Card background with a hint of theme color */
+  --color-card-border: #e0d0f0;    /* Card border with a hint of theme color */
+  
+  /* 4. Text Colors */
+  --color-text: #ffffff;           /* Main titles, primary text */
+  --color-text-secondary: #a0a0a0; /* Subtitles, description text */
+}
+
+/* Light Theme Variables (When user clicks the top-right toggle) */
+.light {
+  /* Light mode backgrounds */
+  --color-bg: #ffffff;             /* Deepest background color for light mode */
+  --color-bg-card: #ffffff;        /* Ordinary card background for light mode */
+  
+  /* Light mode accent card configuration */
+  --color-card-light: #f5f0ff;     /* Accent card background for light mode */
+  --color-card-border: #e8e0f5;    /* Accent card border for light mode */
+  
+  /* Light mode text colors */
+  --color-text: #0f172a;           /* Deep dark color for main text */
+  --color-text-secondary: #64748b; /* Gray color for sub text */
 }
 ```
 </details>
 
 <details>
-<summary><b>❓ What if I don't need the "Awards" section?</b></summary>
+<summary><b>❓ What if I don't need the "Awards" or "Work Experience" section?</b></summary>
 
 In `siteContent.js`, simply empty the corresponding array, and the page will automatically hide that section:
 
@@ -341,8 +429,13 @@ In `siteContent.js`, simply empty the corresponding array, and the page will aut
 awards: {
   // ...
   items: [] // Leave empty to hide
+},
+workExperience: {
+  // ...
+  companies: [] // Leave empty to hide
 }
 ```
+You can also remove the corresponding navigation item from the `navLinks` configuration at the very bottom of `siteContent.js` to prevent it from showing in the top navigation bar.
 </details>
 
 ---
