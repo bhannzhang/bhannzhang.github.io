@@ -507,7 +507,7 @@ export const siteContent = {
             responsibilities: [
               "1. Led HMI concept design for the SVW concept car, conducting prototype evaluations and usability studies; contributed to Volkswagen's advanced innovation program.",
               "2. Directed the next-generation ADAS system framework, overseeing user research, qualitative analysis, and evaluation synthesis for large-scale testing in Shenzhen.",
-              "3. Contributed to the L4 Autonomous Shuttle X project, coordinating cross-scenario validation and behavioral analysis to enhance system robustness and driver-passenger interaction.,
+              "3. Contributed to the L4 Autonomous Shuttle X project, coordinating cross-scenario validation and behavioral analysis to enhance system robustness and driver-passenger interaction.",
               "4. Designed interaction strategies for a DMS-based behavioral alert system, developing logic for driver state detection and proactive intervention within adaptive cockpit contexts.",
             ],
           },
