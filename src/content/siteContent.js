@@ -596,7 +596,7 @@ export const siteContent = {
       },
       {
         title: "Continental Tire Performance Testing & Visualization",
-        description: Created an interactive visualization tool for tire performance benchmarking using Touch Designer and auditory data sonification. ",
+        description: "Created an interactive visualization tool for tire performance benchmarking using Touch Designer and auditory data sonification. ",
         year: "2022",
       },
     ],
