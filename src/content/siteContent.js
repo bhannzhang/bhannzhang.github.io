@@ -477,44 +477,54 @@ export const siteContent = {
         logo: "",
         // logo 文字缩写（当 logo 图片不存在时显示，建议 2-3 个字母）
         // Logo text abbreviation (shown if logo image is missing, 2-3 letters recommended)
-        logoText: "CO1",
+        logoText: "SVW",
         // 在该公司的职位列表 (List of roles at this company)
         roles: [
           {
             // 职位名称 (Role title)
-            title: "Senior Interaction Designer, [Department Name]",
+            title: "HMI Designer in Intelligent Connectivity R&D Department",
             // 时间段 (Period)
-            period: "20XX – Now",
+            period: "Apr. 2023 – Now",
             // 职责描述列表 (List of responsibilities)
             responsibilities: [
-              "Led the core interaction framework design for [Project name], a large-scale user interface system developed to address localized needs.",
-              "Directed HMI framework for [Specific Brand/Product], defining core interaction architecture across multiple functional domains.",
-              "Spearheaded UX/HMI design for [Specific Feature], achieving cross-functional approval and resulting in multiple technical patents.",
-              "Conducted strategic research under [Field Name], producing trend analysis reports that identified key innovation directions.",
+              "1. Led the core interaction framework design for the next-generation NEX HMI, Volkswagen’s first fully China-designed human–machine interface system, developed from the ground up to address localized user needs and driving habits.",
+              "2. Directed HMI framework for the new AUDI intelligent cockpit (first localized EV brand with SAIC), defining core interaction architecture across multiple domains; design successfully mass-produced.",
+              "3. Led UX/HMI design for RHP 2.0 Parking (VW's first localized autonomous parking project in China), achieving cross-functional approval and resulting in 5 patented innovations.",
+              "4. Directed strategic research under "Digital Cockpit Strategy Field," producing a trend analysis report that identified key innovation directions and achieved the highest annual performance rating.Conducted strategic research under [Field Name], producing trend analysis reports that identified key innovation directions.",
             ],
           },
           {
-            title: "Product Engineer, [Department Name]",
-            period: "20XX – 20XX",
+            title: "Product Definition Engineer in Autonomous Driving R&D Department ",
+            period: "Jul. 2022 - Mar. 2023  ",
             responsibilities: [
-              "Managed end-to-end HMI design and system definition for [Technical Project], from initial framework to final validation.",
-              "Served as the sole design lead for [High-impact Concept], overseeing software interaction design and live demonstrations.",
+              "1. Led end-to-end HMI design and system definition for the ADAP proof-of-concept project, from interaction framework to simulator validation.",
+              "2. Served as the sole design lead for the RHP 3.0 autonomous driving concept, overseeing software interaction design, in-vehicle simulator development, and live vehicle demonstrations. The project was selected as a core innovation at the Volkswagen IVET Conference and later transferred to the production division for mass-production adaptation.",
+            ],
+          },
+          {
+            title: "HMI Designer in Autonomous Driving R&D Department (ERR).            ",
+            period: "Jul. 2021 - Jun. 2022 ",
+            responsibilities: [
+              "1. Led HMI concept design for the SVW concept car, conducting prototype evaluations and usability studies; contributed to Volkswagen's advanced innovation program.",
+              "2. Directed the next-generation ADAS system framework, overseeing user research, qualitative analysis, and evaluation synthesis for large-scale testing in Shenzhen.",
+              "3. Contributed to the L4 Autonomous Shuttle X project, coordinating cross-scenario validation and behavioral analysis to enhance system robustness and driver-passenger interaction.,
+              "4. Designed interaction strategies for a DMS-based behavioral alert system, developing logic for driver state detection and proactive intervention within adaptive cockpit contexts.",
             ],
           },
         ],
       },
       {
-        name: "[Company Name 2 / Group]",
+        name: "BMW GROUP ",
         type: "INTERNSHIP",
-        location: "[City, Country]",
+        location: "Shanghai, China",
         logo: "",
-        logoText: "CO2",
+        logoText: "BMW",
         roles: [
           {
-            title: "Interaction Design Intern, [Lab/Unit Name]",
-            period: "20XX – 20XX",
+            title: "Interaction Design Intern, ABK China Skylab",
+            period: " Oct. 2019 – May 2020",
             responsibilities: [
-              "Contributed to the design of [Mobile App/System] and the [AI/Avatar] project; conducted usability studies comparing different system versions.",
+              "1. Contributed to the design of a digital credit system app and the BMW Avatar project; independently led usability studies comparing BMW ID 7 and ID 8 systems.",
             ],
           },
         ],
