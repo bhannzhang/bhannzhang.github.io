@@ -490,7 +490,7 @@ export const siteContent = {
               "1. Led the core interaction framework design for the next-generation NEX HMI, Volkswagen’s first fully China-designed human–machine interface system, developed from the ground up to address localized user needs and driving habits.",
               "2. Directed HMI framework for the new AUDI intelligent cockpit (first localized EV brand with SAIC), defining core interaction architecture across multiple domains; design successfully mass-produced.",
               "3. Led UX/HMI design for RHP 2.0 Parking (VW's first localized autonomous parking project in China), achieving cross-functional approval and resulting in 5 patented innovations.",
-              "4. Directed strategic research under "Digital Cockpit Strategy Field," producing a trend analysis report that identified key innovation directions and achieved the highest annual performance rating.Conducted strategic research under [Field Name], producing trend analysis reports that identified key innovation directions.",
+              "4. Directed strategic research under 「Digital Cockpit Strategy Field」, producing a trend analysis report that identified key innovation directions and achieved the highest annual performance rating.",
             ],
           },
           {
