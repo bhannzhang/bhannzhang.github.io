@@ -565,9 +565,39 @@ export const siteContent = {
         year: "2025",
       },
       {
-        title: "[Template Work Title]",
-        description: "Briefly describe your project, its technical implementation (e.g., Python/Arduino/Figma), and its core impact or goal.",
+        title: "Maternity Support Belt",
+        description: "Created a physiological sensing wearable for maternal health monitoring and HRV analysis to enhance ergonomic comfort. ",
         year: "2024",
+      },
+      {
+        title: "Menstrual Cycle Monitoring",
+        description: "Designed a wearable device integrating HRV and temperature sensing for menstrual cycle prediction and women’s health informatics. ",
+        year: "2024",
+      },
+       {
+        title: "Gesture-Controlled Robotic Arm Gimbal",
+        description: "Developed a servo-actuated robotic arm enabling gesture recognition and intuitive physical control through Arduino programming.  ",
+        year: "2024",
+      },
+      {
+        title: "Interactive System for Skin Manifestations of Immune Disorders",
+        description: "Built a multimodal sensing platform for real-time skin condition detection and digital health visualization. ",
+        year: "2024",
+      },
+      {
+        title: "EV Charging Service & App Design",
+        description: "Designed and prototyped a mobile interface for EV charging optimization, focusing on user flow, service design, and sustainability. ",
+        year: "2024",
+      },
+      {
+        title: "EV Autonomous Driving Energy Testing & Gamified Visualization ",
+        description: "Developed a data visualization system for real-car energy testing with gamified feedback to promote eco-driving behavior.",
+        year: "2023",
+      },
+      {
+        title: "Continental Tire Performance Testing & Visualization",
+        description: Created an interactive visualization tool for tire performance benchmarking using Touch Designer and auditory data sonification. ",
+        year: "2022",
       },
     ],
   },
