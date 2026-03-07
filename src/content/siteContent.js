@@ -466,11 +466,11 @@ export const siteContent = {
     companies: [
       {
         // 公司名称 (Company name)
-        name: "[Company Name 1]",
+        name: "SAIC Volkswagen Automotive Co.",
         // 工作类型 (Work type): FULL TIME / INTERNSHIP / PART TIME
         type: "FULL TIME",
         // 地点 (Location)
-        location: "[City, Country]",
+        location: "[Shanghai, China]",
         // 公司 logo 图片路径（可选，留空则显示文字缩写，放在 public/images/ 目录下）
         // Company logo image path (optional, leave empty to show text abbreviation)
         // logo: import.meta.env.BASE_URL + 'images/logos/company1.png',
