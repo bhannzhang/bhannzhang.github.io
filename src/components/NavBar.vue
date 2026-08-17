@@ -230,7 +230,7 @@ onUnmounted(() => {
 .navbar__nav {
   display: none;
 
-  @media (min-width: 1024px) {
+  @media (min-width: 1320px) {
     display: block;
   }
 }
@@ -309,7 +309,7 @@ onUnmounted(() => {
   cursor: pointer;
   padding: 8px;
 
-  @media (min-width: 1024px) {
+  @media (min-width: 1320px) {
     display: none;
   }
 

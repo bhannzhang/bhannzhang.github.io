@@ -4,8 +4,9 @@
       <div class="overview__content">
         <!-- Left side text content  -->
         <div class="overview__text">
+          <p class="overview__eyebrow">{{ content.personal.title }}</p>
           <h1 class="overview__name">
-            {{ content.personal.name }}<span class="overview__nickname">({{ content.personal.nickname }})</span>
+            {{ content.personal.name }}<span class="overview__nickname"> · {{ content.personal.nickname }}</span>
           </h1>
           
           <p class="overview__welcome">
@@ -16,6 +17,10 @@
           <p class="overview__background">
             {{ content.overview.background }}
             <span v-if="content.overview.backgroundNote" class="overview__note">{{ content.overview.backgroundNote }}</span>
+          </p>
+
+          <p v-if="content.overview.researchNarrative" class="overview__narrative">
+            {{ content.overview.researchNarrative }}
           </p>
           
           <!-- Contact Information -->
@@ -206,6 +211,15 @@ const getFilename = (link) => {
     max-width: 700px;
   }
 
+  &__eyebrow {
+    margin: 0 0 0.75rem;
+    color: var(--color-primary-light);
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
   &__name {
     font-size: clamp(2rem, 5vw, 3rem);
     font-weight: 700;
@@ -231,6 +245,16 @@ const getFilename = (link) => {
     color: var(--color-text-secondary);
     line-height: 1.6;
     margin: 0 0 1.5rem;
+  }
+
+  &__narrative {
+    max-width: 680px;
+    margin: 0 0 1.5rem;
+    padding-left: 1rem;
+    border-left: 2px solid var(--color-primary);
+    color: var(--color-text-secondary);
+    font-size: 0.9375rem;
+    line-height: 1.7;
   }
 
   &__note {

@@ -15,11 +15,20 @@
             v-for="(pub, pubIndex) in category.items" 
             :key="pubIndex"
             class="publication-item"
+            :class="{ 'publication-item--clickable': isPublicationClickable(pub) }"
+            :role="isPublicationClickable(pub) ? 'link' : undefined"
+            :tabindex="isPublicationClickable(pub) ? 0 : undefined"
             @click="openPublication(pub.link)"
+            @keydown.enter="openPublication(pub.link)"
           >
             <div class="publication-item__content">
               <h4 class="publication-item__title">{{ pub.title }}</h4>
-              <p class="publication-item__authors">{{ pub.authors }}</p>
+              <p class="publication-item__authors">
+                <template v-for="(part, partIndex) in splitAuthors(pub.authors)" :key="partIndex">
+                  <strong v-if="part.isSelf">{{ part.text }}</strong>
+                  <span v-else>{{ part.text }}</span>
+                </template>
+              </p>
               <p class="publication-item__venue">
                 <em>{{ pub.venue }}</em>
                 <span v-if="pub.year">, {{ pub.year }}</span>
@@ -62,6 +71,13 @@ const openPublication = (link) => {
     window.open(link, '_blank')
   }
 }
+
+const isPublicationClickable = (publication) => Boolean(publication.link && publication.link !== '#')
+
+const splitAuthors = (authors) => authors
+  .split(/(Zhang, B\.)/g)
+  .filter(Boolean)
+  .map(text => ({ text, isSelf: text === 'Zhang, B.' }))
 </script>
 
 <style lang="scss" scoped>
@@ -112,19 +128,24 @@ const openPublication = (link) => {
   background: var(--color-card-light);
   border-radius: var(--radius-lg);
   padding: 1.25rem;
-  cursor: pointer;
+  cursor: default;
   transition: all 0.3s ease;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   gap: 1rem;
 
-  &:hover {
-    transform: translateX(4px);
-    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.1);
+  &--clickable {
+    cursor: pointer;
 
-    .publication-item__link {
-      opacity: 1;
+    &:hover,
+    &:focus-visible {
+      transform: translateX(4px);
+      box-shadow: 0 4px 12px rgba(139, 92, 246, 0.1);
+
+      .publication-item__link {
+        opacity: 1;
+      }
     }
   }
 
@@ -145,6 +166,11 @@ const openPublication = (link) => {
     color: #4a4a6a;
     margin: 0 0 0.25rem;
     line-height: 1.4;
+
+    strong {
+      color: #1a1a2e;
+      font-weight: 700;
+    }
   }
 
   &__venue {

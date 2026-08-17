@@ -38,9 +38,9 @@ export const siteContent = {
     // 英文昵称 (English nickname)
     nickname: "Bhann",
     // 您的职位/身份 (Your position/title)
-    title: "PhD Applicant in HCI & Cognitive Psychology",
+    title: "Fall 2027 PhD Applicant · Human Factors & HCI",
     // 您所在的学校/机构 (Your school/organization)
-    institution: "Tongji University",
+    institution: "SAIC Volkswagen",
     // 位置 (Your location)
     location: "Shanghai, China",
     
@@ -92,19 +92,20 @@ export const siteContent = {
   // ==========================================
   overview: {
     // 欢迎语 (Welcome message)
-    welcome: "Welcome to my academic portfolio.",
+    welcome: "I study how people understand, trust, collaborate with, and physically interact with intelligent and autonomous systems.",
     // 主要描述 (Main description)
-    description: "I am a PhD Applicant in HCI & Cognitive Psychology, Focusing on Intelligent Cockpit Interaction, Multimodal Feedback, and Driver Cognition",
+    description: "",
     // 注释（可选） (Note (optional))
     note: "",
     // 背景信息 (Background information)
-    background: "Background in Interaction Design & Electrical Engineering | Research interest in Human-AI Interaction",
+    background: "Human Factors research and interaction design, grounded in automotive HMI practice since 2021 and hands-on prototyping of embodied interfaces.",
     backgroundNote: "",
+    researchNarrative: "My work began with human interaction in intelligent vehicles and complex automated systems. Seeing how people interpret, trust, and supervise autonomy in production contexts led me to a broader research question: how can increasingly intelligent and physically embodied systems become understandable, trustworthy, and effective collaborators?",
     // 按钮 (Buttons)
     buttons: [
       {
         text: "Download CV",
-        link: import.meta.env.BASE_URL + "files/cv.pdf", // 请将简历命名为 cv.pdf 放入 public/files/
+        link: import.meta.env.BASE_URL + "files/Zhang_Bihan_CV.pdf",
         style: "primary",
         icon: "download",
       },
@@ -123,59 +124,59 @@ export const siteContent = {
   researchSnapshot: {
     sectionTitle: "Research Snapshot",
     coreResearch: {
-      title: "Core Research Area",
+      title: "Core Research Areas",
       items: [
-        "Intelligent Cockpit HMI & Human-AI Interaction",
-        "Driver cognition & trust in L2-L3 automated driving",
-        "Multimodal interaction feedback (visual, auditory, haptic...)",
-        "Explainable & emotional AI in safety-critical interfaces",
+        "Human factors in AI-enabled and autonomous systems",
+        "Trust, mental models, supervision, and human–AI collaboration",
+        "Multimodal, tangible, and wearable interaction",
+        "Embodied prototyping for responsive physical systems",
       ],
     },
     currentStatus: {
       title: "My Current Status",
       items: [
-        "Industry researcher in intelligent cockpit HMI for 5 years",
-        "Research-led HMI framework development in automotive context",
-        "Preparing PhD applications for Fall 2026",
+        "Industry experience in intelligent cockpit HMI since 2021",
+        "Experience bridging research, system design, and production programs",
+        "Preparing PhD applications for Fall 2027",
       ],
     },
-    keywords: ["HCI", "HMI", "Cognitive Psychology", "Human-AI Trust","Safety-Critical Systems","Hardware Development"],
+    keywords: ["Human Factors", "HCI", "Human–AI Interaction", "Human–Autonomy Interaction", "Embodied Interaction", "Physical Prototyping"],
   },
 
   // ==========================================
   // 📌 核心研究兴趣 (Core Research Interests)
   // ==========================================
   coreResearchInterests: {
-    sectionTitle: "My core research interests",
+    sectionTitle: "Core Research Interests",
     interests: [
       {
-        title: "Human Cognition in Automated Driving",
+        title: "Human–AI & Human–Autonomy Interaction",
         descriptions: [
-          "Driver mental models during L2-L3 transitions",
-          "Attention, trust, and over-reliance in intelligent cockpits",
+          "Mental models, trust, supervision, and collaboration with autonomous systems",
+          "Safety-critical automation and autonomous mobility as empirical contexts",
         ],
       },
       {
-        title: "Multimodal Interaction & Feedback",
+        title: "Embodied & Physical Interaction",
         descriptions: [
-          "Design patterns for visual / auditory / haptic feedback",
-          "Reducing cognitive load in safety-critical contexts",
+          "Tangible, wearable, deformable, and robotic interfaces",
+          "Physical prototyping as a way to investigate human–machine interaction",
         ],
       },
       {
-        title: "Emotional & Explainable AI Interfaces",
+        title: "Multimodal & Explainable Interfaces",
         descriptions: [
-          "Avatar-based voice assistants",
-          "Making AI intentions legible to users",
+          "Visual, auditory, haptic, and physiological interaction channels",
+          "Making system states and intentions legible while managing cognitive load",
         ],
       },
     ],
     // 研究问题（斜体显示）
     // Research questions (italicized)
     researchQuestions: [
-      "How do drivers interpret AI intentions in partially automated driving?",
-      "How can multimodal feedback reduce anxiety and improve trust?",
-      "What makes an AI interface \"understandable\" in time-critical scenarios?",
+      "How do people form accurate mental models of increasingly autonomous systems?",
+      "How can multimodal and embodied feedback support calibrated trust and effective collaboration?",
+      "What changes when AI moves from screen-based interfaces into physical, responsive, and robotic forms?",
     ],
   },
 
@@ -187,16 +188,16 @@ export const siteContent = {
     items: [
       {
         degree: "Master of Interaction Design in HMI & HCI ",
-        school: "TongJi University",
+        school: "Tongji University",
         location: "Shanghai, China",
         period: "2018 - 2021",
-        gpa: "4.73/5.0(1st Rank)",
+        gpa: "4.73/5.0 (1st in program)",
         status: "Completed",
         thesis: "Interaction Design, Concentrations in Human computer interaction and cognition",
         achievements: [
-          "Outstanding Graduate of Tongji University,2021(Top 2%)",
-          "Outstanding Master's Thesis Award, Tongji University (sole recipient,2021)",
-          "Hongda Scholarship(2018 ,2019) & Excellent Master’s Scholarship (2020), Tongji University (Top 2-3%)",
+          "Outstanding Graduate of Tongji University, 2021 (Top 2%)",
+          "Outstanding Master's Thesis Award, Tongji University (sole recipient, 2021)",
+          "Hongda Scholarship (2018, 2019) & Excellent Master’s Scholarship (2020), Tongji University (Top 2–3%)",
         ],
       },
       {
@@ -214,7 +215,7 @@ export const siteContent = {
         //],
       },
     ],
-    intro: "A comprehensive overview of my academic, teaching, industry, and individual projects that have shaped my professional development and research expertise."
+    intro: "My training connects electrical engineering, interaction design, and human-centered research."
   },
 
 
@@ -228,9 +229,9 @@ export const siteContent = {
       {
         category: "",
         status: "completed",
-        title: "Research on social acceptance and HMI for L4+ AV car",
-        description: "Led joint research on social acceptance and HMI for L4+ autonomous campus vehicles, from concept design to UX evaluation.Published findings in a core journal (CCF-C) and presented at HHME academic conference.",
-        tags: ["Principal Investigator (Student PI)"],
+        title: "Social Acceptance and HMI for L4+ Autonomous Vehicles",
+        description: "Led joint research on social acceptance and HMI for L4+ autonomous campus vehicles, from concept design to UX evaluation. Published findings in a core journal (CCF-C) and presented the work at HHME 2019.",
+        tags: ["Student Project Lead"],
         image: import.meta.env.BASE_URL + 'images/projects/project1.jpg',
         link: "",
       },
@@ -238,8 +239,8 @@ export const siteContent = {
         category: "",
         status: "completed",
         title: "Baidu Automotive White Paper Research Collaboration Project",
-        description: "Conducted large-scale benchmarking of 26 automotive brands; formalized findings into guidelines.Presented results at Baidu Headquarters; recognized by Apollo Lab.",
-        tags: ["Principal Investigator (Student PI)"],
+        description: "Conducted large-scale benchmarking of 26 automotive brands and formalized the findings into design guidelines. Presented the results at Baidu headquarters and received recognition from Apollo Lab.",
+        tags: ["Student Project Lead"],
         image: import.meta.env.BASE_URL + 'images/projects/project2.jpg',
         link: "",
       },
@@ -248,7 +249,7 @@ export const siteContent = {
         status: "completed",
         title: "Research on Autonomous Driving Behavior and Strategy",
         description: "Investigated driver behavior under ACC/LKA; designed 10 driving scenarios and collected/analyzed behavioral data from 30 participants.",
-        tags: ["Principal Investigator (Student PI)"],
+        tags: ["Student Project Lead"],
         image: import.meta.env.BASE_URL + 'images/projects/project3.jpg',
         link: "",
       },
@@ -265,7 +266,7 @@ export const siteContent = {
         category: "",
         status: "completed",
         title: "Intelligent In-Vehicle Interaction System Simulation",
-        description: "Spearheaded a 6-member team to build the lab's first functional driving simulation platform in Unity, supporting over 30 subsequent HMI behavior tests",
+        description: "Spearheaded a six-member team to build the lab's first functional driving simulation platform in Unity, supporting more than 30 subsequent HMI behavior tests.",
         tags: ["Team lead"],
         image: import.meta.env.BASE_URL + 'images/projects/project5.jpg',
         link: "",
@@ -275,20 +276,10 @@ export const siteContent = {
         status: "completed",
         title: "AI Voice Assistant Trust Study in Intelligent Cockpit",
         description: "Developed scenario-based prototypes for time-critical driving contexts; examined how multimodal feedback and explanation strategies affect user trust and cognitive load in controlled studies.",
-        tags: ["Principal Investigator (Student PI)"],
+        tags: ["Student Project Lead"],
         image: import.meta.env.BASE_URL + 'images/projects/project6.jpg',
         link: "",
       },
-      /*{
-        category: "Cybersecurity",
-        status: "completed",
-        title: "Distributed Systems Security Framework",
-        description: "Novel approaches to securing microservices architectures and cloud-native applications against emerging threats.",
-        tags: ["Security", "Distributed Systems", "Cloud"],
-        image: import.meta.env.BASE_URL + 'images/projects/project7.jpg',
-        link: "https://github.com/bhannzhang",
-      },
-      */
     ],
   },
 
@@ -296,7 +287,7 @@ export const siteContent = {
   // 📌 发表论文（Publications Section）
   // ==========================================
   publications: {
-    sectionTitle: "My Publications",
+    sectionTitle: "Publications & Books",
     categories: [
       {
         name: "Journal Articles",
@@ -307,7 +298,7 @@ export const siteContent = {
             venue: "Journal of Graphics",
             year: "2020",
             tags: ["CCF-C", "Core Journal"],
-            link: "https://github.com/bhannzhang",
+            link: "",
           },
           {
             title: "Human-Machine Interface Design of External Displays for Unmanned Logistics Vehicles",
@@ -315,7 +306,7 @@ export const siteContent = {
             venue: "Journal of Graphics",
             year: "2019",
             tags: ["CCF-C", "Core Journal"],
-            link: "https://github.com/bhannzhang",
+            link: "",
           },
         ],
       },
@@ -346,7 +337,7 @@ export const siteContent = {
           {
             title: "Research on Intelligent Vehicle Interaction Design Methodology",
             authors: "Zhang, B. (Contributing Author)",
-            venue: "Published monograph",
+            venue: "Science Press · ISBN 978-7-03-074373-2",
             year: "",
             tags: [],
             link: "",
@@ -364,13 +355,110 @@ export const siteContent = {
     ],
   },
 
+  // ==========================================
+  // 📌 外观设计专利（Design Patents）
+  // ==========================================
+  patents: {
+    sectionTitle: "Design Patents",
+    intro: "Named designer on five recently granted production HMI design patents at SAIC Volkswagen, alongside six earlier design patents arising from autonomous-delivery vehicle research.",
+    categories: [
+      {
+        name: "Production Automotive HMI · Granted 2026",
+        items: [
+          {
+            title: "GUI for 360° Surround-View Imaging on Electronic Devices",
+            number: "ZL 2024 3 0740457.0 · CN 309810392 S",
+            year: "2026",
+            role: "Named Designer (first listed) · Patent holder: SAIC Volkswagen Automotive Co.",
+            tags: ["Design Patent", "Surround View", "HMI"],
+          },
+          {
+            title: "GUI for Intelligent Parking Exit on Electronic Devices",
+            number: "ZL 2024 3 0740454.7 · CN 309810389 S",
+            year: "2026",
+            role: "Named Designer (first listed) · Patent holder: SAIC Volkswagen Automotive Co.",
+            tags: ["Design Patent", "Automated Parking", "HMI"],
+          },
+          {
+            title: "GUI for Reverse Parking Assistance on Electronic Devices",
+            number: "ZL 2024 3 0740455.1 · CN 309810390 S",
+            year: "2026",
+            role: "Named Designer (first listed) · Patent holder: SAIC Volkswagen Automotive Co.",
+            tags: ["Design Patent", "Parking Assistance", "HMI"],
+          },
+          {
+            title: "GUI for Memory Parking on Electronic Devices",
+            number: "ZL 2024 3 0740456.6 · CN 309810391 S",
+            year: "2026",
+            role: "Named Designer (first listed) · Patent holder: SAIC Volkswagen Automotive Co.",
+            tags: ["Design Patent", "Memorized Parking", "HMI"],
+          },
+          {
+            title: "GUI for Automated Parking on Electronic Devices",
+            number: "ZL 2024 3 0741186.0 · CN 309810396 S",
+            year: "2026",
+            role: "Named Designer (first listed) · Patent holder: SAIC Volkswagen Automotive Co.",
+            tags: ["Design Patent", "Automated Parking", "HMI"],
+          },
+        ],
+      },
+      {
+        name: "Autonomous Delivery Vehicles · Filed 2020",
+        items: [
+          {
+            title: "GUI for Grocery Shopping on an Unmanned Delivery Vehicle",
+            number: "ZL 2020 3 0593402.3",
+            year: "2020",
+            role: "Design patent · Filed Sep. 30, 2020",
+            tags: ["Design Patent", "GUI", "Autonomous Delivery"],
+          },
+          {
+            title: "GUI for Grocery Shopping on an Unmanned Delivery Cart",
+            number: "ZL 2020 3 0590998.1",
+            year: "2020",
+            role: "Design patent · Filed Sep. 30, 2020",
+            tags: ["Design Patent", "GUI", "Autonomous Delivery"],
+          },
+          {
+            title: "Unmanned Logistics Delivery Vehicle",
+            number: "ZL 2020 3 0593403.8",
+            year: "2020",
+            role: "Design patent · Filed Sep. 30, 2020",
+            tags: ["Design Patent", "Vehicle Design", "Autonomous Delivery"],
+          },
+          {
+            title: "Unmanned Logistics Delivery Cart",
+            number: "ZL 2020 3 0590985.4",
+            year: "2020",
+            role: "Design patent · Filed Sep. 30, 2020",
+            tags: ["Design Patent", "Vehicle Design", "Autonomous Delivery"],
+          },
+          {
+            title: "Unmanned Logistics Delivery Van",
+            number: "ZL 2020 3 0591011.8",
+            year: "2020",
+            role: "Design patent · Filed Sep. 30, 2020",
+            tags: ["Design Patent", "Vehicle Design", "Autonomous Delivery"],
+          },
+          {
+            title: "Unmanned Vehicle",
+            number: "ZL 2020 3 0204943.2",
+            year: "2020",
+            role: "Applicant / patent holder: Bihan Zhang · Filed May 8, 2020",
+            tags: ["Design Patent", "Vehicle Design", "Autonomous Driving"],
+          },
+        ],
+      },
+    ],
+  },
+
   
 
   // ==========================================
   // 📌 获奖与荣誉（Awards Section）
   // ==========================================
   awards: {
-    sectionTitle: "My Awards & Work Experience",
+    sectionTitle: "Awards & Honors",
     // 特色奖项（展示在卡片中，包含图片占位区域）
     // Featured awards (displayed in cards with image placeholders)
     featured: [
@@ -408,17 +496,17 @@ export const siteContent = {
   // 📌 方法与技能（Method & Skills）
   // ==========================================
   methodSkills: {
-    sectionTitle: "Method & My Skills",
+    sectionTitle: "Methods & Skills",
     groups: [
       {
         name: "Research Methods",
         skills: [
-          "User Research",
-          "A/B Testing",
+          "Controlled Experiments",
+          "Mixed-Methods Research",
           "Usability Testing",
           "Eye Tracking",
-          "Survey Design",
-          "Interview Analysis",
+          "Survey & Interview Design",
+          "Quantitative Analysis",
         ],
       },
       {
@@ -426,7 +514,7 @@ export const siteContent = {
         skills: [
           "Figma",
           "Sketch",
-          "Adobe XD",
+          "Unity",
           "Prototyping",
           "UI/UX Design",
           "Interaction Design",
@@ -435,23 +523,23 @@ export const siteContent = {
       {
         name: "Technical Skills",
         skills: [
-          "C programming language",
           "Arduino",
+          "Processing",
           "Hardware Prototyping",
-          "Data Analysis",
+          "Sensors & Actuation",
           "SPSS",
-          "Technical Writing",
+          "C Programming",
         ],
       },
     ],
     additionalExperience: [
       {
         title: "International Collaboration",
-        description: "Cross-cultural research projects with European and American partners",
+        description: "Cross-cultural research projects with European and American collaborators",
       },
       {
         title: "Industry Experience",
-        description: "SAIC Volkswagen HMI Framework designer for 5 years",
+        description: "HMI and interaction framework design at SAIC Volkswagen since 2021",
       },
     ],
   },
@@ -470,7 +558,7 @@ export const siteContent = {
         // 工作类型 (Work type): FULL TIME / INTERNSHIP / PART TIME
         type: "FULL TIME",
         // 地点 (Location)
-        location: "[Shanghai, China]",
+        location: "Shanghai, China",
         // 公司 logo 图片路径（可选，留空则显示文字缩写，放在 public/images/ 目录下）
         // Company logo image path (optional, leave empty to show text abbreviation)
         // logo: import.meta.env.BASE_URL + 'images/logos/company1.png',
@@ -484,26 +572,26 @@ export const siteContent = {
             // 职位名称 (Role title)
             title: "HMI Designer in Intelligent Connectivity R&D Department",
             // 时间段 (Period)
-            period: "Apr. 2023 – Now",
+            period: "Apr. 2023 – Present",
             // 职责描述列表 (List of responsibilities)
             responsibilities: [
               "1. Led the core interaction framework design for the next-generation NEX HMI, Volkswagen’s first fully China-designed human–machine interface system, developed from the ground up to address localized user needs and driving habits.",
               "2. Directed HMI framework for the new AUDI intelligent cockpit (first localized EV brand with SAIC), defining core interaction architecture across multiple domains; design successfully mass-produced.",
-              "3. Led UX/HMI design for RHP 2.0 Parking (VW's first localized autonomous parking project in China), achieving cross-functional approval and resulting in 5 patented innovations.",
+              "3. Led UX/HMI design for RHP 2.0 Parking (Volkswagen's first localized autonomous parking project in China), achieving cross-functional approval and resulting in 10 patent-related interaction innovations, including five recently granted design patents.",
               "4. Directed strategic research under the Digital Cockpit Strategy Field, producing a trend analysis report that identified key innovation directions and achieved the highest annual performance rating."
             ],
           },
           {
-            title: "Product Definition Engineer in Autonomous Driving R&D Department ",
-            period: "Jul. 2022 - Mar. 2023  ",
+            title: "Product Definition Engineer in Autonomous Driving R&D Department",
+            period: "Jul. 2022 – Mar. 2023",
             responsibilities: [
               "1. Led end-to-end HMI design and system definition for the ADAP proof-of-concept project, from interaction framework to simulator validation.",
               "2. Served as the sole design lead for the RHP 3.0 autonomous driving concept, overseeing software interaction design, in-vehicle simulator development, and live vehicle demonstrations. The project was selected as a core innovation at the Volkswagen IVET Conference and later transferred to the production division for mass-production adaptation.",
             ],
           },
           {
-            title: "HMI Designer in Autonomous Driving R&D Department (ERR).            ",
-            period: "Jul. 2021 - Jun. 2022 ",
+            title: "HMI Designer in Autonomous Driving R&D Department (ERR)",
+            period: "Jul. 2021 – Jun. 2022",
             responsibilities: [
               "1. Led HMI concept design for the SVW concept car, conducting prototype evaluations and usability studies; contributed to Volkswagen's advanced innovation program.",
               "2. Directed the next-generation ADAS system framework, overseeing user research, qualitative analysis, and evaluation synthesis for large-scale testing in Shenzhen.",
@@ -514,7 +602,7 @@ export const siteContent = {
         ],
       },
       {
-        name: "BMW GROUP ",
+        name: "BMW Group",
         type: "INTERNSHIP",
         location: "Shanghai, China",
         logo: "",
@@ -522,7 +610,7 @@ export const siteContent = {
         roles: [
           {
             title: "Interaction Design Intern, ABK China Skylab",
-            period: " Oct. 2019 – May 2020",
+            period: "Oct. 2019 – May 2020",
             responsibilities: [
               "1. Contributed to the design of a digital credit system app and the BMW Avatar project; independently led usability studies comparing BMW ID 7 and ID 8 systems.",
             ],
@@ -537,10 +625,12 @@ export const siteContent = {
   // ==========================================
   individualWork: {
     // 栏目标题 (Section title)
-    sectionTitle: "Individual Work",
-    // 作品列表（每项包含标题、描述、年份）
-    // Project list (each item has title, description, year)
-    items: [
+    sectionTitle: "Embodied & Interactive Prototypes",
+    intro: "Exploratory prototypes developed to investigate interaction with sensing, responsive, and physically embodied systems. These projects demonstrate hands-on inquiry and are not presented as published research outcomes.",
+    groups: [
+      {
+        name: "Embodied & Physical Prototypes",
+        items: [
       {
         // 作品标题 (Work title)
         title: "Scoliosis Sleep Posture Monitoring Wearable",
@@ -550,8 +640,8 @@ export const siteContent = {
         year: "2025",
       },
       {
-        title: "Phantom Limb Pain Suppression via EMG Monitoring",
-        description: "Built a multimodal feedback system using EMG sensing and Processing visualization to support pain suppression and affective rehabilitation.",
+        title: "EMG-Responsive Prototype for Phantom Limb Pain Exploration",
+        description: "Built an exploratory multimodal feedback prototype using EMG sensing and Processing visualization to investigate feedback concepts for rehabilitation contexts.",
         year: "2025",
       },
       {
@@ -570,8 +660,8 @@ export const siteContent = {
         year: "2024",
       },
       {
-        title: "Menstrual Cycle Monitoring",
-        description: "Designed a wearable device integrating HRV and temperature sensing for menstrual cycle prediction and women’s health informatics. ",
+        title: "Menstrual Cycle Sensing Concept",
+        description: "Designed an exploratory wearable concept integrating HRV and temperature sensing for menstrual-cycle tracking and women’s health informatics.",
         year: "2024",
       },
        {
@@ -584,6 +674,11 @@ export const siteContent = {
         description: "Built a multimodal sensing platform for real-time skin condition detection and digital health visualization. ",
         year: "2024",
       },
+        ],
+      },
+      {
+        name: "Interactive Systems & Service Concepts",
+        items: [
       {
         title: "EV Charging Service & App Design",
         description: "Designed and prototyped a mobile interface for EV charging optimization, focusing on user flow, service design, and sustainability. ",
@@ -599,6 +694,8 @@ export const siteContent = {
         description: "Created an interactive visualization tool for tire performance benchmarking using Touch Designer and auditory data sonification. ",
         year: "2022",
       },
+        ],
+      },
     ],
   },
 
@@ -606,16 +703,17 @@ export const siteContent = {
   // 📌 导航菜单 (Navigation Menu)
   // ==========================================
   navigation: {
-    brand: "Bhann's website",
+    brand: "Bihan Zhang",
     items: [
       { label: "Home", href: "#home" },
-      { label: "Education", href: "#education" },
       { label: "Research & Projects", href: "#research-projects" },
       { label: "Publications", href: "#publications" },
-      { label: "Awards & Experience", href: "#awards" },
+      { label: "Patents", href: "#patents" },
+      { label: "Prototypes", href: "#prototypes" },
+      { label: "Education", href: "#education" },
       { label: "Work Experience", href: "#work-experience" },
-      { label: "Individual Work", href: "#individual-work" },
-      { label: "Method & Skills", href: "#skills" },
+      { label: "Awards", href: "#awards" },
+      { label: "Methods & Skills", href: "#skills" },
     ],
     menuButtonLabel: "Menu",
   },
@@ -626,9 +724,9 @@ export const siteContent = {
   footer: {
     copyright: "© 2026 Zhang Bihan. All rights reserved.",
     links: [
-      { label: "GitHub", url: "https://github.com/yourusername" },
+      { label: "GitHub", url: "https://github.com/bhannzhang" },
       { label: "Email", url: "mailto:Zhangbihan621@outlook.com" },
-      { label: "Twitter", url: "https://twitter.com/yourusername" },
+      { label: "Twitter", url: "https://x.com/haideezhang?s=11" },
     ],
   },
 
@@ -636,9 +734,9 @@ export const siteContent = {
   // 📌 SEO 和元数据 (SEO and Metadata)
   // ==========================================
   meta: {
-    title: "Bhann's Website - Zhang Bihan",
-    description: "PhD Applicant in HCI & Cognitive Psychology, Focusing on Intelligent Cockpit Interaction, Multimodal Feedback, and Driver Cognition",
-    keywords: "HCI, Human-Computer Interaction, Cognitive Psychology, Autonomous Driving, UX Research",
+    title: "Bihan Zhang | Human Factors, HCI & Embodied Interaction",
+    description: "Fall 2027 PhD applicant studying how people understand, trust, collaborate with, and physically interact with intelligent and autonomous systems.",
+    keywords: "Human Factors, HCI, Human-AI Interaction, Human-Autonomy Interaction, Embodied Interaction, Physical Prototyping, Automotive HMI",
     
     // [Method 1] Local file:
     // ogImage: import.meta.env.BASE_URL + 'images/og-image.jpg',

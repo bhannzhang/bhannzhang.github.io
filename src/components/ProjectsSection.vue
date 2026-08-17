@@ -17,7 +17,11 @@
           v-for="(project, index) in displayedProjects" 
           :key="index"
           class="project-card"
+          :class="{ 'project-card--clickable': isProjectClickable(project) }"
+          :role="isProjectClickable(project) ? 'link' : undefined"
+          :tabindex="isProjectClickable(project) ? 0 : undefined"
           @click="openProject(project.link)"
+          @keydown.enter="openProject(project.link)"
         >
           <!-- Image Area -->
           <div class="project-card__image">
@@ -69,7 +73,7 @@
           </div>
           
           <!-- Hover Arrow -->
-          <div class="project-card__arrow">
+          <div v-if="isProjectClickable(project)" class="project-card__arrow">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <line x1="7" y1="17" x2="17" y2="7"></line>
               <polyline points="7 7 17 7 17 17"></polyline>
@@ -102,6 +106,8 @@ const openProject = (link) => {
     window.open(link, '_blank')
   }
 }
+
+const isProjectClickable = (project) => Boolean(project.link && project.link !== '#')
 
 const handleViewMore = () => {
   showAll.value = !showAll.value
@@ -198,7 +204,7 @@ const getStatusClass = (status) => {
   background: var(--color-card-light);
   border-radius: var(--radius-lg);
   padding: 1.25rem;
-  cursor: pointer;
+  cursor: default;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -206,13 +212,18 @@ const getStatusClass = (status) => {
   flex-direction: column;
   min-height: 200px;
 
-  &:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 24px rgba(139, 92, 246, 0.15);
+  &--clickable {
+    cursor: pointer;
 
-    .project-card__arrow {
-      opacity: 1;
-      transform: translate(0, 0);
+    &:hover,
+    &:focus-visible {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(139, 92, 246, 0.15);
+
+      .project-card__arrow {
+        opacity: 1;
+        transform: translate(0, 0);
+      }
     }
   }
 

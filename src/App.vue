@@ -6,6 +6,7 @@ import EducationSection from './components/EducationSection.vue';
 import ResearchInterestsSection from './components/ResearchInterestsSection.vue';
 import ProjectsSection from './components/ProjectsSection.vue';
 import PublicationsSection from './components/PublicationsSection.vue';
+import PatentsSection from './components/PatentsSection.vue';
 import SkillsSection from './components/SkillsSection.vue';
 import AwardsSection from './components/AwardsSection.vue';
 import WorkExperienceSection from './components/WorkExperience.vue';
@@ -27,9 +28,6 @@ import BackToTopButton from './components/BackToTopButton.vue';
       <!-- Overview Section -->
       <OverviewSection />
       
-      <!-- Education Section -->
-      <EducationSection />
-      
       <!-- Research & Projects Section -->
       <section id="research-projects">
         <ResearchInterestsSection />
@@ -38,15 +36,21 @@ import BackToTopButton from './components/BackToTopButton.vue';
       
       <!-- Publications Section -->
       <PublicationsSection />
-      
-      <!-- Awards & Experience Section -->
-      <AwardsSection />
+
+      <!-- Patents Section -->
+      <PatentsSection />
+
+      <!-- Embodied & Interactive Prototypes -->
+      <IndividualWorkSection />
+
+      <!-- Education Section -->
+      <EducationSection />
 
       <!-- Work Experience Section -->
       <WorkExperienceSection />
 
-      <!-- Individual Work Section -->
-      <IndividualWorkSection />
+      <!-- Awards & Honors Section -->
+      <AwardsSection />
 
       <!-- Method & Skills Section -->
       <SkillsSection />

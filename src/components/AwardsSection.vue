@@ -34,7 +34,7 @@
             
             <div class="award-card__content">
               <h3 class="award-card__title">{{ award.title }}</h3>
-              <p class="award-card__description">{{ award.description || 'Novel approaches to securing microservices architectures and cloud-native applications against emerging threats.' }}</p>
+              <p v-if="award.description" class="award-card__description">{{ award.description }}</p>
             </div>
             <div class="award-card__arrow" aria-hidden="true">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">

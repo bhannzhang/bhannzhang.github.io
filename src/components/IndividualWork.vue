@@ -1,22 +1,25 @@
 <template>
-  <section id="individual-work" class="individual-work">
+  <section id="prototypes" class="individual-work">
     <div class="individual-work__container">
       <h2 class="section-title">{{ content.individualWork.sectionTitle }}</h2>
+      <p class="individual-work__intro">{{ content.individualWork.intro }}</p>
 
-      <ul class="individual-work__list">
-        <li
-          v-for="(item, index) in content.individualWork.items"
-          :key="index"
-          class="work-item"
-        >
-          <!-- Bullet handled via CSS; bold title, then italic description + year -->
-          <span class="work-item__title">{{ item.title }}:</span>
-          <span class="work-item__desc">
-            {{ item.description }}
-            <span class="work-item__year">({{ item.year }})</span>
-          </span>
-        </li>
-      </ul>
+      <div v-for="group in content.individualWork.groups" :key="group.name" class="individual-work__group">
+        <h3 class="individual-work__group-title">{{ group.name }}</h3>
+        <ul class="individual-work__list">
+          <li
+            v-for="item in group.items"
+            :key="item.title"
+            class="work-item"
+          >
+            <span class="work-item__title">{{ item.title }}:</span>
+            <span class="work-item__desc">
+              {{ item.description }}
+              <span class="work-item__year">({{ item.year }})</span>
+            </span>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 </template>
@@ -41,6 +44,32 @@ const content = siteContent
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
+  }
+
+  &__intro {
+    max-width: 780px;
+    margin: -1.25rem auto 2.5rem;
+    color: var(--color-text-secondary);
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    text-align: center;
+  }
+
+  &__group {
+    margin-bottom: 2.5rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__group-title {
+    margin: 0 0 1rem;
+    padding-left: 1rem;
+    border-left: 3px solid var(--color-primary);
+    color: var(--color-primary);
+    font-size: 1rem;
+    font-weight: 600;
   }
 
   /* ── bullet list ── */
