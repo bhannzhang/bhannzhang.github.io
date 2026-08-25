@@ -22,6 +22,7 @@ export default defineConfig({
       automotiveBenchmarking: resolve(__dirname, 'research/automotive-benchmarking/index.html'),
       driverAutomation: resolve(__dirname, 'research/driver-automation/index.html'),
       digitalTwinDriving: resolve(__dirname, 'research/digital-twin-driving/index.html'),
+      drivingSimulationPlatform: resolve(__dirname, 'research/driving-simulation-platform/index.html'),
     },
     output: {
         manualChunks(id) {
