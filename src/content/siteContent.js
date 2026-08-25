@@ -228,7 +228,7 @@ export const siteContent = {
     items: [
       {
         category: "Human–Autonomy Interaction",
-        status: "2018–2021",
+        status: "Completed",
         title: "Social Acceptance and External Communication for Autonomous Delivery Vehicles",
         description: "Led a multi-stage research program that developed from a Mitsubishi Electric campus-delivery collaboration into cross-cultural research with Ulm University and an independently redesigned master's thesis prototype. Using Wizard-of-Oz studies, interviews, multimodal eHMI prototyping, and comparative evaluation, I examined how communication strategies influence pedestrians' trust, understanding, and acceptance.",
         tags: ["Project Lead", "Cross-cultural HRI", "Multimodal eHMI", "56 + 25 participants"],
@@ -237,7 +237,7 @@ export const siteContent = {
       },
       {
         category: "Intelligent-Cockpit UX Research",
-        status: "2019",
+        status: "Completed",
         title: "Cross-Brand Benchmarking for Intelligent-Cockpit Interface Guidelines",
         description: "Led a structured benchmark of 26 automotive brands and translated heterogeneous interface evidence into a 12,000-word internal white paper and actionable UI/UX guidelines. Presented the research at Baidu headquarters; the work was recognized by Apollo Lab for methodological rigor.",
         tags: ["Student Project Lead", "26 brands", "Design synthesis", "NDA-safe case"],
@@ -255,7 +255,7 @@ export const siteContent = {
       },
       {
         category: "Simulation Infrastructure & Human Factors",
-        status: "2019–2020",
+        status: "Completed",
         title: "Real-World Digital Twin for Virtual Driving Evaluation",
         description: "Led a team in translating approximately 500,000 m² of surveyed road geography into a modular Unity environment for repeatable virtual-driving evaluation. The work connected field evidence, road-standard analysis, reusable scene assets, and ADAS-ready road logic while respecting the confidentiality of the final partner system.",
         tags: ["Team Lead", "~500,000 m²", "Unity", "NDA-safe case"],
@@ -264,7 +264,7 @@ export const siteContent = {
       },
       {
         category: "Experimental Systems & HMI Research",
-        status: "2018–2019",
+        status: "Completed",
         title: "Modular Multi-Screen Driving Simulation Platform",
         description: "Led a six-member team in building the lab's first functional, networked driving-simulation platform. A decoupled Unity and MQTT architecture synchronized vehicles, ADAS states, monitoring data, and multiple HMI surfaces, enabling rapid interface iteration and supporting more than 30 subsequent HMI and driver-behavior tests.",
         tags: ["Team Lead", "6-person team", "30+ studies", "Unity + MQTT"],
@@ -273,7 +273,7 @@ export const siteContent = {
       },
       {
         category: "",
-        status: "completed",
+        status: "Completed",
         title: "AI Voice Assistant Trust Study in Intelligent Cockpit",
         description: "Developed scenario-based prototypes for time-critical driving contexts; examined how multimodal feedback and explanation strategies affect user trust and cognitive load in controlled studies.",
         tags: ["Student Project Lead"],
