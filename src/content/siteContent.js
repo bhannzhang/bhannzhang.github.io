@@ -277,7 +277,7 @@ export const siteContent = {
         title: "Proactive Embodied Voice Assistant for Safety-Critical Driving",
         description: "Designed an embodied in-vehicle voice assistant that coordinates speech, text, affective expressions, and escalating alerts across driver-monitoring and automation scenarios. The concept was informed by competitive analysis and six exploratory interviews.",
         tags: ["Independent project", "Proactive HRI", "6 interviews", "Multimodal feedback"],
-        image: import.meta.env.BASE_URL + 'images/research/voice-assistant/cockpit-concepts.png',
+        image: import.meta.env.BASE_URL + 'images/projects/project6.jpg',
         link: import.meta.env.BASE_URL + 'research/voice-assistant/',
       },
     ],
