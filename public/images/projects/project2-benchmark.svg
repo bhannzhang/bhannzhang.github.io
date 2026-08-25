@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Cross-brand intelligent-cockpit interface benchmarking</title>
+  <desc id="desc">An abstract comparison matrix connecting automotive interfaces to design guidelines.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#141322"/>
+      <stop offset="1" stop-color="#31235c"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#a78bfa"/>
+      <stop offset="1" stop-color="#60a5fa"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" fill="url(#bg)"/>
+  <circle cx="1060" cy="70" r="210" fill="#8b5cf6" opacity=".12"/>
+  <g transform="translate(90 92)">
+    <text x="0" y="0" fill="#c4b5fd" font-family="Inter,Arial,sans-serif" font-size="21" font-weight="700" letter-spacing="3">CROSS-BRAND BENCHMARK</text>
+    <text x="0" y="74" fill="#fff" font-family="Inter,Arial,sans-serif" font-size="74" font-weight="800">26</text>
+    <text x="105" y="72" fill="#d6d3e1" font-family="Inter,Arial,sans-serif" font-size="28">automotive brands</text>
+  </g>
+  <g transform="translate(90 245)" fill="none" stroke="#8b82a6" stroke-width="1">
+    <rect width="610" height="360" rx="24" fill="#111018" stroke="#4c4560"/>
+    <path d="M0 90h610M0 180h610M0 270h610M122 0v360M244 0v360M366 0v360M488 0v360" opacity=".55"/>
+    <g fill="url(#accent)" stroke="none">
+      <rect x="21" y="21" width="80" height="48" rx="9"/><rect x="143" y="111" width="80" height="48" rx="9"/>
+      <rect x="265" y="21" width="80" height="48" rx="9"/><rect x="387" y="201" width="80" height="48" rx="9"/>
+      <rect x="509" y="111" width="80" height="48" rx="9"/><rect x="21" y="291" width="80" height="48" rx="9"/>
+      <rect x="265" y="291" width="80" height="48" rx="9"/><rect x="509" y="291" width="80" height="48" rx="9"/>
+    </g>
+  </g>
+  <path d="M735 425h90" stroke="#a78bfa" stroke-width="3" stroke-dasharray="8 9"/>
+  <path d="m810 410 18 15-18 15" fill="none" stroke="#a78bfa" stroke-width="3"/>
+  <g transform="translate(855 266)">
+    <rect width="260" height="318" rx="24" fill="#f0e6ff"/>
+    <text x="28" y="54" fill="#3105a9" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="700" letter-spacing="2">SYNTHESIS</text>
+    <g fill="#241d32" font-family="Inter,Arial,sans-serif" font-size="21" font-weight="600">
+      <text x="28" y="108">Information architecture</text><text x="28" y="151">Layout &amp; hierarchy</text>
+      <text x="28" y="194">Typography</text><text x="28" y="237">Color &amp; state</text><text x="28" y="280">Icon behavior</text>
+    </g>
+  </g>
+</svg>

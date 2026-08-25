@@ -19,6 +19,7 @@ export default defineConfig({
     input: {
       main: resolve(__dirname, 'index.html'),
       autonomousDelivery: resolve(__dirname, 'research/autonomous-delivery/index.html'),
+      automotiveBenchmarking: resolve(__dirname, 'research/automotive-benchmarking/index.html'),
     },
     output: {
         manualChunks(id) {
