@@ -38,7 +38,7 @@ export const siteContent = {
     // 英文昵称 (English nickname)
     nickname: "Bhann",
     // 您的职位/身份 (Your position/title)
-    title: "Fall 2027 PhD Applicant · Human Factors & HCI",
+    title: "Human Factors & HCI Researcher · Fall 2027 PhD Applicant",
     // 您所在的学校/机构 (Your school/organization)
     institution: "SAIC Volkswagen",
     // 位置 (Your location)
@@ -92,15 +92,15 @@ export const siteContent = {
   // ==========================================
   overview: {
     // 欢迎语 (Welcome message)
-    welcome: "I study how people understand, trust, collaborate with, and physically interact with intelligent and autonomous systems.",
+    welcome: "I study how people understand, trust, and coordinate with autonomous and robotic systems in everyday social settings.",
     // 主要描述 (Main description)
     description: "",
     // 注释（可选） (Note (optional))
     note: "",
     // 背景信息 (Background information)
-    background: "Human Factors research and interaction design, grounded in automotive HMI practice since 2021 and hands-on prototyping of embodied interfaces.",
+    background: "My research spans human–autonomy interaction, eHMI, cross-cultural HRI, and embodied prototyping, informed by five years of automotive HMI practice.",
     backgroundNote: "",
-    researchNarrative: "My work began with human interaction in intelligent vehicles and complex automated systems. Seeing how people interpret, trust, and supervise autonomy in production contexts led me to a broader research question: how can increasingly intelligent and physically embodied systems become understandable, trustworthy, and effective collaborators?",
+    researchNarrative: "Beginning with autonomous delivery vehicles in public spaces, I have examined how communication strategies, multimodal cues, and embodiment shape people's understanding and acceptance of autonomy. My current interests extend this work toward socially legible robots and human–AI collaboration in real-world contexts.",
     // 按钮 (Buttons)
     buttons: [
       {
@@ -126,10 +126,10 @@ export const siteContent = {
     coreResearch: {
       title: "Core Research Areas",
       items: [
-        "Human factors in AI-enabled and autonomous systems",
-        "Trust, mental models, supervision, and human–AI collaboration",
-        "Multimodal, tangible, and wearable interaction",
-        "Embodied prototyping for responsive physical systems",
+        "Social interaction with robots and autonomous systems",
+        "Trust, legibility, coordination, and human–AI collaboration",
+        "Multimodal communication for autonomous mobility and HRI",
+        "Embodied prototyping for research in real-world contexts",
       ],
     },
     currentStatus: {
@@ -140,7 +140,7 @@ export const siteContent = {
         "Preparing PhD applications for Fall 2027",
       ],
     },
-    keywords: ["Human Factors", "HCI", "Human–AI Interaction", "Human–Autonomy Interaction", "Embodied Interaction", "Physical Prototyping"],
+    keywords: ["Human Factors", "HCI", "Human–Robot Interaction", "Human–Autonomy Interaction", "Social Robotics", "Embodied Interaction"],
   },
 
   // ==========================================
@@ -150,33 +150,33 @@ export const siteContent = {
     sectionTitle: "Core Research Interests",
     interests: [
       {
-        title: "Human–AI & Human–Autonomy Interaction",
+        title: "Human–Robot & Human–Autonomy Interaction",
         descriptions: [
-          "Mental models, trust, supervision, and collaboration with autonomous systems",
-          "Safety-critical automation and autonomous mobility as empirical contexts",
+          "Trust, coordination, and social interaction with robots and autonomous systems",
+          "Autonomous mobility and public-space robots as empirical contexts",
+        ],
+      },
+      {
+        title: "Socially Legible & Multimodal Systems",
+        descriptions: [
+          "Visual, auditory, behavioral, and spatial cues that make system intentions understandable",
+          "Communication across cultures, road users, and group settings",
         ],
       },
       {
         title: "Embodied & Physical Interaction",
         descriptions: [
-          "Tangible, wearable, deformable, and robotic interfaces",
-          "Physical prototyping as a way to investigate human–machine interaction",
-        ],
-      },
-      {
-        title: "Multimodal & Explainable Interfaces",
-        descriptions: [
-          "Visual, auditory, haptic, and physiological interaction channels",
-          "Making system states and intentions legible while managing cognitive load",
+          "Robotic, tangible, wearable, and responsive physical interfaces",
+          "Research through functional prototyping and empirical evaluation",
         ],
       },
     ],
     // 研究问题（斜体显示）
     // Research questions (italicized)
     researchQuestions: [
-      "How do people form accurate mental models of increasingly autonomous systems?",
-      "How can multimodal and embodied feedback support calibrated trust and effective collaboration?",
-      "What changes when AI moves from screen-based interfaces into physical, responsive, and robotic forms?",
+      "How do people interpret and coordinate with autonomous systems in shared social spaces?",
+      "How can multimodal behavior make robots and autonomous vehicles legible without overloading attention?",
+      "How do culture, embodiment, and group context shape trust and interaction with intelligent systems?",
     ],
   },
 
@@ -196,7 +196,7 @@ export const siteContent = {
         thesis: "Interaction Design, Concentrations in Human computer interaction and cognition",
         achievements: [
           "Outstanding Graduate of Tongji University, 2021 (Top 2%)",
-          "Outstanding Master's Thesis Award, Tongji University (sole recipient, 2021)",
+          "Outstanding Master's Thesis, Tongji University (2021)",
           "Hongda Scholarship (2018, 2019) & Excellent Master’s Scholarship (2020), Tongji University (Top 2–3%)",
         ],
       },
@@ -227,11 +227,11 @@ export const siteContent = {
     viewMoreText: "View more",
     items: [
       {
-        category: "",
-        status: "completed",
-        title: "Social Acceptance and HMI for L4+ Autonomous Vehicles",
-        description: "Led joint research on social acceptance and HMI for L4+ autonomous campus vehicles, from concept design to UX evaluation. Published findings in a core journal (CCF-C) and presented the work at HHME 2019.",
-        tags: ["Student Project Lead"],
+        category: "Human–Autonomy Interaction",
+        status: "2018–2021",
+        title: "Social Acceptance and External Communication for Autonomous Delivery Vehicles",
+        description: "Led a multi-stage research program that developed from a Mitsubishi Electric campus-delivery collaboration into cross-cultural research with Ulm University and an independently redesigned master's thesis prototype. Using Wizard-of-Oz studies, interviews, multimodal eHMI prototyping, and comparative evaluation, I examined how communication strategies influence pedestrians' trust, understanding, and acceptance.",
+        tags: ["Project Lead", "Cross-cultural HRI", "Multimodal eHMI", "56 + 25 participants"],
         image: import.meta.env.BASE_URL + 'images/projects/project1.jpg',
         link: "",
       },
