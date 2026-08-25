@@ -20,6 +20,7 @@ export default defineConfig({
       main: resolve(__dirname, 'index.html'),
       autonomousDelivery: resolve(__dirname, 'research/autonomous-delivery/index.html'),
       automotiveBenchmarking: resolve(__dirname, 'research/automotive-benchmarking/index.html'),
+      driverAutomation: resolve(__dirname, 'research/driver-automation/index.html'),
     },
     output: {
         manualChunks(id) {
