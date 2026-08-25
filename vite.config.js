@@ -23,6 +23,7 @@ export default defineConfig({
       driverAutomation: resolve(__dirname, 'research/driver-automation/index.html'),
       digitalTwinDriving: resolve(__dirname, 'research/digital-twin-driving/index.html'),
       drivingSimulationPlatform: resolve(__dirname, 'research/driving-simulation-platform/index.html'),
+      voiceAssistant: resolve(__dirname, 'research/voice-assistant/index.html'),
     },
     output: {
         manualChunks(id) {
