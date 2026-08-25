@@ -21,6 +21,7 @@ export default defineConfig({
       autonomousDelivery: resolve(__dirname, 'research/autonomous-delivery/index.html'),
       automotiveBenchmarking: resolve(__dirname, 'research/automotive-benchmarking/index.html'),
       driverAutomation: resolve(__dirname, 'research/driver-automation/index.html'),
+      digitalTwinDriving: resolve(__dirname, 'research/digital-twin-driving/index.html'),
     },
     output: {
         manualChunks(id) {

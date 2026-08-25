@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1270 672" role="img" aria-labelledby="title desc">
+  <title id="title">Abstract digital-twin road network</title>
+  <desc id="desc">A privacy-safe visualization of surveyed roads translated into a modular simulation environment.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#081b1d"/><stop offset="1" stop-color="#101217"/></linearGradient>
+    <linearGradient id="road" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#2b4c4d"/><stop offset="1" stop-color="#172b2e"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1270" height="672" fill="url(#bg)"/>
+  <g opacity=".18" stroke="#84e4cc" stroke-width="1"><path d="M0 112h1270M0 224h1270M0 336h1270M0 448h1270M0 560h1270"/><path d="M127 0v672M254 0v672M381 0v672M508 0v672M635 0v672M762 0v672M889 0v672M1016 0v672M1143 0v672"/></g>
+  <path d="M-50 520C180 475 260 250 470 280S760 535 1320 120" fill="none" stroke="url(#road)" stroke-width="98"/>
+  <path d="M90 40C310 195 460 510 680 655" fill="none" stroke="url(#road)" stroke-width="72"/>
+  <path d="M770 -20C760 145 870 238 1110 310S1235 540 1290 660" fill="none" stroke="url(#road)" stroke-width="66"/>
+  <g fill="none" stroke="#d5fff2" stroke-width="4" stroke-dasharray="22 18" opacity=".8"><path d="M-50 520C180 475 260 250 470 280S760 535 1320 120"/><path d="M90 40C310 195 460 510 680 655"/><path d="M770 -20C760 145 870 238 1110 310S1235 540 1290 660"/></g>
+  <g fill="#76e6c5" filter="url(#glow)"><circle cx="244" cy="405" r="8"/><circle cx="478" cy="283" r="8"/><circle cx="720" cy="407" r="8"/><circle cx="942" cy="278" r="8"/><circle cx="1128" cy="323" r="8"/></g>
+  <g font-family="Inter,Arial,sans-serif" fill="#d5fff2"><text x="68" y="588" font-size="20" letter-spacing="3">FIELD → MODEL → TEST</text><text x="68" y="622" font-size="13" opacity=".6" letter-spacing="2">NDA-SAFE RESEARCH INFRASTRUCTURE</text></g>
+  <g transform="translate(970 76)"><rect width="220" height="84" rx="16" fill="#0e2929" stroke="#76e6c5" stroke-opacity=".45"/><text x="22" y="34" font-family="Inter,Arial,sans-serif" font-size="13" fill="#8ea7a3">MODELED COVERAGE</text><text x="22" y="65" font-family="Inter,Arial,sans-serif" font-size="25" font-weight="700" fill="#f5fffc">~500,000 m²</text></g>
+</svg>
