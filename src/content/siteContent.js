@@ -233,7 +233,7 @@ export const siteContent = {
         description: "Led a multi-stage research program that developed from a Mitsubishi Electric campus-delivery collaboration into cross-cultural research with Ulm University and an independently redesigned master's thesis prototype. Using Wizard-of-Oz studies, interviews, multimodal eHMI prototyping, and comparative evaluation, I examined how communication strategies influence pedestrians' trust, understanding, and acceptance.",
         tags: ["Project Lead", "Cross-cultural HRI", "Multimodal eHMI", "56 + 25 participants"],
         image: import.meta.env.BASE_URL + 'images/projects/project1.jpg',
-        link: "",
+        link: import.meta.env.BASE_URL + 'research/autonomous-delivery/',
       },
       {
         category: "",

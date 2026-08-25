@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import { resolve } from 'path'
 
 export default defineConfig({
   plugins: [vue()],
@@ -14,8 +15,12 @@ export default defineConfig({
     // Use esbuild for faster minification
     minify: 'esbuild',
     // Optimize chunk size
-    rollupOptions: {
-      output: {
+  rollupOptions: {
+    input: {
+      main: resolve(__dirname, 'index.html'),
+      autonomousDelivery: resolve(__dirname, 'research/autonomous-delivery/index.html'),
+    },
+    output: {
         manualChunks(id) {
           if (id.includes('node_modules')) {
             return 'vendor';

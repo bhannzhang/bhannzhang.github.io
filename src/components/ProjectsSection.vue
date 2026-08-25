@@ -103,7 +103,7 @@ const displayedProjects = computed(() => {
 
 const openProject = (link) => {
   if (link && link !== '#') {
-    window.open(link, '_blank')
+    window.location.assign(link)
   }
 }
 
