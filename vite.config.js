@@ -25,6 +25,7 @@ export default defineConfig({
       drivingSimulationPlatform: resolve(__dirname, 'research/driving-simulation-platform/index.html'),
       voiceAssistant: resolve(__dirname, 'research/voice-assistant/index.html'),
       oyiResearch: resolve(__dirname, 'research/oyi/index.html'),
+      softActuator: resolve(__dirname, 'research/soft-actuator/index.html'),
     },
     output: {
         manualChunks(id) {

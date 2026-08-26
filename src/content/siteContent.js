@@ -665,9 +665,10 @@ export const siteContent = {
         year: "2025",
       },
       {
-        title: "Soft Robotic Prototype",
-        description: "Designed and fabricated a pneumatically controlled soft robot using 3D-printed molds, exploring bio-inspired actuation and embodied interaction.",
+        title: "Pneumatic Soft Actuator Prototyping",
+        description: "Designed, fabricated, and comparatively tested three bio-inspired pneumatic actuator morphologies, then developed an Arduino-controlled system for touch-triggered actuation.",
         year: "2025",
+        link: import.meta.env.BASE_URL + 'research/soft-actuator/',
       },
       {
         title: "L4 Autonomous Logistics Vehicle",
