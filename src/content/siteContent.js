@@ -181,6 +181,26 @@ export const siteContent = {
   },
 
   // ==========================================
+  // 📌 当前独立研究（Current Independent Research）
+  // ==========================================
+  currentResearch: {
+    kicker: "Current Direction · Independent Research",
+    sectionTitle: "Current Independent Research",
+    intro: "A recent independent research direction extending my earlier work on legibility and multimodal communication from autonomous mobility toward embodied social interaction.",
+    project: {
+      category: "Social HRI · Embodied Interaction · 2026",
+      status: "Completed",
+      title: "OYI: Embodied Companion Robot for Social Interaction",
+      question: "How do embodiment, persistent dialogue, and ambient light feedback shape companionship and social presence?",
+      description: "I designed and developed a 3D-printed companion robot with articulated arms, voice interaction, persistent conversational memory, and multimodal light feedback, then conducted a five-day mixed-method study with 32 participants.",
+      tags: ["Independent Research Lead", "32 participants", "5-day study", "Voice + light"],
+      image: import.meta.env.BASE_URL + 'images/research/oyi/hero-clean-v2.png',
+      imageAlt: "Concept rendering of the OYI embodied companion robot",
+      link: import.meta.env.BASE_URL + 'research/oyi/',
+    },
+  },
+
+  // ==========================================
   // 📌 教育经历（Education Section）
   // ==========================================
   education: {
@@ -223,7 +243,7 @@ export const siteContent = {
   // 📌 研究项目（Projects Section）
   // ==========================================
   projects: {
-    sectionTitle: "Academic Research Experience",
+    sectionTitle: "Graduate Research in Human–Autonomy Interaction",
     viewMoreText: "View more",
     items: [
       {
@@ -270,15 +290,6 @@ export const siteContent = {
         tags: ["Team Lead", "6-person team", "30+ studies", "Unity + MQTT"],
         image: import.meta.env.BASE_URL + 'images/projects/project5.jpg',
         link: import.meta.env.BASE_URL + 'research/driving-simulation-platform/',
-      },
-      {
-        category: "Embodied HRI & Intelligent-Cockpit Interaction",
-        status: "Completed",
-        title: "Proactive Embodied Voice Assistant for Safety-Critical Driving",
-        description: "Designed an embodied in-vehicle voice assistant that coordinates speech, text, affective expressions, and escalating alerts across driver-monitoring and automation scenarios. The concept was informed by competitive analysis and six exploratory interviews.",
-        tags: ["Independent project", "Proactive HRI", "6 interviews", "Multimodal feedback"],
-        image: import.meta.env.BASE_URL + 'images/projects/project6.jpg',
-        link: import.meta.env.BASE_URL + 'research/voice-assistant/',
       },
     ],
   },
@@ -679,6 +690,12 @@ export const siteContent = {
       {
         name: "Interactive Systems & Service Concepts",
         items: [
+      {
+        title: "Proactive Embodied Voice Assistant for Safety-Critical Driving",
+        description: "Explored character, social signaling, and progressive multimodal alerts for an embodied in-vehicle assistant.",
+        year: "2022",
+        link: import.meta.env.BASE_URL + 'research/voice-assistant/',
+      },
       {
         title: "EV Charging Service & App Design",
         description: "Designed and prototyped a mobile interface for EV charging optimization, focusing on user flow, service design, and sustainability. ",

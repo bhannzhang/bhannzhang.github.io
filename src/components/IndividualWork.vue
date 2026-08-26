@@ -12,7 +12,8 @@
             :key="item.title"
             class="work-item"
           >
-            <span class="work-item__title">{{ item.title }}:</span>
+            <a v-if="item.link" class="work-item__title work-item__title--link" :href="item.link">{{ item.title }}:</a>
+            <span v-else class="work-item__title">{{ item.title }}:</span>
             <span class="work-item__desc">
               {{ item.description }}
               <span class="work-item__year">({{ item.year }})</span>
@@ -117,6 +118,14 @@ const content = siteContent
     font-style: italic;
     color: var(--color-text);
     white-space: nowrap;
+
+    &--link {
+      text-decoration: underline;
+      text-decoration-color: rgba(183, 166, 255, .5);
+      text-underline-offset: .2em;
+
+      &:hover { color: var(--color-primary-light); }
+    }
   }
 
   &__desc {

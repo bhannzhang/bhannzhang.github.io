@@ -24,6 +24,7 @@ export default defineConfig({
       digitalTwinDriving: resolve(__dirname, 'research/digital-twin-driving/index.html'),
       drivingSimulationPlatform: resolve(__dirname, 'research/driving-simulation-platform/index.html'),
       voiceAssistant: resolve(__dirname, 'research/voice-assistant/index.html'),
+      oyiResearch: resolve(__dirname, 'research/oyi/index.html'),
     },
     output: {
         manualChunks(id) {
