@@ -243,9 +243,18 @@ export const siteContent = {
   // 📌 研究项目（Projects Section）
   // ==========================================
   projects: {
-    sectionTitle: "Graduate Research in Human–Autonomy Interaction",
+    sectionTitle: "Selected Research Projects",
     viewMoreText: "View more",
     items: [
+      {
+        category: "Current Independent Research · Social HRI",
+        status: "Completed",
+        title: "OYI: Embodied Companion Robot for Social Interaction",
+        description: "Designed and developed a 3D-printed companion robot with articulated arms, voice interaction, persistent conversational memory, and ambient light feedback, then conducted a five-day mixed-method study with 32 participants.",
+        tags: ["Independent Research Lead", "32 participants", "5-day study", "Voice + light"],
+        image: import.meta.env.BASE_URL + 'images/research/oyi/hero-clean-v2.png',
+        link: import.meta.env.BASE_URL + 'research/oyi/',
+      },
       {
         category: "Human–Autonomy Interaction",
         status: "Completed",
@@ -725,11 +734,11 @@ export const siteContent = {
       { label: "Home", href: "#home" },
       { label: "Research & Projects", href: "#research-projects" },
       { label: "Publications", href: "#publications" },
-      { label: "Patents", href: "#patents" },
-      { label: "Prototypes", href: "#prototypes" },
-      { label: "Education", href: "#education" },
       { label: "Work Experience", href: "#work-experience" },
+      { label: "Patents", href: "#patents" },
+      { label: "Education", href: "#education" },
       { label: "Awards", href: "#awards" },
+      { label: "Prototypes", href: "#prototypes" },
       { label: "Methods & Skills", href: "#skills" },
     ],
     menuButtonLabel: "Menu",

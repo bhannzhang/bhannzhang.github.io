@@ -2,7 +2,7 @@
   <main class="case-study">
     <header class="topbar">
       <a class="brand" :href="homeUrl">Bihan Zhang</a>
-      <a class="back-link" :href="`${homeUrl}#current-research`"><span aria-hidden="true">&larr;</span> Back to current research</a>
+      <a class="back-link" :href="`${homeUrl}#research-projects`"><span aria-hidden="true">&larr;</span> Back to research projects</a>
     </header>
 
     <article>

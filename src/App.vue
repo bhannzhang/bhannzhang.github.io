@@ -4,7 +4,6 @@ import NavBar from './components/NavBar.vue';
 import OverviewSection from './components/OverviewSection.vue';
 import EducationSection from './components/EducationSection.vue';
 import ResearchInterestsSection from './components/ResearchInterestsSection.vue';
-import CurrentResearchSection from './components/CurrentResearchSection.vue';
 import ProjectsSection from './components/ProjectsSection.vue';
 import PublicationsSection from './components/PublicationsSection.vue';
 import PatentsSection from './components/PatentsSection.vue';
@@ -32,27 +31,26 @@ import BackToTopButton from './components/BackToTopButton.vue';
       <!-- Research & Projects Section -->
       <section id="research-projects">
         <ResearchInterestsSection />
-        <CurrentResearchSection />
         <ProjectsSection />
       </section>
       
       <!-- Publications Section -->
       <PublicationsSection />
 
+      <!-- Work Experience Section -->
+      <WorkExperienceSection />
+
       <!-- Patents Section -->
       <PatentsSection />
-
-      <!-- Embodied & Interactive Prototypes -->
-      <IndividualWorkSection />
 
       <!-- Education Section -->
       <EducationSection />
 
-      <!-- Work Experience Section -->
-      <WorkExperienceSection />
-
       <!-- Awards & Honors Section -->
       <AwardsSection />
+
+      <!-- Embodied & Interactive Prototypes -->
+      <IndividualWorkSection />
 
       <!-- Method & Skills Section -->
       <SkillsSection />
