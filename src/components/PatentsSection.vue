@@ -10,21 +10,25 @@
         v-show="categoryIndex === 0 || showEarlierPatents"
         class="patents__category"
       >
-        <h3 class="category-title">{{ category.name }}</h3>
+        <div class="category-heading">
+          <h3 class="category-title">{{ category.name }}</h3>
+          <span>{{ category.items.length }} patents</span>
+        </div>
         <div class="patents__list">
           <article
-            v-for="patent in category.items"
+            v-for="(patent, patentIndex) in category.items"
             :key="patent.number"
             class="patent-item"
           >
-            <div class="patent-item__header">
+            <span class="patent-item__index">{{ String(patentIndex + 1).padStart(2, '0') }}</span>
+            <div class="patent-item__main">
               <h4 class="patent-item__title">{{ patent.title }}</h4>
-              <span class="patent-item__year">{{ patent.year }}</span>
+              <p v-if="patent.role" class="patent-item__role">{{ patent.role }}</p>
             </div>
-            <p class="patent-item__number">{{ patent.number }}</p>
-            <p v-if="patent.role" class="patent-item__role">{{ patent.role }}</p>
-            <div class="patent-item__tags">
-              <span v-for="tag in patent.tags" :key="tag" class="patent-tag">{{ tag }}</span>
+            <div class="patent-item__meta">
+              <span class="patent-item__year">{{ patent.year }}</span>
+              <p class="patent-item__number">{{ patent.number }}</p>
+              <p class="patent-item__tags">{{ patent.tags.join(' · ') }}</p>
             </div>
           </article>
         </div>
@@ -64,7 +68,7 @@ const earlierPatentCount = computed(() => content.patents.categories.slice(1)
   z-index: 1;
 
   &__container {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 0 2rem;
   }
@@ -79,7 +83,7 @@ const earlierPatentCount = computed(() => content.patents.categories.slice(1)
   }
 
   &__category {
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
 
     &:last-child {
       margin-bottom: 0;
@@ -109,13 +113,7 @@ const earlierPatentCount = computed(() => content.patents.categories.slice(1)
   }
 
   &__list {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 0.75rem;
-
-    @media (max-width: 720px) {
-      grid-template-columns: 1fr;
-    }
+    border-top: 1px solid var(--color-border);
   }
 }
 
@@ -127,81 +125,106 @@ const earlierPatentCount = computed(() => content.patents.categories.slice(1)
   text-align: center;
 }
 
+.category-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.65rem;
+
+  > span {
+    color: var(--color-text-muted);
+    font-size: 0.6875rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+}
+
 .category-title {
-  margin: 0 0 1rem;
-  padding-left: 1rem;
-  border-left: 3px solid var(--color-primary);
+  margin: 0;
   color: var(--color-primary);
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 600;
+  letter-spacing: 0.04em;
 }
 
 .patent-item {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 2.5rem minmax(0, 1fr) minmax(250px, 0.7fr);
+  gap: 1rem;
+  align-items: start;
   min-width: 0;
-  padding: 1.25rem;
-  background: var(--color-card-light);
-  border-radius: var(--radius-lg);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--color-border);
+  transition: background-color 0.2s ease;
 
   &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(139, 92, 246, 0.12);
+    background: rgba(139, 92, 246, 0.035);
   }
 
-  &__header {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 1rem;
+  &__index {
+    padding-top: 0.125rem;
+    color: var(--color-text-muted);
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
   }
 
   &__title {
     margin: 0;
-    color: #1a1a2e;
-    font-size: 0.9375rem;
+    color: var(--color-text);
+    font-size: 0.875rem;
     font-weight: 600;
     line-height: 1.45;
   }
 
+  &__meta {
+    display: grid;
+    grid-template-columns: 3rem 1fr;
+    gap: 0.2rem 0.75rem;
+    align-items: baseline;
+    min-width: 0;
+  }
+
   &__year {
-    flex-shrink: 0;
-    color: #6a6a8a;
+    grid-row: 1 / span 2;
+    color: var(--color-primary-light);
     font-size: 0.75rem;
     font-weight: 600;
   }
 
   &__number {
-    margin: 0.5rem 0 0;
-    color: #4a4a6a;
+    margin: 0;
+    color: var(--color-text-secondary);
     font-family: var(--font-mono);
-    font-size: 0.75rem;
+    font-size: 0.6875rem;
     line-height: 1.4;
+    overflow-wrap: anywhere;
   }
 
   &__role {
-    margin: 0.4rem 0 0;
-    color: #6a6a8a;
-    font-size: 0.75rem;
+    margin: 0.25rem 0 0;
+    color: var(--color-text-secondary);
+    font-size: 0.6875rem;
     line-height: 1.45;
   }
 
   &__tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.4rem;
-    margin-top: auto;
-    padding-top: 0.75rem;
+    margin: 0;
+    color: var(--color-text-muted);
+    font-size: 0.625rem;
+    line-height: 1.45;
+    text-transform: uppercase;
   }
-}
 
-.patent-tag {
-  padding: 0.1875rem 0.5rem;
-  color: var(--color-primary);
-  background: rgba(139, 92, 246, 0.1);
-  border-radius: var(--radius-sm);
-  font-size: 0.6875rem;
-  font-weight: 500;
+  @media (max-width: 760px) {
+    grid-template-columns: 2rem minmax(0, 1fr);
+    gap: 0.75rem;
+
+    &__meta {
+      grid-column: 2;
+      grid-template-columns: max-content minmax(0, 1fr);
+      margin-top: -0.35rem;
+    }
+  }
 }
 </style>
