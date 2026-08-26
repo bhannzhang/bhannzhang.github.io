@@ -50,7 +50,8 @@ const openProject = () => window.location.assign(research.project.link)
 .current-research {
   position: relative;
   z-index: 1;
-  padding: 4.5rem 0 4rem;
+  scroll-margin-top: 5rem;
+  padding: 3.25rem 0 3rem;
 
   &__container {
     width: min(1200px, calc(100% - 4rem));
@@ -59,8 +60,8 @@ const openProject = () => window.location.assign(research.project.link)
 }
 
 .section-heading {
-  max-width: 760px;
-  margin-bottom: 2.25rem;
+  max-width: 820px;
+  margin-bottom: 1.6rem;
 
   &__kicker {
     margin-bottom: .65rem;
@@ -88,9 +89,9 @@ const openProject = () => window.location.assign(research.project.link)
 }
 
 .feature-card {
-  min-height: 510px;
+  min-height: 360px;
   display: grid;
-  grid-template-columns: .92fr 1.08fr;
+  grid-template-columns: .78fr 1.22fr;
   overflow: hidden;
   border: 1px solid rgba(183, 166, 255, .22);
   border-radius: 1.5rem;
@@ -105,7 +106,7 @@ const openProject = () => window.location.assign(research.project.link)
   }
 
   &__copy {
-    padding: clamp(2rem, 5vw, 4rem);
+    padding: clamp(1.7rem, 3.5vw, 2.7rem);
     display: flex;
     flex-direction: column;
     color: #171421;
@@ -133,33 +134,33 @@ const openProject = () => window.location.assign(research.project.link)
   }
 
   h3 {
-    margin: 2.2rem 0 1rem;
-    font-size: clamp(2rem, 4.2vw, 3.8rem);
-    line-height: 1.02;
+    margin: 1rem 0 .7rem;
+    font-size: clamp(1.8rem, 3.3vw, 2.85rem);
+    line-height: 1.04;
     letter-spacing: -.055em;
   }
 
   &__question {
     max-width: 520px;
     color: #4f4661;
-    font-size: 1.05rem;
+    font-size: .94rem;
     font-weight: 600;
     line-height: 1.55;
   }
 
   &__description {
     max-width: 560px;
-    margin-top: 1rem;
+    margin-top: .75rem;
     color: #625a70;
-    font-size: .9rem;
-    line-height: 1.7;
+    font-size: .82rem;
+    line-height: 1.6;
   }
 
   &__tags {
     display: flex;
     flex-wrap: wrap;
     gap: .5rem;
-    margin-top: 1.7rem;
+    margin-top: 1rem;
 
     span {
       padding: .35rem .65rem;
@@ -173,7 +174,7 @@ const openProject = () => window.location.assign(research.project.link)
 
   &__link {
     margin-top: auto;
-    padding-top: 2rem;
+    padding-top: 1.2rem;
     color: #3105a9;
     font-size: .82rem;
     font-weight: 700;
@@ -181,9 +182,10 @@ const openProject = () => window.location.assign(research.project.link)
 
   &__visual {
     position: relative;
-    min-height: 420px;
+    min-height: 360px;
     overflow: hidden;
     background: #f7f7f7;
+    order: -1;
 
     img {
       width: 100%;
@@ -208,12 +210,13 @@ const openProject = () => window.location.assign(research.project.link)
 @media (max-width: 840px) {
   .current-research__container { width: min(100% - 2rem, 1200px); }
   .feature-card { grid-template-columns: 1fr; }
-  .feature-card__visual { min-height: 390px; order: -1; }
-  .feature-card__copy { min-height: 470px; }
+  .feature-card__visual { min-height: 280px; }
+  .feature-card__copy { min-height: 390px; }
 }
 
 @media (max-width: 520px) {
-  .feature-card__visual { min-height: 300px; }
+  .current-research { padding-top: 2.5rem; }
+  .feature-card__visual { min-height: 235px; }
   .feature-card__copy { min-height: auto; }
   .feature-card__link { margin-top: 1.8rem; }
 }

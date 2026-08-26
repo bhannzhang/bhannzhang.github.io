@@ -185,8 +185,8 @@ export const siteContent = {
   // ==========================================
   currentResearch: {
     kicker: "Current Direction · Independent Research",
-    sectionTitle: "Current Independent Research",
-    intro: "A recent independent research direction extending my earlier work on legibility and multimodal communication from autonomous mobility toward embodied social interaction.",
+    sectionTitle: "Selected Current Work",
+    intro: "Independent research and embodied prototypes extending my earlier work on legibility and multimodal communication toward social interaction.",
     project: {
       category: "Social HRI · Embodied Interaction · 2026",
       status: "Completed",
