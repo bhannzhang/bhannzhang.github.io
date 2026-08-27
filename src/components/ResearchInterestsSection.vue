@@ -19,6 +19,8 @@
           </div>
         </div>
       </div>
+
+      <ResearchConstellation />
       
       <!-- Research Interests -->
       <div class="research-interests__questions-wrapper">
@@ -39,6 +41,7 @@
 <script setup>
 import { ref } from 'vue'
 import { siteContent } from '../content/siteContent.js'
+import ResearchConstellation from './ResearchConstellation.vue'
 
 defineOptions({
   name: 'ResearchInterestsSection'
@@ -69,7 +72,7 @@ const activeIndex = ref(0)
 
   &__questions-wrapper {
     background: var(--color-primary);
-    margin-top: 3rem;
+    margin-top: 2.5rem;
     margin-left: -2rem;
     margin-right: -2rem;
     padding: 3rem 2rem;
