@@ -27,6 +27,8 @@ export default defineConfig({
       oyiResearch: resolve(__dirname, 'research/oyi/index.html'),
       softActuator: resolve(__dirname, 'research/soft-actuator/index.html'),
       gestureArm: resolve(__dirname, 'research/gesture-arm/index.html'),
+      emgPrototype: resolve(__dirname, 'research/emg/index.html'),
+      sleepPosture: resolve(__dirname, 'research/sleep-posture/index.html'),
     },
     output: {
         manualChunks(id) {

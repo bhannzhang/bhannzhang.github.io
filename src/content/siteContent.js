@@ -653,16 +653,18 @@ export const siteContent = {
         items: [
       {
         // 作品标题 (Work title)
-        title: "Scoliosis Sleep Posture Monitoring Wearable",
+        title: "Pressure–Inertial Sleep-Posture Detection and Actuation Prototype",
         // 作品描述 (Description of the work)
-        description: "Developed an Arduino-based wearable device for posture detection and haptic feedback, supporting continuous sleep posture monitoring.",
+        description: "Integrated five-point pressure sensing, inertial orientation estimation, conditional triggering, and five-channel servo actuation in a benchtop prototype.",
         // 完成年份 (Year of completion)
         year: "2025",
+        link: import.meta.env.BASE_URL + 'research/sleep-posture/',
       },
       {
-        title: "EMG-Responsive Prototype for Phantom Limb Pain Exploration",
-        description: "Built an exploratory multimodal feedback prototype using EMG sensing and Processing visualization to investigate feedback concepts for rehabilitation contexts.",
+        title: "Multimodal EMG Sensing and Vibrotactile Feedback Prototype",
+        description: "Combined three-channel EMG, two strain inputs, Processing visualization, and localized vibration to explore tactile acknowledgement of attempted actions.",
         year: "2025",
+        link: import.meta.env.BASE_URL + 'research/emg/',
       },
       {
         title: "Pneumatic Soft Actuator Prototyping",
