@@ -26,6 +26,7 @@ export default defineConfig({
       voiceAssistant: resolve(__dirname, 'research/voice-assistant/index.html'),
       oyiResearch: resolve(__dirname, 'research/oyi/index.html'),
       softActuator: resolve(__dirname, 'research/soft-actuator/index.html'),
+      gestureArm: resolve(__dirname, 'research/gesture-arm/index.html'),
     },
     output: {
         manualChunks(id) {

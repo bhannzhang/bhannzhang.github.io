@@ -685,10 +685,11 @@ export const siteContent = {
         description: "Designed an exploratory wearable concept integrating HRV and temperature sensing for menstrual-cycle tracking and women’s health informatics.",
         year: "2024",
       },
-       {
-        title: "Gesture-Controlled Robotic Arm Gimbal",
-        description: "Developed a servo-actuated robotic arm enabling gesture recognition and intuitive physical control through Arduino programming.  ",
-        year: "2024",
+      {
+        title: "Gesture-to-Motion Mapping for an Articulated Robotic Arm",
+        description: "Mapped a single flex-sensor input into coordinated two-joint motion using calibration, exponential smoothing, and differential servo control.",
+        year: "2025–2026",
+        link: import.meta.env.BASE_URL + 'research/gesture-arm/',
       },
       {
         title: "Interactive System for Skin Manifestations of Immune Disorders",
