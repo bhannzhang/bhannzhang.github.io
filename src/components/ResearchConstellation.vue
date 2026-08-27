@@ -5,11 +5,11 @@
       viewBox="0 0 1000 560"
       role="img"
       aria-labelledby="constellation-title constellation-description"
-      @click.self="selectedId = null"
+      @click.self="clearSelection"
     >
       <title id="constellation-title">Research constellation</title>
       <desc id="constellation-description">
-        An interactive map connecting research themes with selected projects. Hover or focus a node to reveal its relationships.
+        An interactive map connecting research themes with selected projects. Hover, focus, or tap a node to reveal its relationships.
       </desc>
 
       <defs>
@@ -59,6 +59,7 @@
         <line
           v-for="link in links"
           :key="`${link.source}-${link.target}`"
+          class="constellation__link"
           :x1="nodeById[link.source].x"
           :y1="nodeById[link.source].y"
           :x2="nodeById[link.target].x"
@@ -94,7 +95,7 @@
           @pointerleave="hoveredId = null"
           @focus="selectedId = node.id"
           @blur="selectedId = null"
-          @click.stop="handleNodeClick(node, $event)"
+          @click.stop.prevent="handleNodeClick(node)"
           @keydown.enter.prevent="handleKeyboardAction(node)"
           @keydown.space.prevent="selectedId = node.id"
         >
@@ -126,7 +127,8 @@
 
     <p class="constellation__hint">
       <span aria-hidden="true">✦</span>
-      Hover to trace a connection · Select a project to explore
+      <span class="constellation__hint-copy constellation__hint-copy--tap">Tap to trace connections · Tap a project again to open</span>
+      <span class="constellation__hint-copy constellation__hint-copy--hover">Hover to trace connections · Select a project to explore</span>
     </p>
   </div>
 </template>
@@ -140,22 +142,32 @@ defineOptions({
 
 const hoveredId = ref(null)
 const selectedId = ref(null)
+const lastTappedId = ref(null)
 const isCompact = ref(false)
+const isTouchMode = ref(false)
 const activeId = computed(() => hoveredId.value ?? selectedId.value)
 
 let compactMediaQuery
+let touchMediaQuery
 const syncCompactMode = () => {
   isCompact.value = compactMediaQuery?.matches ?? false
+}
+const syncTouchMode = () => {
+  isTouchMode.value = touchMediaQuery?.matches ?? false
 }
 
 onMounted(() => {
   compactMediaQuery = window.matchMedia('(max-width: 768px)')
+  touchMediaQuery = window.matchMedia('(hover: none), (pointer: coarse)')
   syncCompactMode()
+  syncTouchMode()
   compactMediaQuery.addEventListener('change', syncCompactMode)
+  touchMediaQuery.addEventListener('change', syncTouchMode)
 })
 
 onBeforeUnmount(() => {
   compactMediaQuery?.removeEventListener('change', syncCompactMode)
+  touchMediaQuery?.removeEventListener('change', syncTouchMode)
 })
 
 const nodes = [
@@ -255,18 +267,27 @@ const getHref = (href) => {
   return `${base}${href.replace(/^\//, '')}`
 }
 
-const handleNodeClick = (node, event) => {
-  const isTouch = window.matchMedia('(hover: none)').matches
-  if (isTouch && selectedId.value !== node.id) {
-    event.preventDefault()
-    selectedId.value = node.id
+const clearSelection = () => {
+  selectedId.value = null
+  lastTappedId.value = null
+}
+
+const handleNodeClick = (node) => {
+  const usesTapInteraction = isTouchMode.value || window.matchMedia('(max-width: 768px), (hover: none), (pointer: coarse)').matches
+  if (usesTapInteraction) {
+    if (lastTappedId.value !== node.id) {
+      lastTappedId.value = node.id
+      selectedId.value = node.id
+      return
+    }
+
+    if (node.href) window.location.href = getHref(node.href)
+    else clearSelection()
     return
   }
 
-  if (!node.href) {
-    event.preventDefault()
-    selectedId.value = selectedId.value === node.id ? null : node.id
-  }
+  if (node.href) window.location.href = getHref(node.href)
+  else selectedId.value = selectedId.value === node.id ? null : node.id
 }
 
 const handleKeyboardAction = (node) => {
@@ -323,16 +344,18 @@ const stars = makeStars(96)
   }
 
   &__link {
-    stroke: #6d5bd0;
-    stroke-width: 1;
-    stroke-opacity: 0.18;
+    stroke: #a5a7b1;
+    stroke-width: 0.55;
+    stroke-opacity: 0.24;
+    stroke-dasharray: 2.5 6;
+    stroke-linecap: round;
     vector-effect: non-scaling-stroke;
     transition: stroke 220ms ease, stroke-opacity 220ms ease, stroke-width 220ms ease;
 
     &--active {
-      stroke: #67e8f9;
-      stroke-width: 1.75;
-      stroke-opacity: 0.78;
+      stroke: #a78bfa;
+      stroke-width: 0.8;
+      stroke-opacity: 0.92;
     }
 
     &--dimmed {
@@ -340,8 +363,7 @@ const stars = makeStars(96)
     }
 
     &--flow {
-      stroke: #fde047;
-      stroke-dasharray: 5 8;
+      stroke: #a78bfa;
       animation: connection-flow 1.4s linear infinite;
     }
   }
@@ -454,6 +476,12 @@ const stars = makeStars(96)
       color: #f8d94e;
     }
   }
+
+  &__hint-copy {
+    &--tap {
+      display: none;
+    }
+  }
 }
 
 @keyframes twinkle {
@@ -488,6 +516,26 @@ const stars = makeStars(96)
       margin-inline: auto;
       text-align: center;
     }
+
+    &__hint-copy--tap {
+      display: inline;
+      color: inherit;
+    }
+
+    &__hint-copy--hover {
+      display: none;
+    }
+  }
+}
+
+@media (hover: none), (pointer: coarse) {
+  .constellation__hint-copy--tap {
+    display: inline;
+    color: inherit;
+  }
+
+  .constellation__hint-copy--hover {
+    display: none;
   }
 }
 
