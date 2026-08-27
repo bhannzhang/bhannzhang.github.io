@@ -666,7 +666,7 @@ export const siteContent = {
       },
       {
         title: "Pneumatic Soft Actuator Prototyping",
-        description: "Designed, fabricated, and comparatively tested three bio-inspired pneumatic actuator morphologies, then developed an Arduino-controlled system for touch-triggered actuation.",
+        description: "Built and tested three pneumatic actuator architectures to examine how cavity geometry and structural constraint produce distinct bending, curling, and blooming movements.",
         year: "2025",
         link: import.meta.env.BASE_URL + 'research/soft-actuator/',
       },
