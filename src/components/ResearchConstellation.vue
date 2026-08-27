@@ -126,7 +126,7 @@
     </svg>
 
     <p class="constellation__hint">
-      <span aria-hidden="true">✦</span>
+      <span class="constellation__hint-star" aria-hidden="true">✦</span>
       <span class="constellation__hint-copy constellation__hint-copy--tap">Tap to trace connections · Tap a project again to open</span>
       <span class="constellation__hint-copy constellation__hint-copy--hover">Hover to trace connections · Select a project to explore</span>
     </p>
@@ -344,7 +344,7 @@ const stars = makeStars(96)
   }
 
   &__link {
-    stroke: #a5a7b1;
+    stroke: #d8d8e2;
     stroke-width: 0.55;
     stroke-opacity: 0.24;
     stroke-dasharray: 2.5 6;
@@ -472,9 +472,10 @@ const stars = makeStars(96)
     font-size: 0.75rem;
     letter-spacing: 0.04em;
 
-    span {
-      color: #f8d94e;
-    }
+  }
+
+  &__hint-star {
+    color: #f8d94e;
   }
 
   &__hint-copy {

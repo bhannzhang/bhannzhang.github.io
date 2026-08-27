@@ -72,8 +72,11 @@
   
   --color-text: #0f172a;
   --color-text-secondary: #64748b;
-  --color-text-muted: #94a3b8;
+  --color-text-muted: #64748b;
   --color-text-on-card: #1a1a1a;
+  --color-primary-light: #6d28d9;
+
+  --color-success: #15803d;
   
   --color-border: #e2e8f0;
   --color-border-light: #cbd5e1;
@@ -82,6 +85,23 @@
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
   --shadow-glow: 0 0 20px rgba(139, 92, 246, 0.15);
+}
+
+html.light .status--completed {
+  color: #047857;
+}
+
+html.light .status--in-progress {
+  color: #92400e;
+}
+
+html.light .project-tag {
+  color: #92400e;
+  border-color: #b45309;
+}
+
+html.light .project-tag svg {
+  color: #92400e;
 }
 
 /* Global reset */
