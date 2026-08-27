@@ -344,7 +344,7 @@ const stars = makeStars(96)
   }
 
   &__link {
-    stroke: #d8d8e2;
+    stroke: #FFFFFF;
     stroke-width: 0.55;
     stroke-opacity: 0.24;
     stroke-dasharray: 2.5 6;
