@@ -704,20 +704,28 @@ export const siteContent = {
         year: "2022",
         link: import.meta.env.BASE_URL + 'research/voice-assistant/',
       },
+        ],
+      },
+      {
+        name: "Selected Applied Research & Testing",
+        items: [
+      {
+        title: "Tire Performance Field Testing & Audio-Reactive Visualization",
+        description: "Connected Continental field-test evidence with an independently built TouchDesigner pipeline for sound-driven visual response.",
+        year: "2023–2025",
+        link: import.meta.env.BASE_URL + 'research/tire-testing/',
+      },
+      {
+        title: "Real-World EV Energy Testing & Gamified Visualization",
+        description: "Synthesized a 12-vehicle winter road test into comparative energy factors and a later visual communication concept; no autonomous-driving component.",
+        year: "2021–2023",
+        link: import.meta.env.BASE_URL + 'research/ev-energy-testing/',
+      },
       {
         title: "EV Charging Service & App Design",
-        description: "Designed and prototyped a mobile interface for EV charging optimization, focusing on user flow, service design, and sustainability. ",
-        year: "2024",
-      },
-      {
-        title: "EV Autonomous Driving Energy Testing & Gamified Visualization ",
-        description: "Developed a data visualization system for real-car energy testing with gamified feedback to promote eco-driving behavior.",
-        year: "2023",
-      },
-      {
-        title: "Continental Tire Performance Testing & Visualization",
-        description: "Created an interactive visualization tool for tire performance benchmarking using Touch Designer and auditory data sonification. ",
-        year: "2022",
+        description: "Translated a 16-person focus group and charging-journey analysis into a connected parking, wayfinding, and mobile-service concept.",
+        year: "2023–2024",
+        link: import.meta.env.BASE_URL + 'research/ev-charging-service/',
       },
         ],
       },

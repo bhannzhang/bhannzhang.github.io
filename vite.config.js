@@ -29,6 +29,9 @@ export default defineConfig({
       gestureArm: resolve(__dirname, 'research/gesture-arm/index.html'),
       emgPrototype: resolve(__dirname, 'research/emg/index.html'),
       sleepPosture: resolve(__dirname, 'research/sleep-posture/index.html'),
+      tireTesting: resolve(__dirname, 'research/tire-testing/index.html'),
+      evEnergyTesting: resolve(__dirname, 'research/ev-energy-testing/index.html'),
+      evChargingService: resolve(__dirname, 'research/ev-charging-service/index.html'),
     },
     output: {
         manualChunks(id) {
