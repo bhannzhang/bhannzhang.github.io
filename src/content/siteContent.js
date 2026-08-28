@@ -673,11 +673,6 @@ export const siteContent = {
         link: import.meta.env.BASE_URL + 'research/soft-actuator/',
       },
       {
-        title: "L4 Autonomous Logistics Vehicle",
-        description: "Developed an embedded Arduino system for obstacle avoidance and path planning; implemented a VUI for human-vehicle interaction.",
-        year: "2025",
-      },
-      {
         title: "Maternity Support Belt",
         description: "Created a physiological sensing wearable for maternal health monitoring and HRV analysis to enhance ergonomic comfort. ",
         year: "2024",
