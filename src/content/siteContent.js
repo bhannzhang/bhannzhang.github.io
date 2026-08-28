@@ -673,11 +673,6 @@ export const siteContent = {
         link: import.meta.env.BASE_URL + 'research/soft-actuator/',
       },
       {
-        title: "Maternity Support Belt",
-        description: "Created a physiological sensing wearable for maternal health monitoring and HRV analysis to enhance ergonomic comfort. ",
-        year: "2024",
-      },
-      {
         title: "Menstrual Cycle Sensing Concept",
         description: "Designed an exploratory wearable concept integrating HRV and temperature sensing for menstrual-cycle tracking and women’s health informatics.",
         year: "2024",
