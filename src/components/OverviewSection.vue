@@ -146,7 +146,6 @@ const getFilename = (link) => {
 <style lang="scss" scoped>
 .overview {
   position: relative;
-  min-height: 100vh;
   padding: 100px 0 60px;
   z-index: 1;
 
