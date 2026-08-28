@@ -32,11 +32,7 @@
             :key="index"
             class="experience-item"
           >
-            <div class="experience-item__icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-            </div>
+            <span class="experience-item__index" aria-hidden="true">0{{ index + 1 }}</span>
             <div class="experience-item__content">
               <h4 class="experience-item__title">{{ exp.title }}</h4>
               <p class="experience-item__description">{{ exp.description }}</p>
@@ -127,43 +123,43 @@ const content = siteContent
   padding-top: 2.5rem;
 
   &__title {
-    font-size: 1rem;
+    font-size: 0.75rem;
     font-weight: 600;
-    color: var(--color-text);
+    color: var(--color-text-secondary);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
     text-align: center;
-    margin: 0 0 1.5rem;
+    margin: 0 0 2rem;
   }
 }
 
 .experience-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .experience-item {
-  display: flex;
-  gap: 0.75rem;
-  padding: 1rem;
-  background: var(--color-card-light);
-  border-radius: var(--radius-lg);
-  transition: all 0.3s ease;
+  display: grid;
+  grid-template-columns: 2.5rem 1fr;
+  gap: 1rem;
+  padding: 1.25rem 0 1rem;
+  border-top: 2px solid rgba(139, 92, 246, 0.45);
+  background: transparent;
+  transition: border-color 0.25s ease, transform 0.25s ease;
 
   &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.1);
+    border-color: var(--color-primary);
+    transform: translateX(4px);
   }
 
-  &__icon {
-    flex-shrink: 0;
-    width: 24px;
-    height: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--color-primary);
-    color: white;
-    border-radius: var(--radius-sm);
+  &__index {
+    padding-top: 0.15rem;
+    color: var(--color-primary-light);
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
   }
 
   &__content {
@@ -171,17 +167,17 @@ const content = siteContent
   }
 
   &__title {
-    font-size: 0.875rem;
+    font-size: 0.9375rem;
     font-weight: 600;
-    color: #1a1a2e;
-    margin: 0 0 0.25rem;
+    color: var(--color-text);
+    margin: 0 0 0.45rem;
   }
 
   &__description {
     font-size: 0.8125rem;
-    color: #6a6a8a;
+    color: var(--color-text-secondary);
     margin: 0;
-    line-height: 1.4;
+    line-height: 1.55;
   }
 }
 </style>
