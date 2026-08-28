@@ -673,9 +673,10 @@ export const siteContent = {
         link: import.meta.env.BASE_URL + 'research/soft-actuator/',
       },
       {
-        title: "Menstrual Cycle Sensing Concept",
-        description: "Designed an exploratory wearable concept integrating HRV and temperature sensing for menstrual-cycle tracking and women’s health informatics.",
+        title: "Multimodal Menstrual-Cycle Sensing and Situated Pain Logging",
+        description: "Combined physiological sensing, visible or discreet feedback, and pressure-based Arduino–Processing logging to explore privacy-sensitive reminders and in-the-moment pain expression.",
         year: "2024",
+        link: import.meta.env.BASE_URL + 'research/menstrual-sensing/',
       },
       {
         title: "Gesture-to-Motion Mapping for an Articulated Robotic Arm",
