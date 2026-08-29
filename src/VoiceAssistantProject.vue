@@ -52,7 +52,7 @@
       <section class="disclosure"><div class="shell disclosure__inner"><strong>Evidence boundary</strong><p>This page documents an independent exploratory design project completed in 2022 and clearly separates it from the earlier HMI specification. It does not claim implementation of a DMS algorithm, a controlled trust or workload experiment, or statistically generalizable findings.</p></div></section>
     </article>
 
-    <footer class="footer shell"><p>Interested in this research?</p><a href="mailto:bhannzhang@gmail.com">bhannzhang@gmail.com</a><a class="back-link" :href="homeUrl">Return to Bihan Zhang’s academic website</a></footer>
+    <footer class="footer shell"><p>Interested in this research?</p><a href="mailto:Zhangbihan621@outlook.com">Zhangbihan621@outlook.com</a><a class="back-link" :href="homeUrl">Return to Bihan Zhang’s academic website</a></footer>
   </main>
 </template>
 

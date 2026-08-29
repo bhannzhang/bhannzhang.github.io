@@ -101,7 +101,7 @@
       <section class="disclosure"><div class="shell disclosure__inner"><strong>Public research summary</strong><p>The final simulator experience, partner-specific routes, detailed geographic references, internal data, and restricted deliverables are intentionally omitted. The system architecture diagram is included with the project lead’s approval; abstract visuals replace confidential simulator screenshots.</p></div></section>
     </article>
 
-    <footer class="footer shell"><p>Interested in this research?</p><a href="mailto:bhannzhang@gmail.com">bhannzhang@gmail.com</a><a class="back-link" :href="homeUrl">Return to Bihan Zhang’s academic website</a></footer>
+    <footer class="footer shell"><p>Interested in this research?</p><a href="mailto:Zhangbihan621@outlook.com">Zhangbihan621@outlook.com</a><a class="back-link" :href="homeUrl">Return to Bihan Zhang’s academic website</a></footer>
   </main>
 </template>
 

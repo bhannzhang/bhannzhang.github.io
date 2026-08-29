@@ -119,7 +119,7 @@
     </article>
 
     <footer class="footer shell">
-      <p>Interested in this research?</p><a href="mailto:bhannzhang@gmail.com">bhannzhang@gmail.com</a>
+      <p>Interested in this research?</p><a href="mailto:Zhangbihan621@outlook.com">Zhangbihan621@outlook.com</a>
       <a class="back-link" :href="homeUrl">Return to Bihan Zhang’s academic website</a>
     </footer>
   </main>

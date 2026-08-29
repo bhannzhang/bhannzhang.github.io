@@ -47,7 +47,7 @@
       <section class="disclosure"><div class="shell disclosure__inner"><strong>Public project summary</strong><p>This page presents platform-level architecture and research use. Individual teammates' contributions are not claimed as independent work, and detailed source code, internal test records, and participant data are intentionally omitted.</p></div></section>
     </article>
 
-    <footer class="footer shell"><p>Interested in this research?</p><a href="mailto:bhannzhang@gmail.com">bhannzhang@gmail.com</a><a class="back-link" :href="homeUrl">Return to Bihan Zhang’s academic website</a></footer>
+    <footer class="footer shell"><p>Interested in this research?</p><a href="mailto:Zhangbihan621@outlook.com">Zhangbihan621@outlook.com</a><a class="back-link" :href="homeUrl">Return to Bihan Zhang’s academic website</a></footer>
   </main>
 </template>
 
