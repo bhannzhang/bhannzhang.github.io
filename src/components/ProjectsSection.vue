@@ -1,15 +1,9 @@
 <template>
   <section class="projects">
     <div class="projects__container">
-      <!-- Title bar with View more toggle -->
+      <!-- Section title -->
       <div class="projects__header">
         <h2 class="section-title">{{ content.projects.sectionTitle }}</h2>
-        <a v-if="(content.projects.items || []).length > 6" href="#" class="projects__view-more" @click.prevent="handleViewMore">
-          {{ showAll ? 'Show less' : content.projects.viewMoreText }}
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="9 18 15 12 9 6"></polyline>
-          </svg>
-        </a>
       </div>
       
       <div class="projects__grid">
@@ -81,6 +75,13 @@
           </div>
         </article>
       </div>
+
+      <a v-if="(content.projects.items || []).length > 6" href="#" class="projects__view-more" :class="{ 'projects__view-more--open': showAll }" @click.prevent="handleViewMore">
+        {{ showAll ? 'Fold up' : content.projects.viewMoreText }}
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </a>
     </div>
   </section>
 </template>
@@ -153,11 +154,12 @@ const getStatusClass = (status) => {
   }
 
   &__view-more {
-    position: absolute;
-    right: 0;
+    width: max-content;
+    margin: 2rem auto 0;
     display: flex;
     align-items: center;
-    gap: 0.25rem;
+    justify-content: center;
+    gap: 0.4rem;
     font-size: 0.875rem;
     font-weight: 500;
     color: var(--color-text-secondary);
@@ -168,12 +170,20 @@ const getStatusClass = (status) => {
       color: var(--color-primary);
 
       svg {
-        transform: translateX(4px);
+        transform: translateY(3px);
       }
     }
 
     svg {
       transition: transform 0.2s ease;
+    }
+
+    &--open svg {
+      transform: rotate(180deg);
+    }
+
+    &--open:hover svg {
+      transform: rotate(180deg) translateY(3px);
     }
   }
 
@@ -270,11 +280,13 @@ const getStatusClass = (status) => {
   }
 
   &__status {
+    flex: 0 0 auto;
     font-size: 0.6875rem;
     font-weight: 600;
-    padding: 0.25rem 0.75rem;
+    padding: 0.25rem 0.625rem;
     border-radius: var(--radius-full);
     text-transform: capitalize;
+    white-space: nowrap;
   }
 
   &__body {
