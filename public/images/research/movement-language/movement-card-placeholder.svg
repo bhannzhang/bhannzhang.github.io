@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Movement as a Language conceptual trajectory study</title>
+  <desc id="desc">An abstract point travels across layered direct, curved, paused, reversed, and oscillating trajectories.</desc>
+  <rect width="1200" height="675" fill="#111116"/>
+  <g fill="none" stroke-linecap="round">
+    <path d="M105 190 C330 190 475 190 700 190 S970 190 1095 190" stroke="#f1eee7" stroke-width="5" opacity=".28"/>
+    <path d="M105 292 C315 125 455 460 700 292 S930 138 1095 292" stroke="#d7a765" stroke-width="6" opacity=".9"/>
+    <path d="M105 408 L435 408 L355 408 L740 408 L680 408 L1095 408" stroke="#9ba9a0" stroke-width="5" opacity=".58"/>
+    <path d="M105 518 C150 455 195 581 240 518 S330 455 375 518 S465 581 510 518 S600 455 645 518 S735 581 780 518 S870 455 915 518 S1005 581 1095 518" stroke="#f1eee7" stroke-width="4" opacity=".38"/>
+  </g>
+  <circle cx="700" cy="292" r="22" fill="#d7a765"/>
+  <circle cx="1095" cy="292" r="14" fill="none" stroke="#f1eee7" stroke-width="4" opacity=".75"/>
+  <g fill="#f1eee7" font-family="Inter,Arial,sans-serif">
+    <text x="105" y="92" font-size="26" font-weight="700" letter-spacing="4">MOVEMENT AS A LANGUAGE</text>
+    <text x="105" y="625" font-size="18" opacity=".55">Conceptual placeholder · trajectory visual to be refined</text>
+  </g>
+</svg>

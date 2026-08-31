@@ -30,6 +30,7 @@ export default defineConfig({
       emgPrototype: resolve(__dirname, 'research/emg/index.html'),
       sleepPosture: resolve(__dirname, 'research/sleep-posture/index.html'),
       menstrualSensing: resolve(__dirname, 'research/menstrual-sensing/index.html'),
+      movementLanguage: resolve(__dirname, 'research/movement-language/index.html'),
       tireTesting: resolve(__dirname, 'research/tire-testing/index.html'),
       evEnergyTesting: resolve(__dirname, 'research/ev-energy-testing/index.html'),
       evChargingService: resolve(__dirname, 'research/ev-charging-service/index.html'),

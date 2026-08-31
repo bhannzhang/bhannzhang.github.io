@@ -256,6 +256,15 @@ export const siteContent = {
         link: import.meta.env.BASE_URL + 'research/oyi/',
       },
       {
+        category: "Current Independent Research · Movement HRI",
+        status: "In Progress",
+        title: "Movement as a Language",
+        description: "An exploratory research-through-design study of how low-level movement parameters become perceived state, intention, and agency in non-anthropomorphic agents.",
+        tags: ["Research Exploration", "n=6 pilot", "Movement perception", "Processing"],
+        image: import.meta.env.BASE_URL + 'images/research/movement-language/movement-card-placeholder.svg',
+        link: import.meta.env.BASE_URL + 'research/movement-language/',
+      },
+      {
         category: "Human–Autonomy Interaction",
         status: "Completed",
         title: "Social Acceptance and External Communication for Autonomous Delivery Vehicles",
