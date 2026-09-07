@@ -825,7 +825,7 @@ const cueResults = [
 .future-heading h2 { margin: 0; font-size: clamp(2.5rem, 5vw, 4.8rem); line-height: .98; letter-spacing: -.055em; }
 .future-heading > p:last-child { margin-top: 1.35rem; max-width: 820px; color: var(--muted); line-height: 1.75; }
 .future-grid { margin-top: 3.2rem; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); list-style: none; border-top: 1px solid #365158; border-left: 1px solid #365158; }
-.future-grid > li { min-height: 350px; padding: 1.6rem; display: flex; flex-direction: column; border-right: 1px solid #365158; border-bottom: 1px solid #365158; }
+.future-grid > li { padding: 1.6rem; border-right: 1px solid #365158; border-bottom: 1px solid #365158; }
 .future-grid header { display: flex; gap: 1rem; align-items: baseline; }
 .future-grid header span { color: var(--ochre); font-size: .7rem; font-weight: 800; }
 .future-grid h3 { margin: 0; color: var(--text); font-size: 1.3rem; letter-spacing: -.025em; }
@@ -833,7 +833,7 @@ const cueResults = [
 .future-grid dl div { padding: .65rem 0; display: grid; grid-template-columns: 110px 1fr; gap: 1rem; border-top: 1px solid #294147; }
 .future-grid dt { color: var(--teal); font-size: .65rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
 .future-grid dd { margin: 0; color: var(--muted); font-size: .75rem; line-height: 1.6; }
-.future-grid blockquote { margin: auto 0 0; padding: .9rem 0 0 1.1rem; color: #dce8e4; font-size: .82rem; font-style: normal; line-height: 1.55; border-left: 2px solid var(--ochre); }
+.future-grid blockquote { margin: 1rem 0 0; padding: .2rem 0 .2rem 1.1rem; color: #dce8e4; font-size: .82rem; font-style: normal; line-height: 1.55; border-left: 2px solid var(--ochre); }
 .limitations-note { margin-top: 2rem; padding: 1.1rem 0; display: grid; grid-template-columns: 180px 1fr; gap: 2rem; align-items: start; border-top: 1px solid #365158; border-bottom: 1px solid #365158; }
 .limitations-note > span { color: var(--teal); font-size: .68rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
 .limitations-note ul { margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: .7rem 2rem; list-style: none; }
