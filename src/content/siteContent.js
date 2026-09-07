@@ -257,7 +257,7 @@ export const siteContent = {
       },
       {
         category: "Current Independent Research · Swarm HRI",
-        status: "Ongoing",
+        status: "In Progress",
         title: "Embodied Swarm Interaction",
         description: "A two-part exploratory study of how embodied input supports mental-model formation and collective legibility while preserving the autonomy of a 55–60-agent swarm.",
         tags: ["Independent Research", "n=6 pilot", "ESP32 + IMU", "Processing"],
