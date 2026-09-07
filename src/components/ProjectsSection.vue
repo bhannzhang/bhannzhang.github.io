@@ -126,7 +126,7 @@ const getStatusClass = (status) => {
   const statusLower = (status || '').toLowerCase()
   if (statusLower.includes('completed')) {
     return 'status--completed'
-  } else if (statusLower.includes('progress')) {
+  } else if (statusLower.includes('progress') || statusLower.includes('ongoing')) {
     return 'status--in-progress'
   }
   return ''

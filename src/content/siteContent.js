@@ -256,6 +256,15 @@ export const siteContent = {
         link: import.meta.env.BASE_URL + 'research/oyi/',
       },
       {
+        category: "Current Independent Research · Swarm HRI",
+        status: "Ongoing",
+        title: "Embodied Swarm Interaction",
+        description: "A two-part exploratory study of how embodied input supports mental-model formation and collective legibility while preserving the autonomy of a 55–60-agent swarm.",
+        tags: ["Independent Research", "n=6 pilot", "ESP32 + IMU", "Processing"],
+        image: import.meta.env.BASE_URL + 'images/research/embodied-swarm/swarm-card-cover.webp',
+        link: import.meta.env.BASE_URL + 'research/embodied-swarm/',
+      },
+      {
         category: "Current Independent Research · Movement HRI",
         status: "In Progress",
         title: "Movement as a Language",
