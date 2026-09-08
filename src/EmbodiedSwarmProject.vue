@@ -543,8 +543,8 @@ const cueResults = [
 .rationale-principles strong { color: var(--teal); font-size: .76rem; }
 .rationale-principles p { margin-top: .35rem; color: var(--muted); font-size: .69rem; line-height: 1.55; }
 .gesture-gallery { margin-top: 4.5rem; padding-top: 3rem; border-top: 1px solid var(--line); }
-.gesture-gallery__heading { display: flex; align-items: end; justify-content: space-between; gap: 1rem; }
-.gesture-gallery__heading h3 { margin: 0; max-width: 720px; font-size: clamp(1.6rem, 3vw, 2.5rem); letter-spacing: -.035em; }
+.gesture-gallery__heading { display: flex; align-items: baseline; justify-content: flex-start; gap: 2rem; }
+.gesture-gallery__heading h3 { margin: 0; max-width: none; font-size: clamp(1.5rem, 2.2vw, 2rem); letter-spacing: -.03em; white-space: nowrap; }
 .gesture-gallery__grid { margin-top: 1.6rem; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: .75rem; }
 .gesture-card { overflow: hidden; border: 1px solid var(--line); border-radius: 16px; background: var(--panel); }
 .gesture-card img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
