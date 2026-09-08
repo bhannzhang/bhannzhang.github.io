@@ -143,7 +143,7 @@ const cueResults = [
 
           <div class="controller-row">
             <figure class="interaction-photo">
-              <img :src="homeUrl + 'images/research/embodied-swarm/physical/interaction-setup.jpg'" alt="A participant holds the cylindrical embodied controller while influencing a simulated robot swarm on a laptop" />
+              <img :src="homeUrl + 'images/research/embodied-swarm/physical/interaction-setup-v2.jpg'" alt="A participant holds the cylindrical embodied controller while influencing a simulated robot swarm on a laptop" />
               <figcaption><strong>Physical interaction setup.</strong> A hand-held tangible controller maps embodied gestures to the behavior of a simulated robot swarm.</figcaption>
             </figure>
             <aside class="controller-rationale">
@@ -402,19 +402,19 @@ const cueResults = [
         </figure>
         <div class="shell prototype-evidence-grid">
           <figure class="prototype-evidence">
-            <img :src="homeUrl + 'images/research/embodied-swarm/physical/cardboard-prototype.jpg'" alt="ESP32, inertial sensor, cardboard lid, and cylindrical cardboard enclosure arranged as a low-fidelity controller prototype" loading="lazy" />
+            <img :src="homeUrl + 'images/research/embodied-swarm/physical/cardboard-prototype-v2.jpg'" alt="ESP32, inertial sensor, cardboard lid, and cylindrical cardboard enclosure arranged as a low-fidelity controller prototype" loading="lazy" />
             <figcaption><span>01 · Low-fidelity prototype</span><strong>Testing enclosure dimensions and hardware placement</strong><p>Cardboard components provided a quick way to evaluate the cylindrical form, internal volume, and relationship between the sensing hardware and the hand-held enclosure.</p></figcaption>
           </figure>
           <figure class="prototype-evidence">
-            <img :src="homeUrl + 'images/research/embodied-swarm/physical/printed-enclosure.jpg'" alt="Three separate components of the white and silver 3D-printed cylindrical controller enclosure" loading="lazy" />
+            <img :src="homeUrl + 'images/research/embodied-swarm/physical/printed-enclosure-v2.jpg'" alt="Three separate components of the white and silver 3D-printed cylindrical controller enclosure" loading="lazy" />
             <figcaption><span>02 · 3D-printed enclosure</span><strong>Separating the shell into accessible components</strong><p>The printed top surface, electronics base, and removable shell support repeatable assembly while keeping the ESP32 and IMU accessible during iteration.</p></figcaption>
           </figure>
           <figure class="prototype-evidence">
-            <img :src="homeUrl + 'images/research/embodied-swarm/physical/hardware-integration.jpg'" alt="ESP32 and MPU6050 inertial sensor mounted and wired inside the controller base" loading="lazy" />
+            <img :src="homeUrl + 'images/research/embodied-swarm/physical/hardware-integration-v2.jpg'" alt="ESP32 and MPU6050 inertial sensor mounted and wired inside the controller base" loading="lazy" />
             <figcaption><span>03 · Hardware integration</span><strong>Connecting sensing and control inside the printed base</strong><p>The ESP32 and MPU6050 were mounted as an accessible internal assembly so motion sensing could be tested and recalibrated throughout fabrication.</p></figcaption>
           </figure>
           <figure class="prototype-evidence prototype-evidence--assembled">
-            <img :src="homeUrl + 'images/research/embodied-swarm/physical/assembled-controller.jpg'" alt="Completed cylindrical embodied swarm controller with its USB cable" loading="lazy" />
+            <img :src="homeUrl + 'images/research/embodied-swarm/physical/assembled-controller-v2.jpg'" alt="Completed cylindrical embodied swarm controller with its USB cable" loading="lazy" />
             <figcaption><span>04 · Assembled controller</span><strong>A robust hand-held form for repeatable physical testing</strong><p>The finished enclosure contains the sensing architecture used in the pilot while providing a consistent surface and grip for the five embodied gestures.</p></figcaption>
           </figure>
         </div>
@@ -424,7 +424,7 @@ const cueResults = [
       <section class="future-directions section-mid">
         <div class="shell future-heading">
           <p class="kicker">11 · Future Directions</p>
-          <h2>From Prototype to Research Platform</h2>
+          <h2>Next Steps for the Current Study</h2>
           <p>The pilot established a working embodied–swarm interaction loop. The next step is to expand both the interaction vocabulary and the autonomy being interpreted.</p>
         </div>
 
@@ -545,10 +545,8 @@ const cueResults = [
 .gesture-gallery { margin-top: 4.5rem; padding-top: 3rem; border-top: 1px solid var(--line); }
 .gesture-gallery__heading { display: flex; align-items: end; justify-content: space-between; gap: 1rem; }
 .gesture-gallery__heading h3 { margin: 0; max-width: 720px; font-size: clamp(1.6rem, 3vw, 2.5rem); letter-spacing: -.035em; }
-.gesture-gallery__grid { margin-top: 1.6rem; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 1rem; }
-.gesture-card { grid-column: span 2; overflow: hidden; border: 1px solid var(--line); border-radius: 16px; background: var(--panel); }
-.gesture-card:nth-child(4) { grid-column: 2 / span 2; }
-.gesture-card:nth-child(5) { grid-column: span 2; }
+.gesture-gallery__grid { margin-top: 1.6rem; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: .75rem; }
+.gesture-card { overflow: hidden; border: 1px solid var(--line); border-radius: 16px; background: var(--panel); }
 .gesture-card img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
 .gesture-card > div { padding: .9rem 1rem 1rem; }
 .gesture-card strong, .gesture-card small { display: block; }
