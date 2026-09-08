@@ -22,11 +22,11 @@ const researchArc = [
 ]
 
 const gestures = [
-  { code: 'LEFT', input: 'Lateral motion', effect: 'Collective drift left', mark: '←' },
-  { code: 'RIGHT', input: 'Lateral motion', effect: 'Collective drift right', mark: '→' },
-  { code: 'ROTATE CW', input: 'Clockwise rotation', effect: 'Collective CW rotation', mark: '↻' },
-  { code: 'ROTATE CCW', input: 'Counter-clockwise rotation', effect: 'Collective CCW rotation', mark: '↺' },
-  { code: 'SHAKE', input: 'Reciprocating motion', effect: 'Temporary disturbance', mark: '≋' },
+  { code: 'LEFT', input: 'Lateral motion', effect: 'Collective drift left', image: 'left.jpg' },
+  { code: 'RIGHT', input: 'Lateral motion', effect: 'Collective drift right', image: 'right.jpg' },
+  { code: 'ROTATE CW', input: 'Clockwise rotation', effect: 'Collective CW rotation', image: 'rotate-cw.jpg' },
+  { code: 'ROTATE CCW', input: 'Counter-clockwise rotation', effect: 'Collective CCW rotation', image: 'rotate-ccw.jpg' },
+  { code: 'SHAKE', input: 'Reciprocating motion', effect: 'Temporary disturbance', image: 'shake.jpg' },
 ]
 
 const thresholdFailures = [
@@ -142,24 +142,31 @@ const cueResults = [
           </div>
 
           <div class="controller-row">
-            <div class="controller-context">
-              <figure class="interaction-photo">
-                <img :src="homeUrl + 'images/research/embodied-swarm/physical/interaction-setup.jpg'" alt="A participant holds the cylindrical embodied controller while influencing a simulated robot swarm on a laptop" />
-                <figcaption><strong>Physical interaction setup.</strong> A hand-held tangible controller maps embodied gestures to the behavior of a simulated robot swarm.</figcaption>
-              </figure>
-              <aside class="controller-rationale">
-                <p class="mini-label">Research rationale</p>
-                <h3>Why an embodied controller?</h3>
-                <p>I needed a small set of repeatable bodily actions that could be performed consistently while still feeling physically distinct. A single-hand controller allowed me to isolate five embodied motions and observe how participants learned their relationship to collective swarm behavior.</p>
-                <div class="rationale-flow" aria-label="Process from bodily action to mental model formation"><span>Bodily Action</span><i>→</i><span>Temporary Swarm Influence</span><i>→</i><span>Observed Collective Response</span><i>→</i><strong>Mental Model Formation</strong></div>
-                <div class="rationale-principles"><article><span>01</span><div><strong>Limited gesture set</strong><p>Five distinct gestures kept the action space small enough to learn and compare.</p></div></article><article><span>02</span><div><strong>Influence, not direct control</strong><p>Each gesture temporarily perturbed collective dynamics rather than specifying individual robot trajectories.</p></div></article></div>
-              </aside>
-            </div>
-            <div class="gesture-vocabulary">
-              <p class="mini-label">Gesture = temporary influence</p>
-              <article v-for="gesture in gestures" :key="gesture.code"><span>{{ gesture.mark }}</span><div><strong>{{ gesture.code }}</strong><small>{{ gesture.input }} → {{ gesture.effect }}</small></div></article>
-            </div>
+            <figure class="interaction-photo">
+              <img :src="homeUrl + 'images/research/embodied-swarm/physical/interaction-setup.jpg'" alt="A participant holds the cylindrical embodied controller while influencing a simulated robot swarm on a laptop" />
+              <figcaption><strong>Physical interaction setup.</strong> A hand-held tangible controller maps embodied gestures to the behavior of a simulated robot swarm.</figcaption>
+            </figure>
+            <aside class="controller-rationale">
+              <p class="mini-label">Research rationale</p>
+              <h3>Why an embodied controller?</h3>
+              <p>I needed a small set of repeatable bodily actions that could be performed consistently while still feeling physically distinct. A single-hand controller allowed me to isolate five embodied motions and observe how participants learned their relationship to collective swarm behavior.</p>
+              <div class="rationale-flow" aria-label="Process from bodily action to mental model formation"><span>Bodily Action</span><i>→</i><span>Temporary Swarm Influence</span><i>→</i><span>Observed Collective Response</span><i>→</i><strong>Mental Model Formation</strong></div>
+              <div class="rationale-principles"><article><span>01</span><div><strong>Limited gesture set</strong><p>Five distinct gestures kept the action space small enough to learn and compare.</p></div></article><article><span>02</span><div><strong>Influence, not direct control</strong><p>Each gesture temporarily perturbed collective dynamics rather than specifying individual robot trajectories.</p></div></article></div>
+            </aside>
           </div>
+
+          <section class="gesture-gallery" aria-labelledby="gesture-gallery-title">
+            <div class="gesture-gallery__heading">
+              <p class="mini-label">Gesture = temporary influence</p>
+              <h3 id="gesture-gallery-title">Five embodied actions, five collective responses</h3>
+            </div>
+            <div class="gesture-gallery__grid">
+              <article v-for="gesture in gestures" :key="gesture.code" class="gesture-card">
+                <img :src="homeUrl + 'images/research/embodied-swarm/gestures/' + gesture.image" :alt="'Hand-held controller performing ' + gesture.code + ' gesture'" loading="lazy" />
+                <div><strong>{{ gesture.code }}</strong><small>{{ gesture.input }} → {{ gesture.effect }}</small></div>
+              </article>
+            </div>
+          </section>
 
           <section class="motion-process">
             <div class="motion-process__heading">
@@ -402,6 +409,14 @@ const cueResults = [
             <img :src="homeUrl + 'images/research/embodied-swarm/physical/printed-enclosure.jpg'" alt="Three separate components of the white and silver 3D-printed cylindrical controller enclosure" loading="lazy" />
             <figcaption><span>02 · 3D-printed enclosure</span><strong>Separating the shell into accessible components</strong><p>The printed top surface, electronics base, and removable shell support repeatable assembly while keeping the ESP32 and IMU accessible during iteration.</p></figcaption>
           </figure>
+          <figure class="prototype-evidence">
+            <img :src="homeUrl + 'images/research/embodied-swarm/physical/hardware-integration.jpg'" alt="ESP32 and MPU6050 inertial sensor mounted and wired inside the controller base" loading="lazy" />
+            <figcaption><span>03 · Hardware integration</span><strong>Connecting sensing and control inside the printed base</strong><p>The ESP32 and MPU6050 were mounted as an accessible internal assembly so motion sensing could be tested and recalibrated throughout fabrication.</p></figcaption>
+          </figure>
+          <figure class="prototype-evidence prototype-evidence--assembled">
+            <img :src="homeUrl + 'images/research/embodied-swarm/physical/assembled-controller.jpg'" alt="Completed cylindrical embodied swarm controller with its USB cable" loading="lazy" />
+            <figcaption><span>04 · Assembled controller</span><strong>A robust hand-held form for repeatable physical testing</strong><p>The finished enclosure contains the sensing architecture used in the pilot while providing a consistent surface and grip for the five embodied gestures.</p></figcaption>
+          </figure>
         </div>
         <aside class="shell physical-rationale"><span>Design rationale</span><p>The enclosure separates the removable upper shell from the electronics base, allowing the ESP32 and IMU to remain accessible during iteration.</p></aside>
       </section>
@@ -509,12 +524,11 @@ const cueResults = [
 .prototype-progression figcaption { padding: .8rem .2rem 0; color: #82969c; font-size: .72rem; line-height: 1.55; }
 
 .controller-row { margin-top: 4rem; display: grid; grid-template-columns: 1.08fr .92fr; gap: 1rem; align-items: stretch; }
-.controller-context { min-width: 0; display: grid; gap: 1rem; }
 .interaction-photo { margin: 0; overflow: hidden; border: 1px solid #315057; border-radius: 18px; background: #0a191e; }
 .interaction-photo img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
 .interaction-photo figcaption { padding: .85rem 1rem 1rem; color: #82969c; font-size: .7rem; line-height: 1.55; }
 .interaction-photo figcaption strong { color: #dce8e4; }
-.controller-rationale, .gesture-vocabulary, .debug-note, .classifier-flow, .swarm-validation, .ui-placeholder, .task-list, .freeze-section, .prediction-panel { border: 1px solid var(--line); border-radius: 18px; background: var(--panel); }
+.controller-rationale, .debug-note, .classifier-flow, .swarm-validation, .ui-placeholder, .task-list, .freeze-section, .prediction-panel { border: 1px solid var(--line); border-radius: 18px; background: var(--panel); }
 .ui-placeholder > span { color: var(--teal); font-size: .66rem; font-weight: 800; letter-spacing: .12em; }
 .controller-rationale { padding: 1.8rem; }
 .controller-rationale h3 { margin: .8rem 0 1rem; font-size: 1.65rem; letter-spacing: -.035em; }
@@ -528,13 +542,18 @@ const cueResults = [
 .rationale-principles article > span { color: var(--ochre); font-size: .66rem; }
 .rationale-principles strong { color: var(--teal); font-size: .76rem; }
 .rationale-principles p { margin-top: .35rem; color: var(--muted); font-size: .69rem; line-height: 1.55; }
-.gesture-vocabulary { padding: 1.8rem; display: flex; flex-direction: column; }
-.gesture-vocabulary article { flex: 1; padding: .85rem 0; display: grid; grid-template-columns: 55px 1fr; gap: 1rem; align-items: center; border-bottom: 1px solid #233b41; }
-.gesture-vocabulary article:last-child { border: 0; }
-.gesture-vocabulary article > span { color: var(--teal); font-size: 2.2rem; }
-.gesture-vocabulary strong, .gesture-vocabulary small { display: block; }
-.gesture-vocabulary strong { font-size: .83rem; }
-.gesture-vocabulary small { margin-top: .22rem; color: var(--muted); font-size: .73rem; }
+.gesture-gallery { margin-top: 4.5rem; padding-top: 3rem; border-top: 1px solid var(--line); }
+.gesture-gallery__heading { display: flex; align-items: end; justify-content: space-between; gap: 1rem; }
+.gesture-gallery__heading h3 { margin: 0; max-width: 720px; font-size: clamp(1.6rem, 3vw, 2.5rem); letter-spacing: -.035em; }
+.gesture-gallery__grid { margin-top: 1.6rem; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 1rem; }
+.gesture-card { grid-column: span 2; overflow: hidden; border: 1px solid var(--line); border-radius: 16px; background: var(--panel); }
+.gesture-card:nth-child(4) { grid-column: 2 / span 2; }
+.gesture-card:nth-child(5) { grid-column: span 2; }
+.gesture-card img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.gesture-card > div { padding: .9rem 1rem 1rem; }
+.gesture-card strong, .gesture-card small { display: block; }
+.gesture-card strong { color: var(--teal); font-size: .78rem; letter-spacing: .06em; }
+.gesture-card small { margin-top: .28rem; color: var(--muted); font-size: .7rem; line-height: 1.5; }
 
 .motion-process { margin-top: 7rem; padding-top: 6rem; border-top: 1px solid var(--line); }
 .motion-process__heading { max-width: 900px; }
@@ -817,6 +836,7 @@ const cueResults = [
 .prototype-evidence figcaption span, .physical-rationale > span { display: block; color: var(--teal); font-size: .68rem; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; }
 .prototype-evidence figcaption strong { display: block; margin-top: .65rem; color: #dce8e4; font-size: 1.05rem; line-height: 1.35; }
 .prototype-evidence figcaption p { margin-top: .55rem; color: #82969c; font-size: .74rem; line-height: 1.65; }
+.prototype-evidence--assembled img { object-position: center 52%; }
 .physical-rationale { margin-top: 1rem; padding: 1.5rem 1.8rem; display: grid; grid-template-columns: 190px 1fr; gap: 2rem; align-items: baseline; border-top: 1px solid #315057; border-bottom: 1px solid #315057; }
 .physical-rationale p { color: #c3d1ce; font-size: .82rem; line-height: 1.65; }
 .future-directions { padding-top: 5.5rem; padding-bottom: 5.5rem; }
@@ -854,6 +874,8 @@ const cueResults = [
   .reflection-progression li:nth-child(2)::after { display: none; }
   .mapping-evidence { padding-left: 0; border-left: 0; }
   .arc, .iteration-grid, .experiment-a-flow { grid-template-columns: repeat(2, 1fr); }
+  .gesture-gallery__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .gesture-card, .gesture-card:nth-child(4), .gesture-card:nth-child(5) { grid-column: auto; }
   .experiment-b-flow { grid-template-columns: repeat(4, 1fr); }
   .rule-grid { grid-template-columns: repeat(2, 1fr); }
   .flow-line { grid-template-columns: 1fr; }
@@ -892,6 +914,8 @@ const cueResults = [
   .reflection-progression li:not(:last-child)::after { display: none; }
   .reflection-progression small { margin-top: 1rem; padding-top: 0; }
   .rationale-principles { grid-template-columns: 1fr; }
+  .gesture-gallery__heading { align-items: flex-start; flex-direction: column; }
+  .gesture-gallery__grid { grid-template-columns: 1fr; }
   .prototype-evidence-grid { grid-template-columns: 1fr; }
   .physical-rationale { grid-template-columns: 1fr; gap: .7rem; }
   .future-grid dl div, .limitations-note { grid-template-columns: 1fr; }
