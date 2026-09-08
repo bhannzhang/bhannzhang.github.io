@@ -143,10 +143,9 @@ const cueResults = [
 
           <div class="controller-row">
             <div class="controller-context">
-              <figure class="interaction-photo-placeholder">
-                <div aria-hidden="true"><span></span><i></i><b></b></div>
-                <strong>Physical interaction photo forthcoming</strong>
-                <figcaption>Single-hand controller used to influence the swarm during prototype testing.</figcaption>
+              <figure class="interaction-photo">
+                <img :src="homeUrl + 'images/research/embodied-swarm/physical/interaction-setup.jpg'" alt="A participant holds the cylindrical embodied controller while influencing a simulated robot swarm on a laptop" />
+                <figcaption><strong>Physical interaction setup.</strong> A hand-held tangible controller maps embodied gestures to the behavior of a simulated robot swarm.</figcaption>
               </figure>
               <aside class="controller-rationale">
                 <p class="mini-label">Research rationale</p>
@@ -388,17 +387,23 @@ const cueResults = [
         <div class="shell physical-heading">
           <p class="kicker">10 · Physical Prototype Development</p>
           <h2>Refining the Physical Controller</h2>
-          <p>The pilot study used a low-fidelity cylindrical enclosure so I could focus on interaction logic and experimental reliability. I am now translating the same internal architecture into a modular 3D-printed controller for more robust physical testing.</p>
+          <p>The controller progressed from a low-fidelity cardboard enclosure to a modular 3D-printed form. This iteration preserved the same sensing architecture while improving robustness, access to the electronics, and consistency during physical testing.</p>
         </div>
         <figure class="shell prototype-progression">
           <img :src="homeUrl + 'images/research/embodied-swarm/controller-progression-teal.webp'" alt="Four-stage development of the embodied swarm controller, from ESP32 and MPU6050 wiring through exposed and cardboard prototypes to a refined cylindrical enclosure" loading="lazy" />
-          <figcaption>Wiring setup → exposed electronics prototype → cardboard demo controller → 3D-printed version. The final frame records the intended enclosure direction; fabrication evidence will be added when the next prototype is complete.</figcaption>
+          <figcaption>Design progression: wiring setup → exposed electronics → cardboard form study → refined cylindrical enclosure.</figcaption>
         </figure>
-        <div class="shell physical-workbench">
-          <section class="cad-placeholder"><span>A · CAD Development</span><strong>CAD model in progress</strong><div><i>TOP</i><i>FRONT</i><i>SIDE</i><i>EXPLODED</i></div><p>Planned documentation: removable upper shell · electronics base · cable opening.</p></section>
-          <section class="fabrication-placeholder"><span>B · Fabrication</span><div><i>Printed shell</i><i>Internal assembly</i><i>Assembled controller</i><i>Hand-held prototype</i></div></section>
+        <div class="shell prototype-evidence-grid">
+          <figure class="prototype-evidence">
+            <img :src="homeUrl + 'images/research/embodied-swarm/physical/cardboard-prototype.jpg'" alt="ESP32, inertial sensor, cardboard lid, and cylindrical cardboard enclosure arranged as a low-fidelity controller prototype" loading="lazy" />
+            <figcaption><span>01 · Low-fidelity prototype</span><strong>Testing enclosure dimensions and hardware placement</strong><p>Cardboard components provided a quick way to evaluate the cylindrical form, internal volume, and relationship between the sensing hardware and the hand-held enclosure.</p></figcaption>
+          </figure>
+          <figure class="prototype-evidence">
+            <img :src="homeUrl + 'images/research/embodied-swarm/physical/printed-enclosure.jpg'" alt="Three separate components of the white and silver 3D-printed cylindrical controller enclosure" loading="lazy" />
+            <figcaption><span>02 · 3D-printed enclosure</span><strong>Separating the shell into accessible components</strong><p>The printed top surface, electronics base, and removable shell support repeatable assembly while keeping the ESP32 and IMU accessible during iteration.</p></figcaption>
+          </figure>
         </div>
-        <aside class="shell physical-rationale"><span>C · Design Rationale</span><p>The enclosure separates the removable upper shell from the electronics base, allowing the ESP32 and IMU to remain accessible during iteration.</p></aside>
+        <aside class="shell physical-rationale"><span>Design rationale</span><p>The enclosure separates the removable upper shell from the electronics base, allowing the ESP32 and IMU to remain accessible during iteration.</p></aside>
       </section>
 
       <section class="future-directions section-mid">
@@ -505,14 +510,10 @@ const cueResults = [
 
 .controller-row { margin-top: 4rem; display: grid; grid-template-columns: 1.08fr .92fr; gap: 1rem; align-items: stretch; }
 .controller-context { min-width: 0; display: grid; gap: 1rem; }
-.interaction-photo-placeholder { min-height: 285px; margin: 0; padding: 1.8rem; display: flex; flex-direction: column; align-items: center; justify-content: center; border: 1px dashed #4a6c72; border-radius: 18px; background: repeating-linear-gradient(135deg, rgba(155,222,213,.025) 0 9px, transparent 9px 18px), #0a191e; text-align: center; }
-.interaction-photo-placeholder > div { position: relative; width: 108px; height: 70px; margin-bottom: 1.3rem; border: 1px solid #4c7478; border-radius: 8px; }
-.interaction-photo-placeholder > div::before { content: ''; position: absolute; left: 13px; right: 13px; bottom: 12px; height: 1px; background: #45666b; transform: rotate(-10deg); }
-.interaction-photo-placeholder > div span { position: absolute; left: 14px; bottom: 17px; width: 29px; height: 24px; border: 1px solid var(--teal); border-radius: 50% 50% 42% 42%; opacity: .8; }
-.interaction-photo-placeholder > div i { position: absolute; right: 17px; top: 14px; width: 23px; height: 15px; border: 1px solid var(--ochre); border-radius: 50%; opacity: .85; }
-.interaction-photo-placeholder > div b { position: absolute; right: 28px; bottom: 13px; width: 27px; height: 1px; background: var(--teal); transform: rotate(23deg); opacity: .7; }
-.interaction-photo-placeholder > strong { color: #dce8e4; font-size: 1rem; }
-.interaction-photo-placeholder figcaption { margin-top: .55rem; max-width: 420px; color: #82969c; font-size: .7rem; line-height: 1.55; }
+.interaction-photo { margin: 0; overflow: hidden; border: 1px solid #315057; border-radius: 18px; background: #0a191e; }
+.interaction-photo img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.interaction-photo figcaption { padding: .85rem 1rem 1rem; color: #82969c; font-size: .7rem; line-height: 1.55; }
+.interaction-photo figcaption strong { color: #dce8e4; }
 .controller-rationale, .gesture-vocabulary, .debug-note, .classifier-flow, .swarm-validation, .ui-placeholder, .task-list, .freeze-section, .prediction-panel { border: 1px solid var(--line); border-radius: 18px; background: var(--panel); }
 .ui-placeholder > span { color: var(--teal); font-size: .66rem; font-weight: 800; letter-spacing: .12em; }
 .controller-rationale { padding: 1.8rem; }
@@ -809,15 +810,13 @@ const cueResults = [
 .reflection-conclusion { margin-top: 2.2rem; padding: 1.5rem 0 0 1.5rem; max-width: 1000px; color: #dce8e4; font-size: 1rem; line-height: 1.7; border-left: 3px solid var(--ochre); }
 .physical-heading { max-width: 920px; }
 .physical-heading > p:last-child { color: var(--muted); }
-.physical-workbench { margin-top: 4.5rem; display: grid; grid-template-columns: 1.15fr .85fr; gap: 1rem; }
-.cad-placeholder, .fabrication-placeholder { min-height: 340px; padding: 1.8rem; border: 1px solid #315057; border-radius: 18px; background: #0a191e; }
-.cad-placeholder > span, .fabrication-placeholder > span, .physical-rationale > span { color: var(--teal); font-size: .68rem; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; }
-.cad-placeholder > strong { display: block; margin-top: 1.1rem; color: #dce8e4; font-size: 1.25rem; }
-.cad-placeholder > div, .fabrication-placeholder > div { margin-top: 1.8rem; display: grid; grid-template-columns: repeat(4, 1fr); gap: .65rem; }
-.cad-placeholder i, .fabrication-placeholder i { min-height: 125px; padding: .8rem; display: flex; align-items: flex-end; justify-content: center; border: 1px dashed #426268; border-radius: 11px; color: #789097; background: repeating-linear-gradient(135deg, rgba(155,222,213,.025) 0 8px, transparent 8px 16px); font-size: .62rem; font-style: normal; letter-spacing: .08em; text-align: center; text-transform: uppercase; }
-.cad-placeholder > p { margin-top: 1.2rem; color: #82969c; font-size: .7rem; line-height: 1.55; }
-.fabrication-placeholder > div { grid-template-columns: repeat(2, 1fr); }
-.fabrication-placeholder i { min-height: 105px; }
+.prototype-evidence-grid { margin-top: 4.5rem; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.prototype-evidence { margin: 0; overflow: hidden; border: 1px solid #315057; border-radius: 18px; background: #0a191e; }
+.prototype-evidence img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.prototype-evidence figcaption { padding: 1.25rem 1.4rem 1.45rem; }
+.prototype-evidence figcaption span, .physical-rationale > span { display: block; color: var(--teal); font-size: .68rem; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; }
+.prototype-evidence figcaption strong { display: block; margin-top: .65rem; color: #dce8e4; font-size: 1.05rem; line-height: 1.35; }
+.prototype-evidence figcaption p { margin-top: .55rem; color: #82969c; font-size: .74rem; line-height: 1.65; }
 .physical-rationale { margin-top: 1rem; padding: 1.5rem 1.8rem; display: grid; grid-template-columns: 190px 1fr; gap: 2rem; align-items: baseline; border-top: 1px solid #315057; border-bottom: 1px solid #315057; }
 .physical-rationale p { color: #c3d1ce; font-size: .82rem; line-height: 1.65; }
 .future-directions { padding-top: 5.5rem; padding-bottom: 5.5rem; }
@@ -846,7 +845,7 @@ const cueResults = [
 .footer .back-link { grid-column: 2; }
 
 @media (max-width: 980px) {
-  .question-grid, .controller-row, .experiment-a-support, .transition-grid, .experiment-b-intro, .freeze-section, .swarm-validation, .mapping-check-grid, .findings-header, .experiment-a-results, .physical-workbench { grid-template-columns: 1fr; }
+  .question-grid, .controller-row, .experiment-a-support, .transition-grid, .experiment-b-intro, .freeze-section, .swarm-validation, .mapping-check-grid, .findings-header, .experiment-a-results { grid-template-columns: 1fr; }
   .reflection-progression { grid-template-columns: repeat(2, 1fr); }
   .future-grid { grid-template-columns: 1fr; }
   .future-grid > li { min-height: 0; }
@@ -893,7 +892,7 @@ const cueResults = [
   .reflection-progression li:not(:last-child)::after { display: none; }
   .reflection-progression small { margin-top: 1rem; padding-top: 0; }
   .rationale-principles { grid-template-columns: 1fr; }
-  .cad-placeholder > div { grid-template-columns: repeat(2, 1fr); }
+  .prototype-evidence-grid { grid-template-columns: 1fr; }
   .physical-rationale { grid-template-columns: 1fr; gap: .7rem; }
   .future-grid dl div, .limitations-note { grid-template-columns: 1fr; }
   .limitations-note { gap: 1rem; }
