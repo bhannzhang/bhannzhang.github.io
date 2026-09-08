@@ -418,6 +418,28 @@ const cueResults = [
             <figcaption><span>04 · Assembled controller</span><strong>A robust hand-held form for repeatable physical testing</strong><p>The finished enclosure contains the sensing architecture used in the pilot while providing a consistent surface and grip for the five embodied gestures.</p></figcaption>
           </figure>
         </div>
+
+        <section class="shell making-notes" aria-labelledby="making-notes-title">
+          <div class="making-notes__heading">
+            <span>Behind the build</span>
+            <p id="making-notes-title">Hands-on moments from assembling, wiring, and closing the physical controller.</p>
+          </div>
+          <div class="making-notes__grid">
+            <figure>
+              <img :src="homeUrl + 'images/research/embodied-swarm/physical/behind-assembly.jpg'" alt="Researcher assembling the controller electronics at a work table" loading="lazy" />
+              <figcaption>Hands-on assembly</figcaption>
+            </figure>
+            <figure>
+              <img :src="homeUrl + 'images/research/embodied-swarm/physical/behind-wiring.jpg'" alt="Hands connecting the ESP32 and inertial sensor inside the controller base" loading="lazy" />
+              <figcaption>Internal wiring</figcaption>
+            </figure>
+            <figure>
+              <img :src="homeUrl + 'images/research/embodied-swarm/physical/behind-enclosure.jpg'" alt="Hands closing the silver top of the cylindrical controller enclosure" loading="lazy" />
+              <figcaption>Closing the enclosure</figcaption>
+            </figure>
+          </div>
+        </section>
+
         <aside class="shell physical-rationale"><span>Design rationale</span><p>The enclosure separates the removable upper shell from the electronics base, allowing the ESP32 and IMU to remain accessible during iteration.</p></aside>
       </section>
 
@@ -835,6 +857,16 @@ const cueResults = [
 .prototype-evidence figcaption strong { display: block; margin-top: .65rem; color: #dce8e4; font-size: 1.05rem; line-height: 1.35; }
 .prototype-evidence figcaption p { margin-top: .55rem; color: #82969c; font-size: .74rem; line-height: 1.65; }
 .prototype-evidence--assembled img { object-position: center 52%; }
+.making-notes { margin-top: 1rem; padding: 1rem; border: 1px solid #315057; border-radius: 18px; background: #0a191e; }
+.making-notes__heading { display: flex; align-items: baseline; justify-content: space-between; gap: 1.5rem; padding: .15rem .2rem .9rem; }
+.making-notes__heading span { flex: 0 0 auto; color: var(--teal); font-size: .66rem; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; }
+.making-notes__heading p { margin: 0; color: #82969c; font-size: .72rem; line-height: 1.5; text-align: right; }
+.making-notes__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .65rem; }
+.making-notes figure { margin: 0; overflow: hidden; border: 1px solid #28444a; border-radius: 12px; background: #071419; }
+.making-notes img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.making-notes figure:nth-child(2) img { object-position: center 55%; }
+.making-notes figure:nth-child(3) img { object-position: center 48%; }
+.making-notes figcaption { padding: .65rem .75rem .72rem; color: #b8c9c7; font-size: .68rem; letter-spacing: .02em; }
 .physical-rationale { margin-top: 1rem; padding: 1.5rem 1.8rem; display: grid; grid-template-columns: 190px 1fr; gap: 2rem; align-items: baseline; border-top: 1px solid #315057; border-bottom: 1px solid #315057; }
 .physical-rationale p { color: #c3d1ce; font-size: .82rem; line-height: 1.65; }
 .future-directions { padding-top: 5.5rem; padding-bottom: 5.5rem; }
@@ -915,6 +947,10 @@ const cueResults = [
   .gesture-gallery__heading { align-items: flex-start; flex-direction: column; }
   .gesture-gallery__grid { grid-template-columns: 1fr; }
   .prototype-evidence-grid { grid-template-columns: 1fr; }
+  .making-notes__heading { align-items: flex-start; flex-direction: column; gap: .35rem; }
+  .making-notes__heading p { text-align: left; }
+  .making-notes__grid { display: flex; overflow-x: auto; padding-bottom: .3rem; scroll-snap-type: x mandatory; }
+  .making-notes figure { flex: 0 0 78%; scroll-snap-align: start; }
   .physical-rationale { grid-template-columns: 1fr; gap: .7rem; }
   .future-grid dl div, .limitations-note { grid-template-columns: 1fr; }
   .limitations-note { gap: 1rem; }
