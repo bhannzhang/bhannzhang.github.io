@@ -192,6 +192,7 @@ const nodes = [
   { id: 'driving-platform', label: 'Driving Simulation Platform', type: 'project', x: 205, y: 505, radius: 6, href: '/research/driving-simulation-platform/' },
   { id: 'digital-twin', label: 'Real-World Digital Twin', type: 'project', x: 350, y: 470, radius: 6, href: '/research/digital-twin-driving/' },
   { id: 'oyi', label: 'OYI Companion Robot', type: 'project', x: 748, y: 150, radius: 8, href: '/research/oyi/' },
+  { id: 'embodied-swarm', label: 'Embodied Swarm Interaction', type: 'project', x: 862, y: 164, radius: 8, href: '/research/embodied-swarm/' },
   { id: 'voice-assistant', label: 'Embodied Voice Assistant', type: 'project', x: 565, y: 404, radius: 7, href: '/research/voice-assistant/' },
   { id: 'gesture-arm', label: 'Gesture-to-Motion Robotic Arm', type: 'project', x: 792, y: 448, radius: 6, href: '/research/gesture-arm/' },
   { id: 'soft-actuator', label: 'Pneumatic Soft Actuators', type: 'project', x: 925, y: 458, radius: 6, href: '/research/soft-actuator/' },
@@ -224,11 +225,13 @@ const links = [
   { source: 'social-interaction', target: 'multimodal' },
   { source: 'social-interaction', target: 'oyi' },
   { source: 'social-interaction', target: 'multi-agent' },
+  { source: 'social-interaction', target: 'embodied-swarm' },
   { source: 'social-interaction', target: 'roles' },
   { source: 'multimodal', target: 'embodied-ai' },
   { source: 'multimodal', target: 'oyi' },
   { source: 'multimodal', target: 'voice-assistant' },
   { source: 'embodied-ai', target: 'oyi' },
+  { source: 'embodied-ai', target: 'embodied-swarm' },
   { source: 'embodied-ai', target: 'voice-assistant' },
   { source: 'embodied-ai', target: 'movement' },
   { source: 'embodied-ai', target: 'emg' },
@@ -238,7 +241,10 @@ const links = [
   { source: 'movement', target: 'oyi' },
   { source: 'adaptation', target: 'oyi' },
   { source: 'adaptation', target: 'multi-agent' },
+  { source: 'adaptation', target: 'embodied-swarm' },
   { source: 'roles', target: 'multi-agent' },
+  { source: 'roles', target: 'embodied-swarm' },
+  { source: 'multi-agent', target: 'embodied-swarm' },
 ]
 
 const nodeById = Object.fromEntries(nodes.map((node) => [node.id, node]))
