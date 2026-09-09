@@ -211,7 +211,7 @@ export const siteContent = {
         school: "Tongji University",
         location: "Shanghai, China",
         period: "2018 - 2021",
-        gpa: "4.73/5.0 (1st in program)",
+        gpa: "4.73/5.0 · 1st in program for 3 consecutive academic years",
         status: "Completed",
         thesis: "Interaction Design, Concentrations in Human computer interaction and cognition",
         achievements: [
