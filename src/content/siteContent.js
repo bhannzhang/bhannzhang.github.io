@@ -204,7 +204,7 @@ export const siteContent = {
   // 📌 教育经历（Education Section）
   // ==========================================
   education: {
-    sectionTitle: "Education",
+    sectionTitle: "Education Experience",
     items: [
       {
         degree: "Master of Interaction Design in HMI & HCI ",

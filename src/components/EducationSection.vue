@@ -171,7 +171,7 @@ const content = siteContent
     align-items: center;
     gap: 0.375rem;
     font-size: 0.875rem;
-    color: var(--color-text-secondary);
+    color: #625d70;
 
     svg {
       width: 14px;
@@ -182,7 +182,7 @@ const content = siteContent
 
   &__thesis {
     font-size: 0.9375rem;
-    color: var(--color-text-secondary);
+    color: #625d70;
     line-height: 1.6;
     margin: 0 0 1.25rem;
   }
