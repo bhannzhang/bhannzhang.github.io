@@ -35,15 +35,15 @@
       </section>
 
       <section class="system-section"><div class="shell system-grid">
-        <div><p class="kicker">System architecture</p><h2>Conversation, continuity, and embodiment</h2></div>
+        <div><p class="kicker">Technical implementation</p><h2>From speech input to embodied response</h2><p class="prose">The same core hardware and memory capability were used in both study conditions.</p></div>
         <div class="system-flow">
-          <article><span>01</span><strong>Voice dialogue</strong><p>Speech input and model-enabled conversational response</p></article>
+          <article><span>01 · Hardware</span><strong>Voice interface</strong><p>ESP32-S3 N16R8, display, microphone, and speaker inside a Xingzhi CUBE XiaoZhi AI dialogue module</p></article>
           <i aria-hidden="true">→</i>
-          <article><span>02</span><strong>Interaction logic</strong><p>Persona configuration, structured prompts, and dialogue guidance</p></article>
+          <article><span>02 · Model</span><strong>Dialogue logic</strong><p>DeepSeek-based conversation configured through system prompts and daily dialogue goals, without model fine-tuning</p></article>
           <i aria-hidden="true">→</i>
-          <article><span>03</span><strong>Persistent memory</strong><p>Session continuity, user profile, and longitudinal context</p></article>
+          <article><span>03 · Context</span><strong>Persistent memory</strong><p>Prior conversation details carried across the five daily sessions in both conditions</p></article>
           <i aria-hidden="true">→</i>
-          <article><span>04</span><strong>Embodied output</strong><p>Voice response and coordinated ambient RGB light</p></article>
+          <article><span>04 · Output</span><strong>Voice + light</strong><p>Spoken responses in both conditions; researcher-controlled LED colour, brightness, and transitions in the experimental condition</p></article>
         </div>
       </div></section>
 
@@ -55,19 +55,43 @@
         </div>
       </section>
 
+      <section class="multimodal-section"><div class="shell multimodal-inner">
+        <div class="section-intro"><p class="kicker">Multimodal strategy</p><h2>Each channel had a defined role</h2><p class="prose">The broader concept explored movement, facial display, touch, and temperature. The study evaluated a narrower set of implemented resources so the portfolio does not present speculative behaviours as tested features.</p></div>
+        <div class="modality-grid">
+          <article><span>Voice</span><strong>Guide the exchange</strong><p>Active openings, reflective follow-up, reframing prompts, and session summaries.</p><small>Experimental and control</small></article>
+          <article><span>Memory</span><strong>Maintain continuity</strong><p>Earlier conversation details could be recalled across all five days.</p><small>Experimental and control</small></article>
+          <article><span>Physical form</span><strong>Create object presence</strong><p>A compact 3D-printed body situated the conversation in a shared physical space.</p><small>Experimental and control</small></article>
+          <article><span>Ambient light</span><strong>Make state visible</strong><p>Colour, brightness, and transitions supplemented the spoken response without claiming automatic emotion recognition.</p><small>Experimental only · researcher controlled</small></article>
+        </div>
+        <p class="scope-note"><strong>Outside this evaluation:</strong> autonomous movement, touch feedback, temperature change, expressive face behaviour, and automatic emotion recognition.</p>
+      </div></section>
+
+      <section class="shell principles">
+        <div><p class="kicker">Design principles</p><h2>Five principles derived from the study</h2></div>
+        <ol class="principle-list">
+          <li><span>01</span><p><strong>Clarify before advising.</strong> Reflect the situation and help users articulate what they think before offering suggestions.</p></li>
+          <li><span>02</span><p><strong>Guide gradually and preserve exit points.</strong> Active prompts should deepen reflection without turning into repeated questioning.</p></li>
+          <li><span>03</span><p><strong>Synchronise the modalities.</strong> Voice and light should communicate the same interaction state at the same moment.</p></li>
+          <li><span>04</span><p><strong>Use memory as relationship continuity.</strong> Recall matters when it supports relevant follow-up, not simply because data were stored.</p></li>
+          <li><span>05</span><p><strong>Pair social cues with clear boundaries.</strong> A companion-like form should not obscure system limits, privacy, or data use.</p></li>
+        </ol>
+      </section>
+
       <section class="demo-section"><div class="shell demo-grid">
         <div><p class="kicker">Interaction demo</p><h2>Mandarin voice dialogue with responsive light feedback</h2><p class="prose">The original interaction was developed and studied in Mandarin. The video shows the implemented sequence: the user speaks, OYI responds, and the body light changes as an additional interaction cue.</p></div>
         <figure class="video-frame"><video controls playsinline preload="metadata" :poster="asset('light-feedback.jpg')"><source :src="media('oyi-interaction-demo.mp4')" type="video/mp4" />Your browser does not support embedded video.</video><figcaption>Functional OYI prototype interaction demo</figcaption></figure>
       </div></section>
 
       <section class="shell study">
-        <div><p class="kicker">Study design</p><h2>Repeated interaction rather than a one-time usability test</h2></div>
+        <div><p class="kicker">Study design</p><h2>Two parallel conditions across five days</h2><p class="prose">Thirty-two participants were assigned to two groups of 16. The comparison tested the integrated interaction as a whole, not the independent effect of any single feature.</p></div>
         <div>
+          <div class="shared-baseline"><span>Held constant in both groups</span><p>16 participants · same OYI body and voice hardware · persistent memory · one daily topic · at least 10 minutes per day · five consecutive days</p></div>
           <div class="study-grid">
-            <article><span>Experimental condition</span><h3>Structured social interaction</h3><p>Guided reflection, conversational continuity, active prompting, and coordinated light feedback.</p></article>
-            <article><span>Control condition</span><h3>General voice interaction</h3><p>The same physical form and persistent memory, with open daily conversation and no coordinated light feedback.</p></article>
-            <article><span>Evaluation</span><h3>Experience across five days</h3><p>Pre/post measures, post-study scales, interaction records, and 32 semi-structured interviews.</p></article>
+            <article><span>Experimental condition · n = 16</span><h3>Integrated interaction</h3><p>Structured guided reflection, active initiation, deeper follow-up, and researcher-controlled ambient light.</p></article>
+            <div class="comparison-mark" aria-hidden="true">vs</div>
+            <article><span>Control condition · n = 16</span><h3>General voice interaction</h3><p>Neutral open daily topics and general conversation, without structured guidance or ambient light.</p></article>
           </div>
+          <p class="evaluation-line"><strong>Evaluation:</strong> pre/post measures, post-study scales, interaction records, and 32 semi-structured interviews.</p>
           <ol class="study-timeline" aria-label="Five-day interaction sequence">
             <li><span>Day 1</span>Build familiarity</li>
             <li><span>Day 2</span>Notice recurring thoughts</li>
@@ -86,6 +110,7 @@
           <article><span class="result-label">Social presence</span><strong>55.13 vs 42.19</strong><p>The integrated condition produced a stronger sense that OYI was socially present in the interaction.</p><small>p = .012</small></article>
         </div>
         <p class="results-boundary"><strong>What did not change.</strong> The study found no significant condition-specific change in positive affect or the adapted self-regulation skills measure, and no significant usability difference. After correction, only the facilitating-conditions dimension of the trust scale differed—not overall trust.</p>
+        <div class="results-conclusion"><span>Conclusion</span><p>The integrated condition was associated with lower negative affect and stronger perceived empathy and social presence after five days. The pattern supports OYI as an embodied social-interaction concept, while the composite study design means these differences cannot be attributed to structured guidance, active prompting, or light alone.</p></div>
       </div></section>
 
       <section class="shell participant-insights">
@@ -119,4 +144,6 @@ const media = (filename) => `${import.meta.env.BASE_URL}media/research/oyi/${fil
 @media(max-width:900px){.shell,.topbar{width:min(100% - 2rem,1120px)}.topbar{min-height:68px}.hero,.two-column,.system-grid,.demo-grid,.study,.participant-insights,.analysis__inner{grid-template-columns:1fr}.hero{padding:5rem 0 4rem}.two-column,.implementation,.design-language,.study,.participant-insights{padding:4rem 0}.metric-grid,.evidence-grid,.study-grid,.result-grid,.insight-grid{grid-template-columns:1fr}.metric-grid div{min-height:100px;border-right:0;border-bottom:1px solid rgba(19,17,27,.14)}.system-section,.demo-section,.results-section,.analysis{padding:4rem 0}.system-flow{grid-template-columns:1fr}.system-flow i{transform:rotate(90deg);text-align:center}.system-flow article{min-height:auto}.study-timeline{grid-template-columns:1fr}.study-timeline li{padding:1rem;border-bottom:1px solid rgba(255,255,255,.1)}.design-crops{grid-template-columns:1fr}.design-crop,.design-crop--render{height:320px}.result-grid p{min-height:auto}.disclosure__inner,.footer{grid-template-columns:1fr}.footer .back-link{grid-column:auto}}
 .limitation{padding:6rem 0;background:#17131d}.limitation__inner{display:grid;grid-template-columns:.65fr 1.35fr;gap:clamp(3rem,7vw,6rem);align-items:start}.limitation-list p{margin:0;padding:1rem 0;border-top:1px solid rgba(255,255,255,.1);color:#aaa4b2;line-height:1.75}.limitation-list strong{color:#e5e0e9}
 @media(max-width:900px){.limitation{padding:4rem 0}.limitation__inner{grid-template-columns:1fr}}
+.system-grid>div>.prose,.study>div>.prose{margin-top:1.2rem}.system-flow article{min-height:240px}.system-flow span{font-size:.7rem}.multimodal-section{padding:6rem 0;background:#ece7f7;color:var(--ink)}.multimodal-section .kicker{color:#6547ba}.multimodal-section .prose{color:#625b6d}.modality-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:3rem}.modality-grid article{min-height:250px;padding:1.25rem;display:flex;flex-direction:column;border-top:2px solid #6547ba;background:rgba(255,255,255,.55)}.modality-grid span{color:#6547ba;font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}.modality-grid strong{margin:2rem 0 .75rem}.modality-grid p{color:#625b6d;font-size:.82rem;line-height:1.65}.modality-grid small{margin-top:auto;padding-top:1.2rem;color:#756d7e;font-size:.68rem}.scope-note{margin:1.5rem 0 0;color:#625b6d;font-size:.82rem;line-height:1.7}.principles{padding:6rem 0;display:grid;grid-template-columns:.6fr 1.4fr;gap:clamp(3rem,7vw,6rem);border-top:1px solid rgba(255,255,255,.1)}.principle-list{margin:0;padding:0;list-style:none}.principle-list li{padding:1.15rem 0;display:grid;grid-template-columns:3rem 1fr;gap:1rem;border-top:1px solid rgba(255,255,255,.12)}.principle-list span{color:var(--mint);font:600 .72rem var(--font-mono)}.principle-list p{margin:0;color:#aaa4b2;line-height:1.7}.principle-list strong{color:#e8e3eb}.shared-baseline{margin-bottom:1rem;padding:1rem 1.2rem;border-left:2px solid var(--mint);background:#15121a}.shared-baseline span{color:var(--mint);font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}.shared-baseline p{margin:.55rem 0 0;color:#aaa4b2;font-size:.8rem;line-height:1.6}.study-grid{grid-template-columns:1fr auto 1fr;align-items:stretch}.study-grid article{min-height:250px}.comparison-mark{align-self:center;color:#77707e;font:600 .75rem var(--font-mono);text-transform:uppercase}.evaluation-line{margin:1rem 0 0;color:#aaa4b2;font-size:.82rem;line-height:1.65}.evaluation-line strong{color:#e5e0e9}.results-conclusion{margin-top:2rem;padding:1.5rem;border-top:2px solid #6547ba;background:rgba(255,255,255,.55)}.results-conclusion span{color:#6547ba;font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}.results-conclusion p{margin:.75rem 0 0;font-size:clamp(1rem,2vw,1.25rem);line-height:1.65}
+@media(max-width:900px){.multimodal-section{padding:4rem 0}.modality-grid,.principles,.study-grid{grid-template-columns:1fr}.modality-grid article{min-height:auto}.modality-grid small{margin-top:1rem}.principles{padding:4rem 0}.comparison-mark{padding:.25rem;text-align:center}}
 </style>
