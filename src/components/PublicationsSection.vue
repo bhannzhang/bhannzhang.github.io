@@ -33,6 +33,7 @@
                 <em>{{ pub.venue }}</em>
                 <span v-if="pub.year">, {{ pub.year }}</span>
               </p>
+              <p v-if="pub.note" class="publication-item__note">{{ pub.note }}</p>
               <div v-if="pub.tags && pub.tags.length" class="publication-item__tags">
                 <span 
                   v-for="tag in pub.tags" 
@@ -177,6 +178,13 @@ const splitAuthors = (authors) => authors
     font-size: 0.8125rem;
     color: #6a6a8a;
     margin: 0;
+  }
+
+  &__note {
+    font-size: 0.8125rem;
+    color: #5a5a78;
+    margin: 0.5rem 0 0;
+    line-height: 1.5;
   }
 
   &__tags {

@@ -139,7 +139,7 @@
         </div>
         <ul>
           <li><span>AutomotiveUI 2020</span><strong>Designing Communication Strategies of Autonomous Vehicles with Pedestrians: An Intercultural Study</strong></li>
-          <li><span>HHME 2019</span><strong>Study on Pedestrian Interaction with Unmanned Logistics Vehicles Based on Cognitive Acceptance</strong></li>
+          <li><span>CHCI 2019 presentation</span><strong>Human–Machine Interface Design of an Exterior Display for an Unmanned Delivery Vehicle</strong></li>
           <li><span>Master’s thesis</span><strong>Tongji University Outstanding Master’s Thesis, 2021</strong></li>
           <li><span>Additional outputs</span><strong>Journal of Graphics papers and related design patents</strong></li>
         </ul>

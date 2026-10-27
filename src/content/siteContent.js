@@ -38,7 +38,7 @@ export const siteContent = {
     // 英文昵称 (English nickname)
     nickname: "Bhann",
     // 您的职位/身份 (Your position/title)
-    title: "Human Factors & HCI Researcher · Fall 2027 PhD Applicant",
+    title: "Human Factors & HCI Researcher",
     // 您所在的学校/机构 (Your school/organization)
     institution: "SAIC Volkswagen",
     // 位置 (Your location)
@@ -137,7 +137,7 @@ export const siteContent = {
       items: [
         "Industry experience in intelligent cockpit HMI since 2021",
         "Experience bridging research, system design, and production programs",
-        "Preparing PhD applications for Fall 2027",
+        "Independent research in embodied and autonomous systems",
       ],
     },
     keywords: ["Human Factors", "HCI", "Human–Robot Interaction", "Human–Autonomy Interaction", "Social Robotics", "Embodied Interaction"],
@@ -325,7 +325,7 @@ export const siteContent = {
   // 📌 发表论文（Publications Section）
   // ==========================================
   publications: {
-    sectionTitle: "Publications & Books",
+    sectionTitle: "Publications & Other Scholarly Contributions",
     categories: [
       {
         name: "Journal Articles",
@@ -333,18 +333,18 @@ export const siteContent = {
           {
             title: "Research on Vehicle Exterior Interaction Design Based on Automation Acceptance Model",
             authors: "Zhang, B., & You, F.",
-            venue: "Journal of Graphics",
+            venue: "Journal of Graphics · 41(6), 1012–1017",
             year: "2020",
-            tags: ["CCF-C", "Core Journal"],
-            link: "",
+            tags: ["DOI: 10.11996/JG.j.2095-302X.2020061012"],
+            link: "https://doi.org/10.11996/JG.j.2095-302X.2020061012",
           },
           {
-            title: "Human-Machine Interface Design of External Displays for Unmanned Logistics Vehicles",
+            title: "Research on Human–Machine Interface Design of the Exterior Screen of a Driverless Delivery Car",
             authors: "Wang, W., Zhang, B., Fu, M., Lin, Z., Pei, J., & Wang, J.",
-            venue: "Journal of Graphics",
-            year: "2019",
-            tags: ["CCF-C", "Core Journal"],
-            link: "",
+            venue: "Journal of Graphics · 41(3), 335–341",
+            year: "2020",
+            tags: ["DOI: 10.11996/JG.j.2095-302X.2020030335"],
+            link: "https://doi.org/10.11996/JG.j.2095-302X.2020030335",
           },
         ],
       },
@@ -354,39 +354,38 @@ export const siteContent = {
           {
             title: "Designing Communication Strategies of Autonomous Vehicles with Pedestrians: An Intercultural Study",
             authors: "Lanzer, M., Babel, F., Yan, F., Zhang, B., You, F., Wang, J., & Baumann, M.",
-            venue: "AutomotiveUI 2020",
+            venue: "Proceedings of the 12th International Conference on Automotive User Interfaces and Interactive Vehicular Applications (AutomotiveUI ’20) · 122–131",
             year: "2020",
-            tags: ["AutomotiveUI 2020 SIGCHI"],
-            link: "",
-          },
-          {
-            title: "Study on Pedestrian Interaction with Unmanned Logistics Vehicles Based on Cognitive Acceptance",
-            authors: "Zhang, B., You, F., Yan, F., & Wang, J.",
-            venue: "HHME 2019",
-            year: "2019",
-            tags: ["HHME"],
-            link: "",
+            tags: ["DOI: 10.1145/3409120.3410653"],
+            link: "https://doi.org/10.1145/3409120.3410653",
           },
         ],
       },
       {
-        name: "Books & Chapters",
+        name: "Conference Presentation",
         items: [
           {
-            title: "Research on Intelligent Vehicle Interaction Design Methodology",
-            authors: "Zhang, B. (Contributing Author)",
-            venue: "Science Press · ISBN 978-7-03-074373-2",
-            year: "",
-            tags: [],
-            link: "",
+            title: "Human–Machine Interface Design of an Exterior Display for an Unmanned Delivery Vehicle",
+            authors: "Wang, W., Zhang, B., Fu, M., Lin, Z., Pei, J., & Wang, J.",
+            venue: "CHCI 2019 Paper Presentation, HHME 2019 · Nanjing, China",
+            year: "2019",
+            note: "Presented in Chinese as “无人物流车的车外屏人机界面设计研究” on September 22, 2019.",
+            tags: ["Conference presentation"],
+            link: "https://hhme.ccf.org.cn/history/2019/JLLW3.html",
           },
+        ],
+      },
+      {
+        name: "Other Scholarly Contributions",
+        items: [
           {
-            title: "Human-Machine Interface for Intelligent Vehicles — Design Methodology and Cognitive Evaluation",
-            authors: "Zhang, B. (Chapter author)",
-            venue: "Authored Chapter 2",
-            year: "",
+            title: "HMI Interaction Design and Evaluation for Intelligent Vehicles [智能汽车HMI交互设计与评估]",
+            authors: "You, F., Wang, J., & Wang, W.",
+            venue: "Science Press · ISBN 9787030743732",
+            year: "2023",
+            note: "Bihan Zhang — Acknowledged Editorial Contributor. Assisted in refining the book’s structure and chapter organization, organizing the text of Chapters 1–3 and 7–9, and proofreading the manuscript.",
             tags: [],
-            link: "",
+            link: "https://www.ecsponline.com/goods.php?id=224055",
           },
         ],
       },
@@ -782,7 +781,7 @@ export const siteContent = {
   // ==========================================
   meta: {
     title: "Bihan Zhang | Human Factors, HCI & Embodied Interaction",
-    description: "Fall 2027 PhD applicant studying how people understand, trust, collaborate with, and physically interact with intelligent and autonomous systems.",
+    description: "Human factors and HCI researcher studying how people understand, trust, collaborate with, and physically interact with intelligent and autonomous systems.",
     keywords: "Human Factors, HCI, Human-AI Interaction, Human-Autonomy Interaction, Embodied Interaction, Physical Prototyping, Automotive HMI",
     
     // [Method 1] Local file:
