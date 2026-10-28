@@ -21,6 +21,12 @@
             @click="openPublication(pub.link)"
             @keydown.enter="openPublication(pub.link)"
           >
+            <img
+              v-if="pub.image"
+              :src="pub.image"
+              :alt="`${pub.title} cover`"
+              class="publication-item__cover"
+            />
             <div class="publication-item__content">
               <h4 class="publication-item__title">{{ pub.title }}</h4>
               <p class="publication-item__authors">
@@ -152,6 +158,15 @@ const splitAuthors = (authors) => authors
 
   &__content {
     flex: 1;
+  }
+
+  &__cover {
+    width: 88px;
+    height: 118px;
+    flex-shrink: 0;
+    object-fit: contain;
+    border-radius: 4px;
+    background: #fff;
   }
 
   &__title {
