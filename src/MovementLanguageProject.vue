@@ -1,4 +1,6 @@
 <script setup>
+import ResearchPageTopbar from './components/ResearchPageTopbar.vue'
+
 const homeUrl = import.meta.env.BASE_URL
 
 const parameters = [
@@ -110,10 +112,7 @@ const labLimits = [
 
 <template>
   <main class="case-study">
-    <header class="topbar">
-      <a class="brand" :href="homeUrl">Bihan Zhang</a>
-      <a class="back-link" :href="`${homeUrl}#research-projects`"><span aria-hidden="true">&larr;</span> Back to selected research</a>
-    </header>
+    <ResearchPageTopbar :home-url="homeUrl" />
 
     <article>
       <section class="hero shell">
@@ -280,4 +279,8 @@ const labLimits = [
 .evidence-matrix-section{padding:6rem 0}.evidence-matrix-section .section-copy>p:last-child{color:#aaa7a2}.evidence-matrix-wrap{margin-top:3rem;overflow-x:auto;border-top:2px solid var(--accent)}.evidence-matrix{width:100%;min-width:1080px;border-collapse:collapse;background:#131318;font-size:.78rem}.evidence-matrix th,.evidence-matrix td{padding:1.15rem 1rem;border-right:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.1);vertical-align:top;text-align:left;line-height:1.65}.evidence-matrix thead th{color:#8f8b85;font-size:.66rem;letter-spacing:.08em;text-transform:uppercase}.evidence-matrix tbody th{width:110px;color:var(--accent);font-size:.9rem}.evidence-matrix td{color:#aaa69f}.evidence-matrix td:nth-child(4){width:150px}.evidence-matrix td span{display:inline-block;padding:.32rem .5rem;border:1px solid rgba(215,167,101,.35);color:var(--accent-soft);font-size:.66rem;white-space:nowrap}.evidence-matrix td:last-child{color:#d2cec7}
 @media(max-width:900px){.evidence-matrix-section{padding:4rem 0}}
 .table-scroll-note{display:none}@media(max-width:900px){.table-scroll-note{display:block;margin:1.5rem 0 -1.5rem;color:#77736e;font-size:.72rem}}
+</style>
+
+<style lang="scss" scoped>
+@use './styles/research-detail-system';
 </style>

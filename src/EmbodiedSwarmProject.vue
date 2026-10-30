@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue'
+import ResearchPageTopbar from './components/ResearchPageTopbar.vue'
 
 const homeUrl = import.meta.env.BASE_URL
 
@@ -102,10 +103,7 @@ const cueResults = [
 
 <template>
   <main class="swarm-page">
-    <header class="topbar">
-      <a class="brand" :href="homeUrl">Bihan Zhang</a>
-      <a class="back-link" :href="`${homeUrl}#research-projects`"><span aria-hidden="true">&larr;</span> Back to selected research</a>
-    </header>
+    <ResearchPageTopbar :home-url="homeUrl" />
 
     <article>
       <section class="hero shell">
@@ -958,4 +956,8 @@ const cueResults = [
   .footer { grid-template-columns: 1fr; }
   .footer .back-link { grid-column: auto; }
 }
+</style>
+
+<style lang="scss" scoped>
+@use './styles/research-detail-system';
 </style>

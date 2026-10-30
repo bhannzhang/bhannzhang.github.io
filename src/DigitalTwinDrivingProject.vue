@@ -1,9 +1,6 @@
 <template>
   <main class="case-study">
-    <header class="topbar">
-      <a class="brand" :href="homeUrl">Bihan Zhang</a>
-      <a class="back-link" :href="`${homeUrl}#research-projects`"><span aria-hidden="true">&larr;</span> Back to research</a>
-    </header>
+    <ResearchPageTopbar :home-url="homeUrl" />
 
     <article>
       <section class="hero shell">
@@ -106,6 +103,8 @@
 </template>
 
 <script setup>
+import ResearchPageTopbar from './components/ResearchPageTopbar.vue'
+
 const homeUrl = import.meta.env.BASE_URL
 const architectureDiagram = `${import.meta.env.BASE_URL}images/projects/project4.jpg`
 const layers = [
@@ -126,4 +125,8 @@ const layers = [
 .system-architecture{padding:6rem 0;border-top:1px solid rgba(255,255,255,.1)}.system-architecture__heading{display:grid;grid-template-columns:.8fr 1.2fr;column-gap:clamp(3rem,8vw,7rem);margin-bottom:2.5rem}.system-architecture__heading .kicker{grid-column:1}.system-architecture__heading h2{grid-column:1}.system-architecture__heading .prose{grid-column:2;grid-row:1 / span 2}.system-architecture figure{padding:1rem;border:1px solid rgba(116,226,193,.18);border-radius:1rem;background:#f4f1f7}.system-architecture img{display:block;width:100%;border-radius:.55rem}.system-architecture figcaption{padding:.85rem .35rem 0;color:#74827e;font-size:.8rem}.system-architecture figcaption strong{color:#334b45}
 @media(max-width:820px){.shell,.topbar{width:min(100% - 2rem,1120px)}.topbar{min-height:68px}.hero{padding:4.5rem 0 3.5rem}.map-visual{aspect-ratio:4/3}.map-label{left:1rem;bottom:1rem;max-width:65%}.map-label strong{font-size:.9rem}.coverage{right:1rem;top:1rem;padding:.7rem}.coverage strong{font-size:1rem}.two-column,.coverage-section,.translation__inner,.role-section,.architecture__inner{padding:4rem 0;grid-template-columns:1fr;gap:2rem}.metric-grid,.steps,.road-types,.role-grid{grid-template-columns:1fr}.metric-grid div{min-height:105px;border-right:0;border-bottom:1px solid rgba(16,35,31,.15)}.metric-grid div:last-child{border-bottom:0}.workflow,.architecture{padding:4rem 0}.steps li{min-height:auto;border-right:0}.steps h3{margin-top:1.25rem}.road-types article{min-height:200px}.disclosure__inner,.footer{grid-template-columns:1fr}.footer .back-link{grid-column:auto}}
 @media(max-width:820px){.system-architecture{padding:4rem 0}.system-architecture__heading{grid-template-columns:1fr;gap:1.25rem}.system-architecture__heading .kicker,.system-architecture__heading h2,.system-architecture__heading .prose{grid-column:1;grid-row:auto}.system-architecture figure{padding:.55rem}.system-architecture figcaption{font-size:.72rem}}
+</style>
+
+<style lang="scss" scoped>
+@use './styles/research-detail-system';
 </style>

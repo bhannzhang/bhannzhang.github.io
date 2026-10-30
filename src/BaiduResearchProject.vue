@@ -1,9 +1,6 @@
 <template>
   <main class="case-study">
-    <header class="topbar">
-      <a class="brand" :href="homeUrl">Bihan Zhang</a>
-      <a class="back-link" :href="`${homeUrl}#research-projects`"><span aria-hidden="true">&larr;</span> Back to research</a>
-    </header>
+    <ResearchPageTopbar :home-url="homeUrl" />
 
     <article>
       <section class="hero shell">
@@ -97,6 +94,8 @@
 </template>
 
 <script setup>
+import ResearchPageTopbar from './components/ResearchPageTopbar.vue'
+
 const homeUrl = import.meta.env.BASE_URL
 </script>
 
@@ -173,4 +172,8 @@ h2 { margin-top: .75rem; font-size: clamp(1.8rem, 3.5vw, 3rem); line-height: 1.1
   .footer { grid-template-columns: 1fr; }
   .footer .back-link { grid-column: auto; }
 }
+</style>
+
+<style lang="scss" scoped>
+@use './styles/research-detail-system';
 </style>

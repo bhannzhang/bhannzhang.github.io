@@ -1,9 +1,6 @@
 <template>
   <main class="case-study">
-    <header class="topbar">
-      <a class="brand" :href="homeUrl">Bihan Zhang</a>
-      <a class="back-link" :href="`${homeUrl}#research-projects`"><span aria-hidden="true">&larr;</span> Back to research</a>
-    </header>
+    <ResearchPageTopbar :home-url="homeUrl" />
 
     <article>
       <section class="hero shell">
@@ -126,6 +123,8 @@
 </template>
 
 <script setup>
+import ResearchPageTopbar from './components/ResearchPageTopbar.vue'
+
 const homeUrl = import.meta.env.BASE_URL
 const asset = (filename) => `${import.meta.env.BASE_URL}images/research/driver-automation/${filename}`
 const scenarios = [
@@ -231,4 +230,8 @@ figcaption { margin-top: .75rem; color: #938c89; font-size: .8rem; line-height: 
   .disclosure__inner, .footer { grid-template-columns: 1fr; }
   .footer .back-link { grid-column: auto; }
 }
+</style>
+
+<style lang="scss" scoped>
+@use './styles/research-detail-system';
 </style>

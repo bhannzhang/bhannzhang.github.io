@@ -1,0 +1,597 @@
+.case-study,
+.swarm-page {
+  --research-accent: var(--color-primary-light);
+  --research-bg: var(--color-bg);
+  --research-surface: var(--color-bg-secondary);
+  --research-text: var(--color-text);
+  --research-muted: var(--color-text-secondary);
+  --research-line: var(--color-border);
+  min-height: 100vh;
+  color: var(--research-text);
+  background: var(--research-bg);
+}
+
+.shell,
+.section-shell {
+  width: min(1180px, calc(100% - 3rem));
+  margin-inline: auto;
+}
+
+.eyebrow,
+.kicker,
+.section-kicker,
+.mini-label {
+  color: var(--research-accent);
+  font: 600 .68rem/1.4 var(--font-mono);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+h1 {
+  max-width: 1020px;
+  margin: 1rem 0 1.25rem;
+  color: var(--research-text);
+  font-size: clamp(2.55rem, 5vw, 4.15rem);
+  line-height: 1.03;
+  letter-spacing: -.045em;
+}
+
+h2 {
+  margin: .65rem 0 0;
+  color: var(--research-text);
+  font-size: clamp(1.65rem, 2.7vw, 2.25rem);
+  line-height: 1.16;
+  letter-spacing: -.03em;
+}
+
+h3 { color: var(--research-text); font-size: 1rem; line-height: 1.3; letter-spacing: -.01em; }
+.swarm-page .section-heading h2,
+.swarm-page .transition h2,
+.swarm-page .experiment-b-intro h2,
+.swarm-page .motion-process__heading h2,
+.swarm-page .mapping-check-copy h2,
+.swarm-page .findings-header h2,
+.swarm-page .reflection-heading h2,
+.swarm-page .physical-heading h2,
+.swarm-page .future-heading h2,
+.swarm-page .question-grid h1 {
+  margin: .65rem 0 0;
+  color: var(--research-text);
+  font-size: clamp(1.65rem, 2.7vw, 2.25rem);
+  line-height: 1.16;
+  letter-spacing: -.03em;
+}
+.lede,
+.hero__summary { max-width: 760px; color: var(--research-muted); font-size: clamp(1rem, 1.5vw, 1.14rem); line-height: 1.7; }
+.prose,
+.section-copy > p:not(.kicker) { color: var(--research-muted); font-size: .94rem; line-height: 1.78; }
+.prose p + p { margin-top: 1rem; }
+figcaption { color: var(--research-muted); font-size: .72rem; line-height: 1.5; }
+
+.hero { padding: clamp(5.5rem, 10vw, 8rem) 0 5rem; }
+.hero__meta,
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  margin: 2.25rem 0 3.25rem;
+  border-top: 1px solid var(--research-line);
+  border-bottom: 1px solid var(--research-line);
+}
+.hero__meta span,
+.chips span {
+  padding: .72rem 1rem .72rem 0;
+  margin-right: 1rem;
+  color: var(--research-muted);
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  font: 500 .7rem/1.4 var(--font-mono);
+}
+.hero__meta span + span::before,
+.chips span + span::before {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: .8rem;
+  margin-right: 1rem;
+  vertical-align: -.1rem;
+  background: var(--research-line);
+}
+
+.hero__visual,
+.hero-figure,
+.evidence-figure,
+.prototype-evidence,
+.interaction-photo,
+.collector-gallery__image { margin: 0; border: 1px solid var(--research-line); border-radius: 0; background: transparent; box-shadow: none; }
+.hero__visual img,
+.hero-figure img,
+.evidence-figure img,
+.prototype-evidence img,
+.interaction-photo img,
+.collector-gallery__image img { width: 100%; display: block; border: 0; border-radius: 0; object-fit: cover; }
+.hero__visual figcaption,
+.hero-figure figcaption,
+.evidence-figure figcaption,
+.prototype-evidence figcaption,
+.interaction-photo figcaption { margin: 0; padding: .75rem 0 0; }
+
+.two-column,
+.overview-grid,
+.role-panel,
+.prototype-section,
+.outputs,
+.outcomes,
+.implications,
+.evidence,
+.coverage-section,
+.role-section,
+.capabilities,
+.contribution,
+.question-grid,
+.study-grid,
+.mapping-grid,
+.limits-grid,
+.next-grid {
+  padding-block: 5.5rem;
+  display: grid;
+  grid-template-columns: minmax(230px, 4fr) minmax(0, 8fr);
+  gap: clamp(3rem, 7vw, 7rem);
+  align-items: start;
+  border-top: 1px solid var(--research-line);
+}
+
+.approach,
+.workflow,
+.design-principles,
+.system-architecture,
+.movement-probes,
+.early-probes,
+.method-correction,
+.coding,
+.findings,
+.grammar,
+.status-section,
+.evidence-matrix-section,
+.parameter-section > .shell,
+.lab-section > .shell,
+.study-b > .shell,
+.data-pipeline > .shell,
+.evidence-section > .shell,
+.mapping-section > .shell,
+.design-space > .shell,
+.limits-section > .shell,
+.next-section > .shell,
+.arc,
+.arc-caption,
+.question-grid,
+.physical-heading,
+.physical-rationale,
+.prototype-evidence-grid,
+.prototype-progression,
+.making-notes,
+.transition-grid,
+.experiment-a-flow,
+.experiment-a-results,
+.findings-header,
+.findings-secondary,
+.experiment-b-intro,
+.experiment-b-flow,
+.experiment-b-summary,
+.mapping-check-grid,
+.mapping-interpretation-wide,
+.prediction-panel,
+.cue-comparison,
+.cue-results,
+.freeze-section,
+.reflection-heading,
+.reflection-progression,
+.reflection-conclusion,
+.future-heading,
+.future-grid,
+.limitations-note {
+  padding-block: 5.5rem;
+}
+
+.metrics-band {
+  padding: 0;
+  color: var(--research-text);
+  border-top: 1px solid var(--research-line);
+  border-bottom: 1px solid var(--research-line);
+  background: var(--research-bg);
+}
+.metric-grid,
+.metrics,
+.outcome-grid,
+.data-counts {
+  display: grid;
+  gap: 0;
+}
+.metric-grid { grid-template-columns: repeat(4, 1fr); }
+.metrics,
+.outcome-grid,
+.data-counts { grid-template-columns: repeat(3, 1fr); }
+.metric-grid > div,
+.metrics > div,
+.outcome-grid > div,
+.data-counts > article {
+  min-height: 128px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--research-text);
+  border: 0;
+  border-right: 1px solid var(--research-line);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.metric-grid > div:first-child,
+.metrics > div:first-child,
+.outcome-grid > div:first-child,
+.data-counts > article:first-child { padding-left: 0; }
+.metric-grid > div:last-child,
+.metrics > div:last-child,
+.outcome-grid > div:last-child,
+.data-counts > article:last-child { border-right: 0; }
+.metric-grid strong,
+.metrics strong,
+.outcome-grid strong,
+.data-counts strong { color: var(--research-text); font-size: clamp(1.3rem, 2.3vw, 1.9rem); font-weight: 600; letter-spacing: -.035em; }
+.metric-grid span,
+.metrics span,
+.outcome-grid span,
+.data-counts span,
+.data-counts small { color: var(--research-muted); font-size: .72rem; line-height: 1.45; }
+
+.section-dark,
+.section-mid,
+.section-accent,
+.findings,
+.confidentiality,
+.lenses,
+.scenario-section,
+.evaluation,
+.architecture,
+.translation,
+.research-lineage,
+.question-band,
+.parameter-section,
+.lab-section,
+.study-a,
+.study-b,
+.data-pipeline,
+.evidence-section,
+.mapping-section,
+.design-space,
+.limits-section,
+.next-section,
+.disclosure {
+  color: var(--research-text);
+  border-top: 1px solid var(--research-line);
+  background: var(--research-surface);
+}
+
+.confidentiality,
+.evaluation,
+.translation,
+.research-lineage,
+.question-band,
+.study-a,
+.study-b,
+.disclosure { padding-block: 2.5rem; }
+
+.confidentiality__inner,
+.evaluation__inner,
+.architecture__inner,
+.translation__inner,
+.lineage__inner,
+.disclosure__inner,
+.system-architecture__heading {
+  display: grid;
+  grid-template-columns: minmax(230px, 4fr) minmax(0, 8fr);
+  gap: clamp(3rem, 7vw, 7rem);
+  align-items: start;
+}
+.confidentiality__inner { grid-template-columns: auto minmax(230px, 4fr) minmax(0, 8fr); }
+.confidentiality__inner > p,
+.disclosure__inner p { color: var(--research-muted); font-size: .84rem; line-height: 1.7; }
+.lock { width: 44px; height: 44px; display: grid; place-items: center; color: var(--research-accent); border: 1px solid var(--research-line); border-radius: 0; background: transparent; font: 600 .68rem var(--font-mono); }
+
+.steps,
+.process,
+.principle-grid,
+.lens-grid,
+.role-grid,
+.road-types,
+.parameter-grid,
+.probe-row,
+.decision-grid,
+.meaning-grid,
+.data-stage-grid,
+.finding-grid,
+.grammar-grid,
+.gesture-gallery__grid,
+.failure-cards,
+.rule-grid,
+.confidence-grid {
+  display: grid;
+  gap: 0;
+  margin-top: 3rem;
+  border-top: 1px solid var(--research-line);
+  border-bottom: 1px solid var(--research-line);
+}
+.steps { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+.process,
+.principle-grid,
+.meaning-grid,
+.data-stage-grid,
+.grammar-grid { grid-template-columns: repeat(4, 1fr); }
+.parameter-grid,
+.lens-grid { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+.role-grid,
+.road-types,
+.decision-grid { grid-template-columns: repeat(3, 1fr); }
+.probe-row { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.finding-grid { grid-template-columns: repeat(2, 1fr); }
+.steps > li,
+.process > li,
+.principle-grid > article,
+.lens-grid > article,
+.role-grid > article,
+.road-types > article,
+.parameter-grid > article,
+.probe-row > article,
+.decision-grid > article,
+.meaning-grid > article,
+.data-stage-grid > li,
+.finding-grid > article,
+.grammar-grid > article,
+.gesture-gallery__grid > article,
+.failure-cards > article,
+.rule-grid > article,
+.confidence-grid > article {
+  min-height: 220px;
+  padding: 1.2rem;
+  color: var(--research-text);
+  border: 0;
+  border-right: 1px solid var(--research-line);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.steps > li:last-child,
+.process > li:last-child,
+.principle-grid > article:last-child,
+.lens-grid > article:last-child,
+.role-grid > article:last-child,
+.road-types > article:last-child,
+.parameter-grid > article:last-child,
+.probe-row > article:last-child,
+.decision-grid > article:last-child,
+.meaning-grid > article:last-child,
+.data-stage-grid > li:last-child,
+.finding-grid > article:last-child,
+.grammar-grid > article:last-child { border-right: 0; }
+.steps span,
+.process__number,
+.principle-grid span,
+.lens-grid article > span,
+.role-grid article > span,
+.road-types article > span,
+.parameter-grid article > span,
+.decision-grid article > span,
+.data-stage-grid li > span,
+.finding-grid article > span,
+.grammar-grid article > span { color: var(--research-accent); font: 600 .68rem/1.4 var(--font-mono); }
+.steps h3,
+.process h3,
+.principle-grid h3,
+.lens-grid h3,
+.role-grid h3,
+.road-types h3,
+.parameter-grid h3,
+.probe-row h3,
+.decision-grid h3,
+.data-stage-grid h3,
+.finding-grid h3,
+.grammar-grid h3 { margin: 2rem 0 .65rem; }
+.steps p,
+.process p,
+.principle-grid p,
+.lens-grid p,
+.role-grid p,
+.road-types p,
+.parameter-grid p,
+.probe-row p,
+.decision-grid p,
+.meaning-grid li,
+.data-stage-grid p,
+.finding-grid p,
+.grammar-grid p { color: var(--research-muted); font-size: .8rem; line-height: 1.65; }
+
+.evidence-grid,
+.collector-gallery,
+.prototype-evidence-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+.evidence-grid figure,
+.collector-gallery figure,
+.prototype-evidence-grid figure { margin: 0; padding: 0; border: 0; border-radius: 0; background: transparent; box-shadow: none; }
+.evidence-grid img,
+.collector-gallery img,
+.prototype-evidence-grid img { width: 100%; display: block; border: 1px solid var(--research-line); border-radius: 0; object-fit: cover; }
+.evidence-grid figcaption,
+.collector-gallery figcaption,
+.prototype-evidence-grid figcaption { padding: .75rem 0 0; }
+
+.benchmark-visual,
+.map-visual,
+.system-map,
+.data-figure__visual,
+.hero__visual,
+.mapping-diagram,
+.flocking-model,
+.cue-visual,
+.freeze-diagram,
+.confidence-plot,
+.task-success-chart,
+.accuracy-mini,
+.experiment-interface,
+.coding-example,
+.parameter-audit,
+.evidence-matrix-wrap {
+  color: var(--research-text);
+  border: 1px solid var(--research-line);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.matrix span,
+.framework-card,
+.system-map__source,
+.system-map__outputs div,
+.lineage-flow article,
+.shared-baseline,
+.controller-row,
+.gesture-card,
+.feature-block,
+.prototype-evidence,
+.mapping-method,
+.mapping-evidence,
+.confidence-summary,
+.confidence-participants,
+.confidence-mean,
+.subjective-compact,
+.finding-takeaway,
+.prediction-panel,
+.cue-measure,
+.task-bar,
+.final-classifier,
+.audit-note,
+.turning-point,
+.coding-flow article,
+.coding-example__result {
+  color: var(--research-text);
+  border: 1px solid var(--research-line);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.controller-rationale,
+.debug-note,
+.classifier-flow,
+.swarm-validation,
+.ui-placeholder,
+.task-list,
+.experiment-interface > div,
+.cue-comparison article,
+.making-notes,
+.making-notes figure,
+.prototype-progression img,
+.evidence-figure img {
+  border-color: var(--research-line);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.matrix span.active,
+.lineage-flow article.active { color: var(--research-bg); border-color: var(--research-accent); background: var(--research-accent); }
+.flow-arrow,
+.route,
+.point,
+.system-map__bus,
+.trace,
+.probe-agent,
+.target { color: var(--research-accent); }
+.point { box-shadow: none; }
+
+.roadmap,
+.layers,
+.capability-list,
+.value-list,
+.implication-list,
+.contribution-list,
+.analysis-list,
+.role-panel dl,
+.outputs ul,
+.version-timeline,
+.coding-flow,
+.revised-flow,
+.concept-flow,
+.lineage-flow,
+.rationale-flow,
+.motion-process,
+.experiment-a-flow,
+.final-classifier__flow {
+  border-color: var(--research-line);
+}
+.roadmap,
+.layers,
+.capability-list,
+.outputs ul { border-top: 1px solid var(--research-line); }
+.scenario,
+.layers article,
+.capability-list article,
+.value-list p,
+.implication-list p,
+.contribution-list p,
+.role-panel dl > div,
+.outputs li,
+.version-timeline li,
+.analysis-list p {
+  color: var(--research-muted);
+  border-color: var(--research-line);
+  background: transparent;
+}
+.scenario span,
+.layers span,
+.capability-list > article > span,
+.value-list span,
+.implication-list span,
+.contribution-list span,
+.outputs li > span { color: var(--research-accent); }
+
+.impact { grid-column: 2; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.impact p,
+.finding-notes p { padding-top: 1rem; color: var(--research-muted); border-top: 1px solid var(--research-line); line-height: 1.65; }
+
+.footer {
+  width: min(1180px, calc(100% - 3rem));
+  margin-inline: auto;
+  padding-block: 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  border-top: 1px solid var(--research-line);
+}
+.footer > p { color: var(--research-muted); font-size: .78rem; }
+.footer > a:not(.back-link) { color: var(--research-text); font-size: clamp(1.15rem, 2.5vw, 1.8rem); font-weight: 600; letter-spacing: -.025em; }
+.footer .back-link { grid-column: 2; color: var(--research-muted); font-size: .78rem; }
+
+@media (max-width: 900px) {
+  .shell, .section-shell, .footer { width: min(100% - 2rem, 1180px); }
+  .hero { padding: 4.5rem 0 3.5rem; }
+  .two-column, .overview-grid, .role-panel, .prototype-section, .outputs, .outcomes, .implications, .evidence, .coverage-section, .role-section, .capabilities, .contribution, .question-grid, .study-grid, .mapping-grid, .limits-grid, .next-grid, .confidentiality__inner, .evaluation__inner, .architecture__inner, .translation__inner, .lineage__inner, .disclosure__inner, .system-architecture__heading { grid-template-columns: 1fr; gap: 2.5rem; }
+  .two-column, .overview-grid, .role-panel, .prototype-section, .outputs, .outcomes, .implications, .evidence, .coverage-section, .role-section, .capabilities, .contribution { padding-block: 4rem; }
+  .metric-grid, .metrics, .outcome-grid, .data-counts { grid-template-columns: 1fr 1fr; }
+  .steps, .process, .principle-grid, .lens-grid, .role-grid, .road-types, .parameter-grid, .probe-row, .decision-grid, .meaning-grid, .data-stage-grid, .finding-grid, .grammar-grid { grid-template-columns: 1fr 1fr; }
+  .impact { grid-column: auto; }
+  .footer { grid-template-columns: 1fr; }
+  .footer .back-link { grid-column: auto; }
+}
+
+@media (max-width: 620px) {
+  h1 { font-size: clamp(2.15rem, 12vw, 3rem); }
+  .hero__meta span, .chips span { width: 50%; margin: 0; padding-right: .5rem; }
+  .hero__meta span + span::before, .chips span + span::before { display: none; }
+  .hero__meta span:nth-child(even), .chips span:nth-child(even) { padding-left: .75rem; border-left: 1px solid var(--research-line); }
+  .metric-grid, .metrics, .outcome-grid, .data-counts, .steps, .process, .principle-grid, .lens-grid, .role-grid, .road-types, .parameter-grid, .probe-row, .decision-grid, .meaning-grid, .data-stage-grid, .finding-grid, .grammar-grid, .evidence-grid, .collector-gallery, .prototype-evidence-grid { grid-template-columns: 1fr; }
+  .metric-grid > div, .metrics > div, .outcome-grid > div, .data-counts > article, .steps > li, .process > li, .principle-grid > article, .lens-grid > article, .role-grid > article, .road-types > article, .parameter-grid > article, .probe-row > article, .decision-grid > article, .meaning-grid > article, .data-stage-grid > li, .finding-grid > article, .grammar-grid > article { min-height: auto; padding: 1rem 0; border-right: 0; border-top: 1px solid var(--research-line); }
+  .metric-grid > div:first-child, .metrics > div:first-child, .outcome-grid > div:first-child, .data-counts > article:first-child, .steps > li:first-child, .process > li:first-child { border-top: 0; }
+  .impact { grid-template-columns: 1fr; }
+}
