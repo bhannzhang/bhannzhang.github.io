@@ -217,7 +217,7 @@ h3 { font-size: 1rem; line-height: 1.3; letter-spacing: -.01em; }
 .prose p + p { margin-top: 1rem; }
 figcaption { color: var(--case-muted); font-size: .72rem; line-height: 1.5; }
 
-.hero { padding: clamp(5.5rem, 10vw, 8rem) 0 5rem; }
+.hero { padding: 5rem 0 4.5rem; }
 .hero__copy { max-width: 930px; }
 .chips { display: flex; flex-wrap: wrap; margin-top: 2.25rem; border-top: 1px solid var(--case-line); border-bottom: 1px solid var(--case-line); }
 .chips span { padding: .72rem 1rem .72rem 0; margin-right: 1rem; color: var(--case-muted); font: 500 .7rem/1.4 var(--font-mono); }
@@ -238,7 +238,7 @@ figcaption { color: var(--case-muted); font-size: .72rem; line-height: 1.5; }
 .results-section,
 .analysis,
 .limitation {
-  padding-block: 5.5rem;
+  padding-block: 4.5rem;
   border-top: 1px solid var(--case-line);
 }
 
@@ -264,7 +264,7 @@ figcaption { color: var(--case-muted); font-size: .72rem; line-height: 1.5; }
 
 .metrics-band { border-top: 1px solid var(--case-line); border-bottom: 1px solid var(--case-line); }
 .metric-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
-.metric-grid div { min-height: 128px; padding: 1.25rem 1.5rem 1.25rem 0; display: flex; flex-direction: column; justify-content: space-between; border-right: 1px solid var(--case-line); }
+.metric-grid div { min-height: 104px; padding: 1.25rem 1.5rem 1.25rem 0; display: flex; flex-direction: column; justify-content: space-between; border-right: 1px solid var(--case-line); }
 .metric-grid div + div { padding-left: 1.5rem; }
 .metric-grid div:last-child { border-right: 0; }
 .metric-grid strong { font-size: clamp(1.3rem, 2.3vw, 1.85rem); font-weight: 600; letter-spacing: -.035em; }
@@ -288,9 +288,9 @@ figcaption { color: var(--case-muted); font-size: .72rem; line-height: 1.5; }
 .analysis,
 .limitation { background: var(--case-surface); }
 .system-flow { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--case-line); border-bottom: 1px solid var(--case-line); }
-.system-flow article { min-height: 250px; padding: 1.15rem; display: flex; flex-direction: column; border-right: 1px solid var(--case-line); }
+.system-flow article { padding: 1.15rem; display: flex; flex-direction: column; border-right: 1px solid var(--case-line); }
 .system-flow article:nth-of-type(4) { border-right: 0; }
-.system-flow strong { margin: 2.25rem 0 .7rem; font-size: .92rem; }
+.system-flow strong { margin: 1.25rem 0 .7rem; font-size: .92rem; }
 .system-flow p { color: var(--case-muted); font-size: .76rem; line-height: 1.62; }
 .system-flow i { display: none; }
 
@@ -300,9 +300,9 @@ figcaption { color: var(--case-muted); font-size: .72rem; line-height: 1.5; }
 .design-crop figcaption { padding-inline: .75rem; padding-bottom: .75rem; }
 
 .modality-grid { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 3rem; border-top: 1px solid var(--case-line); border-bottom: 1px solid var(--case-line); }
-.modality-grid article { min-height: 250px; padding: 1.2rem; display: flex; flex-direction: column; border-right: 1px solid var(--case-line); }
+.modality-grid article { padding: 1.2rem; display: flex; flex-direction: column; border-right: 1px solid var(--case-line); }
 .modality-grid article:last-child { border-right: 0; }
-.modality-grid strong { margin: 2rem 0 .65rem; font-size: .92rem; }
+.modality-grid strong { margin: 1.25rem 0 .65rem; font-size: .92rem; }
 .modality-grid p { color: var(--case-muted); font-size: .8rem; line-height: 1.65; }
 .modality-grid small { margin-top: auto; padding-top: 1.25rem; color: var(--case-muted); font: 500 .66rem/1.45 var(--font-mono); }
 .scope-note { margin: 1.25rem 0 0; color: var(--case-muted); font-size: .78rem; line-height: 1.7; }
@@ -320,7 +320,7 @@ figcaption { color: var(--case-muted); font-size: .72rem; line-height: 1.5; }
 .shared-baseline { margin-bottom: 1.5rem; padding: 1rem 0; border-top: 1px solid var(--case-line); border-bottom: 1px solid var(--case-line); }
 .shared-baseline p { margin: .5rem 0 0; color: var(--case-muted); font-size: .78rem; line-height: 1.6; }
 .study-grid { display: grid; grid-template-columns: 1fr auto 1fr; align-items: stretch; }
-.study-grid article { min-height: 225px; padding: 1.2rem 0; border-top: 1px solid var(--case-line); border-bottom: 1px solid var(--case-line); }
+.study-grid article { padding: 1.2rem 0; border-top: 1px solid var(--case-line); border-bottom: 1px solid var(--case-line); }
 .study-grid article:last-child { padding-left: 1.5rem; }
 .study-grid h3 { margin: 2rem 0 .7rem; }
 .study-grid p,
@@ -359,7 +359,7 @@ figcaption { color: var(--case-muted); font-size: .72rem; line-height: 1.5; }
 .disclosure strong { font-size: .82rem; }
 .disclosure p { color: var(--case-muted); font-size: .82rem; line-height: 1.7; }
 
-.footer { padding-block: 4rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; border-top: 1px solid var(--case-line); }
+.footer { padding-block: 3rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; border-top: 1px solid var(--case-line); }
 .footer > p { color: var(--case-muted); font-size: .78rem; }
 .footer > a:not(.back-link) { font-size: clamp(1.15rem, 2.5vw, 1.8rem); font-weight: 600; letter-spacing: -.025em; }
 .footer .back-link { grid-column: 2; }
@@ -369,10 +369,10 @@ figcaption { color: var(--case-muted); font-size: .72rem; line-height: 1.5; }
   .topbar { min-height: 64px; }
   .back-link { font-size: 0; }
   .back-link span { font-size: 1rem; }
-  .hero { padding: 4.5rem 0 3.5rem; }
+  .hero { padding: 3.5rem 0 3rem; }
   .hero__visual { margin-top: 2.5rem; }
   .two-column, .study, .participant-insights, .principles, .system-grid, .demo-grid, .analysis__inner, .limitation__inner { grid-template-columns: 1fr; gap: 2.5rem; }
-  .two-column, .implementation, .design-language, .study, .participant-insights, .principles, .system-section, .multimodal-section, .demo-section, .results-section, .analysis, .limitation { padding-block: 4rem; }
+  .two-column, .implementation, .design-language, .study, .participant-insights, .principles, .system-section, .multimodal-section, .demo-section, .results-section, .analysis, .limitation { padding-block: 3rem; }
   .metric-grid { grid-template-columns: 1fr 1fr; }
   .metric-grid div:nth-child(2) { border-right: 0; }
   .metric-grid div:nth-child(n+3) { border-top: 1px solid var(--case-line); }
