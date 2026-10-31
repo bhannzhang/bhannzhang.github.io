@@ -293,7 +293,17 @@ const labLimits = [
 }
 .space-legend span { color: var(--research-accent); }
 .space-legend p { color: var(--research-muted); }
+.case-study .kicker { color: var(--research-accent); }
+.limits-section,
 .next-section { padding-block: 0; }
-.next-section .kicker { color: var(--research-accent); }
+.limits-grid,
+.next-grid { padding-block: 3rem; border-top: 0; }
+.status-section { padding-block: 3rem; }
 .next-grid > div:last-child > p { color: var(--research-muted); }
+
+@media (max-width: 900px) {
+  .limits-grid,
+  .status-section,
+  .next-grid { padding-block: 2.5rem; }
+}
 </style>
