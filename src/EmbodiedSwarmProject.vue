@@ -967,4 +967,6 @@ const cueResults = [
 .mapping-check .confidence-summary { border: 0; }
 
 .experiment-a-findings .task-bar { border: 0; }
+
+.experiment-b-findings .cue-measure { border: 0; }
 </style>
