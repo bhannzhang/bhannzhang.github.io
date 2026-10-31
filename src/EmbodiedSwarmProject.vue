@@ -960,4 +960,9 @@ const cueResults = [
 
 <style lang="scss" scoped>
 @use './styles/research-detail-system';
+
+.mapping-check .mapping-evidence,
+.mapping-check .accuracy-mini,
+.mapping-check .confidence-plot,
+.mapping-check .confidence-summary { border: 0; }
 </style>
