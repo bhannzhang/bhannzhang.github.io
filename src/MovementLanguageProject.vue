@@ -284,3 +284,16 @@ const labLimits = [
 <style lang="scss" scoped>
 @use './styles/research-detail-system';
 </style>
+
+<style lang="scss" scoped>
+.space-legend article {
+  color: var(--research-text);
+  border-top-color: var(--research-accent);
+  background: var(--research-bg);
+}
+.space-legend span { color: var(--research-accent); }
+.space-legend p { color: var(--research-muted); }
+.next-section { padding-block: 0; }
+.next-section .kicker { color: var(--research-accent); }
+.next-grid > div:last-child > p { color: var(--research-muted); }
+</style>

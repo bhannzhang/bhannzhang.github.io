@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 690" role="img" aria-labelledby="title desc">
+  <title id="title">Rotation — Integrated Gyroscope Z</title>
+  <desc id="desc">Representative clockwise and counter-clockwise gesture windows showing accumulated angular displacement.</desc>
+  <rect width="1600" height="690" fill="#08151b"/>
+  <text x="70" y="86" fill="#e7efed" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="700">Rotation — Integrated Gyroscope Z</text>
+  <text x="70" y="128" fill="#9aabb0" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="600">Accumulated angular displacement across representative CW and CCW windows</text>
+  <rect x="54" y="170" width="1492" height="426" rx="28" fill="#132a31"/>
+  <g fill="none" stroke="#5b7379" stroke-width="1.5">
+    <path d="M125 236V516H1486"/>
+    <path d="M125 338H1486" opacity=".78"/>
+    <path d="M125 376H1486" opacity=".92"/>
+    <path d="M125 412H1486" opacity=".78"/>
+  </g>
+  <g fill="#a8b6ba" font-family="Inter, Arial, sans-serif" font-size="17">
+    <text x="125" y="219">accumulated GZ · degree</text>
+    <text x="133" y="328">+25° decision threshold</text>
+    <text x="133" y="436">−25° decision threshold</text>
+    <text x="125" y="547">0</text>
+    <text x="1426" y="547">800 ms</text>
+  </g>
+  <path d="M125 376 L195 375 L265 376 L335 375 L405 376 L475 376 L545 369 L615 363 L685 353 L755 340 L825 329 L895 318 L965 300 L1035 279 L1105 260 L1175 249 L1245 244 L1315 241 L1385 238 L1485 225" fill="none" stroke="#59d0ca" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M125 376 L195 377 L265 376 L335 377 L405 376 L475 378 L545 386 L615 397 L685 412 L755 427 L825 445 L895 463 L965 480 L1035 495 L1105 507 L1175 518 L1245 529 L1315 540 L1385 550 L1485 562" fill="none" stroke="#df7d67" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <g font-family="Inter, Arial, sans-serif" font-size="20" font-weight="650">
+    <rect x="1094" y="203" width="310" height="40" rx="5" fill="#132a31"/>
+    <text x="1108" y="230" fill="#59d0ca">CW · positive accumulation</text>
+    <path d="M1230 243 L1237 246" fill="none" stroke="#59d0ca" stroke-width="1.5"/>
+    <rect x="1094" y="515" width="338" height="40" rx="5" fill="#132a31"/>
+    <text x="1108" y="542" fill="#df7d67">CCW · negative accumulation</text>
+    <path d="M1234 515 L1238 521" fill="none" stroke="#df7d67" stroke-width="1.5"/>
+  </g>
+  <text x="70" y="651" fill="#9aabb0" font-family="Inter, Arial, sans-serif" font-size="17">Integration distinguishes sustained rotation from a brief peak in angular velocity.</text>
+</svg>

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 720" role="img" aria-labelledby="title desc">
+  <title id="title">Translation — First Lateral Pulse</title>
+  <desc id="desc">Representative left and right gesture windows showing the polarity of the first significant lateral acceleration pulse.</desc>
+  <rect width="1600" height="720" fill="#08151b"/>
+  <text x="70" y="86" fill="#e7efed" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="700">Translation — First Lateral Pulse</text>
+  <text x="70" y="128" fill="#9aabb0" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="600">Representative labeled windows · AY relative to the initial 100 ms</text>
+  <rect x="54" y="170" width="1492" height="456" rx="28" fill="#132a31"/>
+  <g fill="none" stroke="#5b7379" stroke-width="1.5">
+    <path d="M125 246V548H1486"/>
+    <path d="M125 397H1486" opacity=".7"/>
+  </g>
+  <g fill="#a8b6ba" font-family="Inter, Arial, sans-serif" font-size="17">
+    <text x="125" y="229">relative AY · g</text>
+    <text x="125" y="577">0</text>
+    <text x="1426" y="577">800 ms</text>
+  </g>
+  <g font-family="Inter, Arial, sans-serif" font-size="19" font-weight="650">
+    <path d="M1084 205h46" stroke="#59d0ca" stroke-width="5"/>
+    <text x="1142" y="212" fill="#59d0ca">LEFT · negative first pulse</text>
+    <path d="M1084 235h46" stroke="#df7d67" stroke-width="5"/>
+    <text x="1142" y="242" fill="#df7d67">RIGHT · positive first pulse</text>
+  </g>
+  <path d="M125 397 L230 397 L265 396 L405 397 L445 405 L470 406 L505 427 L542 405 L577 478 L612 469 L649 468 L683 484 L720 451 L755 493 L790 472 L827 337 L860 348 L892 347 L928 318 L965 288 L1000 322 L1035 322 L1071 289 L1106 326 L1143 322 L1179 397 L1260 397 L1345 397 L1485 397" fill="none" stroke="#59d0ca" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M125 397 L229 397 L265 396 L405 397 L445 397 L482 397 L520 397 L556 334 L592 275 L628 292 L664 274 L700 237 L735 266 L770 239 L806 346 L842 412 L878 412 L915 446 L950 482 L986 526 L1023 500 L1059 489 L1095 475 L1132 460 L1170 397 L1260 397 L1345 398 L1485 397" fill="none" stroke="#df7d67" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <g>
+    <circle cx="505" cy="427" r="9" fill="#59d0ca" stroke="#e7efed" stroke-width="2"/>
+    <path d="M505 416 L530 369" fill="none" stroke="#59d0ca" stroke-width="1.5"/>
+    <rect x="527" y="338" width="206" height="38" rx="5" fill="#132a31"/>
+    <text x="539" y="363" fill="#59d0ca" font-family="Inter, Arial, sans-serif" font-size="18">first significant pulse</text>
+    <circle cx="592" cy="275" r="9" fill="#df7d67" stroke="#e7efed" stroke-width="2"/>
+    <path d="M592 265 L618 224" fill="none" stroke="#df7d67" stroke-width="1.5"/>
+    <rect x="615" y="193" width="206" height="38" rx="5" fill="#132a31"/>
+    <text x="627" y="218" fill="#df7d67" font-family="Inter, Arial, sans-serif" font-size="18">first significant pulse</text>
+  </g>
+  <text x="70" y="682" fill="#9aabb0" font-family="Inter, Arial, sans-serif" font-size="17">Classification uses the polarity of the first significant AY pulse after motion onset—not the final sign of a biphasic gesture.</text>
+</svg>

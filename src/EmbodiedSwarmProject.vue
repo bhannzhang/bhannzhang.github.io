@@ -199,11 +199,11 @@ const cueResults = [
 
               <article class="feature-block feature-block--translation">
                 <div class="feature-copy"><span>A · TRANSLATION</span><h4>First Lateral Pulse</h4><p>LEFT and RIGHT were classified using the polarity of the first significant AY pulse after motion onset.</p><dl><div><dt>Negative first pulse</dt><dd>LEFT</dd></div><div><dt>Positive first pulse</dt><dd>RIGHT</dd></div></dl></div>
-                <figure><img :src="homeUrl + 'images/research/embodied-swarm/translation-first-pulse.webp'" alt="Representative LEFT and RIGHT AY signals with the first significant lateral pulse annotated" loading="lazy" /><figcaption>Representative labeled windows from the recorded gesture CSV.</figcaption></figure>
+                <figure><img :src="homeUrl + 'images/research/embodied-swarm/translation-first-pulse.svg'" alt="Representative LEFT and RIGHT AY signals with the first significant lateral pulse annotated" loading="lazy" /><figcaption>Representative labeled windows from the recorded gesture CSV.</figcaption></figure>
               </article>
 
               <article class="feature-block feature-block--rotation">
-                <figure><img :src="homeUrl + 'images/research/embodied-swarm/rotation-integrated-gz.webp'" alt="Accumulated gyroscope Z over time for representative clockwise and counter-clockwise rotations" loading="lazy" /><figcaption>Accumulated GZ, calculated across each temporal window.</figcaption></figure>
+                <figure><img :src="homeUrl + 'images/research/embodied-swarm/rotation-integrated-gz.svg'" alt="Accumulated gyroscope Z over time for representative clockwise and counter-clockwise rotations" loading="lazy" /><figcaption>Accumulated GZ, calculated across each temporal window.</figcaption></figure>
                 <div class="feature-copy"><span>B · ROTATION</span><h4>Integrated Gyroscope Z</h4><p>Rotation was identified from accumulated angular displacement rather than peak GZ.</p><blockquote>Integrating GZ separated sustained rotation from brief angular disturbance.</blockquote></div>
               </article>
 
@@ -581,14 +581,14 @@ const cueResults = [
 .part-heading { display: flex; gap: 1.2rem; align-items: flex-start; }
 .part-heading h3 { margin-top: .45rem; font-size: 1.35rem; }
 
-.collector-section { margin-top: 4rem; display: grid; grid-template-columns: .7fr 1.3fr; gap: 2.5rem; align-items: center; }
+.collector-section { margin-top: 4rem; display: grid; grid-template-columns: .55fr 1.45fr; gap: 2.5rem; align-items: center; }
 .collector-copy h3 { margin: .7rem 0 1rem; font-size: 2rem; letter-spacing: -.035em; }
-.collector-copy > p:last-of-type { color: var(--muted); line-height: 1.75; }
+.collector-copy > p:last-of-type { color: var(--research-muted); line-height: 1.75; }
 .collector-copy .part-number { display: block; margin-bottom: 1.3rem; }
 .collector-meta { margin-top: 2rem; display: flex; flex-wrap: wrap; gap: .6rem; }
-.collector-meta span { padding: .7rem .8rem; border-left: 2px solid var(--teal-bright); color: var(--muted); font-size: .68rem; background: rgba(7,17,22,.36); }
-.collector-meta strong { display: block; margin-bottom: .2rem; color: var(--text); font-size: .95rem; }
-.collector-gallery { min-width: 0; margin: 0; padding: 1rem; border: 1px solid #426168; background: #071216; box-shadow: 0 24px 60px rgba(0,0,0,.22); }
+.collector-meta span { padding: .7rem .8rem; border-left: 2px solid var(--teal-bright); color: var(--research-muted); font-size: .68rem; background: rgba(7,17,22,.36); }
+.collector-meta strong { display: block; margin-bottom: .2rem; color: var(--research-text); font-size: .95rem; }
+.collector-section .collector-gallery { min-width: 0; margin: 0; padding: 1rem; display: block; border: 1px solid #426168; background: #071216; box-shadow: 0 24px 60px rgba(0,0,0,.22); }
 .collector-gallery__top { display: flex; justify-content: space-between; gap: 1rem; color: #789097; font-size: .62rem; letter-spacing: .08em; }
 .collector-gallery__top strong { color: var(--teal); }
 .collector-gallery__image { margin: 1rem 0; overflow: hidden; border: 1px solid #31494f; background: #f6f6f6; }
@@ -608,17 +608,17 @@ const cueResults = [
 
 .feature-section { margin-top: 5rem; }
 .feature-block { margin-top: 1.2rem; display: grid; align-items: center; overflow: hidden; border-top: 1px solid var(--line); background: #0a181d; }
-.feature-block--translation { grid-template-columns: .65fr 1.35fr; }
-.feature-block--rotation { grid-template-columns: 1.35fr .65fr; background: #11282d; }
+.feature-block--translation { grid-template-columns: .48fr 1.52fr; }
+.feature-block--rotation { grid-template-columns: 1.52fr .48fr; background: #11282d; }
 .feature-block--shake { grid-template-columns: .58fr 1.42fr; }
 .feature-copy { padding: 2.2rem; }
 .feature-copy > span { color: var(--teal); font-size: .67rem; font-weight: 800; letter-spacing: .12em; }
 .feature-copy h4 { margin: .75rem 0 1rem; font-size: 1.75rem; letter-spacing: -.035em; }
-.feature-copy p, .feature-copy blockquote { color: var(--muted); font-size: .84rem; line-height: 1.7; }
+.feature-copy p, .feature-copy blockquote { color: var(--research-muted); font-size: .84rem; line-height: 1.7; }
 .feature-copy blockquote { margin-top: 1.2rem; padding-left: 1rem; border-left: 2px solid var(--ochre); }
 .feature-copy dl { margin-top: 1.4rem; }
 .feature-copy dl div { padding: .65rem 0; border-top: 1px solid #284149; }
-.feature-copy dt { color: var(--muted); font-size: .67rem; }
+.feature-copy dt { color: var(--research-muted); font-size: .67rem; }
 .feature-copy dd { margin: .15rem 0 0; color: var(--teal); font-size: .82rem; font-weight: 800; }
 .feature-copy code { display: block; margin-top: 1.2rem; padding: .8rem; color: var(--ochre); background: #061014; font-size: .72rem; }
 .feature-block figure { margin: 0; padding: 1.2rem; }
