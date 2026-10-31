@@ -295,7 +295,9 @@ const labLimits = [
 .space-legend p { color: var(--research-muted); }
 .case-study .kicker { color: var(--research-accent); }
 .question-grid,
-.study-grid { border-top: 0; }
+.study-grid,
+.mapping-grid { border-top: 0; }
+.coding-example__result { border: 0; }
 .questions aside {
   color: #c4c0ba;
   border-left: 0;
