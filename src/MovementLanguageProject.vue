@@ -294,6 +294,13 @@ const labLimits = [
 .space-legend span { color: var(--research-accent); }
 .space-legend p { color: var(--research-muted); }
 .case-study .kicker { color: var(--research-accent); }
+.question-grid,
+.study-grid { border-top: 0; }
+.questions aside {
+  color: #18130d;
+  border-left: 0;
+  background: var(--accent);
+}
 .limits-section,
 .next-section { padding-block: 0; }
 .limits-grid,
