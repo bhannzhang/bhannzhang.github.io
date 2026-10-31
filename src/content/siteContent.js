@@ -672,7 +672,7 @@ export const siteContent = {
   individualWork: {
     // 栏目标题 (Section title)
     sectionTitle: "Embodied & Interactive Prototypes",
-    intro: "Exploratory prototypes developed to investigate interaction with sensing, responsive, and physically embodied systems. These projects demonstrate hands-on inquiry and are not presented as published research outcomes.",
+    intro: "Exploratory prototypes developed through hands-on inquiry into sensing, responsive systems, and physical interaction. They are documented separately from the published research listed above.",
     groups: [
       {
         name: "Embodied & Physical Prototypes",

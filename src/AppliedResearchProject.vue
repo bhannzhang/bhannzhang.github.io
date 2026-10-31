@@ -50,7 +50,7 @@
       <section class="translation-section"><div class="shell translation"><div><p class="kicker">Research value</p><h2>What this case demonstrates</h2></div><p>{{ project.translation }}</p></div></section>
 
       <section class="shell boundaries">
-        <div><p class="kicker">Interpretation boundary</p><h2>What the evidence does—and does not—support</h2></div>
+        <div><p class="kicker">Interpretation boundary</p><h2>Evidence and interpretation limits</h2></div>
         <ul><li v-for="limit in project.limitations" :key="limit">{{ limit }}</li></ul>
       </section>
 

@@ -19,7 +19,7 @@
       <section class="question">
         <div class="shell question__inner">
           <div><p class="kicker">Technical objective</p><h2>Translate a continuous body movement into coordinated mechanical articulation</h2></div>
-          <div class="prose"><p>I designed the mechanical structure, fabricated the 3D-printed parts, assembled the electronics, and programmed the control logic. Rather than classifying a small set of symbolic gestures, the prototype preserves the continuous quality of finger bending and maps it directly to an articulated output.</p><p>The project is presented as a functional technical prototype. It did not include a formal user study or comparative evaluation.</p></div>
+          <div class="prose"><p>I designed the mechanical structure, fabricated the 3D-printed parts, assembled the electronics, and programmed the control logic. The prototype preserves the continuous quality of finger bending and maps it directly to an articulated output.</p><p>This functional technical prototype was not evaluated through a formal user study or comparative experiment.</p></div>
         </div>
       </section>
 
@@ -69,7 +69,7 @@
         </div>
       </section>
 
-      <section class="disclosure"><div class="shell disclosure__inner"><strong>Evidence boundary</strong><p>This page documents an independently developed functional prototype and its implemented code path. It does not claim gesture-recognition classification, autonomous motion planning, force feedback, or findings from a user study.</p></div></section>
+      <section class="disclosure"><div class="shell disclosure__inner"><strong>Prototype scope</strong><p>This independently developed prototype demonstrates continuous finger-bend sensing and articulated output. Its implementation does not include gesture classification, autonomous motion planning, force feedback, or formal user-study evaluation.</p></div></section>
     </article>
 
     <footer class="footer shell"><p>Interested in this work?</p><a href="mailto:Zhangbihan621@outlook.com">Zhangbihan621@outlook.com</a><a class="back-link" :href="homeUrl">Return to Bihan Zhang’s academic website</a></footer>

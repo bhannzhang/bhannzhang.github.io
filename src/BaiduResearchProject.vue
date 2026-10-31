@@ -21,12 +21,12 @@
       </section>
 
       <section class="shell two-column">
-        <div><p class="kicker">Research question</p><h2>How can fragmented interface examples become defensible design guidance?</h2></div>
+        <div><p class="kicker">Research question</p><h2>How can interface examples become usable design guidance?</h2></div>
         <div class="prose">
           <p>
             Automotive interfaces vary by display format, information architecture, brand language, and interaction
-            behavior. The challenge was not simply to collect examples, but to build a consistent comparison method
-            that could reveal patterns across products and support design decisions.
+            behavior. I built a consistent comparison method that could reveal patterns across products and support
+            design decisions.
           </p>
           <p>
             I led the student research work, organized the benchmark, developed the synthesis structure, and
@@ -38,10 +38,11 @@
       <section class="confidentiality">
         <div class="shell confidentiality__inner">
           <span class="lock" aria-hidden="true">NDA</span>
-          <div><p class="kicker">Public disclosure boundary</p><h2>Method and contribution are public; client deliverables are not.</h2></div>
+          <div><p class="kicker">Public project scope</p><h2>What I can show publicly</h2></div>
           <p>
-            This page intentionally excludes the final white paper, proprietary interface screenshots, internal data,
-            and client-specific recommendations. The visuals below are abstract reconstructions of the research process.
+            This page presents the benchmarking method and my contribution. Client deliverables, proprietary interface
+            screenshots, internal data, and client-specific recommendations remain confidential. The visuals below
+            reconstruct the research process without using client materials.
           </p>
         </div>
       </section>
@@ -60,7 +61,7 @@
       <section class="lenses">
         <div class="shell">
           <p class="kicker">Analysis framework</p>
-          <h2>Five lenses made unlike systems comparable</h2>
+          <h2>Five lenses for comparing unlike systems</h2>
           <div class="lens-grid">
             <article><span>01</span><h3>Information architecture</h3><p>Depth, grouping, navigation, and the relationship between primary and secondary functions.</p></article>
             <article><span>02</span><h3>Layout & hierarchy</h3><p>Spatial organization across landscape, portrait, and widescreen display configurations.</p></article>
@@ -72,7 +73,7 @@
       </section>
 
       <section class="shell outcomes">
-        <div><p class="kicker">Research outcomes</p><h2>Evidence at scale, converted into a usable design language</h2></div>
+        <div><p class="kicker">Research outcomes</p><h2>Turning benchmark evidence into interface guidelines</h2></div>
         <div class="outcome-grid">
           <div><strong>26</strong><span>automotive brands benchmarked</span></div>
           <div><strong>12,000</strong><span>words in the internal white paper</span></div>
@@ -81,7 +82,7 @@
         <div class="impact">
           <p>The project was presented at Baidu headquarters.</p>
           <p>The work was recognized by Apollo Lab for its methodological rigor.</p>
-          <p>The framework turned a large collection of examples into traceable design guidance rather than a visual trend report.</p>
+          <p>The framework turned a large collection of examples into traceable design guidance.</p>
         </div>
       </section>
     </article>

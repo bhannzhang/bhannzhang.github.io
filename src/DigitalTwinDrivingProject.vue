@@ -20,7 +20,7 @@
       <section class="shell two-column">
         <div><p class="kicker">Infrastructure question</p><h2>How can a real road network become a controllable experimental environment?</h2></div>
         <div class="prose">
-          <p>A geographically convincing scene is not automatically a useful research platform. Virtual-driving studies also require consistent road logic, modular conditions, repeatable configurations, and assets that can be recombined as research questions change.</p>
+          <p>A useful research environment needs more than geographic resemblance. Virtual-driving studies also require consistent road logic, modular conditions, repeatable configurations, and assets that can be recombined as research questions change.</p>
           <p>As team lead, I coordinated the route survey, scene decomposition, modeling workflow, progress tracking, and handoff into a shared Unity-based environment. The resulting system supported virtual-driving evaluation while preserving a traceable connection to real roads.</p>
         </div>
       </section>
@@ -36,7 +36,7 @@
 
       <section class="shell workflow">
         <p class="kicker">Field-to-simulation workflow</p>
-        <h2>Preserve geographic evidence while making the environment reusable</h2>
+        <h2>Keeping real road geometry reusable in simulation</h2>
         <ol class="steps">
           <li><span>01</span><h3>Survey the route</h3><p>Recorded road length, lane count, intersections, surrounding structures, and mismatches between map imagery and current field conditions.</p></li>
           <li><span>02</span><h3>Decompose the environment</h3><p>Separated a continuous site into road geometries, markings, facilities, landmarks, and configurable environmental conditions.</p></li>
@@ -48,7 +48,7 @@
 
       <section class="architecture">
         <div class="shell architecture__inner">
-          <div><p class="kicker">Scene architecture</p><h2>Five layers separated what researchers need to control</h2><p class="prose">The material library distinguished visual context from functional road logic. That separation made scenes easier to recombine without rebuilding the complete environment for every study.</p></div>
+          <div><p class="kicker">Scene architecture</p><h2>Five layers organized the variables researchers needed to control</h2><p class="prose">The material library distinguished visual context from functional road logic. That separation made scenes easier to recombine without rebuilding the complete environment for every study.</p></div>
           <div class="layers">
             <article v-for="(layer, index) in layers" :key="layer.title"><span>{{ String(index + 1).padStart(2, '0') }}</span><div><h3>{{ layer.title }}</h3><p>{{ layer.description }}</p></div></article>
           </div>
@@ -70,7 +70,7 @@
       </section>
 
       <section class="shell coverage-section">
-        <div><p class="kicker">Coverage strategy</p><h2>A reusable grammar of roads—not one fixed cinematic scene</h2></div>
+        <div><p class="kicker">Coverage strategy</p><h2>A reusable set of road types and scene components</h2></div>
         <div class="road-types">
           <article><span>Urban</span><h3>Four- and six-lane roads</h3><p>Straights, angled and right-angle curves, intersections, ramps, roundabouts, crossings, traffic lights, and lane markings.</p></article>
           <article><span>Highway</span><h3>Single- and bidirectional corridors</h3><p>Three-lane segments, emergency lanes, merge and exit ramps, guardrails, distance markings, and speed-control assets.</p></article>
@@ -80,7 +80,7 @@
 
       <section class="translation">
         <div class="shell translation__inner">
-          <div><p class="kicker">Research value</p><h2>The deliverable was not a render. It was an experimental substrate.</h2></div>
+          <div><p class="kicker">Research value</p><h2>A controllable environment for repeated experiments</h2></div>
           <div class="value-list">
             <p><span>Traceability</span>Connect virtual road elements back to surveyed geography and documented road conditions.</p>
             <p><span>Repeatability</span>Allow teams to reconstruct comparable conditions across virtual-driving evaluations.</p>
@@ -91,7 +91,7 @@
       </section>
 
       <section class="shell role-section">
-        <div><p class="kicker">My contribution</p><h2>Leading coordination across field evidence, models, and experimental use</h2></div>
+        <div><p class="kicker">My contribution</p><h2>My role in connecting field data, models, and experimental use</h2></div>
         <div class="role-grid"><article><strong>Scope</strong><p>Translated a large, ambiguous real-world site into a tractable modeling and validation plan.</p></article><article><strong>System</strong><p>Defined the modular scene logic connecting roads, traffic facilities, environmental layers, and ADAS-ready movement logic.</p></article><article><strong>Delivery</strong><p>Coordinated team progress and asset handoff so independently produced components formed one usable environment.</p></article></div>
       </section>
 

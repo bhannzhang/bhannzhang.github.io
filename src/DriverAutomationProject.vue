@@ -21,9 +21,9 @@
         <div><p class="kicker">Research question</p><h2>What do drivers need to understand when partial automation changes state or reaches a limit?</h2></div>
         <div class="prose">
           <p>
-            ACC and LKA redistribute control rather than remove the driver from the loop. The research therefore
-            examined the interaction between system behavior, interface feedback, driver monitoring, and intervention
-            across routine and boundary conditions.
+            ACC and LKA redistribute control between the system and the driver. The research examined how system
+            behavior, interface feedback, driver monitoring, and intervention interact across routine and boundary
+            conditions.
           </p>
           <p>
             I served as the faculty-appointed student project lead, developed ten test scenarios, helped define the
@@ -48,7 +48,7 @@
           <li><span>01</span><div><h3>Ground the study in real systems</h3><p>Compared production-vehicle behavior and HMI patterns to identify recurring states, transitions, and limitations.</p></div></li>
           <li><span>02</span><div><h3>Build a scenario taxonomy</h3><p>Mapped highway and urban conditions across routine use, traffic disturbances, target changes, and system boundaries.</p></div></li>
           <li><span>03</span><div><h3>Operationalize the experiment</h3><p>Converted control conditions into ten repeatable simulator scenarios with observable driver-response points.</p></div></li>
-          <li><span>04</span><div><h3>Study drivers in context</h3><p>Collected behavioral and subjective evidence from thirty participants rather than evaluating the interface in isolation.</p></div></li>
+          <li><span>04</span><div><h3>Study drivers in context</h3><p>Collected behavioral and subjective evidence from thirty participants across complete driving scenarios.</p></div></li>
           <li><span>05</span><div><h3>Translate evidence into HMI strategy</h3><p>Connected system state, target status, automation limits, and driver action to clearer interface requirements.</p></div></li>
         </ol>
       </section>
@@ -91,21 +91,21 @@
 
       <section class="evaluation">
         <div class="shell evaluation__inner">
-          <div><p class="kicker">Evaluation logic</p><h2>Three human-factors lenses connected interface feedback to driver behavior</h2></div>
+          <div><p class="kicker">Evaluation logic</p><h2>Evaluating driver response through three human-factors measures</h2></div>
           <div class="lens-grid">
             <article><span>01</span><h3>Situation awareness</h3><p>Whether the driver could perceive the system state, understand what it meant, and anticipate what would happen next.</p></article>
-            <article><span>02</span><h3>Trust</h3><p>Whether system behavior and feedback supported calibrated reliance rather than over-trust or unnecessary intervention.</p></article>
+            <article><span>02</span><h3>Trust</h3><p>Whether system behavior and feedback supported calibrated reliance, including appropriate monitoring and intervention.</p></article>
             <article><span>03</span><h3>Workload</h3><p>Whether monitoring, interpreting, and responding to automation imposed avoidable cognitive or physical demand.</p></article>
           </div>
         </div>
       </section>
 
       <section class="shell implications">
-        <div><p class="kicker">Research contribution</p><h2>A reusable bridge between automation logic and HMI evaluation</h2></div>
+        <div><p class="kicker">Research contribution</p><h2>Linking automation logic to HMI evaluation</h2></div>
         <div class="implication-list">
-          <p><span>System</span>Represent automation as changing states, targets, and capabilities—not a single on/off function.</p>
+          <p><span>System</span>Represent automation through changing states, targets, and capabilities.</p>
           <p><span>Interface</span>Make current mode, target status, transition, and limitation legible before intervention becomes urgent.</p>
-          <p><span>Evaluation</span>Judge an HMI through driver understanding and behavior across scenarios, not visual preference alone.</p>
+          <p><span>Evaluation</span>Evaluate the HMI through driver understanding and behavior across scenarios.</p>
           <p><span>Evidence</span>Produced a scenario framework, experimental protocol, behavioral dataset, and design recommendations.</p>
         </div>
       </section>

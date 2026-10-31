@@ -122,7 +122,7 @@ const cueResults = [
           <div>
             <p class="kicker">01 · Research question</p>
             <h1>How can embodied interaction support users in building and revising mental models of autonomous robotic swarms?</h1>
-            <p>Human users influence the collective rather than puppeteering individual robots. Bodily motion is the interaction medium; the research contribution concerns learning, predictability, collective legibility, and the interpretation of autonomy.</p>
+            <p>Human users perturb the collective through bodily motion while individual robots retain autonomous behavior. The research examines learning, predictability, collective legibility, and the interpretation of autonomy.</p>
           </div>
         </div>
         <div class="shell arc" aria-label="Research process from embodied action to mental model revision">
@@ -149,7 +149,7 @@ const cueResults = [
               <h3>Why an embodied controller?</h3>
               <p>I needed a small set of repeatable bodily actions that could be performed consistently while still feeling physically distinct. A single-hand controller allowed me to isolate five embodied motions and observe how participants learned their relationship to collective swarm behavior.</p>
               <div class="rationale-flow" aria-label="Process from bodily action to mental model formation"><span>Bodily Action</span><i>→</i><span>Temporary Swarm Influence</span><i>→</i><span>Observed Collective Response</span><i>→</i><strong>Mental Model Formation</strong></div>
-              <div class="rationale-principles"><article><span>01</span><div><strong>Limited gesture set</strong><p>Five distinct gestures kept the action space small enough to learn and compare.</p></div></article><article><span>02</span><div><strong>Influence, not direct control</strong><p>Each gesture temporarily perturbed collective dynamics rather than specifying individual robot trajectories.</p></div></article></div>
+              <div class="rationale-principles"><article><span>01</span><div><strong>Limited gesture set</strong><p>Five distinct gestures kept the action space small enough to learn and compare.</p></div></article><article><span>02</span><div><strong>Temporary influence</strong><p>Each gesture briefly perturbed collective dynamics while individual trajectories remained autonomous.</p></div></article></div>
             </aside>
           </div>
 
@@ -177,7 +177,7 @@ const cueResults = [
               <div class="collector-copy">
                 <span class="part-number">01</span>
                 <p class="mini-label">Collecting labeled motion data</p>
-                <h3>Record first. Tune later.</h3>
+                <h3>Recording gesture data before tuning thresholds</h3>
                 <p>Instead of continuing to tune arbitrary thresholds, I recorded labeled six-axis IMU motion at 50 Hz and inspected how each gesture unfolded over time.</p>
                 <div class="collector-meta"><span><strong>5</strong> gesture classes</span><span><strong>50 Hz</strong> sampling</span><span><strong>~800 ms</strong> labeled windows</span></div>
               </div>
@@ -190,7 +190,7 @@ const cueResults = [
             </div>
 
             <div class="failure-section">
-              <div class="part-heading"><span class="part-number">02</span><div><p class="mini-label">Why instantaneous thresholds failed</p><h3>One frame could not represent one gesture.</h3></div></div>
+              <div class="part-heading"><span class="part-number">02</span><div><p class="mini-label">Why instantaneous thresholds failed</p><h3>Gestures required temporal windows</h3></div></div>
               <div class="failure-cards"><article v-for="failure in thresholdFailures" :key="failure.title"><span>{{ failure.signal }}</span><h4>{{ failure.title }}</h4><p>{{ failure.text }}</p></article></div>
             </div>
 
@@ -209,21 +209,21 @@ const cueResults = [
 
               <article class="feature-block feature-block--shake">
                 <div class="feature-copy"><span>C · DISTURBANCE</span><h4>Accumulated Jerk Energy</h4><p>Shake was detected through accumulated frame-to-frame acceleration change across the gesture window.</p><code>Jerk energy ≈ Σ(|ΔAX| + |ΔAY| + |ΔAZ|)</code></div>
-                <figure><img :src="homeUrl + 'images/research/embodied-swarm/shake-jerk-energy.webp'" alt="Real shake AX, AY, and AZ traces with jerk-energy comparison across the five gesture classes" loading="lazy" /><figcaption>One recorded SHAKE window plus class-level descriptive comparison. This is not classifier accuracy.</figcaption></figure>
+                <figure><img :src="homeUrl + 'images/research/embodied-swarm/shake-jerk-energy.webp'" alt="Real shake AX, AY, and AZ traces with jerk-energy comparison across the five gesture classes" loading="lazy" /><figcaption>One recorded SHAKE window plus a descriptive comparison of feature separation across classes. The chart does not report classifier accuracy.</figcaption></figure>
               </article>
             </div>
 
             <div class="final-classifier">
-              <div class="part-heading"><span class="part-number">04</span><div><p class="mini-label">Final classifier</p><h3>One window. One feature decision. One event.</h3></div></div>
+              <div class="part-heading"><span class="part-number">04</span><div><p class="mini-label">Final classifier</p><h3>Classifying each gesture from one temporal window</h3></div></div>
               <div class="final-classifier__flow"><span>Motion onset</span><i>→</i><span>Temporal gesture window</span><i>→</i><span>First AY pulse<br>Integrated GZ<br>Jerk energy</span><i>→</i><span>Classify gesture</span><i>→</i><span>Neutral lock</span><i>→</i><strong>Single event<br>to Processing</strong></div>
               <div class="rule-grid"><article v-for="rule in classifierRules" :key="rule[0]"><span>{{ rule[0] }}</span><strong>{{ rule[1] }}</strong><small>{{ rule[2] }}</small></article></div>
             </div>
 
-            <blockquote class="motion-process__conclusion">“The final recognizer was not built by stacking more thresholds, but by matching each gesture to the temporal feature that best represented its motion structure.”</blockquote>
+            <blockquote class="motion-process__conclusion">“The final recognizer matched each gesture to the temporal feature that best represented its motion structure.”</blockquote>
           </section>
 
           <div class="swarm-validation">
-            <div><p class="mini-label">Swarm prototype validation</p><h3>Input changes collective tendency—not individual trajectories.</h3><p>Processing maintains separation, alignment, cohesion, and local self-organization. Drift, rotation, and disturbance are bounded influences that decay, leaving the collective responsive but never fully scripted.</p></div>
+            <div><p class="mini-label">Swarm prototype validation</p><h3>Input changes collective tendency while individual trajectories remain autonomous.</h3><p>Processing maintains separation, alignment, cohesion, and local self-organization. Drift, rotation, and disturbance are bounded influences that decay, leaving the collective responsive but never fully scripted.</p></div>
             <div class="flocking-model"><span>SEPARATION</span><b>+</b><span>ALIGNMENT</span><b>+</b><span>COHESION</span><i>→</i><strong>AUTONOMOUS COLLECTIVE</strong></div>
           </div>
         </div>
@@ -260,7 +260,7 @@ const cueResults = [
 
       <section class="transition section-accent">
         <div class="shell transition-grid">
-          <div class="transition-copy"><p class="kicker">04 · From influence to autonomy</p><h2>When influence is no longer control.</h2><p>Experiment A asked, “What happens when I move?” Experiment B introduced autonomous divergence to ask, “Can I still interpret and predict the collective when it no longer fully follows my input?”</p></div>
+          <div class="transition-copy"><p class="kicker">04 · From influence to autonomy</p><h2>When interaction shifts from influence to autonomy</h2><p>Experiment A asked, “What happens when I move?” Experiment B introduced autonomous divergence and asked whether participants could still interpret and predict the collective as it began acting independently.</p></div>
           <div class="transition-model"><span>Experiment A</span><strong>Build an action–response model</strong><i>→</i><span>Experiment B</span><strong>Revise it under autonomy</strong></div>
         </div>
       </section>
@@ -332,7 +332,7 @@ const cueResults = [
 
       <section class="experiment-a-findings section-mid">
         <div class="shell findings-header">
-          <div><p class="kicker">07 · Experiment A Findings</p><h2>Knowing the mapping was not the same as successfully enacting it.</h2></div>
+          <div><p class="kicker">07 · Experiment A findings</p><h2>Mapping knowledge and control performance diverged</h2></div>
           <p>Small-scale exploratory pilot, n = 6. Results are reported descriptively.</p>
         </div>
         <div class="shell experiment-a-results">
@@ -357,7 +357,7 @@ const cueResults = [
 
       <section class="experiment-b-findings section-dark">
         <div class="shell findings-header">
-          <div><p class="kicker">08 · Experiment B Findings</p><h2>Global cues showed the strongest descriptive pattern.</h2></div>
+          <div><p class="kicker">08 · Experiment B findings</p><h2>Global cues produced the clearest descriptive pattern</h2></div>
           <p>Small-scale exploratory pilot, n = 6. Results are reported descriptively.</p>
         </div>
         <div class="shell cue-results" aria-label="Experiment B results organized by cue condition">
@@ -376,7 +376,7 @@ const cueResults = [
       <section class="reflection section-accent">
         <div class="shell reflection-heading">
           <p class="kicker">09 · Research Reflection</p>
-          <h2>From Mapping to Collective Interpretation</h2>
+          <h2>From mapping to collective interpretation</h2>
           <p>The two studies suggest a progression from learning action–response mappings to interpreting autonomous collective behavior.</p>
         </div>
         <ol class="shell reflection-progression">
@@ -391,7 +391,7 @@ const cueResults = [
       <section class="physical-development section-dark">
         <div class="shell physical-heading">
           <p class="kicker">10 · Physical Prototype Development</p>
-          <h2>Refining the Physical Controller</h2>
+          <h2>Refining the physical controller</h2>
           <p>The controller progressed from a low-fidelity cardboard enclosure to a modular 3D-printed form. This iteration preserved the same sensing architecture while improving robustness, access to the electronics, and consistency during physical testing.</p>
         </div>
         <figure class="shell prototype-progression">
@@ -444,7 +444,7 @@ const cueResults = [
       <section class="future-directions section-mid">
         <div class="shell future-heading">
           <p class="kicker">11 · Future Directions</p>
-          <h2>Next Steps for the Current Study</h2>
+          <h2>Next steps for the current study</h2>
           <p>The pilot established a working embodied–swarm interaction loop. The next step is to expand both the interaction vocabulary and the autonomy being interpreted.</p>
         </div>
 
@@ -943,6 +943,7 @@ const cueResults = [
   .reflection-progression small { margin-top: 1rem; padding-top: 0; }
   .rationale-principles { grid-template-columns: 1fr; }
   .gesture-gallery__heading { align-items: flex-start; flex-direction: column; }
+  .gesture-gallery__heading h3 { white-space: normal; }
   .gesture-gallery__grid { grid-template-columns: 1fr; }
   .prototype-evidence-grid { grid-template-columns: 1fr; }
   .making-notes__heading { align-items: flex-start; flex-direction: column; gap: .35rem; }

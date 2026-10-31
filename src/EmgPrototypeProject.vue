@@ -24,7 +24,7 @@
         </div>
       </section>
 
-      <section class="objective"><div class="shell split"><div><p class="kicker">Technical objective</p><h2>Sense attempted movement and return an immediate tactile acknowledgement</h2></div><div class="prose"><p>I built and tested the complete sensing and feedback chain. The prototype used finger movement as a focused test case: muscle activity and auxiliary deformation inputs were monitored, while a vibration motor positioned at the simulated residual-limb site returned a localized tactile cue.</p><p>The work explores an interaction mechanism for rehabilitation contexts. It does not claim clinical pain reduction or restoration of proprioception.</p></div></div></section>
+      <section class="objective"><div class="shell split"><div><p class="kicker">Technical objective</p><h2>Sense attempted movement and return an immediate tactile acknowledgement</h2></div><div class="prose"><p>I built and tested the complete sensing and feedback chain. The prototype used finger movement as a focused test case: muscle activity and auxiliary deformation inputs were monitored, while a vibration motor positioned at the simulated residual-limb site returned a localized tactile cue.</p><p>The work explores a technical interaction mechanism for rehabilitation contexts; clinical pain reduction and proprioception remain outside its scope.</p></div></div></section>
 
       <section class="pipeline shell">
         <div class="section-intro"><p class="kicker">Implemented system</p><h2>A multimodal path from attempted action to tactile output</h2></div>
@@ -58,7 +58,7 @@
         <article><strong>Observed limitation</strong><p>Low-cost EMG hardware produced limited separation between resting noise and subtle contraction, motivating future filtering and sensor-fusion work.</p></article>
       </div></section>
 
-      <section class="boundary"><div class="shell boundary__inner"><strong>Evidence boundary</strong><p>This page documents a self-built functional prototype and qualitative self-testing. “Residual-limb site” describes the placement simulated in the prototype. No amputee participants, clinical efficacy study, pain-relief outcome, or validated intent-classification model is claimed.</p></div></section>
+      <section class="boundary"><div class="shell boundary__inner"><strong>Prototype scope</strong><p>This is a self-built functional prototype evaluated through qualitative self-testing. “Residual-limb site” refers to the simulated placement; the work has not undergone amputee-participant or clinical evaluation.</p></div></section>
     </article>
     <footer class="footer shell"><p>Interested in this work?</p><a href="mailto:Zhangbihan621@outlook.com">Zhangbihan621@outlook.com</a><a class="back-link" :href="homeUrl">Return to Bihan Zhang’s academic website</a></footer>
   </main>

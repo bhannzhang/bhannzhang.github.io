@@ -85,7 +85,7 @@ const studyB = [
 ]
 
 const findings = [
-  { number: '01', title: 'Perceptual salience is not semantic specificity.', text: 'Slow speed and curvature were readily noticed, but did not map to one stable meaning.' },
+  { number: '01', title: 'Salience and semantic specificity varied independently.', text: 'Slow speed and curvature were readily noticed but mapped to several meanings.' },
   { number: '02', title: 'Meaning can be sequence-based.', text: 'Hesitation appeared more clearly as advance → interrupt or reverse → resume than as a single parameter.' },
   { number: '03', title: 'Production and perception may be asymmetric.', text: 'Participants produced avoidance through curved detours, while observers did not consistently infer avoidance from curvature alone.' },
   { number: '04', title: 'Oscillation may primarily modulate arousal.', text: 'High-frequency oscillation was more often read as playful or energetic; smaller exploratory oscillations appeared in curiosity production.' },
@@ -132,39 +132,39 @@ const labLimits = [
             <circle class="agent" cx="315" cy="208" r="14"/>
             <circle class="target" cx="575" cy="208" r="10"/>
           </svg>
-          <p>Conceptual overview—not a participant-facing stimulus.</p>
+          <p>Conceptual overview used to frame the project.</p>
         </div>
       </section>
 
       <section class="question-band">
         <div class="shell question-grid">
           <p class="kicker">01 · Research question</p>
-          <div><h2>Can movement alone make a machine feel intentional?</h2><p>Instead of giving robots faces, limbs, or human-like gestures, this exploration treats movement itself as a communication material. The agent is intentionally non-anthropomorphic.</p></div>
+          <div><h2>Can movement alone make a machine feel intentional?</h2><p>This exploration isolates movement as a communication material. The agent has no face, limbs, or human-like gestures, allowing speed, timing, path, and oscillation to carry the interaction.</p></div>
         </div>
       </section>
 
       <section class="shell why">
-        <div class="section-copy"><p class="kicker">02 · Why movement?</p><h2>Remove the familiar social signals.</h2><p>Social robots often rely on faces, gaze, arms, gesture, or humanoid form. This study asks what remains when those signals are removed—and whether speed, acceleration, pause, reversal, curvature, and oscillation still invite interpretations of intention or agency.</p></div>
+        <div class="section-copy"><p class="kicker">02 · Why movement?</p><h2>What movement communicates without familiar social cues</h2><p>Social robots often communicate through faces, gaze, arms, gestures, or humanoid form. This study isolates movement to examine how speed, acceleration, pause, reversal, curvature, and oscillation shape interpretations of intention and agency.</p></div>
         <ol class="concept-flow" aria-label="Initial conceptual model"><li><span>Input</span><strong>Kinematics</strong><small>measurable motion</small></li><i>↓</i><li><span>Transformation</span><strong>Movement quality</strong><small>temporal pattern</small></li><i>↓</i><li><span>Interpretation</span><strong>Perceived meaning</strong><small>state · intention · agency</small></li></ol>
       </section>
 
       <section class="parameter-section">
         <div class="shell">
-          <div class="section-copy"><p class="kicker">03 · From intuition to parameters</p><h2>Avoid semantic labels too early.</h2><p>I did not begin by designing a “happy” or “hesitant” animation. The first step was to decompose motion into lower-level properties that could be manipulated systematically.</p></div>
+          <div class="section-copy"><p class="kicker">03 · From intuition to parameters</p><h2>Start with movement parameters</h2><p>The study decomposed motion into lower-level properties before assigning semantic labels such as “happy” or “hesitant.” This made each property easier to manipulate systematically.</p></div>
           <div class="parameter-grid"><article v-for="([name, text], index) in parameters" :key="name"><span>{{ String(index + 1).padStart(2, '0') }}</span><h3>{{ name }}</h3><p>{{ text }}</p></article></div>
         </div>
       </section>
 
       <section class="shell early-probes">
-        <div class="section-copy"><p class="kicker">04 · Early motion probes</p><h2>Intuition was useful—and too entangled.</h2><p>Early Figma probes gave the question a visible form, but they also changed too many variables at once. The problem shifted from inventing expressive motions to isolating what produced an interpretation.</p></div>
+        <div class="section-copy"><p class="kicker">04 · Early motion probes</p><h2>Early probes changed too many variables at once</h2><p>Early Figma probes gave the question a visible form, but speed, path, timing, and oscillation often changed together. The next step was to isolate which properties produced an interpretation.</p></div>
         <div class="probe-row"><article v-for="probe in earlyProbes" :key="probe.name"><svg viewBox="0 0 120 76" role="img" :aria-label="`${probe.name} early movement hypothesis`"><path :d="probe.path"/><circle class="probe-agent" r="4"><animateMotion :path="probe.path" :dur="probe.duration" repeatCount="indefinite" /></circle></svg><h3>{{ probe.name }}</h3><p>{{ probe.issue }}</p></article></div>
         <div class="turning-point"><strong>Initial probes</strong><i>→</i><span>Too many variables changed together</span><i>→</i><strong>Build a parameterized movement lab</strong></div>
-        <p class="probe-note">These web animations reconstruct the motion logic of the early Figma probes; they are presented as formative hypotheses, not study stimuli.</p>
+        <p class="probe-note">These web animations reconstruct the motion logic of the early Figma probes and document the project’s formative hypotheses.</p>
       </section>
 
       <section class="lab-section">
         <div class="shell">
-          <div class="section-copy"><p class="kicker">05 · Building Movement Lab</p><h2>The research tool evolved with the study.</h2><p>Movement Lab is a researcher-side Processing tool for manipulating parameters, building presets, and running repeatable sessions—not a participant-facing final product.</p></div>
+          <div class="section-copy"><p class="kicker">05 · Building Movement Lab</p><h2>Movement Lab made the study repeatable</h2><p>Movement Lab is a researcher-side Processing tool for manipulating parameters, building presets, and running repeatable sessions.</p></div>
           <ol class="version-timeline"><li v-for="item in labVersions" :key="item.version"><span>{{ item.version }}</span><div><h3>{{ item.title }}</h3><p>{{ item.text }}</p></div></li></ol>
           <figure class="evidence-figure evidence-figure--dark"><img :src="homeUrl + 'images/research/movement-language/movement-lab-ui.webp'" alt="Movement Lab version 0.5 Processing interface showing a movement path, preset P12, trial progress, and parameter controls" loading="lazy"><figcaption>Movement Lab v0.5 · researcher-side interface for preset playback, randomized study traversal, replay, and parameter inspection.</figcaption></figure>
         </div>
@@ -178,13 +178,13 @@ const labLimits = [
 
       <section class="study-a">
         <div class="shell study-grid">
-          <div><p class="kicker">07 · Study A · Movement → Meaning</p><h2>Open interpretation, not emotion guessing.</h2><div class="study-meta"><strong>n = 6</strong><span>exploratory pilot</span><span>randomized probes</span></div></div>
-          <div class="questions"><p><span>01</span>What do you think this object was doing?</p><p><span>02</span>If it had a state or intention, how would you describe it?</p><p><span>03</span>What part of the movement made you think that?</p><aside>The study did not test whether participants “guessed the correct emotion.” It explored how meaning emerged from movement.</aside></div>
+          <div><p class="kicker">07 · Study A · Movement → Meaning</p><h2>How participants interpreted state and intention from movement</h2><div class="study-meta"><strong>n = 6</strong><span>exploratory pilot</span><span>randomized probes</span></div></div>
+          <div class="questions"><p><span>01</span>What do you think this object was doing?</p><p><span>02</span>If it had a state or intention, how would you describe it?</p><p><span>03</span>What part of the movement made you think that?</p><aside>Participants described what the object appeared to be doing, the state or intention they perceived, and the movement cues behind that interpretation.</aside></div>
         </div>
       </section>
 
       <section class="shell method-correction">
-        <div class="section-copy"><p class="kicker">08 · Why Study B changed</p><h2>A method correction before data collection.</h2><p>The initial plan asked participants to express a meaning by adjusting Movement Lab sliders. That interface would have primed them with the researcher-defined parameter space and turned elicitation into a UI task.</p></div>
+        <div class="section-copy"><p class="kicker">08 · Why Study B changed</p><h2>Redesigning Study B before data collection</h2><p>The initial plan asked participants to express a meaning by adjusting Movement Lab sliders. Those controls would have primed them with the researcher-defined parameter space and turned elicitation into a UI task.</p></div>
         <div class="decision-grid"><article><span>Initial plan</span><h3>Slider elicitation</h3><p>Participants manipulate velocity, pause, reversal, and oscillation directly.</p></article><article class="decision-problem"><span>Method problem</span><h3>Parameter priming</h3><p>The available controls predefine what participants imagine movement can be.</p></article><article class="decision-final"><span>Revised method</span><h3>Paper + think aloud</h3><p>Participants draw and describe movement before researcher translation and participant validation.</p></article></div>
         <ol class="revised-flow"><li>Meaning prompt</li><i>→</i><li>Draw / describe</li><i>→</i><li>Code natural features</li><i>→</i><li>Optional parameterization</li></ol>
       </section>
@@ -198,7 +198,7 @@ const labLimits = [
 
       <section class="data-pipeline">
         <div class="shell">
-          <div class="section-copy"><p class="kicker">10 · From records to evidence</p><h2>Data Cleaning and Coding</h2><p>The analysis kept raw descriptions separate from researcher interpretation, preserved presentation order, and documented each revision from open coding to final aggregation.</p></div>
+          <div class="section-copy"><p class="kicker">10 · From records to evidence</p><h2>Data cleaning and coding</h2><p>The analysis kept raw descriptions separate from researcher interpretation, preserved presentation order, and documented each revision from open coding to final aggregation.</p></div>
           <div class="data-counts"><article><strong>72</strong><span>Study A records</span><small>6 participants × 12 probes</small></article><article><strong>24</strong><span>Study B records</span><small>6 participants × 4 meanings</small></article><article><strong>3</strong><span>coding layers</span><small>behaviour · state/intention · cue</small></article></div>
           <ol class="data-stage-grid"><li v-for="stage in dataStages" :key="stage.step"><span>{{ stage.step }}</span><h3>{{ stage.title }}</h3><p>{{ stage.text }}</p></li></ol>
           <div class="coding-example"><div><p class="kicker">An anonymized worked example</p><h3>P06 · translated from Chinese</h3><dl><div><dt>Behaviour</dt><dd>“It was moving at varying speeds.”</dd></div><div><dt>State / intention</dt><dd>“Hesitant.”</dd></div><div><dt>Movement cue</dt><dd>“It paused.”</dd></div></dl></div><div class="coding-example__result"><span>Behaviour code</span><strong>variable_speed_motion</strong><span>State code</span><strong>hesitation</strong><span>Cue code</span><strong>pause_present</strong><span>Review status</span><strong>manual review</strong></div></div>
@@ -209,7 +209,7 @@ const labLimits = [
       <section class="shell coding">
         <div class="section-copy"><p class="kicker">11 · Coding was iterative</p><h2>Separate what participants said from what the researcher knew.</h2><p>The first coding pass joined behavior, state, and cue text to increase keyword matches. This created cross-layer contamination. Coding v2 restricted each raw response to its own code layer and added manual review and negation checks.</p></div>
         <div class="coding-flow"><article><span>Behaviour_Raw</span><strong>Behaviour codes only</strong></article><article><span>State_Intention_Raw</span><strong>State codes only</strong></article><article><span>Movement_Cue_Raw</span><strong>Cue codes only</strong></article></div>
-        <blockquote>Participant did not perceive it → do not code it.</blockquote>
+        <blockquote>Code only what the participant perceived.</blockquote>
         <p class="coding-note">Manual review also checked negation such as “no hesitation,” “no pause,” and “no reversal” to reduce keyword false positives.</p>
       </section>
 
@@ -221,25 +221,25 @@ const labLimits = [
       </section>
 
       <section class="shell findings">
-        <div class="section-copy"><p class="kicker">13 · What emerged</p><h2>Four preliminary observations.</h2></div>
+        <div class="section-copy"><p class="kicker">13 · What emerged</p><h2>Four patterns in how movement was interpreted</h2></div>
         <div class="finding-grid"><article v-for="finding in findings" :key="finding.number"><span>{{ finding.number }}</span><h3>{{ finding.title }}</h3><p>{{ finding.text }}</p></article></div>
       </section>
 
       <section class="mapping-section">
         <div class="shell mapping-grid">
-          <div><p class="kicker">14 · Bidirectional mapping</p><h2>Perception and production reveal different evidence.</h2><p>Convergence does not imply a one-to-one vocabulary. It shows where features converge, remain ambiguous, depend on temporal context, or require a relational context.</p></div>
+          <div><p class="kicker">14 · Bidirectional mapping</p><h2>Perception and production showed different patterns</h2><p>The comparison shows where features converged, remained ambiguous, depended on temporal context, or required a relational context.</p></div>
           <div class="mapping-diagram"><article><span>Movement features</span><strong>Movement</strong></article><i>→</i><article class="mapping-center"><span>Study A</span><strong>Perception</strong><b>↕</b><span>Study B</span><strong>Production</strong></article><i>←</i><article><span>Prompts</span><strong>Meaning</strong></article></div>
         </div>
       </section>
 
       <section class="shell evidence-matrix-section">
-        <div class="section-copy"><p class="kicker">15 · A × B evidence matrix</p><h2>Where perception and production converge—and where they do not.</h2><p>The table keeps the two study directions visible before they are synthesized into a design space. Convergence labels are descriptive summaries of this exploratory pilot, not inferential results.</p></div>
+        <div class="section-copy"><p class="kicker">15 · A × B evidence matrix</p><h2>Comparing perception and production</h2><p>The table keeps the two study directions visible before they are synthesized into a design space. Its convergence labels summarize patterns from this exploratory pilot.</p></div>
         <p class="table-scroll-note">Swipe horizontally to compare all evidence columns →</p><div class="evidence-matrix-wrap"><table class="evidence-matrix"><thead><tr><th>Meaning</th><th>Study A · perception</th><th>Study B · production</th><th>Convergence</th><th>Design implication</th></tr></thead><tbody><tr v-for="row in evidenceMatrix" :key="row.meaning"><th>{{ row.meaning }}</th><td>{{ row.studyA }}</td><td>{{ row.studyB }}</td><td><span>{{ row.convergence }}</span></td><td>{{ row.implication }}</td></tr></tbody></table></div>
       </section>
 
       <section class="design-space">
         <div class="shell">
-          <div class="section-copy"><p class="kicker">16 · Movement–meaning design space</p><h2>An exploratory design space emerging from the pilot.</h2><p>This is not a validated model. It organizes the difference between perceptual salience and semantic specificity while keeping under-tested relational motion visible.</p></div>
+          <div class="section-copy"><p class="kicker">16 · Movement–meaning design space</p><h2>A preliminary map of movement and meaning</h2><p>The map organizes the pilot findings by perceptual salience, semantic specificity, and the relational movements that remain under-tested.</p></div>
           <figure class="evidence-figure evidence-figure--paper evidence-figure--large"><img :src="homeUrl + 'images/research/movement-language/movement-meaning-design-space.webp'" alt="Exploratory movement-meaning design space plotting movement features by perceptual salience and semantic specificity" loading="lazy"><figcaption>Exploratory synthesis of Movement → Meaning and Meaning → Movement evidence. Positions summarize qualitative patterns rather than inferential effect sizes.</figcaption></figure>
           <div class="space-legend"><article><span>Promising patterns</span><p>Pause / interruption · reversal / correction · high-frequency oscillation</p></article><article><span>Visible, semantically broad</span><p>Slow speed · curved / indirect path · curvature direction</p></article><article><span>Relational / under-tested</span><p>Object-relative inspection / orbit emerged in Study B and was not formally tested in Study A.</p></article></div>
         </div>
@@ -251,16 +251,16 @@ const labLimits = [
       </section>
 
       <section class="limits-section">
-        <div class="shell limits-grid"><div><p class="kicker">18 · What the current lab cannot yet express</p><h2>Participant ideas exposed new dimensions.</h2><p>These are not simply software bugs. They are motion structures that emerged beyond the first researcher-defined parameter space.</p></div><ul><li v-for="item in labLimits" :key="item">{{ item }}</li></ul></div>
+        <div class="shell limits-grid"><div><p class="kicker">18 · Limits of the current Movement Lab</p><h2>Participant-created movements expanded the design space</h2><p>Participant-created movements extended beyond the researcher-defined parameter space, adding pause timing, frequency changes, relational motion, and multi-stage sequences.</p></div><ul><li v-for="item in labLimits" :key="item">{{ item }}</li></ul></div>
       </section>
 
       <section class="shell status-section">
-        <div><p class="kicker">19 · Current status</p><h2>Ongoing direction, paused pilot.</h2></div>
-        <div><p>This research direction remains in progress, while the current pilot is paused for synthesis. Rather than treating the study as a finished vocabulary, I am using it to articulate a preliminary movement–meaning design space and identify questions for future embodied experiments.</p><span>Exploratory · preliminary · not a validated framework</span></div>
+        <div><p class="kicker">19 · Current status</p><h2>Pausing the pilot to refine the research direction</h2></div>
+        <div><p>The current pilot is paused while I synthesize its findings into a preliminary movement–meaning design space and identify questions for future embodied experiments.</p><span>Exploratory pilot · synthesis in progress</span></div>
       </section>
 
       <section class="next-section">
-        <div class="shell next-grid"><div><p class="kicker">20 · Possible next direction</p><h2>Point → object → physical non-anthropomorphic agent</h2></div><div><p>A future iteration could test whether these movement patterns remain legible when transferred from a screen-based point to a physical robotic body.</p><ul><li>relational motion</li><li>object-relative inspection</li><li>target distance</li><li>event-triggered behavior</li></ul></div></div>
+        <div class="shell next-grid"><div><p class="kicker">20 · Possible next direction</p><h2>Point → object → physical non-anthropomorphic agent</h2></div><div><p>The next question is whether these movement patterns remain legible when transferred from a screen-based point to a physical robotic body.</p><ul><li>relational motion</li><li>object-relative inspection</li><li>target distance</li><li>event-triggered behavior</li></ul></div></div>
       </section>
     </article>
 
@@ -297,9 +297,9 @@ const labLimits = [
 .question-grid,
 .study-grid { border-top: 0; }
 .questions aside {
-  color: #18130d;
+  color: #c4c0ba;
   border-left: 0;
-  background: var(--accent);
+  background: #211b14;
 }
 .limits-section,
 .next-section { padding-block: 0; }

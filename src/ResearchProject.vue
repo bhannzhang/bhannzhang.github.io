@@ -29,8 +29,8 @@
         </div>
         <div class="prose">
           <p>
-            The work focused on social acceptance—not only whether people could understand a vehicle’s
-            message, but whether its communication style affected trust, comfort, compliance, and the
+            The work examined both pedestrian understanding and the social acceptance of the vehicle’s
+            behavior. I studied how communication style affected trust, comfort, compliance, and the
             perceived distribution of power in a street encounter.
           </p>
           <p>
@@ -44,7 +44,7 @@
       <section class="section-shell role-panel">
         <div>
           <p class="section-kicker">Role & collaboration</p>
-          <h2>Research leadership across design, study execution, and prototyping</h2>
+          <h2>My role across the research program</h2>
         </div>
         <div class="role-panel__body">
           <p>
@@ -97,7 +97,7 @@
       <section class="findings">
         <div class="section-shell">
           <p class="section-kicker">Key findings</p>
-          <h2>Clearer, earlier, and multimodal communication improved the interaction</h2>
+          <h2>Earlier multimodal cues made the vehicle’s intent easier to interpret</h2>
           <div class="metrics">
             <div class="metric"><strong>43.8% → 87.5%</strong><span>early recognition</span></div>
             <div class="metric"><strong>4.80s → 3.60s</strong><span>mean task completion time</span></div>
@@ -114,11 +114,11 @@
       <section class="section-shell prototype-section">
         <div>
           <p class="section-kicker">Design translation</p>
-          <h2>A distinct prototype for the master’s thesis</h2>
+          <h2>Master’s thesis prototype</h2>
           <p class="prose">
-            The thesis required a new design rather than a reuse of the earlier vehicle. I redefined the
-            function, redesigned the exterior, and developed a physical demonstration platform to test how
-            coordinated visual, auditory, and motion cues could reduce ambiguity.
+            For the master’s thesis, I developed a new vehicle and redefined its function, exterior form,
+            communication channels, and interaction sequence. The physical demonstration platform tested
+            how coordinated visual, auditory, and motion cues could reduce ambiguity.
           </p>
         </div>
         <figure>
