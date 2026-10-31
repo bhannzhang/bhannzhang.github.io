@@ -742,14 +742,14 @@ const cueResults = [
 .prediction-panel p { margin: 1.2rem auto 0; max-width: 760px; color: var(--muted); font-size: .78rem; }
 
 .mapping-check { border-bottom: 1px solid #1c3339; }
-.mapping-check-grid { display: grid; grid-template-columns: .78fr 1.22fr; gap: clamp(3rem, 6vw, 6.5rem); align-items: stretch; }
+.mapping-check-grid { display: grid; grid-template-columns: minmax(300px, .68fr) minmax(0, 1.32fr); gap: clamp(2.5rem, 4vw, 4.5rem); align-items: stretch; }
 .mapping-check-copy { display: flex; flex-direction: column; }
 .mapping-check-copy h2 { margin: 0; max-width: 560px; font-size: clamp(2.5rem, 4.8vw, 4.6rem); line-height: .98; letter-spacing: -.055em; }
 .mapping-method { margin-top: 1.6rem; max-width: 560px; color: var(--muted); line-height: 1.75; }
 .mapping-takeaway { margin-top: 3rem; padding: 1.5rem 0 1.5rem 1.5rem; border-left: 3px solid var(--ochre); background: linear-gradient(90deg, rgba(225,170,90,.09), transparent 82%); }
 .mapping-takeaway span { color: var(--ochre); font-size: .69rem; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
 .mapping-takeaway p { margin-top: .8rem; color: #dce8e4; font-size: 1rem; line-height: 1.7; }
-.mapping-evidence { padding-left: clamp(2rem, 4vw, 4rem); border-left: 1px solid var(--line); }
+.mapping-evidence { min-width: 0; padding-left: 0; border: 0; }
 .accuracy-mini { padding-bottom: 3rem; border-bottom: 1px solid var(--line); }
 .accuracy-mini > div:first-child, .confidence-plot header, .confidence-plot header > div { display: flex; align-items: baseline; gap: .85rem; }
 .accuracy-mini > div:first-child > span, .confidence-plot header span { color: var(--ochre); font-size: .72rem; font-weight: 800; }
