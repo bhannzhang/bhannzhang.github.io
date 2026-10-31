@@ -969,4 +969,6 @@ const cueResults = [
 .experiment-a-findings .task-bar { border: 0; }
 
 .experiment-b-findings .cue-measure { border: 0; }
+
+.swarm-validation .flocking-model { border: 0; }
 </style>

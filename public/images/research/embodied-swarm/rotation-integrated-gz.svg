@@ -21,12 +21,8 @@
   <path d="M125 376 L195 375 L265 376 L335 375 L405 376 L475 376 L545 369 L615 363 L685 353 L755 340 L825 329 L895 318 L965 300 L1035 279 L1105 260 L1175 249 L1245 244 L1315 241 L1385 238 L1485 225" fill="none" stroke="#59d0ca" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
   <path d="M125 376 L195 377 L265 376 L335 377 L405 376 L475 378 L545 386 L615 397 L685 412 L755 427 L825 445 L895 463 L965 480 L1035 495 L1105 507 L1175 518 L1245 529 L1315 540 L1385 550 L1485 562" fill="none" stroke="#df7d67" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
   <g font-family="Inter, Arial, sans-serif" font-size="20" font-weight="650">
-    <rect x="1094" y="203" width="310" height="40" rx="5" fill="#132a31"/>
-    <text x="1108" y="230" fill="#59d0ca">CW · positive accumulation</text>
-    <path d="M1230 243 L1237 246" fill="none" stroke="#59d0ca" stroke-width="1.5"/>
-    <rect x="1094" y="515" width="338" height="40" rx="5" fill="#132a31"/>
-    <text x="1108" y="542" fill="#df7d67">CCW · negative accumulation</text>
-    <path d="M1234 515 L1238 521" fill="none" stroke="#df7d67" stroke-width="1.5"/>
+    <text x="1108" y="205" fill="#59d0ca">CW · positive accumulation</text>
+    <text x="1108" y="584" fill="#df7d67">CCW · negative accumulation</text>
   </g>
   <text x="70" y="651" fill="#9aabb0" font-family="Inter, Arial, sans-serif" font-size="17">Integration distinguishes sustained rotation from a brief peak in angular velocity.</text>
 </svg>
