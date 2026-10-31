@@ -965,4 +965,6 @@ const cueResults = [
 .mapping-check .accuracy-mini,
 .mapping-check .confidence-plot,
 .mapping-check .confidence-summary { border: 0; }
+
+.experiment-a-findings .task-bar { border: 0; }
 </style>
