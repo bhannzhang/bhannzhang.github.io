@@ -84,6 +84,37 @@
               </div>
               <p class="typography-conclusion">Title-size conventions varied across interface functions and vehicle systems. While some functional contexts exhibited recurring typographic sizes, others showed considerable variation, suggesting that a single universal title-size convention was not evident in this historical sample.</p>
             </section>
+            <section class="character-length-analysis" aria-labelledby="character-length-title">
+              <div class="character-length-analysis__intro">
+                <p class="mini-label">Character Length</p>
+                <h4 id="character-length-title">Character Length Distribution Across Interface Functions</h4>
+                <p>Beyond font size, the length of textual information is another important dimension of automotive interface typography. This analysis examined the distribution of recorded character lengths across five interface contexts: Home, Navigation, Multimedia, Vehicle Settings, and Voice Control.</p>
+              </div>
+              <figure class="typography-figure character-length-figure">
+                <h5>Character Length Distribution Across Five Automotive Interface Functions</h5>
+                <a :href="figures.characterLengthSvg.src" target="_blank" rel="noopener noreferrer" aria-label="Open character-length distribution figure at full resolution">
+                  <picture>
+                    <source :srcset="figures.characterLengthSvg.src" type="image/svg+xml" />
+                    <img :src="figures.characterLengthPng.src" :alt="figures.characterLengthSvg.alt" loading="lazy" />
+                  </picture>
+                  <span>Open full-resolution figure ↗</span>
+                </a>
+                <figcaption>Distribution of recorded text lengths across five automotive interface functions. Each dot represents one non-zero historical observation, with repeated values stacked vertically. Short vertical markers indicate the median character length within each function.</figcaption>
+              </figure>
+              <section class="typography-findings character-length-findings" aria-labelledby="character-length-findings-title">
+                <div><p class="mini-label">Descriptive Findings</p><h4 id="character-length-findings-title">Key Findings — Character Length</h4></div>
+                <p class="typography-findings__note">These observations describe the retained historical dataset; they do not define optimal interface design.</p>
+                <dl class="character-length-findings__grid">
+                  <div><dt>Home</dt><dd>Character lengths showed considerable variation across the recorded home-screen observations, rather than clustering around a single uniform length.</dd></div>
+                  <div><dt>Navigation</dt><dd>Most first-level navigation labels were relatively short, while longer secondary text entries were also documented. Some recorded navigation text reached 34 characters.</dd></div>
+                  <div><dt>Multimedia</dt><dd>Multimedia interfaces exhibited a mixture of short labels and longer textual content, reflecting variation in the amount of information displayed.</dd></div>
+                  <div><dt>Vehicle Settings</dt><dd>Vehicle-settings interfaces showed a broad range of character lengths, including longer records reaching 34 characters.</dd></div>
+                  <div><dt>Voice Control</dt><dd>Voice-control interfaces contained both short and extended text entries. The historical report documented a maximum observed character length of 23 characters.</dd></div>
+                </dl>
+                <p class="typography-conclusion">Character length varied across automotive interface functions, reflecting differences in information content and presentation. While shorter labels were common in several functional contexts, longer text entries also appeared, particularly in navigation and vehicle settings. These observations highlight the need to consider text length alongside font size and visual hierarchy when analyzing automotive HMI typography.</p>
+                <p class="character-length-method">Descriptive visualization reconstructed from retained historical benchmarking records. Blank and zero-marked entries were excluded as unverified observations.</p>
+              </section>
+            </section>
           </div>
         </div>
         <div class="evidence-block">
@@ -172,6 +203,8 @@ const figures = {
   layout: pendingFigure('layout-pattern-classification.webp', 'Figure pending — Historical layout classification and frequency comparison', 'Layout patterns across navigation, multimedia, vehicle settings, and other center-stack functions.'),
   primaryTypography: { src: evidenceImage('automotive_primary_title_sizes.png'), alt: 'Primary title sizes across Home, Navigation, Multimedia, Vehicle Settings, and Voice Control interfaces' },
   secondaryTypography: { src: evidenceImage('automotive_secondary_title_sizes.png'), alt: 'Secondary title sizes across Home, Navigation, Multimedia, Vehicle Settings, and Voice Control interfaces' },
+  characterLengthSvg: { src: evidenceImage('automotive_character_length_distribution.svg'), alt: 'Character-length distributions across Home, Navigation, Multimedia, Vehicle Settings, and Voice Control interfaces' },
+  characterLengthPng: { src: evidenceImage('automotive_character_length_distribution.png'), alt: 'Character-length distributions across Home, Navigation, Multimedia, Vehicle Settings, and Voice Control interfaces' },
   color: pendingFigure('color-distribution-analysis.webp', 'Figure pending — Historical color distribution analysis', 'Color distributions and interface-state conventions documented across vehicle functions.'),
   icons: pendingFigure('icon-classification-analysis.webp', 'Figure pending — Historical icon classification and dimensional analysis', 'Line and filled icon styles, functional categories, and dimensional comparisons.'),
   focusGroup: pendingFigure('focus-group-session.webp', 'Figure pending — Focus group session photograph', 'Authentic documentation of the focus-group or interview activity will be added here.'),
@@ -289,6 +322,21 @@ const figures = {
 .typography-findings tbody th { width: 20%; color: var(--benchmark-text); font-weight: 600; }
 .typography-conclusion { max-width: 900px; color: var(--benchmark-muted); font-size: .86rem; line-height: 1.72; }
 
+.character-length-analysis { display: grid; gap: 2.5rem; padding-top: 3.25rem; border-top: 1px solid var(--benchmark-line); }
+.character-length-analysis__intro { max-width: 820px; }
+.character-length-analysis__intro h4 { margin: .55rem 0 1rem; color: var(--benchmark-text); font-size: 1.25rem; line-height: 1.3; }
+.character-length-analysis__intro > p:last-child { color: var(--benchmark-muted); font-size: .88rem; line-height: 1.72; }
+.character-length-figure h5 { margin: 0 0 1rem; color: var(--benchmark-text); font-size: .9rem; line-height: 1.4; font-weight: 600; }
+.character-length-figure picture { display: block; }
+.character-length-findings__grid { grid-column: 1 / -1; margin: 0; border-top: 1px solid var(--benchmark-line); border-bottom: 1px solid var(--benchmark-line); }
+.character-length-findings__grid > div { display: grid; grid-template-columns: minmax(180px, 2fr) minmax(0, 8fr); border-bottom: 1px solid var(--benchmark-line); }
+.character-length-findings__grid > div:last-child { border-bottom: 0; }
+.character-length-findings dt,
+.character-length-findings dd { margin: 0; padding: 1rem 1.25rem; }
+.character-length-findings dt { color: var(--benchmark-text); font-weight: 600; }
+.character-length-findings dd { color: var(--benchmark-muted); border-left: 1px solid var(--benchmark-line); font-size: .78rem; line-height: 1.6; }
+.character-length-method { grid-column: 1 / -1; max-width: 900px; padding-top: 1.25rem; color: var(--benchmark-muted); border-top: 1px solid var(--benchmark-line); font-size: .72rem; line-height: 1.65; }
+
 .integrity-note,
 .confidentiality-note { padding: 1.25rem 0 0; color: var(--benchmark-muted); border-top: 1px solid var(--benchmark-line); font-size: .78rem; line-height: 1.65; }
 .integrity-note { grid-column: 1 / -1; }
@@ -353,6 +401,8 @@ const figures = {
   .evidence-block { grid-template-columns: 1fr; }
   .typography-findings { grid-template-columns: 1fr; }
   .typography-findings__note { grid-column: 1; }
+  .character-length-findings__grid > div { grid-template-columns: 1fr; }
+  .character-length-findings dd { padding-top: 0; border-left: 0; }
   .topic-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .topic-grid li:nth-child(2) { border-right: 0; }
   .topic-grid li:nth-child(-n+2) { border-bottom: 1px solid var(--benchmark-line); }
