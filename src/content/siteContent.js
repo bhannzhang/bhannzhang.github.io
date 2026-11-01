@@ -98,9 +98,9 @@ export const siteContent = {
     // 注释（可选） (Note (optional))
     note: "",
     // 背景信息 (Background information)
-    background: "My research spans human–autonomy interaction, eHMI, cross-cultural HRI, and embodied prototyping, informed by five years of automotive HMI practice.",
+    background: "My work spans human–autonomy interaction, eHMI, cross-cultural HRI, and embodied prototyping. It draws on five years of automotive HMI practice.",
     backgroundNote: "",
-    researchNarrative: "Beginning with autonomous delivery vehicles in public spaces, I have examined how communication strategies, multimodal cues, and embodiment shape people's understanding and acceptance of autonomy. My current interests extend this work toward socially legible robots and human–AI collaboration in real-world contexts.",
+    researchNarrative: "I began by studying how pedestrians understand autonomous delivery vehicles in public spaces. I now extend this work to socially legible robots, multimodal behavior, and human–AI collaboration.",
     // 按钮 (Buttons)
     buttons: [
       {
@@ -153,14 +153,14 @@ export const siteContent = {
         title: "Human–Robot & Human–Autonomy Interaction",
         descriptions: [
           "Trust, coordination, and social interaction with robots and autonomous systems",
-          "Autonomous mobility and public-space robots as empirical contexts",
+          "Autonomous mobility and public-space robots as study contexts",
         ],
       },
       {
         title: "Socially Legible & Multimodal Systems",
         descriptions: [
           "Visual, auditory, behavioral, and spatial cues that make system intentions understandable",
-          "Communication across cultures, road users, and group settings",
+          "How communication changes across cultures, road users, and group settings",
         ],
       },
       {
@@ -204,16 +204,16 @@ export const siteContent = {
   // 📌 教育经历（Education Section）
   // ==========================================
   education: {
-    sectionTitle: "Education Experience",
+    sectionTitle: "Education",
     items: [
       {
-        degree: "Master of Interaction Design in HMI & HCI ",
+        degree: "M.Des. in Interaction Design",
         school: "Tongji University",
         location: "Shanghai, China",
         period: "2018 - 2021",
         gpa: "4.73/5.0 · 1st in program for 3 consecutive academic years",
         status: "Completed",
-        thesis: "Interaction Design, Concentrations in Human computer interaction and cognition",
+        thesis: "Concentration in Human–Computer Interaction and Cognition",
         achievements: [
           "Outstanding Graduate of Tongji University, 2021 (Top 2%)",
           "Outstanding Master's Thesis, Tongji University (2021)",
@@ -221,13 +221,13 @@ export const siteContent = {
         ],
       },
       {
-        degree: "Bachelor of Electrical Engineer",
+        degree: "B.Eng. in Electrical Engineering and Automation",
         school: "Hohai University",
         location: "Nanjing, China",
         period: "2012 - 2016",
         gpa: "4.08/5.0",
         status: "Completed",
-        thesis: "Major in Electrical Engineering and Automation.",
+        thesis: "",
         //achievements: [
          // "Dean's List (6 semesters)",
           //"Undergraduate Research Award",
@@ -250,7 +250,7 @@ export const siteContent = {
         category: "Current Independent Research · Social HRI",
         status: "Completed",
         title: "OYI: Embodied Companion Robot for Social Interaction",
-        description: "Designed and developed a 3D-printed companion robot with articulated arms, voice interaction, persistent conversational memory, and ambient light feedback, then conducted a five-day mixed-method study with 32 participants.",
+        description: "Built a 3D-printed companion robot with articulated arms, voice interaction, persistent memory, and ambient light feedback. A five-day mixed-method study involved 32 participants.",
         tags: ["Independent Research Lead", "32 participants", "5-day study", "Voice + light"],
         image: import.meta.env.BASE_URL + 'images/research/oyi/hri-card-cover.webp',
         link: import.meta.env.BASE_URL + 'research/oyi/',
@@ -259,7 +259,7 @@ export const siteContent = {
         category: "Current Independent Research · Swarm HRI",
         status: "In Progress",
         title: "Embodied Swarm Interaction",
-        description: "A two-part exploratory study of how embodied input supports mental-model formation and collective legibility while preserving the autonomy of a 55–60-agent swarm.",
+        description: "A two-part exploratory study examining how embodied input shapes mental models and the legibility of collective behavior in a 55–60-agent autonomous swarm.",
         tags: ["Independent Research", "n=6 pilot", "ESP32 + IMU", "Processing"],
         image: import.meta.env.BASE_URL + 'images/research/embodied-swarm/swarm-card-cover.webp',
         link: import.meta.env.BASE_URL + 'research/embodied-swarm/',
@@ -268,7 +268,7 @@ export const siteContent = {
         category: "Current Independent Research · Movement HRI",
         status: "In Progress",
         title: "Movement as a Language",
-        description: "An exploratory research-through-design study of how low-level movement parameters become perceived state, intention, and agency in non-anthropomorphic agents.",
+        description: "An exploratory study using controlled variations in movement to examine how people perceive state, intention, and agency in non-anthropomorphic agents.",
         tags: ["Research Exploration", "n=6 pilot", "Movement perception", "Processing"],
         image: import.meta.env.BASE_URL + 'images/research/movement-language/movement-card-placeholder.svg',
         link: import.meta.env.BASE_URL + 'research/movement-language/',
@@ -277,7 +277,7 @@ export const siteContent = {
         category: "Human–Autonomy Interaction",
         status: "Completed",
         title: "Social Acceptance and External Communication for Autonomous Delivery Vehicles",
-        description: "Led a multi-stage research program that developed from a Mitsubishi Electric campus-delivery collaboration into cross-cultural research with Ulm University and an independently redesigned master's thesis prototype. Using Wizard-of-Oz studies, interviews, multimodal eHMI prototyping, and comparative evaluation, I examined how communication strategies influence pedestrians' trust, understanding, and acceptance.",
+        description: "Led research that began with a Mitsubishi Electric campus-delivery collaboration and expanded into a cross-cultural study with Ulm University and a redesigned master's thesis prototype. Wizard-of-Oz studies, interviews, multimodal eHMI prototypes, and comparative evaluation examined how communication strategies affect pedestrians' trust, understanding, and acceptance.",
         tags: ["Project Lead", "Cross-cultural HRI", "Multimodal eHMI", "56 + 25 participants"],
         image: import.meta.env.BASE_URL + 'images/projects/project1.jpg',
         link: import.meta.env.BASE_URL + 'research/autonomous-delivery/',
@@ -286,8 +286,8 @@ export const siteContent = {
         category: "Intelligent-Cockpit UX Research",
         status: "Completed",
         title: "Cross-Brand Benchmarking for Intelligent-Cockpit Interface Guidelines",
-        description: "Led a structured benchmark of 26 automotive brands and translated heterogeneous interface evidence into a 12,000-word internal white paper and actionable UI/UX guidelines. Presented the research at Baidu headquarters; the work was recognized by Apollo Lab for methodological rigor.",
-        tags: ["Student Project Lead", "26 brands", "Design synthesis", "NDA-safe case"],
+        description: "Compared intelligent-cockpit interfaces across 26 automotive brands and synthesized the findings into a 12,000-word internal white paper and UI/UX guidelines. I presented the research at Baidu headquarters, where Apollo Lab recognized its methodological rigor.",
+        tags: ["Student Project Lead", "26 brands", "Design synthesis", "Industry collaboration"],
         image: import.meta.env.BASE_URL + 'images/projects/project2-benchmark.svg',
         link: import.meta.env.BASE_URL + 'research/automotive-benchmarking/',
       },
@@ -295,7 +295,7 @@ export const siteContent = {
         category: "Driver–Automation Interaction",
         status: "Completed",
         title: "Driver Behavior and HMI Strategy under ACC and LKA Automation",
-        description: "Led a scenario-based study of driver behavior under ACC and LKA automation. Developed 10 driving scenarios, helped operationalize trust, situation awareness, and workload as evaluation lenses, and collected and analyzed behavioral data from 30 participants.",
+        description: "Led a study of driver behavior under ACC and LKA automation using 10 scenarios and 30 participants. The evaluation measured trust, situation awareness, workload, and behavioral responses.",
         tags: ["Student Project Lead", "10 scenarios", "30 participants", "Driving simulator"],
         image: import.meta.env.BASE_URL + 'images/research/driver-automation/acc-simulator.jpg',
         link: import.meta.env.BASE_URL + 'research/driver-automation/',
@@ -304,8 +304,8 @@ export const siteContent = {
         category: "Simulation Infrastructure & Human Factors",
         status: "Completed",
         title: "Real-World Digital Twin for Virtual Driving Evaluation",
-        description: "Led a team in translating approximately 500,000 m² of surveyed road geography into a modular Unity environment for repeatable virtual-driving evaluation. The work connected field evidence, road-standard analysis, reusable scene assets, and ADAS-ready road logic while respecting the confidentiality of the final partner system.",
-        tags: ["Team Lead", "~500,000 m²", "Unity", "NDA-safe case"],
+        description: "Led a team that translated approximately 500,000 m² of surveyed road geography into a modular Unity environment for repeatable virtual-driving evaluation. The environment combined field surveys, road-standard analysis, reusable scene assets, and ADAS-ready road logic.",
+        tags: ["Team Lead", "~500,000 m²", "Unity", "Industry collaboration"],
         image: import.meta.env.BASE_URL + 'images/projects/project4-digital-twin.svg',
         link: import.meta.env.BASE_URL + 'research/digital-twin-driving/',
       },
@@ -313,7 +313,7 @@ export const siteContent = {
         category: "Experimental Systems & HMI Research",
         status: "Completed",
         title: "Modular Multi-Screen Driving Simulation Platform",
-        description: "Led a six-member team in building the lab's first functional, networked driving-simulation platform. A decoupled Unity and MQTT architecture synchronized vehicles, ADAS states, monitoring data, and multiple HMI surfaces, enabling rapid interface iteration and supporting more than 30 subsequent HMI and driver-behavior tests.",
+        description: "Led a six-member team in building the lab's first functional, networked driving-simulation platform. Its Unity and MQTT architecture synchronized vehicles, ADAS states, monitoring data, and multiple HMI surfaces. The platform supported more than 30 subsequent HMI and driver-behavior tests.",
         tags: ["Team Lead", "6-person team", "30+ studies", "Unity + MQTT"],
         image: import.meta.env.BASE_URL + 'images/projects/project5.jpg',
         link: import.meta.env.BASE_URL + 'research/driving-simulation-platform/',
@@ -406,7 +406,7 @@ export const siteContent = {
   // ==========================================
   patents: {
     sectionTitle: "Design Patents",
-    intro: "Named designer on five recently granted production HMI design patents at SAIC Volkswagen, alongside six earlier design patents arising from autonomous-delivery vehicle research.",
+    intro: "Named designer on five production HMI design patents granted to SAIC Volkswagen in 2026 and six earlier design patents from autonomous-delivery vehicle research.",
     categories: [
       {
         name: "Production Automotive HMI · Granted 2026",
@@ -621,28 +621,28 @@ export const siteContent = {
             period: "Apr. 2023 – Present",
             // 职责描述列表 (List of responsibilities)
             responsibilities: [
-              "1. Led the core interaction framework design for the next-generation NEX HMI, Volkswagen’s first fully China-designed human–machine interface system, developed from the ground up to address localized user needs and driving habits.",
-              "2. Directed HMI framework for the new AUDI intelligent cockpit (first localized EV brand with SAIC), defining core interaction architecture across multiple domains; design successfully mass-produced.",
-              "3. Led UX/HMI design for RHP 2.0 Parking (Volkswagen's first localized autonomous parking project in China), achieving cross-functional approval and resulting in 10 patent-related interaction innovations, including five recently granted design patents.",
-              "4. Directed strategic research under the Digital Cockpit Strategy Field, producing a trend analysis report that identified key innovation directions and achieved the highest annual performance rating."
+              "1. Led the core interaction framework for the next-generation NEX HMI, Volkswagen’s first human–machine interface system designed entirely in China for local user needs and driving habits.",
+              "2. Directed the HMI framework for the new AUDI intelligent cockpit, the first localized EV brand developed with SAIC. Defined the interaction architecture across multiple domains, and the design entered production.",
+              "3. Led UX/HMI design for RHP 2.0 Parking, Volkswagen's first localized autonomous parking project in China, and secured cross-functional approval. The work produced 10 patent-related interaction innovations, including five granted design patents.",
+              "4. Led research for the Digital Cockpit Strategy Field and produced a trend report identifying future innovation directions. Received the highest annual performance rating."
             ],
           },
           {
             title: "Product Definition Engineer in Autonomous Driving R&D Department",
             period: "Jul. 2022 – Mar. 2023",
             responsibilities: [
-              "1. Led end-to-end HMI design and system definition for the ADAP proof-of-concept project, from interaction framework to simulator validation.",
-              "2. Served as the sole design lead for the RHP 3.0 autonomous driving concept, overseeing software interaction design, in-vehicle simulator development, and live vehicle demonstrations. The project was selected as a core innovation at the Volkswagen IVET Conference and later transferred to the production division for mass-production adaptation.",
+              "1. Led HMI design and system definition for the ADAP proof-of-concept project, from the interaction framework through simulator validation.",
+              "2. Served as the sole design lead for the RHP 3.0 autonomous driving concept, covering software interaction design, in-vehicle simulator development, and live vehicle demonstrations. The project was selected as a core innovation at the Volkswagen IVET Conference and later transferred to the production division for production adaptation.",
             ],
           },
           {
             title: "HMI Designer in Autonomous Driving R&D Department (ERR)",
             period: "Jul. 2021 – Jun. 2022",
             responsibilities: [
-              "1. Led HMI concept design for the SVW concept car, conducting prototype evaluations and usability studies; contributed to Volkswagen's advanced innovation program.",
-              "2. Directed the next-generation ADAS system framework, overseeing user research, qualitative analysis, and evaluation synthesis for large-scale testing in Shenzhen.",
-              "3. Contributed to the L4 Autonomous Shuttle X project, coordinating cross-scenario validation and behavioral analysis to enhance system robustness and driver-passenger interaction.",
-              "4. Designed interaction strategies for a DMS-based behavioral alert system, developing logic for driver state detection and proactive intervention within adaptive cockpit contexts.",
+              "1. Led HMI concept design for the SVW concept car and conducted prototype evaluations and usability studies for Volkswagen's advanced innovation program.",
+              "2. Directed the next-generation ADAS system framework and coordinated user research, qualitative analysis, and evaluation for large-scale testing in Shenzhen.",
+              "3. Contributed to the L4 Autonomous Shuttle X project by coordinating cross-scenario validation and behavioral analysis of system robustness and driver-passenger interaction.",
+              "4. Designed interaction strategies for a DMS-based behavioral alert system, including logic for driver-state detection and proactive intervention in adaptive cockpit contexts.",
             ],
           },
         ],
@@ -658,7 +658,7 @@ export const siteContent = {
             title: "Interaction Design Intern, ABK China Skylab",
             period: "Oct. 2019 – May 2020",
             responsibilities: [
-              "1. Contributed to the design of a digital credit system app and the BMW Avatar project; independently led usability studies comparing BMW ID 7 and ID 8 systems.",
+              "1. Contributed to a digital credit system app and the BMW Avatar project. Independently led usability studies comparing BMW ID 7 and ID 8.",
             ],
           },
         ],
@@ -672,7 +672,7 @@ export const siteContent = {
   individualWork: {
     // 栏目标题 (Section title)
     sectionTitle: "Embodied & Interactive Prototypes",
-    intro: "Exploratory prototypes developed through hands-on inquiry into sensing, responsive systems, and physical interaction. They are documented separately from the published research listed above.",
+    intro: "Hands-on prototypes exploring sensing, responsive systems, and physical interaction.",
     groups: [
       {
         name: "Embodied & Physical Prototypes",
@@ -688,7 +688,7 @@ export const siteContent = {
       },
       {
         title: "Multimodal EMG Sensing and Vibrotactile Feedback Prototype",
-        description: "Combined three-channel EMG, two strain inputs, Processing visualization, and localized vibration to explore tactile acknowledgement of attempted actions.",
+        description: "Combined three-channel EMG, two strain inputs, Processing visualization, and localized vibration to explore tactile feedback in response to attempted actions.",
         year: "2025",
         link: import.meta.env.BASE_URL + 'research/emg/',
       },
@@ -700,7 +700,7 @@ export const siteContent = {
       },
       {
         title: "Multimodal Menstrual-Cycle Sensing and Situated Pain Logging",
-        description: "Combined physiological sensing, visible or discreet feedback, and pressure-based Arduino–Processing logging to explore privacy-sensitive reminders and in-the-moment pain expression.",
+        description: "Combined physiological sensing with visible or discreet feedback and pressure-based Arduino–Processing logging to explore private reminders and in-the-moment pain logging.",
         year: "2024",
         link: import.meta.env.BASE_URL + 'research/menstrual-sensing/',
       },
@@ -712,7 +712,7 @@ export const siteContent = {
       },
       {
         title: "Interactive System for Skin Manifestations of Immune Disorders",
-        description: "Built a multimodal sensing platform for real-time skin condition detection and digital health visualization. ",
+        description: "Built a multimodal sensing platform for real-time detection and visualization of skin conditions.",
         year: "2024",
       },
         ],
@@ -733,19 +733,19 @@ export const siteContent = {
         items: [
       {
         title: "Tire Performance Field Testing & Audio-Reactive Visualization",
-        description: "Connected Continental field-test evidence with an independently built TouchDesigner pipeline for sound-driven visual response.",
+        description: "Combined Continental field-test evidence with an independently built TouchDesigner pipeline that translated sound into visual responses.",
         year: "2023–2025",
         link: import.meta.env.BASE_URL + 'research/tire-testing/',
       },
       {
         title: "Real-World EV Energy Testing & Gamified Visualization",
-        description: "Synthesized a 12-vehicle winter road test into comparative energy factors and a later visual communication concept; no autonomous-driving component.",
+        description: "Synthesized a 12-vehicle winter road test into comparative energy factors and a later visual communication concept.",
         year: "2021–2023",
         link: import.meta.env.BASE_URL + 'research/ev-energy-testing/',
       },
       {
         title: "EV Charging Service & App Design",
-        description: "Translated a 16-person focus group and charging-journey analysis into a connected parking, wayfinding, and mobile-service concept.",
+        description: "Used findings from a 16-person focus group and charging-journey analysis to design a connected parking, wayfinding, and mobile-service concept.",
         year: "2023–2024",
         link: import.meta.env.BASE_URL + 'research/ev-charging-service/',
       },
@@ -790,7 +790,7 @@ export const siteContent = {
   // ==========================================
   meta: {
     title: "Bihan Zhang | Human Factors, HCI & Embodied Interaction",
-    description: "Human factors and HCI researcher studying how people understand, trust, collaborate with, and physically interact with intelligent and autonomous systems.",
+    description: "Human factors and HCI researcher studying how people understand and interact with intelligent and autonomous systems, including trust, collaboration, and embodied interaction.",
     keywords: "Human Factors, HCI, Human-AI Interaction, Human-Autonomy Interaction, Embodied Interaction, Physical Prototyping, Automotive HMI",
     
     // [Method 1] Local file:
