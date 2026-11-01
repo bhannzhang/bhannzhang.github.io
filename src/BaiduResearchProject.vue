@@ -4,177 +4,317 @@
 
     <article>
       <section class="hero shell">
-        <div class="eyebrow">Intelligent-Cockpit UX Research · 2019</div>
-        <h1>Cross-Brand Benchmarking for Intelligent-Cockpit Interface Guidelines</h1>
+        <p class="eyebrow">Industry–University Collaboration · Student Project Lead</p>
+        <h1>Automotive HMI Research: From Benchmarking to User Evaluation</h1>
         <p class="lede">
-          A Baidu collaboration that transformed heterogeneous evidence from 26 automotive brands into a
-          systematic interface-analysis framework, an internal white paper, and actionable UI/UX guidelines.
+          An industry–university research collaboration with Baidu Apollo exploring how visual interface design
+          influences information comprehension, interaction usability, and driver workload.
         </p>
-        <div class="chips"><span>Student Project Lead</span><span>26 brands</span><span>12,000-word synthesis</span><span>Presented at Baidu HQ</span></div>
-        <div class="benchmark-visual" aria-label="Abstract visualization of the cross-brand comparison">
-          <div class="matrix">
-            <span v-for="n in 26" :key="n" :class="{ active: [2, 5, 9, 13, 18, 22, 25].includes(n) }"></span>
+        <div class="chips" aria-label="Project metadata">
+          <span>Automotive HMI</span><span>Mixed-Method Research</span><span>Baidu Apollo Collaboration</span><span>2019</span>
+        </div>
+        <BaiduEvidenceFigure :figure="figures.hero" size="hero" priority />
+      </section>
+
+      <section class="shell editorial-section">
+        <div class="section-heading"><p class="kicker">01 · Project Context</p><h2>Understanding Automotive Interface Design Across Brands</h2></div>
+        <div class="section-body prose">
+          <p>This project examined how the visual design of automotive center-stack interfaces supports information comprehension and interaction during driving. Conducted as part of an industry–university collaboration with Baidu Apollo, the research investigated interface layout, typography, color, and iconography across different vehicle systems.</p>
+          <p>The work combined cross-brand interface analysis with user research and simulator-based evaluation, with the broader goal of informing automotive HMI design guidelines.</p>
+        </div>
+        <BaiduEvidenceFigure class="section-figure" :figure="figures.context" size="wide" />
+      </section>
+
+      <section class="section-surface">
+        <div class="shell editorial-section">
+          <div class="section-heading"><p class="kicker">02 · Research Approach</p><h2>Connecting Interface Patterns with User Experience</h2></div>
+          <div class="section-body prose">
+            <p>The research brought together three complementary perspectives: comparative analysis of existing vehicle interfaces, qualitative investigation of drivers’ experiences, and controlled evaluation of selected interface variables.</p>
+            <p>Together, these methods allowed the team to examine both the design characteristics observed across products and the human factors relevant to their use.</p>
           </div>
-          <div class="flow-arrow" aria-hidden="true">&rarr;</div>
-          <div class="framework-card"><small>Synthesis framework</small><strong>Evidence → Pattern → Guideline</strong></div>
+          <ol class="method-strip" aria-label="Three complementary research methods">
+            <li><span>01</span><div><h3>Cross-Brand Benchmarking</h3><p>Comparative analysis of interface elements.</p></div></li>
+            <li><span>02</span><div><h3>Qualitative User Research</h3><p>Focus groups and interviews.</p></div></li>
+            <li><span>03</span><div><h3>Experimental Evaluation</h3><p>Simulator-based testing of interface design variables.</p></div></li>
+          </ol>
         </div>
       </section>
 
-      <section class="shell two-column">
-        <div><p class="kicker">Research question</p><h2>How can interface examples become usable design guidance?</h2></div>
-        <div class="prose">
-          <p>
-            Automotive interfaces vary by display format, information architecture, brand language, and interaction
-            behavior. I built a consistent comparison method that could reveal patterns across products and support
-            design decisions.
-          </p>
-          <p>
-            I led the student research work, organized the benchmark, developed the synthesis structure, and
-            translated the findings into guidelines that could be communicated to both research and design audiences.
-          </p>
+      <section class="shell benchmark-section">
+        <div class="section-heading"><p class="kicker">03 · Cross-Brand Benchmarking</p><h2>Deconstructing Automotive Interfaces into Comparable Elements</h2></div>
+        <div class="section-body prose">
+          <p>The benchmarking research documented interface characteristics across multiple vehicle systems, organizing observations by functional contexts such as navigation, multimedia, vehicle settings, and voice interaction.</p>
+          <p>Interfaces were examined through four main dimensions: layout patterns, typography, color usage, and iconography. This structure helped identify recurring visual conventions and differences across products.</p>
+        </div>
+        <div class="evidence-block">
+          <div class="evidence-copy"><span>A</span><h3>Layout Patterns</h3><p>The analysis categorized common center-stack layouts, including card-based, list-based, and divider-based arrangements, and compared their occurrence across major vehicle functions.</p><small>Source material · original benchmarking report, approximately pp. 3–8</small></div>
+          <BaiduEvidenceFigure :figure="figures.layout" size="wide" />
+        </div>
+        <div class="evidence-block">
+          <div class="evidence-copy"><span>B</span><h3>Typography &amp; Information Hierarchy</h3><p>Typography was compared through typefaces, title sizes, character lengths, and spacing conventions across different in-vehicle functions.</p><small>Source material · original benchmarking report, approximately pp. 9–20</small></div>
+          <BaiduEvidenceFigure :figure="figures.typography" size="wide" />
+        </div>
+        <div class="evidence-block">
+          <div class="evidence-copy"><span>C</span><h3>Color &amp; Iconography</h3><p>Color distributions and icon characteristics were documented across interface functions, including functional colors, interface states, line icons, filled icons, and icon dimensions.</p><small>Source material · original benchmarking report, approximately pp. 21–46</small></div>
+          <div class="figure-pair"><BaiduEvidenceFigure :figure="figures.color" /><BaiduEvidenceFigure :figure="figures.icons" /></div>
+        </div>
+        <p class="integrity-note"><strong>Evidence boundary.</strong> Historical statistical inconsistencies will be checked against the original tables before any data visualization is reconstructed.</p>
+      </section>
+
+      <section class="section-surface">
+        <div class="shell editorial-section qualitative-section">
+          <div class="section-heading"><p class="kicker">04 · Qualitative Research</p><h2>Investigating Drivers’ Everyday Interaction Experiences</h2></div>
+          <div class="section-body prose">
+            <p>Focus group discussions and interview activities explored how drivers interpreted and interacted with in-vehicle interfaces. The discussion guide covered interface organization, text legibility, color-based state communication, and the recognition and operability of icons.</p>
+            <p>Questions were grounded in everyday vehicle-use scenarios, including navigation, multimedia control, vehicle settings, warning messages, and transitions between concurrent functions.</p>
+          </div>
+          <ul class="topic-grid" aria-label="Qualitative research topics">
+            <li><span>01</span>Layout and information organization</li><li><span>02</span>Typography and legibility</li><li><span>03</span>Color and interface state</li><li><span>04</span>Icon comprehension and operability</li>
+          </ul>
+          <BaiduEvidenceFigure class="section-figure" :figure="figures.focusGroup" size="wide" />
         </div>
       </section>
 
-      <section class="confidentiality">
-        <div class="shell confidentiality__inner">
-          <span class="lock" aria-hidden="true">NDA</span>
-          <div><p class="kicker">Public project scope</p><h2>What I can show publicly</h2></div>
-          <p>
-            This page presents the benchmarking method and my contribution. Client deliverables, proprietary interface
-            screenshots, internal data, and client-specific recommendations remain confidential. The visuals below
-            reconstruct the research process without using client materials.
-          </p>
+      <section class="shell simulator-section">
+        <div class="section-heading"><p class="kicker">05 · Simulator-Based Evaluation</p><h2>Evaluating Typography under Driving and Stationary Conditions</h2></div>
+        <div class="section-body prose">
+          <p>A driving-simulator study was designed to examine how text layout parameters affected information comprehension, usability, workload, and driving performance. The experiment compared text line length, character spacing, and line spacing across three display formats and two vehicle states: driving and stationary.</p>
+          <p>Participants performed a primary driving task while responding to secondary information-reading tasks on a simulated center-stack display. The protocol combined task performance, subjective assessments, and planned behavioral and physiological measurements.</p>
         </div>
-      </section>
-
-      <section class="shell approach">
-        <p class="kicker">Research approach</p>
-        <h2>A repeatable path from collection to synthesis</h2>
-        <ol class="steps">
-          <li><span>01</span><div><h3>Define a common unit of comparison</h3><p>Structured the benchmark so products with different display formats could be examined using shared criteria.</p></div></li>
-          <li><span>02</span><div><h3>Capture interface evidence</h3><p>Documented representative systems and interaction states across 26 automotive brands.</p></div></li>
-          <li><span>03</span><div><h3>Code recurring design patterns</h3><p>Compared evidence across information architecture, layout, typography, color, and icon behavior.</p></div></li>
-          <li><span>04</span><div><h3>Translate patterns into guidelines</h3><p>Synthesized findings into a 12,000-word internal white paper and presented the work at Baidu headquarters.</p></div></li>
-        </ol>
-      </section>
-
-      <section class="lenses">
-        <div class="shell">
-          <p class="kicker">Analysis framework</p>
-          <h2>Five lenses for comparing unlike systems</h2>
-          <div class="lens-grid">
-            <article><span>01</span><h3>Information architecture</h3><p>Depth, grouping, navigation, and the relationship between primary and secondary functions.</p></article>
-            <article><span>02</span><h3>Layout & hierarchy</h3><p>Spatial organization across landscape, portrait, and widescreen display configurations.</p></article>
-            <article><span>03</span><h3>Typography</h3><p>Text hierarchy, size, density, spacing, and the legibility of instructional and status information.</p></article>
-            <article><span>04</span><h3>Color & state</h3><p>Brand color, selection, activation, feedback, and day–night presentation logic.</p></article>
-            <article><span>05</span><h3>Icon behavior</h3><p>Icon scale, spacing, control grouping, state changes, and consistency across interface levels.</p></article>
+        <div class="protocol-block">
+          <div class="subsection-title"><span>A</span><div><p>Historical protocol</p><h3>Experimental Design</h3></div></div>
+          <div class="protocol-grid">
+            <article><span>Typography variables</span><ul><li>Line length</li><li>Character spacing</li><li>Line spacing</li></ul></article>
+            <article><span>Driving conditions</span><ul><li>Moving</li><li>Stationary</li></ul></article>
+            <article><span>Display formats</span><ul><li>Landscape</li><li>Widescreen</li><li>Portrait</li></ul></article>
+            <article class="protocol-sample"><span>Planned sample</span><strong>30 participants</strong><p>Three protocol groups of 10. This is the planned design; completed-sample data has not yet been verified for public presentation.</p></article>
           </div>
         </div>
+        <div class="protocol-block"><div class="subsection-title"><span>B</span><div><p>Driving scenario</p><h3>Route and Task Schedule</h3></div></div><BaiduEvidenceFigure :figure="figures.route" size="diagram" /></div>
+        <div class="protocol-block"><div class="subsection-title"><span>C</span><div><p>Study setup</p><h3>Experimental Procedure</h3></div></div><BaiduEvidenceFigure :figure="figures.procedure" size="diagram" /></div>
+        <div class="protocol-block"><div class="subsection-title"><span>D</span><div><p>Study materials</p><h3>Interface Stimuli</h3></div></div><BaiduEvidenceFigure :figure="figures.stimuli" size="diagram" /></div>
+        <div class="protocol-block">
+          <div class="subsection-title"><span>E</span><div><p>Planned measurements</p><h3>Measures</h3></div></div>
+          <ul class="measure-list"><li><span>01</span>Reading comprehension and task completion</li><li><span>02</span>Usability and subjective workload</li><li><span>03</span>Eye-tracking measures</li><li><span>04</span>Physiological responses</li><li><span>05</span>Driving behavior and vehicle-control measures</li></ul>
+          <p class="integrity-note">These are the protocol’s intended measurements. The page does not claim that every measure was successfully collected and analyzed.</p>
+          <div class="figure-pair testing-figures"><BaiduEvidenceFigure :figure="figures.pilot" /><BaiduEvidenceFigure :figure="figures.simulator" /></div>
+        </div>
       </section>
 
-      <section class="shell outcomes">
-        <div><p class="kicker">Research outcomes</p><h2>Turning benchmark evidence into interface guidelines</h2></div>
-        <div class="outcome-grid">
-          <div><strong>26</strong><span>automotive brands benchmarked</span></div>
-          <div><strong>12,000</strong><span>words in the internal white paper</span></div>
-          <div><strong>5</strong><span>core public analysis lenses</span></div>
-        </div>
-        <div class="impact">
-          <p>The project was presented at Baidu headquarters.</p>
-          <p>The work was recognized by Apollo Lab for its methodological rigor.</p>
-          <p>The framework turned a large collection of examples into traceable design guidance.</p>
+      <section class="section-surface">
+        <div class="shell outputs-section">
+          <div class="section-heading"><p class="kicker">06 · Research Outputs &amp; Reflection</p><h2>Translating Interface Observations into Design Knowledge</h2></div>
+          <div class="section-body prose">
+            <p>The project brought together descriptive interface analysis, qualitative user research, and controlled experimental methods to support the development of automotive HMI design recommendations.</p>
+            <p>It provided early experience in translating visual design questions into measurable research variables and connecting interface-level decisions with driver comprehension and workload.</p>
+          </div>
+          <div class="outputs-grid">
+            <article><span>Deliverable</span><h3>Internal white paper</h3><p>A 12,000-word synthesis of the benchmarking research and design recommendations.</p></article>
+            <article><span>Communication</span><h3>Project presentation</h3><p>The research was presented at Baidu headquarters.</p></article>
+            <article><span>My role</span><h3>Student Project Lead</h3><p>I organized the benchmark, developed the synthesis structure, and translated the evidence into research and design guidance.</p></article>
+            <article><span>Method reflection</span><h3>From visual questions to testable variables</h3><p>The project connected interface analysis with qualitative and simulator-based research methods.</p></article>
+          </div>
+          <BaiduEvidenceFigure class="section-figure" :figure="figures.outputs" size="wide" />
+          <p class="confidentiality-note"><strong>Public documentation.</strong> This portfolio reconstruction uses retained historical process materials and publicly shareable research documentation. The final client deliverables are not reproduced.</p>
         </div>
       </section>
     </article>
 
-    <footer class="footer shell">
-      <p>Interested in this research?</p><a href="mailto:Zhangbihan621@outlook.com">Zhangbihan621@outlook.com</a>
-      <a class="back-link" :href="homeUrl">Return to Bihan Zhang’s academic website</a>
-    </footer>
+    <footer class="footer shell"><p>Interested in this research?</p><a href="mailto:Zhangbihan621@outlook.com">Zhangbihan621@outlook.com</a><a class="back-link" :href="homeUrl">Return to Bihan Zhang’s academic website</a></footer>
   </main>
 </template>
 
 <script setup>
 import ResearchPageTopbar from './components/ResearchPageTopbar.vue'
+import BaiduEvidenceFigure from './components/BaiduEvidenceFigure.vue'
 
 const homeUrl = import.meta.env.BASE_URL
+const projectImage = (filename) => `${homeUrl}images/projects/${filename}`
+const evidenceImage = (filename) => `${homeUrl}images/research/automotive-benchmarking/${filename}`
+const pendingFigure = (filename, label, caption) => ({ src: '', expectedSrc: evidenceImage(filename), label, caption })
+
+// Add verified historical files at the expected paths, then set `src` to `expectedSrc`.
+const figures = {
+  hero: pendingFigure('hero-research-documentation-collage.webp', 'Figure pending — Historical research-documentation collage', 'Planned collage of retained benchmarking pages, experimental materials, and project documentation.'),
+  context: { src: projectImage('project2.jpg'), label: '', alt: 'Printed automotive HMI benchmarking materials from the Baidu Apollo collaboration', caption: 'Retained historical documentation from the automotive HMI benchmarking work.' },
+  layout: pendingFigure('layout-pattern-classification.webp', 'Figure pending — Historical layout classification and frequency comparison', 'Layout patterns across navigation, multimedia, vehicle settings, and other center-stack functions.'),
+  typography: pendingFigure('typography-comparison.webp', 'Figure pending — Historical typography comparison', 'Typeface, title-size, character-length, and spacing comparisons from the original report.'),
+  color: pendingFigure('color-distribution-analysis.webp', 'Figure pending — Historical color distribution analysis', 'Color distributions and interface-state conventions documented across vehicle functions.'),
+  icons: pendingFigure('icon-classification-analysis.webp', 'Figure pending — Historical icon classification and dimensional analysis', 'Line and filled icon styles, functional categories, and dimensional comparisons.'),
+  focusGroup: pendingFigure('focus-group-session.webp', 'Figure pending — Focus group session photograph', 'Authentic documentation of the focus-group or interview activity will be added here.'),
+  route: pendingFigure('driving-simulator-task-schedule.webp', 'Figure pending — Driving simulator task schedule', 'Experimental driving route with scheduled text-reading tasks under moving and stationary conditions.'),
+  procedure: pendingFigure('experimental-procedure-flow.webp', 'Figure pending — Historical three-lane experimental procedure', 'Original experimental flow connecting the simulator, driver, and center-stack display.'),
+  stimuli: pendingFigure('typography-experiment-stimuli.webp', 'Figure pending — Typography experiment stimuli', 'Historical interface variations in line length, character spacing, and line spacing.'),
+  pilot: pendingFigure('pilot-test-session.webp', 'Figure pending — Pilot-test photograph', 'Authentic pilot-test documentation will be added here.'),
+  simulator: pendingFigure('simulator-test-session.webp', 'Figure pending — Driving simulator test photograph', 'Authentic simulator-testing documentation will be added here.'),
+  outputs: pendingFigure('historical-project-outputs.webp', 'Figure pending — Historical report, presentation, or team research material', 'Publicly shareable evidence of the project outputs will be added here.'),
+}
 </script>
 
 <style lang="scss" scoped>
-.case-study {
-  --accent: #8bb8ff;
-  --accent-soft: #c9ddff;
-  min-height: 100vh;
-  color: #f7f7fb;
-  background: radial-gradient(circle at 82% 4%, rgba(42, 104, 190, .28), transparent 32rem), #090b10;
-}
-.shell, .topbar { width: min(1120px, calc(100% - 3rem)); margin: 0 auto; }
-.topbar { min-height: 80px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,.1); }
-.brand { font-weight: 700; letter-spacing: -.02em; }
-.back-link { color: #b8bec9; font-size: .9rem; }
-.back-link:hover { color: white; }
-.hero { padding: 7rem 0 5rem; }
-.eyebrow, .kicker { color: var(--accent-soft); font-size: .75rem; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
-h1 { max-width: 1020px; margin: 1.2rem 0 1.5rem; font-size: clamp(2.7rem, 6.2vw, 5.6rem); line-height: 1; letter-spacing: -.055em; }
-h2 { margin-top: .75rem; font-size: clamp(1.8rem, 3.5vw, 3rem); line-height: 1.1; letter-spacing: -.035em; }
-.lede { max-width: 790px; color: #bec3cd; font-size: clamp(1.08rem, 2vw, 1.35rem); line-height: 1.7; }
-.chips { display: flex; flex-wrap: wrap; gap: .6rem; margin: 2.1rem 0 3rem; }
-.chips span { padding: .55rem .85rem; border: 1px solid rgba(139,184,255,.35); border-radius: 999px; color: #dbe9ff; font-size: .78rem; }
-.benchmark-visual { min-height: 390px; padding: clamp(1.5rem, 5vw, 4rem); display: grid; grid-template-columns: 1.4fr auto .8fr; align-items: center; gap: 2rem; border: 1px solid rgba(255,255,255,.1); border-radius: 1.25rem; background: linear-gradient(135deg, rgba(26,29,39,.96), rgba(26,42,66,.8)); }
-.matrix { display: grid; grid-template-columns: repeat(7, 1fr); gap: .65rem; }
-.matrix span { aspect-ratio: 1.35; border: 1px solid rgba(255,255,255,.15); border-radius: .45rem; background: rgba(255,255,255,.04); }
-.matrix span.active { border: 0; background: linear-gradient(135deg, #a78bfa, #60a5fa); }
-.flow-arrow { color: var(--accent); font-size: 2.5rem; }
-.framework-card { padding: 1.5rem; border-radius: 1rem; background: #e8f1ff; color: #142238; }
-.framework-card small { display: block; margin-bottom: .75rem; color: #41618b; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }
-.framework-card strong { font-size: 1.35rem; line-height: 1.35; }
-.two-column, .outcomes { padding: 6rem 0; display: grid; grid-template-columns: .85fr 1.15fr; gap: clamp(3rem, 8vw, 7rem); border-top: 1px solid rgba(255,255,255,.1); }
-.prose { color: #b6bbc5; line-height: 1.8; }
-.prose p + p { margin-top: 1.25rem; }
-.confidentiality { padding: 5rem 0; background: #e9f2ff; color: #142238; }
-.confidentiality .kicker { color: #285f9c; }
-.confidentiality__inner { display: grid; grid-template-columns: auto 1.15fr .85fr; align-items: start; gap: 2.5rem; }
-.confidentiality__inner > p { color: #4c5e73; line-height: 1.75; }
-.lock { width: 58px; height: 58px; display: grid; place-items: center; border-radius: 50%; background: #18375e; color: white; font-size: .75rem; font-weight: 800; }
-.approach { padding: 6rem 0; }
-.steps { margin-top: 3rem; list-style: none; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
-.steps li { min-height: 170px; padding: 1.5rem; display: flex; gap: 1.25rem; border: 1px solid rgba(255,255,255,.09); border-radius: 1rem; background: #141820; }
-.steps li > span, .lens-grid article > span { color: var(--accent); font: 600 .8rem var(--font-mono); }
-.steps h3, .lens-grid h3 { margin-bottom: .55rem; font-size: 1rem; }
-.steps p, .lens-grid p { color: #969da8; font-size: .87rem; line-height: 1.65; }
-.lenses { padding: 6rem 0; background: #11141b; }
-.lens-grid { margin-top: 3rem; display: grid; grid-template-columns: repeat(5, 1fr); }
-.lens-grid article { min-height: 235px; padding: 1.4rem; border-top: 1px solid #526173; border-right: 1px solid rgba(255,255,255,.09); }
-.lens-grid h3 { margin-top: 3rem; }
-.outcomes { grid-template-columns: .8fr 1.2fr; }
-.outcome-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: .75rem; }
-.outcome-grid div { min-height: 150px; padding: 1.2rem; display: flex; flex-direction: column; justify-content: space-between; border-radius: 1rem; background: #e8f1ff; color: #142238; }
-.outcome-grid strong { font-size: clamp(2rem, 4vw, 3.5rem); letter-spacing: -.06em; }
-.outcome-grid span { color: #50637a; font-size: .8rem; }
-.impact { grid-column: 2; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
-.impact p { padding-top: 1rem; border-top: 1px solid rgba(255,255,255,.12); color: #b6bbc5; line-height: 1.65; }
-.footer { padding: 4rem 0; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; border-top: 1px solid rgba(255,255,255,.1); }
-.footer > p { color: #8f96a2; }
-.footer > a:not(.back-link) { font-size: clamp(1.4rem, 3vw, 2.4rem); font-weight: 700; letter-spacing: -.04em; }
-.footer .back-link { grid-column: 2; }
-@media (max-width: 800px) {
-  .shell, .topbar { width: min(100% - 2rem, 1120px); }
-  .topbar { min-height: 68px; }
-  .hero { padding: 4.5rem 0 3.5rem; }
-  .benchmark-visual { min-height: auto; grid-template-columns: 1fr; }
-  .flow-arrow { transform: rotate(90deg); text-align: center; }
-  .two-column, .outcomes, .confidentiality__inner { padding: 4rem 0; grid-template-columns: 1fr; gap: 2rem; }
-  .confidentiality { padding: 0; }
-  .approach, .lenses { padding: 4rem 0; }
-  .steps, .lens-grid, .outcome-grid, .impact { grid-template-columns: 1fr; }
-  .lens-grid article { min-height: auto; border-right: 0; }
-  .lens-grid h3 { margin-top: 1.25rem; }
-  .impact { grid-column: auto; }
-  .footer { grid-template-columns: 1fr; }
-  .footer .back-link { grid-column: auto; }
-}
+@use './styles/research-detail-system';
 </style>
 
 <style lang="scss" scoped>
-@use './styles/research-detail-system';
+.case-study {
+  --benchmark-accent: var(--color-primary-light);
+  --benchmark-line: var(--color-border);
+  --benchmark-text: var(--color-text);
+  --benchmark-muted: var(--color-text-secondary);
+  --benchmark-surface: var(--color-bg-secondary);
+}
+
+.hero { padding-top: 5.25rem; }
+.hero h1 { max-width: 980px; }
+.hero .lede { max-width: 820px; }
+
+.editorial-section,
+.benchmark-section,
+.simulator-section,
+.outputs-section {
+  padding-block: 4.75rem;
+  display: grid;
+  grid-template-columns: minmax(230px, 4fr) minmax(0, 8fr);
+  gap: 2rem clamp(3rem, 7vw, 7rem);
+  align-items: start;
+  border-top: 1px solid var(--benchmark-line);
+}
+
+.section-surface { border-top: 1px solid var(--benchmark-line); background: var(--benchmark-surface); }
+.case-study article > section.section-surface { padding-block: 0 !important; }
+.section-surface .editorial-section,
+.section-surface .outputs-section { border-top: 0; }
+.section-body { max-width: 720px; }
+.section-figure,
+.method-strip,
+.topic-grid,
+.outputs-grid,
+.confidentiality-note { grid-column: 1 / -1; }
+.section-figure { margin-top: 1rem; }
+
+.method-strip {
+  margin: 1.25rem 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  list-style: none;
+  border-top: 1px solid var(--benchmark-line);
+  border-bottom: 1px solid var(--benchmark-line);
+}
+.method-strip li { min-height: 150px; padding: 1.35rem 1.5rem; display: grid; grid-template-columns: auto 1fr; gap: 1.25rem; border-right: 1px solid var(--benchmark-line); }
+.method-strip li:first-child { padding-left: 0; }
+.method-strip li:last-child { border-right: 0; }
+.method-strip span,
+.evidence-copy > span,
+.subsection-title > span,
+.topic-grid span,
+.measure-list span,
+.outputs-grid article > span { color: var(--benchmark-accent); font: 600 .68rem/1.4 var(--font-mono); letter-spacing: .08em; text-transform: uppercase; }
+.method-strip h3 { margin: 0 0 .55rem; }
+.method-strip p { color: var(--benchmark-muted); font-size: .82rem; line-height: 1.6; }
+
+.benchmark-section > .section-heading,
+.simulator-section > .section-heading,
+.outputs-section > .section-heading { grid-column: 1; }
+.benchmark-section > .section-body,
+.simulator-section > .section-body,
+.outputs-section > .section-body { grid-column: 2; }
+
+.evidence-block,
+.protocol-block { grid-column: 1 / -1; padding-top: 3.5rem; border-top: 1px solid var(--benchmark-line); }
+.evidence-block { display: grid; grid-template-columns: minmax(220px, 3fr) minmax(0, 9fr); gap: clamp(2rem, 5vw, 5rem); }
+.evidence-copy h3 { margin: .75rem 0 1rem; font-size: 1.25rem; }
+.evidence-copy p { color: var(--benchmark-muted); font-size: .88rem; line-height: 1.72; }
+.evidence-copy small { display: block; margin-top: 1.25rem; color: var(--benchmark-muted); font-size: .68rem; line-height: 1.5; }
+.figure-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
+
+.integrity-note,
+.confidentiality-note { padding: 1.25rem 0 0; color: var(--benchmark-muted); border-top: 1px solid var(--benchmark-line); font-size: .78rem; line-height: 1.65; }
+.integrity-note { grid-column: 1 / -1; }
+.integrity-note strong,
+.confidentiality-note strong { color: var(--benchmark-text); }
+
+.topic-grid {
+  margin: 1rem 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  list-style: none;
+  border-top: 1px solid var(--benchmark-line);
+  border-bottom: 1px solid var(--benchmark-line);
+}
+.topic-grid li { min-height: 112px; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between; gap: 1.5rem; color: var(--benchmark-text); border-right: 1px solid var(--benchmark-line); font-size: .82rem; line-height: 1.5; }
+.topic-grid li:first-child { padding-left: 0; }
+.topic-grid li:last-child { border-right: 0; }
+
+.protocol-block { display: grid; gap: 2rem; }
+.subsection-title { display: flex; align-items: flex-start; gap: 1rem; }
+.subsection-title p { margin-bottom: .25rem; color: var(--benchmark-muted); font: 500 .66rem/1.4 var(--font-mono); letter-spacing: .07em; text-transform: uppercase; }
+.subsection-title h3 { margin: 0; font-size: 1.2rem; }
+.protocol-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--benchmark-line); border-bottom: 1px solid var(--benchmark-line); }
+.protocol-grid article { min-height: 180px; padding: 1.35rem; border-right: 1px solid var(--benchmark-line); }
+.protocol-grid article:first-child { padding-left: 0; }
+.protocol-grid article:last-child { border-right: 0; }
+.protocol-grid article > span { display: block; margin-bottom: 2.25rem; color: var(--benchmark-accent); font: 600 .68rem/1.4 var(--font-mono); letter-spacing: .08em; text-transform: uppercase; }
+.protocol-grid ul { margin: 0; padding: 0; list-style: none; }
+.protocol-grid li { padding: .3rem 0; color: var(--benchmark-muted); font-size: .84rem; }
+.protocol-grid .protocol-sample { grid-column: 1 / -1; min-height: 0; padding: 1.35rem 0; display: grid; grid-template-columns: 1fr 1fr 2fr; gap: 1rem; align-items: start; border-top: 1px solid var(--benchmark-line); border-right: 0; }
+.protocol-sample > span { margin: 0; }
+.protocol-sample strong { font-size: 1.15rem; }
+.protocol-sample p { color: var(--benchmark-muted); font-size: .78rem; line-height: 1.6; }
+
+.measure-list { margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); list-style: none; border-top: 1px solid var(--benchmark-line); border-bottom: 1px solid var(--benchmark-line); }
+.measure-list li { min-height: 125px; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between; gap: 1rem; color: var(--benchmark-muted); border-right: 1px solid var(--benchmark-line); font-size: .78rem; line-height: 1.5; }
+.measure-list li:first-child { padding-left: 0; }
+.measure-list li:last-child { border-right: 0; }
+.testing-figures { margin-top: .5rem; }
+
+.outputs-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid var(--benchmark-line); }
+.outputs-grid article { min-height: 170px; padding: 1.35rem 1.5rem 1.35rem 0; border-right: 1px solid var(--benchmark-line); border-bottom: 1px solid var(--benchmark-line); }
+.outputs-grid article:nth-child(even) { padding-left: 1.5rem; border-right: 0; }
+.outputs-grid h3 { margin: 1.7rem 0 .55rem; }
+.outputs-grid p { color: var(--benchmark-muted); font-size: .8rem; line-height: 1.6; }
+
+@media (max-width: 900px) {
+  .editorial-section,
+  .benchmark-section,
+  .simulator-section,
+  .outputs-section { padding-block: 3.5rem; grid-template-columns: 1fr; gap: 2rem; }
+  .benchmark-section > .section-heading,
+  .benchmark-section > .section-body,
+  .simulator-section > .section-heading,
+  .simulator-section > .section-body,
+  .outputs-section > .section-heading,
+  .outputs-section > .section-body { grid-column: auto; }
+  .method-strip { grid-template-columns: 1fr; }
+  .method-strip li { min-height: 0; padding: 1.1rem 0; border-right: 0; border-bottom: 1px solid var(--benchmark-line); }
+  .method-strip li:last-child { border-bottom: 0; }
+  .evidence-block { grid-template-columns: 1fr; }
+  .topic-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .topic-grid li:nth-child(2) { border-right: 0; }
+  .topic-grid li:nth-child(-n+2) { border-bottom: 1px solid var(--benchmark-line); }
+  .protocol-grid { grid-template-columns: 1fr; }
+  .protocol-grid article { min-height: 0; padding: 1.1rem 0; border-right: 0; border-bottom: 1px solid var(--benchmark-line); }
+  .protocol-grid article > span { margin-bottom: 1rem; }
+  .protocol-grid .protocol-sample { grid-column: auto; grid-template-columns: 1fr; border-top: 0; }
+  .measure-list { grid-template-columns: 1fr 1fr; }
+  .measure-list li { min-height: 100px; }
+  .measure-list li:nth-child(even) { border-right: 0; }
+  .measure-list li:nth-child(-n+4) { border-bottom: 1px solid var(--benchmark-line); }
+}
+
+@media (max-width: 620px) {
+  .hero { padding-top: 3.5rem; }
+  .figure-pair,
+  .topic-grid,
+  .measure-list,
+  .outputs-grid { grid-template-columns: 1fr; }
+  .topic-grid li,
+  .measure-list li { min-height: 0; padding: 1rem 0; border-right: 0; border-bottom: 1px solid var(--benchmark-line); }
+  .topic-grid li:last-child,
+  .measure-list li:last-child { border-bottom: 0; }
+  .outputs-grid article,
+  .outputs-grid article:nth-child(even) { min-height: 0; padding: 1.25rem 0; border-right: 0; }
+  .outputs-grid h3 { margin-top: 1rem; }
+}
 </style>
