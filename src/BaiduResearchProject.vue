@@ -50,9 +50,41 @@
           <div class="evidence-copy"><span>A</span><h3>Layout Patterns</h3><p>The analysis categorized common center-stack layouts, including card-based, list-based, and divider-based arrangements, and compared their occurrence across major vehicle functions.</p><small>Source material · original benchmarking report, approximately pp. 3–8</small></div>
           <BaiduEvidenceFigure :figure="figures.layout" size="wide" />
         </div>
-        <div class="evidence-block">
-          <div class="evidence-copy"><span>B</span><h3>Typography &amp; Information Hierarchy</h3><p>Typography was compared through typefaces, title sizes, character lengths, and spacing conventions across different in-vehicle functions.</p><small>Source material · original benchmarking report, approximately pp. 9–20</small></div>
-          <BaiduEvidenceFigure :figure="figures.typography" size="wide" />
+        <div class="evidence-block evidence-block--typography">
+          <div class="evidence-copy"><span>B</span><h3>Typography — Title Size Distribution Across Interface Functions</h3><p>To examine typographic hierarchy across automotive center-stack interfaces, primary and secondary title sizes were compared across five functional contexts: Home, Navigation, Multimedia, Vehicle Settings, and Voice Control.</p><small>Source material · original benchmarking report, approximately pp. 9–20</small></div>
+          <div class="typography-analysis">
+            <figure class="typography-figure">
+              <a :href="figures.primaryTypography.src" target="_blank" rel="noopener noreferrer" aria-label="Open Figure A at full resolution">
+                <img :src="figures.primaryTypography.src" :alt="figures.primaryTypography.alt" loading="lazy" />
+                <span>Open full-resolution figure ↗</span>
+              </a>
+              <figcaption><strong>Figure A — Primary Title Sizes.</strong> Primary title font-size distribution across five automotive interface functions, based on historical cross-brand benchmarking records.</figcaption>
+            </figure>
+            <figure class="typography-figure">
+              <a :href="figures.secondaryTypography.src" target="_blank" rel="noopener noreferrer" aria-label="Open Figure B at full resolution">
+                <img :src="figures.secondaryTypography.src" :alt="figures.secondaryTypography.alt" loading="lazy" />
+                <span>Open full-resolution figure ↗</span>
+              </a>
+              <figcaption><strong>Figure B — Secondary Title Sizes.</strong> Secondary title font-size distribution across the same five interface functions.</figcaption>
+            </figure>
+            <section class="typography-findings" aria-labelledby="typography-findings-title">
+              <div><p class="mini-label">Key Findings</p><h4 id="typography-findings-title">Typography Hierarchy</h4></div>
+              <p class="typography-findings__note">Descriptive patterns from the historical records; recurring values indicate frequency in the sample, not design quality or performance.</p>
+              <div class="table-scroll">
+                <table>
+                  <thead><tr><th>Interface function</th><th>Primary title</th><th>Secondary title</th></tr></thead>
+                  <tbody>
+                    <tr><th>Home</th><td>Broad variation; no single concentrated range</td><td>24 pt frequently observed</td></tr>
+                    <tr><th>Navigation</th><td>Commonly around 36–40 pt</td><td>24 pt frequently observed</td></tr>
+                    <tr><th>Multimedia</th><td>Several observations around 20–26 pt; larger values also present</td><td>20 pt appears repeatedly; distribution varies</td></tr>
+                    <tr><th>Vehicle Settings</th><td>20 pt appears frequently; substantial variation and large outliers</td><td>14 pt and 24 pt both appear repeatedly; no single dominant range</td></tr>
+                    <tr><th>Voice Control</th><td>Commonly around 28–32 pt</td><td>Commonly around 24–32 pt</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="typography-conclusion">Title-size conventions varied across interface functions and vehicle systems. While some functional contexts exhibited recurring typographic sizes, others showed considerable variation, suggesting that a single universal title-size convention was not evident in this historical sample.</p>
+            </section>
+          </div>
         </div>
         <div class="evidence-block">
           <div class="evidence-copy"><span>C</span><h3>Color &amp; Iconography</h3><p>Color distributions and icon characteristics were documented across interface functions, including functional colors, interface states, line icons, filled icons, and icon dimensions.</p><small>Source material · original benchmarking report, approximately pp. 21–46</small></div>
@@ -138,7 +170,8 @@ const figures = {
   hero: pendingFigure('hero-research-documentation-collage.webp', 'Figure pending — Historical research-documentation collage', 'Planned collage of retained benchmarking pages, experimental materials, and project documentation.'),
   context: { src: projectImage('project2.jpg'), label: '', alt: 'Printed automotive HMI benchmarking materials from the Baidu Apollo collaboration', caption: 'Retained historical documentation from the automotive HMI benchmarking work.' },
   layout: pendingFigure('layout-pattern-classification.webp', 'Figure pending — Historical layout classification and frequency comparison', 'Layout patterns across navigation, multimedia, vehicle settings, and other center-stack functions.'),
-  typography: pendingFigure('typography-comparison.webp', 'Figure pending — Historical typography comparison', 'Typeface, title-size, character-length, and spacing comparisons from the original report.'),
+  primaryTypography: { src: evidenceImage('automotive_primary_title_sizes.png'), alt: 'Primary title sizes across Home, Navigation, Multimedia, Vehicle Settings, and Voice Control interfaces' },
+  secondaryTypography: { src: evidenceImage('automotive_secondary_title_sizes.png'), alt: 'Secondary title sizes across Home, Navigation, Multimedia, Vehicle Settings, and Voice Control interfaces' },
   color: pendingFigure('color-distribution-analysis.webp', 'Figure pending — Historical color distribution analysis', 'Color distributions and interface-state conventions documented across vehicle functions.'),
   icons: pendingFigure('icon-classification-analysis.webp', 'Figure pending — Historical icon classification and dimensional analysis', 'Line and filled icon styles, functional categories, and dimensional comparisons.'),
   focusGroup: pendingFigure('focus-group-session.webp', 'Figure pending — Focus group session photograph', 'Authentic documentation of the focus-group or interview activity will be added here.'),
@@ -228,6 +261,34 @@ const figures = {
 .evidence-copy small { display: block; margin-top: 1.25rem; color: var(--benchmark-muted); font-size: .68rem; line-height: 1.5; }
 .figure-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
 
+.evidence-block--typography { display: block; }
+.evidence-block--typography .evidence-copy { max-width: 760px; margin-bottom: 2.5rem; }
+.typography-analysis { display: grid; gap: 3.25rem; }
+.typography-figure { margin: 0; min-width: 0; }
+.typography-figure a { display: block; color: var(--benchmark-muted); }
+.typography-figure img { width: 100%; height: auto; display: block; border: 1px solid var(--benchmark-line); background: #0d1016; object-fit: contain; }
+.typography-figure a > span { display: block; padding-top: .55rem; font: 500 .66rem/1.4 var(--font-mono); text-align: right; }
+.typography-figure a:hover > span { color: var(--benchmark-text); }
+.typography-figure figcaption { max-width: 860px; padding-top: .55rem; }
+.typography-figure figcaption strong { color: var(--benchmark-text); font-weight: 600; }
+
+.typography-findings { display: grid; grid-template-columns: minmax(220px, 3fr) minmax(0, 9fr); gap: 1.5rem clamp(2rem, 5vw, 5rem); padding-top: 2.75rem; border-top: 1px solid var(--benchmark-line); }
+.typography-findings h4 { margin: .55rem 0 0; color: var(--benchmark-text); font-size: 1.25rem; line-height: 1.25; }
+.typography-findings__note { max-width: 650px; color: var(--benchmark-muted); font-size: .78rem; line-height: 1.65; }
+.table-scroll,
+.typography-conclusion { grid-column: 1 / -1; }
+.table-scroll { overflow-x: auto; border-top: 1px solid var(--benchmark-line); border-bottom: 1px solid var(--benchmark-line); }
+.typography-findings table { width: 100%; min-width: 760px; border-collapse: collapse; color: var(--benchmark-muted); font-size: .78rem; line-height: 1.55; }
+.typography-findings th,
+.typography-findings td { padding: 1rem 1.25rem; border-right: 1px solid var(--benchmark-line); border-bottom: 1px solid var(--benchmark-line); text-align: left; vertical-align: top; }
+.typography-findings th:last-child,
+.typography-findings td:last-child { border-right: 0; }
+.typography-findings tbody tr:last-child th,
+.typography-findings tbody tr:last-child td { border-bottom: 0; }
+.typography-findings thead th { color: var(--benchmark-accent); font: 600 .68rem/1.4 var(--font-mono); letter-spacing: .06em; text-transform: uppercase; }
+.typography-findings tbody th { width: 20%; color: var(--benchmark-text); font-weight: 600; }
+.typography-conclusion { max-width: 900px; color: var(--benchmark-muted); font-size: .86rem; line-height: 1.72; }
+
 .integrity-note,
 .confidentiality-note { padding: 1.25rem 0 0; color: var(--benchmark-muted); border-top: 1px solid var(--benchmark-line); font-size: .78rem; line-height: 1.65; }
 .integrity-note { grid-column: 1 / -1; }
@@ -290,6 +351,8 @@ const figures = {
   .method-strip li { min-height: 0; padding: 1.1rem 0; border-right: 0; border-bottom: 1px solid var(--benchmark-line); }
   .method-strip li:last-child { border-bottom: 0; }
   .evidence-block { grid-template-columns: 1fr; }
+  .typography-findings { grid-template-columns: 1fr; }
+  .typography-findings__note { grid-column: 1; }
   .topic-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .topic-grid li:nth-child(2) { border-right: 0; }
   .topic-grid li:nth-child(-n+2) { border-bottom: 1px solid var(--benchmark-line); }
