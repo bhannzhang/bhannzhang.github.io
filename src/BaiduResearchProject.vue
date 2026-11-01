@@ -141,9 +141,61 @@
             </section>
           </div>
         </div>
-        <div class="evidence-block">
-          <div class="evidence-copy"><span>D</span><h3>Iconography</h3><p>Icon characteristics were documented across interface functions, including interface states, line icons, filled icons, and icon dimensions.</p><small>Source material · original benchmarking report, approximately pp. 33–46</small></div>
-          <BaiduEvidenceFigure :figure="figures.icons" />
+        <div class="evidence-block evidence-block--iconography">
+          <div class="evidence-copy"><span>D</span><h3>Iconography Across Automotive Interface Functions</h3><p>The benchmarking study examined iconography across automotive center-stack interfaces, focusing on three dimensions: visual style, relative dimensions, and spacing conventions. Comparing these characteristics across interface functions helped document recurring design patterns and variations in icon presentation.</p><small>Source material · original benchmarking report, approximately pp. 33–46</small></div>
+          <div class="iconography-analysis">
+            <section class="iconography-part" aria-labelledby="icon-type-title">
+              <div class="iconography-part__intro"><p class="mini-label">Part A</p><h4 id="icon-type-title">A. Icon Type Distribution</h4><p>Icons were classified into three visual categories: linear (outline), filled (solid), and hybrid (combined outline and filled elements). Their distribution was compared across Navigation, Multimedia, Vehicle Settings, Voice Control, and Home interfaces.</p></div>
+              <figure class="typography-figure iconography-figure">
+                <a :href="figures.iconTypeSvg.src" target="_blank" rel="noopener noreferrer" aria-label="Open icon-type distribution figure at full resolution">
+                  <picture><source :srcset="figures.iconTypeSvg.src" type="image/svg+xml" /><img :src="figures.iconTypePng.src" :alt="figures.iconTypeSvg.alt" loading="lazy" /></picture>
+                  <span>Open full-resolution figure ↗</span>
+                </a>
+                <figcaption><strong>Figure A — Icon Type Distribution Across Automotive Interface Functions.</strong> Distribution of linear, filled, and hybrid icon styles across five automotive interface contexts. Counts for Navigation, Multimedia, Vehicle Settings, and Voice Control were reconstructed from the retained benchmarking chart; Home is presented using the available percentages.</figcaption>
+              </figure>
+              <section class="typography-findings iconography-findings" aria-labelledby="icon-type-findings-title">
+                <div><p class="mini-label">Descriptive Statistics</p><h4 id="icon-type-findings-title">Key Findings — Icon Types</h4></div>
+                <p class="typography-findings__note">Home percentages are historical rounded values; exact sample counts cannot be inferred from them.</p>
+                <div class="table-scroll"><table><thead><tr><th>Interface</th><th>Linear</th><th>Filled</th><th>Hybrid</th></tr></thead><tbody><tr><th>Navigation</th><td>17 (81.0%)</td><td>2 (9.5%)</td><td>2 (9.5%)</td></tr><tr><th>Multimedia</th><td>11 (52.4%)</td><td>4 (19.0%)</td><td>6 (28.6%)</td></tr><tr><th>Vehicle Settings</th><td>15 (78.9%)</td><td>1 (5.3%)</td><td>3 (15.8%)</td></tr><tr><th>Voice Control</th><td>7 (53.8%)</td><td>1 (7.7%)</td><td>5 (38.5%)</td></tr><tr><th>Home</th><td>58%</td><td>29%</td><td>13%</td></tr></tbody></table></div>
+                <p class="typography-conclusion">Linear icons represented the largest share across all five interface contexts, particularly in Navigation and Vehicle Settings. Multimedia and Voice Control showed comparatively greater use of hybrid icon styles, indicating variation in visual conventions across different interface functions.</p>
+              </section>
+            </section>
+
+            <section class="iconography-part" aria-labelledby="icon-dimensions-title">
+              <div class="iconography-part__intro"><p class="mini-label">Part B</p><h4 id="icon-dimensions-title">B. Icon Dimensions Across Interface Functions</h4><p>To compare icon sizes across different display formats, icon dimensions were normalized relative to the corresponding screen dimensions. Icon length was divided by screen length, while icon width was divided by screen width. This allowed the study to document relative icon dimensions across five interface contexts.</p></div>
+              <figure class="typography-figure iconography-figure">
+                <a :href="figures.iconDimensions.src" target="_blank" rel="noopener noreferrer" aria-label="Open normalized icon-dimensions figure at full resolution"><img :src="figures.iconDimensions.src" :alt="figures.iconDimensions.alt" loading="lazy" /><span>Open full-resolution figure ↗</span></a>
+                <figcaption><strong>Figure B — Normalized Icon Dimensions.</strong> Scatter plots of normalized icon dimensions across five automotive interface functions. The horizontal axis represents icon length divided by screen length; the vertical axis represents icon width divided by screen width. Each observation represents a documented icon-size pair.</figcaption>
+              </figure>
+              <section class="typography-findings iconography-findings" aria-labelledby="icon-dimensions-findings-title">
+                <div><p class="mini-label">Descriptive Findings</p><h4 id="icon-dimensions-findings-title">Key Findings — Icon Dimensions</h4></div>
+                <p class="typography-findings__note">The normalized ratios describe relative dimensions, not absolute physical sizes or recommended design thresholds.</p>
+                <ol class="color-findings__list"><li><span>01 · Smaller Relative Dimensions</span><p>Many icon observations were concentrated in the lower portions of the normalized length–width space, indicating repeated use of relatively small icon dimensions.</p></li><li><span>02 · Variation Across Functions</span><p>The distribution of normalized icon dimensions differed across interface functions, suggesting that relative icon sizing was not uniform across the sampled systems.</p></li><li><span>03 · Larger Individual Observations</span><p>Several larger normalized dimensions were also recorded, particularly along the length axis. These observations contributed to the overall variability in icon presentation.</p></li></ol>
+                <p class="typography-conclusion">Icon dimensions varied across automotive interface functions, with many observations concentrated in relatively small normalized size ranges and a smaller number of larger icons. Examining length and width jointly revealed variation in both relative scale and proportions.</p>
+                <p class="character-length-method">Illustrative reconstruction from historical benchmarking charts rather than the original editable dataset. Marker positions should not be interpreted as independently verified exact measurements.</p>
+              </section>
+            </section>
+
+            <section class="iconography-part" aria-labelledby="icon-spacing-title">
+              <div class="iconography-part__intro"><p class="mini-label">Part C</p><h4 id="icon-spacing-title">C. Icon Spacing Distribution</h4><p>Icon spacing was also compared across five automotive interface functions. The historical benchmarking records documented recurring spacing values and their frequencies, providing an overview of how icon separation varied among existing in-vehicle interfaces.</p></div>
+              <figure class="typography-figure iconography-figure">
+                <a :href="figures.iconSpacingSvg.src" target="_blank" rel="noopener noreferrer" aria-label="Open icon-spacing distribution figure at full resolution">
+                  <picture><source :srcset="figures.iconSpacingSvg.src" type="image/svg+xml" /><img :src="figures.iconSpacingPng.src" :alt="figures.iconSpacingSvg.alt" loading="lazy" /></picture>
+                  <span>Open full-resolution figure ↗</span>
+                </a>
+                <figcaption><strong>Figure C — Icon Spacing Distribution Across Interface Functions.</strong> Frequency profiles of recorded icon-spacing values across Navigation, Multimedia, Vehicle Settings, Voice Control, and Home interfaces. The figure was reconstructed from retained historical benchmarking charts.</figcaption>
+              </figure>
+              <section class="typography-findings iconography-findings" aria-labelledby="icon-spacing-findings-title">
+                <div><p class="mini-label">Descriptive Findings</p><h4 id="icon-spacing-findings-title">Key Findings — Icon Spacing</h4></div>
+                <p class="typography-findings__note">The original spacing scale is retained without interpreting it as pixels or physical distance.</p>
+                <ol class="color-findings__list"><li><span>01 · Recurring Spacing Values</span><p>Icon-spacing records were concentrated around several recurring discrete values rather than being evenly distributed across the entire observed range.</p></li><li><span>02 · Main Observed Range</span><p>Many recorded observations appeared between 0.5 and 3, with repeated use of spacing values such as 0.5, 1, 1.5, 2, and 2.5.</p></li><li><span>03 · Variation Between Functions</span><p>Navigation, Multimedia, Vehicle Settings, Voice Control, and Home interfaces exhibited different spacing profiles, reflecting variation in documented layout practices.</p></li><li><span>04 · Less Frequent Large Values</span><p>Larger recorded spacing values were less frequent in the retained charts.</p></li></ol>
+                <p class="typography-conclusion">The historical icon-spacing records showed recurring spacing values alongside differences between interface functions. These distributions describe observed layout conventions rather than validated spacing recommendations.</p>
+                <p class="character-length-method">Reconstructed from a historical chart screenshot. Some densely overlapping labels and low-frequency observations could not be independently verified; precise frequency totals, medians, and modes are therefore not reported.</p>
+              </section>
+            </section>
+
+            <section class="iconography-synthesis" aria-labelledby="iconography-synthesis-title"><p class="mini-label">Closing Synthesis</p><h4 id="iconography-synthesis-title">Research Synthesis — Iconography</h4><p>Across the sampled automotive interfaces, iconography varied in visual style, normalized dimensions, and spacing. Linear icon styles were widespread, while relative icon sizes and spacing conventions differed between functional contexts. Together, these observations provided a descriptive basis for examining consistency and variation in automotive HMI icon design.</p></section>
+          </div>
         </div>
         <p class="integrity-note"><strong>Evidence boundary.</strong> Historical statistical inconsistencies will be checked against the original tables before any data visualization is reconstructed.</p>
       </section>
@@ -230,7 +282,11 @@ const figures = {
   characterLengthSvg: { src: evidenceImage('automotive_character_length_distribution.svg'), alt: 'Character-length distributions across Home, Navigation, Multimedia, Vehicle Settings, and Voice Control interfaces' },
   characterLengthPng: { src: evidenceImage('automotive_character_length_distribution.png'), alt: 'Character-length distributions across Home, Navigation, Multimedia, Vehicle Settings, and Voice Control interfaces' },
   colorDistribution: { src: evidenceImage('automotive_color_distribution_by_function.png'), alt: 'Page theme and functional indication color distributions across Home, Navigation, Multimedia, Vehicle Settings, and Voice Control interfaces' },
-  icons: pendingFigure('icon-classification-analysis.webp', 'Figure pending — Historical icon classification and dimensional analysis', 'Line and filled icon styles, functional categories, and dimensional comparisons.'),
+  iconTypeSvg: { src: evidenceImage('automotive_icon_type_distribution.svg'), alt: 'Linear, filled, and hybrid icon-type distributions across five automotive interface functions' },
+  iconTypePng: { src: evidenceImage('automotive_icon_type_distribution.png'), alt: 'Linear, filled, and hybrid icon-type distributions across five automotive interface functions' },
+  iconDimensions: { src: evidenceImage('automotive_icon_dimensions.png'), alt: 'Normalized icon length and width scatter plots across five automotive interface functions' },
+  iconSpacingSvg: { src: evidenceImage('automotive_icon_spacing_distribution.svg'), alt: 'Icon-spacing frequency distributions across five automotive interface functions' },
+  iconSpacingPng: { src: evidenceImage('automotive_icon_spacing_distribution.png'), alt: 'Icon-spacing frequency distributions across five automotive interface functions' },
   focusGroup: pendingFigure('focus-group-session.webp', 'Figure pending — Focus group session photograph', 'Authentic documentation of the focus-group or interview activity will be added here.'),
   route: pendingFigure('driving-simulator-task-schedule.webp', 'Figure pending — Driving simulator task schedule', 'Experimental driving route with scheduled text-reading tasks under moving and stationary conditions.'),
   procedure: pendingFigure('experimental-procedure-flow.webp', 'Figure pending — Historical three-lane experimental procedure', 'Original experimental flow connecting the simulator, driver, and center-stack display.'),
@@ -374,6 +430,19 @@ const figures = {
 .color-findings__list p { padding: 1rem 1.25rem; }
 .color-findings__list span { color: var(--benchmark-text); font-weight: 600; }
 .color-findings__list p { color: var(--benchmark-muted); border-left: 1px solid var(--benchmark-line); font-size: .78rem; line-height: 1.6; }
+
+.evidence-block--iconography { display: block; }
+.evidence-block--iconography > .evidence-copy { max-width: 820px; margin-bottom: 2.5rem; }
+.iconography-analysis { display: grid; gap: 3.5rem; }
+.iconography-part { display: grid; gap: 2.5rem; padding-top: 3rem; border-top: 1px solid var(--benchmark-line); }
+.iconography-part__intro { max-width: 820px; }
+.iconography-part__intro h4,
+.iconography-synthesis h4 { margin: .55rem 0 1rem; color: var(--benchmark-text); font-size: 1.25rem; line-height: 1.3; }
+.iconography-part__intro > p:last-child,
+.iconography-synthesis > p:last-child { color: var(--benchmark-muted); font-size: .88rem; line-height: 1.72; }
+.iconography-figure picture { display: block; }
+.iconography-findings .table-scroll { grid-column: 1 / -1; }
+.iconography-synthesis { max-width: 900px; padding-top: 3rem; border-top: 1px solid var(--benchmark-line); }
 
 .integrity-note,
 .confidentiality-note { padding: 1.25rem 0 0; color: var(--benchmark-muted); border-top: 1px solid var(--benchmark-line); font-size: .78rem; line-height: 1.65; }
