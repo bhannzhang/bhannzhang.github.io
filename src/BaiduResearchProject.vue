@@ -117,9 +117,33 @@
             </section>
           </div>
         </div>
+        <div class="evidence-block evidence-block--color">
+          <div class="evidence-copy"><span>C</span><h3>Color Distribution Across Automotive Interface Functions</h3><p>The benchmarking study examined color usage across five automotive interface contexts: Home, Navigation, Multimedia, Vehicle Settings, and Voice Control.</p><p>Two categories of color usage were compared: page theme colors and functional indication colors. The latter included colors used for navigation or transition cues, focus indication, and operability-related feedback.</p><small>Source material · original benchmarking report, approximately pp. 21–32</small></div>
+          <div class="color-analysis">
+            <figure class="typography-figure color-figure">
+              <h4>Page Theme vs. Functional Indication Colors</h4>
+              <a :href="figures.colorDistribution.src" target="_blank" rel="noopener noreferrer" aria-label="Open color-distribution figure at full resolution">
+                <img :src="figures.colorDistribution.src" :alt="figures.colorDistribution.alt" loading="lazy" />
+                <span>Open full-resolution figure ↗</span>
+              </a>
+              <figcaption><strong>Figure — Color Distribution Across Interface Functions.</strong> Comparative visualization of page theme and functional indication colors across five automotive HMI contexts, reconstructed from historical benchmarking documentation.<br />Hue represents the observed color family. Radial displacement is used only to reduce marker overlap and does not encode a measured variable.</figcaption>
+            </figure>
+            <section class="typography-findings color-findings" aria-labelledby="color-findings-title">
+              <div><p class="mini-label">Descriptive Findings</p><h4 id="color-findings-title">Key Findings — Color Usage</h4></div>
+              <p class="typography-findings__note">The reconstructed figure supports descriptive comparison only; individual marker locations and sample counts have not been independently verified.</p>
+              <ol class="color-findings__list">
+                <li><span>01 · Recurring Color Families</span><p>Historical observations included recurring cool and warm hue families across different automotive interface functions, although the balance and distribution varied between contexts.</p></li>
+                <li><span>02 · Color Roles</span><p>Page theme colors and functional indication colors served different interface purposes. The latter were associated with interaction cues such as navigation, focus, and operability feedback.</p></li>
+                <li><span>03 · Cross-Context Variation</span><p>The observed color distributions were not identical across the five functional contexts, suggesting variation in how existing automotive interfaces applied color.</p></li>
+              </ol>
+              <p class="typography-conclusion">Color usage across the sampled automotive interfaces exhibited recurring hue families as well as differences between functional contexts and color roles. Distinguishing page theme colors from functional indication colors provided a more structured way to document visual conventions and interaction-related color cues.</p>
+              <p class="character-length-method">Descriptive analysis based on retained historical benchmarking materials. The visualization does not establish the usability or effectiveness of individual color choices.</p>
+            </section>
+          </div>
+        </div>
         <div class="evidence-block">
-          <div class="evidence-copy"><span>C</span><h3>Color &amp; Iconography</h3><p>Color distributions and icon characteristics were documented across interface functions, including functional colors, interface states, line icons, filled icons, and icon dimensions.</p><small>Source material · original benchmarking report, approximately pp. 21–46</small></div>
-          <div class="figure-pair"><BaiduEvidenceFigure :figure="figures.color" /><BaiduEvidenceFigure :figure="figures.icons" /></div>
+          <div class="evidence-copy"><span>D</span><h3>Iconography</h3><p>Icon characteristics were documented across interface functions, including interface states, line icons, filled icons, and icon dimensions.</p><small>Source material · original benchmarking report, approximately pp. 33–46</small></div>
+          <BaiduEvidenceFigure :figure="figures.icons" />
         </div>
         <p class="integrity-note"><strong>Evidence boundary.</strong> Historical statistical inconsistencies will be checked against the original tables before any data visualization is reconstructed.</p>
       </section>
@@ -205,7 +229,7 @@ const figures = {
   secondaryTypography: { src: evidenceImage('automotive_secondary_title_sizes.png'), alt: 'Secondary title sizes across Home, Navigation, Multimedia, Vehicle Settings, and Voice Control interfaces' },
   characterLengthSvg: { src: evidenceImage('automotive_character_length_distribution.svg'), alt: 'Character-length distributions across Home, Navigation, Multimedia, Vehicle Settings, and Voice Control interfaces' },
   characterLengthPng: { src: evidenceImage('automotive_character_length_distribution.png'), alt: 'Character-length distributions across Home, Navigation, Multimedia, Vehicle Settings, and Voice Control interfaces' },
-  color: pendingFigure('color-distribution-analysis.webp', 'Figure pending — Historical color distribution analysis', 'Color distributions and interface-state conventions documented across vehicle functions.'),
+  colorDistribution: { src: evidenceImage('automotive_color_distribution_by_function.png'), alt: 'Page theme and functional indication color distributions across Home, Navigation, Multimedia, Vehicle Settings, and Voice Control interfaces' },
   icons: pendingFigure('icon-classification-analysis.webp', 'Figure pending — Historical icon classification and dimensional analysis', 'Line and filled icon styles, functional categories, and dimensional comparisons.'),
   focusGroup: pendingFigure('focus-group-session.webp', 'Figure pending — Focus group session photograph', 'Authentic documentation of the focus-group or interview activity will be added here.'),
   route: pendingFigure('driving-simulator-task-schedule.webp', 'Figure pending — Driving simulator task schedule', 'Experimental driving route with scheduled text-reading tasks under moving and stationary conditions.'),
@@ -337,6 +361,20 @@ const figures = {
 .character-length-findings dd { color: var(--benchmark-muted); border-left: 1px solid var(--benchmark-line); font-size: .78rem; line-height: 1.6; }
 .character-length-method { grid-column: 1 / -1; max-width: 900px; padding-top: 1.25rem; color: var(--benchmark-muted); border-top: 1px solid var(--benchmark-line); font-size: .72rem; line-height: 1.65; }
 
+.evidence-block--color { display: block; }
+.evidence-block--color .evidence-copy { max-width: 820px; margin-bottom: 2.5rem; }
+.evidence-block--color .evidence-copy p + p { margin-top: .75rem; }
+.color-analysis { display: grid; gap: 3rem; }
+.color-figure h4 { margin: 0 0 1rem; color: var(--benchmark-text); font-size: 1.25rem; line-height: 1.3; }
+.color-figure figcaption { line-height: 1.65; }
+.color-findings__list { grid-column: 1 / -1; margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--benchmark-line); border-bottom: 1px solid var(--benchmark-line); }
+.color-findings__list li { display: grid; grid-template-columns: minmax(220px, 3fr) minmax(0, 9fr); border-bottom: 1px solid var(--benchmark-line); }
+.color-findings__list li:last-child { border-bottom: 0; }
+.color-findings__list span,
+.color-findings__list p { padding: 1rem 1.25rem; }
+.color-findings__list span { color: var(--benchmark-text); font-weight: 600; }
+.color-findings__list p { color: var(--benchmark-muted); border-left: 1px solid var(--benchmark-line); font-size: .78rem; line-height: 1.6; }
+
 .integrity-note,
 .confidentiality-note { padding: 1.25rem 0 0; color: var(--benchmark-muted); border-top: 1px solid var(--benchmark-line); font-size: .78rem; line-height: 1.65; }
 .integrity-note { grid-column: 1 / -1; }
@@ -403,6 +441,8 @@ const figures = {
   .typography-findings__note { grid-column: 1; }
   .character-length-findings__grid > div { grid-template-columns: 1fr; }
   .character-length-findings dd { padding-top: 0; border-left: 0; }
+  .color-findings__list li { grid-template-columns: 1fr; }
+  .color-findings__list p { padding-top: 0; border-left: 0; }
   .topic-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .topic-grid li:nth-child(2) { border-right: 0; }
   .topic-grid li:nth-child(-n+2) { border-bottom: 1px solid var(--benchmark-line); }
