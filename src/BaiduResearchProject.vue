@@ -73,14 +73,12 @@
             <figure class="typography-figure">
               <a :href="figures.primaryTypography.src" target="_blank" rel="noopener noreferrer" aria-label="Open Figure A at full resolution">
                 <img :src="figures.primaryTypography.src" :alt="figures.primaryTypography.alt" loading="lazy" />
-                <span>Open full-resolution figure ↗</span>
               </a>
               <figcaption><strong>Figure A — Primary Title Sizes.</strong> Primary title font-size distribution across five automotive interface functions, based on historical cross-brand benchmarking records.</figcaption>
             </figure>
             <figure class="typography-figure">
               <a :href="figures.secondaryTypography.src" target="_blank" rel="noopener noreferrer" aria-label="Open Figure B at full resolution">
                 <img :src="figures.secondaryTypography.src" :alt="figures.secondaryTypography.alt" loading="lazy" />
-                <span>Open full-resolution figure ↗</span>
               </a>
               <figcaption><strong>Figure B — Secondary Title Sizes.</strong> Secondary title font-size distribution across the same five interface functions.</figcaption>
             </figure>
@@ -114,7 +112,6 @@
                     <source :srcset="figures.characterLengthSvg.src" type="image/svg+xml" />
                     <img :src="figures.characterLengthPng.src" :alt="figures.characterLengthSvg.alt" loading="lazy" />
                   </picture>
-                  <span>Open full-resolution figure ↗</span>
                 </a>
                 <figcaption>Distribution of recorded text lengths across five automotive interface functions. Each dot represents one non-zero historical observation, with repeated values stacked vertically. Short vertical markers indicate the median character length within each function.</figcaption>
               </figure>
@@ -141,7 +138,6 @@
               <h4>Page Theme vs. Functional Indication Colors</h4>
               <a :href="figures.colorDistribution.src" target="_blank" rel="noopener noreferrer" aria-label="Open color-distribution figure at full resolution">
                 <img :src="figures.colorDistribution.src" :alt="figures.colorDistribution.alt" loading="lazy" />
-                <span>Open full-resolution figure ↗</span>
               </a>
               <figcaption><strong>Figure — Color Distribution Across Interface Functions.</strong> Comparative visualization of page theme and functional indication colors across five automotive HMI contexts, reconstructed from historical benchmarking documentation.<br />Hue represents the observed color family. Radial displacement is used only to reduce marker overlap and does not encode a measured variable.</figcaption>
             </figure>
@@ -166,7 +162,6 @@
               <figure class="typography-figure iconography-figure">
                 <a :href="figures.iconTypeSvg.src" target="_blank" rel="noopener noreferrer" aria-label="Open icon-type distribution figure at full resolution">
                   <picture><source :srcset="figures.iconTypeSvg.src" type="image/svg+xml" /><img :src="figures.iconTypePng.src" :alt="figures.iconTypeSvg.alt" loading="lazy" /></picture>
-                  <span>Open full-resolution figure ↗</span>
                 </a>
                 <figcaption><strong>Figure A — Icon Type Distribution Across Automotive Interface Functions.</strong> Distribution of linear, filled, and hybrid icon styles across five automotive interface contexts. Counts for Navigation, Multimedia, Vehicle Settings, and Voice Control were reconstructed from the retained benchmarking chart; Home is presented using the available percentages.</figcaption>
               </figure>
@@ -181,7 +176,7 @@
             <section class="iconography-part" aria-labelledby="icon-dimensions-title">
               <div class="iconography-part__intro"><p class="mini-label">Part B</p><h4 id="icon-dimensions-title">B. Icon Dimensions Across Interface Functions</h4><p>To compare icon sizes across different display formats, icon dimensions were normalized relative to the corresponding screen dimensions. Icon length was divided by screen length, while icon width was divided by screen width. This allowed the study to document relative icon dimensions across five interface contexts.</p></div>
               <figure class="typography-figure iconography-figure">
-                <a :href="figures.iconDimensions.src" target="_blank" rel="noopener noreferrer" aria-label="Open normalized icon-dimensions figure at full resolution"><img :src="figures.iconDimensions.src" :alt="figures.iconDimensions.alt" loading="lazy" /><span>Open full-resolution figure ↗</span></a>
+                <a :href="figures.iconDimensions.src" target="_blank" rel="noopener noreferrer" aria-label="Open normalized icon-dimensions figure at full resolution"><img :src="figures.iconDimensions.src" :alt="figures.iconDimensions.alt" loading="lazy" /></a>
                 <figcaption><strong>Figure B — Normalized Icon Dimensions.</strong> Scatter plots of normalized icon dimensions across five automotive interface functions. The horizontal axis represents icon length divided by screen length; the vertical axis represents icon width divided by screen width. Each observation represents a documented icon-size pair.</figcaption>
               </figure>
               <section class="typography-findings iconography-findings" aria-labelledby="icon-dimensions-findings-title">
@@ -198,7 +193,6 @@
               <figure class="typography-figure iconography-figure">
                 <a :href="figures.iconSpacingSvg.src" target="_blank" rel="noopener noreferrer" aria-label="Open icon-spacing distribution figure at full resolution">
                   <picture><source :srcset="figures.iconSpacingSvg.src" type="image/svg+xml" /><img :src="figures.iconSpacingPng.src" :alt="figures.iconSpacingSvg.alt" loading="lazy" /></picture>
-                  <span>Open full-resolution figure ↗</span>
                 </a>
                 <figcaption><strong>Figure C — Icon Spacing Distribution Across Interface Functions.</strong> Frequency profiles of recorded icon-spacing values across Navigation, Multimedia, Vehicle Settings, Voice Control, and Home interfaces. The figure was reconstructed from retained historical benchmarking charts.</figcaption>
               </figure>
@@ -225,7 +219,7 @@
           <section class="qualitative-part" aria-labelledby="interview-research-title">
             <div class="subsection-title"><span>01</span><div><p>In-depth interviews</p><h3 id="interview-research-title">Understanding Everyday Center-Stack Usage</h3></div></div>
             <p class="qualitative-context">Ten participants (five male and five female) were interviewed about their everyday use of automotive center-stack interfaces. The interviews examined frequently used functions, typical interaction behaviors, and design-related concerns across navigation, multimedia, climate control, vehicle settings, and other functions.</p>
-            <figure class="qualitative-figure"><h4>In-depth Interview Findings — Usage Patterns and Design Concerns</h4><a :href="figures.interviewFindings.src" target="_blank" rel="noopener"><img :src="figures.interviewFindings.src" :alt="figures.interviewFindings.alt" loading="lazy" /><span>Open full-resolution figure ↗</span></a><figcaption>Summary of self-reported center-stack function usage, frequently mentioned operations, and design-related concerns from ten historical interviews. Valid response counts vary between questionnaire items.</figcaption></figure>
+            <figure class="qualitative-figure"><h4>In-depth Interview Findings — Usage Patterns and Design Concerns</h4><a :href="figures.interviewFindings.src" target="_blank" rel="noopener"><img :src="figures.interviewFindings.src" :alt="figures.interviewFindings.alt" loading="lazy" /></a><figcaption>Summary of self-reported center-stack function usage, frequently mentioned operations, and design-related concerns from ten historical interviews. Valid response counts vary between questionnaire items.</figcaption></figure>
             <section class="qualitative-findings" aria-labelledby="interview-findings-title"><p class="mini-label">Key findings — In-depth interviews</p><h4 id="interview-findings-title">Interview Observations</h4><ol><li><span>01 · Function Usage Varied</span><p>Reported usage frequencies differed across center-stack functions. Climate control, rear-view camera, and music functions received relatively high recorded frequency scores, while navigation and vehicle settings were used less frequently in the retained responses.</p></li><li><span>02 · Familiar Operations Dominated</span><p>Commonly described interactions included playing music through a smartphone connection, switching tracks, adjusting volume, and using navigation services. Some participants relied on smartphones rather than the in-vehicle navigation interface.</p></li><li><span>03 · Design Concerns Extended Beyond Appearance</span><p>Open-ended responses highlighted concerns related to information accessibility, icon recognition, visual feedback, and text readability, suggesting that interface evaluation should consider both visual presentation and interaction demands.</p></li></ol><p class="qualitative-conclusion">The interviews revealed differences in how drivers engaged with automotive center-stack functions, alongside recurring concerns about information accessibility and interface readability. These observations provided contextual input for selecting realistic interaction tasks and visual design parameters in subsequent experiments.</p></section>
           </section>
 
@@ -261,10 +255,10 @@
           <ol class="procedure-sequence"><li><span>01</span>Participant introduction and familiarization</li><li><span>02</span>Simulator practice</li><li><span>03</span>Driving and secondary HMI tasks</li><li><span>04</span>Data collection</li><li><span>05</span>Post-task assessments and interviews</li></ol>
           <p class="protocol-note">Relevant protocols specified a target speed of approximately 35–40 km/h. Typography included moving and stationary conditions. Iconography and layout focused on driving. The color document retains a driving protocol, while earlier stationary-condition text appears as deleted draft material.</p>
           <div class="environment-figures">
-            <figure class="simulator-figure"><a :href="figures.route.src" target="_blank" rel="noopener"><img :src="figures.route.src" :alt="figures.route.alt" loading="lazy" /><span>Open full-resolution figure ↗</span></a><figcaption><strong>Figure 1 — Campus Driving Route and Task Schedule.</strong> Historical simulator route showing typography tasks assigned to moving and stopped segments.</figcaption></figure>
-            <figure class="simulator-figure"><a :href="figures.simulatorEnvironment.src" target="_blank" rel="noopener"><img :src="figures.simulatorEnvironment.src" :alt="figures.simulatorEnvironment.alt" loading="lazy" /><span>Open full-resolution figure ↗</span></a><figcaption><strong>Figure 2 — Driving Simulator Environment.</strong> The historical simulator setup used for the driving and secondary HMI tasks.</figcaption></figure>
+            <figure class="simulator-figure"><a :href="figures.route.src" target="_blank" rel="noopener"><img :src="figures.route.src" :alt="figures.route.alt" loading="lazy" /></a><figcaption><strong>Figure 1 — Campus Driving Route and Task Schedule.</strong> Historical simulator route showing typography tasks assigned to moving and stopped segments.</figcaption></figure>
+            <figure class="simulator-figure"><a :href="figures.simulatorEnvironment.src" target="_blank" rel="noopener"><img :src="figures.simulatorEnvironment.src" :alt="figures.simulatorEnvironment.alt" loading="lazy" /></a><figcaption><strong>Figure 2 — Driving Simulator Environment.</strong> The historical simulator setup used for the driving and secondary HMI tasks.</figcaption></figure>
           </div>
-          <figure class="simulator-figure simulator-figure--procedure"><a :href="figures.procedure.src" target="_blank" rel="noopener"><img :src="figures.procedure.src" :alt="figures.procedure.alt" loading="lazy" /><span>Open full-resolution figure ↗</span></a><figcaption><strong>Figure 3 — Three-Column Experimental Procedure.</strong> Historical workflow coordinating the simulator, participant, and center-stack task sequence.</figcaption></figure>
+          <figure class="simulator-figure simulator-figure--procedure"><a :href="figures.procedure.src" target="_blank" rel="noopener"><img :src="figures.procedure.src" :alt="figures.procedure.alt" loading="lazy" /></a><figcaption><strong>Figure 3 — Three-Column Experimental Procedure.</strong> Historical workflow coordinating the simulator, participant, and center-stack task sequence.</figcaption></figure>
         </section>
 
         <section class="protocol-block simulator-studies" aria-labelledby="simulator-studies-title">
@@ -281,11 +275,11 @@
 
         <section class="protocol-block simulator-results" aria-labelledby="simulator-results-title">
           <div class="subsection-title"><span>04</span><div><p>Formal experiment evidence</p><h3 id="simulator-results-title">Representative Experimental Results</h3></div></div>
-          <div class="result-group"><div class="result-group__intro"><p class="mini-label">A · Color Experiment</p><h4>Response Time Across Day–Night and Color Conditions</h4><p>Descriptive comparison of response-time patterns across daytime and nighttime driving scenes, different hue conditions, and target-to-background contrast ratios, reconstructed from historical post-experiment analysis figures.</p></div><figure class="simulator-figure simulator-figure--result"><a :href="figures.colorResponseTime.src" target="_blank" rel="noopener"><img :src="figures.colorResponseTime.src" :alt="figures.colorResponseTime.alt" loading="lazy" /><span>Open full-resolution figure ↗</span></a><figcaption><strong>Figure 4 — Color Experiment Response-Time Results.</strong> Consolidated visual reconstruction from historical formal-experiment charts. Individual data points have not been independently checked against the original editable dataset.</figcaption></figure><p class="result-observation"><strong>Descriptive observation.</strong> Across the retained charts, response-time patterns varied between daytime and nighttime scenes and across color-contrast conditions. Nighttime conditions generally showed higher mean response times in the displayed comparisons, while the magnitude of variation differed across hue and contrast combinations.</p></div>
+          <div class="result-group"><div class="result-group__intro"><p class="mini-label">A · Color Experiment</p><h4>Response Time Across Day–Night and Color Conditions</h4><p>Descriptive comparison of response-time patterns across daytime and nighttime driving scenes, different hue conditions, and target-to-background contrast ratios, reconstructed from historical post-experiment analysis figures.</p></div><figure class="simulator-figure simulator-figure--result"><a :href="figures.colorResponseTime.src" target="_blank" rel="noopener"><img :src="figures.colorResponseTime.src" :alt="figures.colorResponseTime.alt" loading="lazy" /></a><figcaption><strong>Figure 4 — Color Experiment Response-Time Results.</strong> Consolidated visual reconstruction from historical formal-experiment charts. Individual data points have not been independently checked against the original editable dataset.</figcaption></figure><p class="result-observation"><strong>Descriptive observation.</strong> Across the retained charts, response-time patterns varied between daytime and nighttime scenes and across color-contrast conditions. Nighttime conditions generally showed higher mean response times in the displayed comparisons, while the magnitude of variation differed across hue and contrast combinations.</p></div>
 
-          <div class="result-group"><div class="result-group__intro"><p class="mini-label">B · Supporting Measures</p><h4>Gaze-Related and Driving-Control Indicators</h4><p>In addition to response time, the formal analysis included gaze-related and driving-control indicators. These measures were examined alongside task performance to characterize driver behavior under different visual conditions.</p></div><div class="supporting-results"><figure v-for="item in figures.drivingMeasures" :key="item.src" class="simulator-figure"><a :href="item.src" target="_blank" rel="noopener"><img :src="item.src" :alt="item.alt" loading="lazy" /><span>Open full-resolution figure ↗</span></a><figcaption>{{ item.caption }}</figcaption></figure></div></div>
+          <div class="result-group"><div class="result-group__intro"><p class="mini-label">B · Supporting Measures</p><h4>Gaze-Related and Driving-Control Indicators</h4><p>In addition to response time, the formal analysis included gaze-related and driving-control indicators. These measures were examined alongside task performance to characterize driver behavior under different visual conditions.</p></div><div class="supporting-results"><figure v-for="item in figures.drivingMeasures" :key="item.src" class="simulator-figure"><a :href="item.src" target="_blank" rel="noopener"><img :src="item.src" :alt="item.alt" loading="lazy" /></a><figcaption>{{ item.caption }}</figcaption></figure></div></div>
 
-          <div class="result-group"><div class="result-group__intro"><p class="mini-label">C · Layout Experiment</p><h4>Perceived Difficulty Across Screen Arrangements</h4><p>Historical results documented perceived difficulty across screen configurations and vertical interaction patterns, including vertical scrolling and page-based navigation. The scale definition and participant-level data have not been recovered, so the chart is presented descriptively.</p></div><figure class="simulator-figure simulator-figure--result simulator-figure--light"><a :href="figures.layoutDifficulty.src" target="_blank" rel="noopener"><img :src="figures.layoutDifficulty.src" :alt="figures.layoutDifficulty.alt" loading="lazy" /><span>Open full-resolution figure ↗</span></a><figcaption><strong>Figure 7 — Layout Experiment Difficulty Ratings.</strong> Historical post-experiment chart comparing alternative display formats and vertical interaction patterns.</figcaption></figure></div>
+          <div class="result-group"><div class="result-group__intro"><p class="mini-label">C · Layout Experiment</p><h4>Perceived Difficulty Across Screen Arrangements</h4><p>Historical results documented perceived difficulty across screen configurations and vertical interaction patterns, including vertical scrolling and page-based navigation. The scale definition and participant-level data have not been recovered, so the chart is presented descriptively.</p></div><figure class="simulator-figure simulator-figure--result"><a :href="figures.layoutDifficulty.src" target="_blank" rel="noopener"><img :src="figures.layoutDifficulty.src" :alt="figures.layoutDifficulty.alt" loading="lazy" /></a><figcaption><strong>Figure 7 — Layout Experiment Difficulty Ratings.</strong> Historical post-experiment chart comparing alternative display formats and vertical interaction patterns.</figcaption></figure></div>
 
           <section class="simulator-conclusions" aria-labelledby="simulator-conclusions-title"><p class="mini-label">Research conclusions</p><h4 id="simulator-conclusions-title">Key Findings — Simulator-Based Evaluation</h4><ol class="color-findings__list"><li><span>01 · Evaluated in Driving Contexts</span><p>The research examined interface elements through practical driving and secondary-task scenarios rather than static visual comparison alone.</p></li><li><span>02 · Performance and Driver Behavior</span><p>The evaluation framework combined interaction performance, subjective measures, and driving-related indicators to investigate the broader consequences of HMI design variations.</p></li><li><span>03 · Outcomes Varied Across Conditions</span><p>The retained post-experiment figures document variation in response time and other recorded indicators across visual and driving conditions. These descriptive patterns support further examination but do not independently establish causal or statistically significant effects.</p></li></ol><p class="typography-conclusion">The simulator-based studies extended the cross-brand benchmarking research by examining selected interface design variables under controlled driving conditions. Combining experimental tasks with behavioral and subjective measures provided a broader basis for evaluating automotive HMI design decisions.</p></section>
         </section>
@@ -388,7 +382,7 @@ const figures = {
     { src: evidenceImage('color-driving-measures-extended.png'), alt: 'Historical color-experiment chart with response time, fixation, lane departure, steering, and vehicle speed indicators', caption: 'Figure 5 — Extended supporting-measures chart across day–night, hue, and contrast conditions.' },
     { src: evidenceImage('color-driving-measures-summary.png'), alt: 'Historical summary chart of response time, fixation, lane departure, steering, and vehicle speed indicators by day and night', caption: 'Figure 6 — Day–night summary of supporting gaze-related and driving-control measures.' },
   ],
-  layoutDifficulty: { src: evidenceImage('layout-difficulty-results.jpg'), alt: 'Historical perceived-difficulty chart across screen formats and vertical scrolling or page-based navigation' },
+  layoutDifficulty: { src: evidenceImage('layout-difficulty-results.png'), alt: 'Historical perceived-difficulty chart across screen formats and vertical scrolling or page-based navigation' },
   outputs: pendingFigure('historical-project-outputs.webp', 'Figure pending — Historical report, presentation, or team research material', 'Publicly shareable evidence of the project outputs will be added here.'),
 }
 </script>
@@ -512,8 +506,6 @@ const figures = {
 .typography-figure { margin: 0; min-width: 0; }
 .typography-figure a { display: block; color: var(--benchmark-muted); }
 .typography-figure img { width: 100%; height: auto; display: block; border: 1px solid var(--benchmark-line); background: #0d1016; object-fit: contain; }
-.typography-figure a > span { display: block; padding-top: .55rem; font: 500 .66rem/1.4 var(--font-mono); text-align: right; }
-.typography-figure a:hover > span { color: var(--benchmark-text); }
 .typography-figure figcaption { max-width: 860px; padding-top: .55rem; }
 .typography-figure figcaption strong { color: var(--benchmark-text); font-weight: 600; }
 
@@ -601,8 +593,6 @@ const figures = {
 .qualitative-findings h4 { margin: 0 0 1rem; color: var(--benchmark-text); font-size: 1.2rem; line-height: 1.35; }
 .qualitative-figure a { display: block; color: var(--benchmark-muted); }
 .qualitative-figure img { width: 100%; height: auto; display: block; }
-.qualitative-figure a > span { display: block; padding-top: .55rem; font: 500 .66rem/1.4 var(--font-mono); text-align: right; }
-.qualitative-figure a:hover > span { color: var(--benchmark-text); }
 .qualitative-figure figcaption,
 .decision-matrix-figure figcaption { padding-top: .65rem; color: var(--benchmark-muted); font-size: .72rem; line-height: 1.6; }
 
@@ -683,8 +673,6 @@ const figures = {
 .simulator-figure { margin: 0; min-width: 0; }
 .simulator-figure a { display: block; color: var(--benchmark-muted); }
 .simulator-figure img { width: 100%; height: auto; display: block; border: 1px solid var(--benchmark-line); background: #0d1016; object-fit: contain; }
-.simulator-figure a > span { display: block; padding-top: .55rem; font: 500 .66rem/1.4 var(--font-mono); text-align: right; }
-.simulator-figure a:hover > span { color: var(--benchmark-text); }
 .simulator-figure figcaption { padding-top: .65rem; color: var(--benchmark-muted); font-size: .72rem; line-height: 1.6; }
 .simulator-figure figcaption strong { color: var(--benchmark-text); font-weight: 600; }
 .simulator-figure--procedure { max-width: 760px; }
