@@ -226,6 +226,7 @@
           <section class="qualitative-part" aria-labelledby="focus-group-title">
             <div class="subsection-title"><span>02</span><div><p>Focus group</p><h3 id="focus-group-title">From Qualitative Findings to Experimental Decisions</h3></div></div>
             <p class="qualitative-context">Following the initial interviews, a focus-group evaluation was conducted to review proposed interface variations and refine the next stage of simulator-based experiments. Participants examined representative interface stimuli covering layout, typography, color, and iconography, followed by discussions about information acquisition, visual recognition, and interaction difficulty. The historical protocol used a 55-inch display to present interface examples for discussion.</p>
+            <figure class="qualitative-photo"><a :href="figures.focusGroup.src" target="_blank" rel="noopener"><img :src="figures.focusGroup.src" :alt="figures.focusGroup.alt" loading="lazy" /></a><figcaption><strong>Focus-group session.</strong> Participants reviewed interface variations and discussed the experimental tasks and design variables.</figcaption></figure>
             <figure class="decision-matrix-figure"><h4>From Qualitative Findings to Experimental Decisions</h4><table class="decision-matrix"><thead><tr><th scope="col">Qualitative Finding</th><th scope="col">Research Implication</th><th scope="col">Experimental Decision</th></tr></thead><tbody><tr><td data-label="Qualitative Finding">Drivers preferred using center-stack functions when road conditions were relatively stable and safe.</td><td data-label="Research Implication">Secondary-task conditions should reduce unnecessary driving-context variability.</td><td data-label="Experimental Decision">Use relatively stable urban-road scenarios, with interaction tasks assigned to straight-road segments and a target driving speed of 35–40 km/h.</td></tr><tr><td data-label="Qualitative Finding">Drivers often avoided reading lengthy information while moving but paid attention to vehicle warning messages.</td><td data-label="Research Implication">Text-reading tasks should reflect situations where drivers have a realistic need to inspect information.</td><td data-label="Experimental Decision">Use vehicle warning messages, including tire-pressure and engine-related alerts, as representative reading tasks.</td></tr><tr><td data-label="Qualitative Finding">Participants differentiated between finding information and completing an interface operation.</td><td data-label="Research Implication">Information acquisition and task execution should be evaluated as distinct aspects of interaction.</td><td data-label="Experimental Decision">Consider eye-tracking-based information acquisition measures alongside task-completion performance.</td></tr><tr><td data-label="Qualitative Finding">Icon size and spacing were discussed in relation to recognition and visual comfort, while icon-to-text spacing was particularly associated with visual appearance.</td><td data-label="Research Implication">Different icon-related parameters should be examined separately.</td><td data-label="Experimental Decision">Manipulate icon size, icon-to-icon spacing, and icon-to-text spacing as distinct experimental factors.</td></tr><tr><td data-label="Qualitative Finding">Alternative layouts involved trade-offs between information clarity, navigation depth, and interaction effort.</td><td data-label="Research Implication">Layout comparisons should control task demands to support meaningful interpretation.</td><td data-label="Experimental Decision">Compare primary and secondary layouts using matched functional tasks and consistent operation-step requirements.</td></tr></tbody></table><figcaption>Traceable relationships between retained qualitative findings, their research implications, and the experimental decisions documented for the simulator-based studies.</figcaption></figure>
             <section class="qualitative-findings" aria-labelledby="focus-group-findings-title"><p class="mini-label">Key findings — Focus group</p><h4 id="focus-group-findings-title">From Discussion to Experimental Design</h4><ol><li><span>01 · Scenario Refinement</span><p>Participants' descriptions of everyday driving behavior informed the selection of relatively stable driving conditions and the placement of secondary interaction tasks.</p></li><li><span>02 · Experimental Operationalization</span><p>Focus-group feedback helped translate broad interface concerns into more specific experimental manipulations, including typography parameters, icon dimensions, spacing, and layout alternatives.</p></li><li><span>03 · Differentiating Evaluation Outcomes</span><p>The discussions highlighted the importance of distinguishing visual recognition and information acquisition from the effort required to complete an interaction.</p></li></ol><p class="qualitative-conclusion">Qualitative inquiry informed the experimental program by grounding task selection in drivers' reported behavior, refining the driving context, and clarifying which interface parameters and outcome measures should be examined. This established a traceable connection between user research and the subsequent simulator-based evaluation.</p></section>
           </section>
@@ -298,7 +299,7 @@
             <article><span>My role</span><h3>Student Project Lead</h3><p>I organized the benchmark, developed the synthesis structure, and translated the evidence into research and design guidance.</p></article>
             <article><span>Method reflection</span><h3>From visual questions to testable variables</h3><p>The project connected interface analysis with qualitative and simulator-based research methods.</p></article>
           </div>
-          <BaiduEvidenceFigure class="section-figure" :figure="figures.outputs" size="wide" />
+          <figure class="project-photo-figure"><div class="project-photo-grid"><a v-for="item in figures.headquartersVisit" :key="item.src" :href="item.src" target="_blank" rel="noopener"><img :src="item.src" :alt="item.alt" loading="lazy" /></a></div><figcaption><strong>Baidu headquarters presentation visit.</strong> Site documentation and the project presentation from the 2019 collaboration.</figcaption></figure>
           <p class="confidentiality-note"><strong>Public documentation.</strong> This portfolio reconstruction uses retained historical process materials and publicly shareable research documentation. The final client deliverables are not reproduced.</p>
         </div>
       </section>
@@ -313,7 +314,6 @@ import ResearchPageTopbar from './components/ResearchPageTopbar.vue'
 import BaiduEvidenceFigure from './components/BaiduEvidenceFigure.vue'
 
 const homeUrl = import.meta.env.BASE_URL
-const projectImage = (filename) => `${homeUrl}images/projects/${filename}`
 const evidenceImage = (filename) => `${homeUrl}images/research/automotive-benchmarking/${filename}`
 const pendingFigure = (filename, label, caption) => ({ src: '', expectedSrc: evidenceImage(filename), label, caption })
 
@@ -343,7 +343,7 @@ const benchmarkBrands = [
 // Add verified historical files at the expected paths, then set `src` to `expectedSrc`.
 const figures = {
   hero: pendingFigure('hero-research-documentation-collage.webp', 'Figure pending — Historical research-documentation collage', 'Planned collage of retained benchmarking pages, experimental materials, and project documentation.'),
-  context: { src: projectImage('project2.jpg'), label: '', alt: 'Printed automotive HMI benchmarking materials from the Baidu Apollo collaboration', caption: 'Retained historical documentation from the automotive HMI benchmarking work.' },
+  context: { src: evidenceImage('benchmarking-materials.jpg'), label: '', alt: 'Printed automotive HMI benchmarking materials from the Baidu Apollo collaboration', caption: 'Retained historical documentation from the automotive HMI benchmarking work.' },
   primaryTypography: { src: evidenceImage('automotive_primary_title_sizes.png'), alt: 'Primary title sizes across Home, Navigation, Multimedia, Vehicle Settings, and Voice Control interfaces' },
   secondaryTypography: { src: evidenceImage('automotive_secondary_title_sizes.png'), alt: 'Secondary title sizes across Home, Navigation, Multimedia, Vehicle Settings, and Voice Control interfaces' },
   characterLengthSvg: { src: evidenceImage('automotive_character_length_distribution.svg'), alt: 'Character-length distributions across Home, Navigation, Multimedia, Vehicle Settings, and Voice Control interfaces' },
@@ -355,6 +355,7 @@ const figures = {
   iconSpacingSvg: { src: evidenceImage('automotive_icon_spacing_distribution.svg'), alt: 'Icon-spacing frequency distributions across five automotive interface functions' },
   iconSpacingPng: { src: evidenceImage('automotive_icon_spacing_distribution.png'), alt: 'Icon-spacing frequency distributions across five automotive interface functions' },
   interviewFindings: { src: evidenceImage('automotive_indepth_interview_findings.svg'), alt: 'In-depth interview findings showing center-stack usage frequencies, reported operations, and design concerns' },
+  focusGroup: { src: evidenceImage('focus-group-session.jpg'), alt: 'Historical focus-group session for the automotive HMI research' },
   route: { src: evidenceImage('simulator-route.png'), alt: 'Campus driving-simulator route with moving and stopped typography tasks' },
   simulatorEnvironment: { src: evidenceImage('simulator-environment.png'), alt: 'Historical driving simulator environment used for the automotive HMI experiments' },
   procedure: { src: evidenceImage('simulator-procedure.png'), alt: 'Three-column historical experimental procedure for simulator, participant, and center-stack display' },
@@ -383,7 +384,12 @@ const figures = {
     { src: evidenceImage('color-driving-measures-summary.png'), alt: 'Historical summary chart of response time, fixation, lane departure, steering, and vehicle speed indicators by day and night', caption: 'Figure 6 — Day–night summary of supporting gaze-related and driving-control measures.' },
   ],
   layoutDifficulty: { src: evidenceImage('layout-difficulty-results.png'), alt: 'Historical perceived-difficulty chart across screen formats and vertical scrolling or page-based navigation' },
-  outputs: pendingFigure('historical-project-outputs.webp', 'Figure pending — Historical report, presentation, or team research material', 'Publicly shareable evidence of the project outputs will be added here.'),
+  headquartersVisit: [
+    { src: evidenceImage('baidu-headquarters-robot.jpg'), alt: 'Robotics display at Baidu headquarters during the project presentation visit' },
+    { src: evidenceImage('baidu-headquarters-campus.jpg'), alt: 'Baidu headquarters campus during the project presentation visit' },
+    { src: evidenceImage('baidu-headquarters-interior.jpg'), alt: 'Interior at Baidu headquarters during the project presentation visit' },
+    { src: evidenceImage('baidu-headquarters-presentation.jpg'), alt: 'Automotive HMI research presentation at Baidu headquarters' },
+  ],
 }
 </script>
 
@@ -587,14 +593,20 @@ const figures = {
 .qualitative-context,
 .qualitative-conclusion { max-width: 900px; margin: 0; color: var(--benchmark-muted); font-size: .86rem; line-height: 1.72; }
 .qualitative-figure,
+.qualitative-photo,
 .decision-matrix-figure { margin: 0; min-width: 0; }
 .qualitative-figure h4,
 .decision-matrix-figure h4,
 .qualitative-findings h4 { margin: 0 0 1rem; color: var(--benchmark-text); font-size: 1.2rem; line-height: 1.35; }
-.qualitative-figure a { display: block; color: var(--benchmark-muted); }
-.qualitative-figure img { width: 100%; height: auto; display: block; }
+.qualitative-figure a,
+.qualitative-photo a { display: block; color: var(--benchmark-muted); }
+.qualitative-figure img,
+.qualitative-photo img { width: 100%; height: auto; display: block; }
+.qualitative-photo { max-width: 980px; }
 .qualitative-figure figcaption,
+.qualitative-photo figcaption,
 .decision-matrix-figure figcaption { padding-top: .65rem; color: var(--benchmark-muted); font-size: .72rem; line-height: 1.6; }
+.qualitative-photo figcaption strong { color: var(--benchmark-text); font-weight: 600; }
 
 .qualitative-findings { padding-top: 2.75rem; border-top: 1px solid var(--benchmark-line); }
 .qualitative-findings ol { margin: 1.5rem 0; padding: 0; list-style: none; border-top: 1px solid var(--benchmark-line); border-bottom: 1px solid var(--benchmark-line); }
@@ -668,10 +680,7 @@ const figures = {
 .procedure-sequence li:first-child { padding-left: 0; }
 .procedure-sequence li:last-child { border-right: 0; }
 .procedure-sequence span { display: block; margin-bottom: 1.5rem; color: var(--benchmark-accent); font: 600 .68rem/1.4 var(--font-mono); }
-.environment-figures { display: grid; grid-template-columns: minmax(0, 1fr); gap: clamp(2rem, 4vw, 3.5rem); }
-.environment-figures .simulator-figure { width: 100%; margin-inline: auto; }
-.environment-figures .simulator-figure:first-child { max-width: 1040px; }
-.environment-figures .simulator-figure:nth-child(2) { max-width: 720px; }
+.environment-figures { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; align-items: start; }
 
 .simulator-figure { margin: 0; min-width: 0; }
 .simulator-figure a { display: block; color: var(--benchmark-muted); }
@@ -720,6 +729,12 @@ const figures = {
 .outputs-grid article:nth-child(even) { padding-left: 1.5rem; border-right: 0; }
 .outputs-grid h3 { margin: 1.7rem 0 .55rem; }
 .outputs-grid p { color: var(--benchmark-muted); font-size: .8rem; line-height: 1.6; }
+.project-photo-figure { grid-column: 1 / -1; margin: 0; }
+.project-photo-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .85rem; }
+.project-photo-grid a { display: block; min-width: 0; background: #0d1016; }
+.project-photo-grid img { width: 100%; aspect-ratio: 4 / 3; display: block; object-fit: contain; }
+.project-photo-figure figcaption { padding-top: .65rem; color: var(--benchmark-muted); font-size: .72rem; line-height: 1.6; }
+.project-photo-figure figcaption strong { color: var(--benchmark-text); font-weight: 600; }
 
 @media (max-width: 900px) {
   .editorial-section,
@@ -766,6 +781,7 @@ const figures = {
   .experiment-study { grid-template-columns: 1fr; }
   .stimuli-grid img { height: 180px; }
   .supporting-results { grid-template-columns: 1fr; }
+  .project-photo-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 620px) {
