@@ -71,15 +71,11 @@
           <div class="evidence-copy"><span>B</span><h3>Typography — Title Size Distribution Across Interface Functions</h3><p>To examine typographic hierarchy across automotive center-stack interfaces, primary and secondary title sizes were compared across five functional contexts: Home, Navigation, Multimedia, Vehicle Settings, and Voice Control.</p><small>Source material · original benchmarking report, approximately pp. 9–20</small></div>
           <div class="typography-analysis">
             <figure class="typography-figure">
-              <a :href="figures.primaryTypography.src" target="_blank" rel="noopener noreferrer" aria-label="Open Figure A at full resolution">
-                <img :src="figures.primaryTypography.src" :alt="figures.primaryTypography.alt" loading="lazy" />
-              </a>
+              <img :src="figures.primaryTypography.src" :alt="figures.primaryTypography.alt" loading="lazy" />
               <figcaption><strong>Figure A — Primary Title Sizes.</strong> Primary title font-size distribution across five automotive interface functions, based on historical cross-brand benchmarking records.</figcaption>
             </figure>
             <figure class="typography-figure">
-              <a :href="figures.secondaryTypography.src" target="_blank" rel="noopener noreferrer" aria-label="Open Figure B at full resolution">
-                <img :src="figures.secondaryTypography.src" :alt="figures.secondaryTypography.alt" loading="lazy" />
-              </a>
+              <img :src="figures.secondaryTypography.src" :alt="figures.secondaryTypography.alt" loading="lazy" />
               <figcaption><strong>Figure B — Secondary Title Sizes.</strong> Secondary title font-size distribution across the same five interface functions.</figcaption>
             </figure>
             <section class="typography-findings" aria-labelledby="typography-findings-title">
@@ -107,12 +103,10 @@
               </div>
               <figure class="typography-figure character-length-figure">
                 <h5>Character Length Distribution Across Five Automotive Interface Functions</h5>
-                <a :href="figures.characterLengthSvg.src" target="_blank" rel="noopener noreferrer" aria-label="Open character-length distribution figure at full resolution">
-                  <picture>
-                    <source :srcset="figures.characterLengthSvg.src" type="image/svg+xml" />
-                    <img :src="figures.characterLengthPng.src" :alt="figures.characterLengthSvg.alt" loading="lazy" />
-                  </picture>
-                </a>
+                <picture>
+                  <source :srcset="figures.characterLengthSvg.src" type="image/svg+xml" />
+                  <img :src="figures.characterLengthPng.src" :alt="figures.characterLengthSvg.alt" loading="lazy" />
+                </picture>
                 <figcaption>Distribution of recorded text lengths across five automotive interface functions. Each dot represents one non-zero historical observation, with repeated values stacked vertically. Short vertical markers indicate the median character length within each function.</figcaption>
               </figure>
               <section class="typography-findings character-length-findings" aria-labelledby="character-length-findings-title">
@@ -136,9 +130,7 @@
           <div class="color-analysis">
             <figure class="typography-figure color-figure">
               <h4>Page Theme vs. Functional Indication Colors</h4>
-              <a :href="figures.colorDistribution.src" target="_blank" rel="noopener noreferrer" aria-label="Open color-distribution figure at full resolution">
-                <img :src="figures.colorDistribution.src" :alt="figures.colorDistribution.alt" loading="lazy" />
-              </a>
+              <img :src="figures.colorDistribution.src" :alt="figures.colorDistribution.alt" loading="lazy" />
               <figcaption><strong>Figure — Color Distribution Across Interface Functions.</strong> Comparative visualization of page theme and functional indication colors across five automotive HMI contexts, reconstructed from historical benchmarking documentation.<br />Hue represents the observed color family. Radial displacement is used only to reduce marker overlap and does not encode a measured variable.</figcaption>
             </figure>
             <section class="typography-findings color-findings" aria-labelledby="color-findings-title">
@@ -160,9 +152,7 @@
             <section class="iconography-part" aria-labelledby="icon-type-title">
               <div class="iconography-part__intro"><p class="mini-label">Part A</p><h4 id="icon-type-title">A. Icon Type Distribution</h4><p>Icons were classified into three visual categories: linear (outline), filled (solid), and hybrid (combined outline and filled elements). Their distribution was compared across Navigation, Multimedia, Vehicle Settings, Voice Control, and Home interfaces.</p></div>
               <figure class="typography-figure iconography-figure">
-                <a :href="figures.iconTypeSvg.src" target="_blank" rel="noopener noreferrer" aria-label="Open icon-type distribution figure at full resolution">
-                  <picture><source :srcset="figures.iconTypeSvg.src" type="image/svg+xml" /><img :src="figures.iconTypePng.src" :alt="figures.iconTypeSvg.alt" loading="lazy" /></picture>
-                </a>
+                <picture><source :srcset="figures.iconTypeSvg.src" type="image/svg+xml" /><img :src="figures.iconTypePng.src" :alt="figures.iconTypeSvg.alt" loading="lazy" /></picture>
                 <figcaption><strong>Figure A — Icon Type Distribution Across Automotive Interface Functions.</strong> Distribution of linear, filled, and hybrid icon styles across five automotive interface contexts. Counts for Navigation, Multimedia, Vehicle Settings, and Voice Control were reconstructed from the retained benchmarking chart; Home is presented using the available percentages.</figcaption>
               </figure>
               <section class="typography-findings iconography-findings" aria-labelledby="icon-type-findings-title">
@@ -176,7 +166,7 @@
             <section class="iconography-part" aria-labelledby="icon-dimensions-title">
               <div class="iconography-part__intro"><p class="mini-label">Part B</p><h4 id="icon-dimensions-title">B. Icon Dimensions Across Interface Functions</h4><p>To compare icon sizes across different display formats, icon dimensions were normalized relative to the corresponding screen dimensions. Icon length was divided by screen length, while icon width was divided by screen width. This allowed the study to document relative icon dimensions across five interface contexts.</p></div>
               <figure class="typography-figure iconography-figure">
-                <a :href="figures.iconDimensions.src" target="_blank" rel="noopener noreferrer" aria-label="Open normalized icon-dimensions figure at full resolution"><img :src="figures.iconDimensions.src" :alt="figures.iconDimensions.alt" loading="lazy" /></a>
+                <img :src="figures.iconDimensions.src" :alt="figures.iconDimensions.alt" loading="lazy" />
                 <figcaption><strong>Figure B — Normalized Icon Dimensions.</strong> Scatter plots of normalized icon dimensions across five automotive interface functions. The horizontal axis represents icon length divided by screen length; the vertical axis represents icon width divided by screen width. Each observation represents a documented icon-size pair.</figcaption>
               </figure>
               <section class="typography-findings iconography-findings" aria-labelledby="icon-dimensions-findings-title">
@@ -191,9 +181,7 @@
             <section class="iconography-part" aria-labelledby="icon-spacing-title">
               <div class="iconography-part__intro"><p class="mini-label">Part C</p><h4 id="icon-spacing-title">C. Icon Spacing Distribution</h4><p>Icon spacing was also compared across five automotive interface functions. The historical benchmarking records documented recurring spacing values and their frequencies, providing an overview of how icon separation varied among existing in-vehicle interfaces.</p></div>
               <figure class="typography-figure iconography-figure">
-                <a :href="figures.iconSpacingSvg.src" target="_blank" rel="noopener noreferrer" aria-label="Open icon-spacing distribution figure at full resolution">
-                  <picture><source :srcset="figures.iconSpacingSvg.src" type="image/svg+xml" /><img :src="figures.iconSpacingPng.src" :alt="figures.iconSpacingSvg.alt" loading="lazy" /></picture>
-                </a>
+                <img :src="figures.iconSpacingPng.src" :alt="figures.iconSpacingPng.alt" loading="lazy" />
                 <figcaption><strong>Figure C — Icon Spacing Distribution Across Interface Functions.</strong> Frequency profiles of recorded icon-spacing values across Navigation, Multimedia, Vehicle Settings, Voice Control, and Home interfaces. The figure was reconstructed from retained historical benchmarking charts.</figcaption>
               </figure>
               <section class="typography-findings iconography-findings" aria-labelledby="icon-spacing-findings-title">
@@ -219,14 +207,14 @@
           <section class="qualitative-part" aria-labelledby="interview-research-title">
             <div class="subsection-title"><span>01</span><div><p>In-depth interviews</p><h3 id="interview-research-title">Understanding Everyday Center-Stack Usage</h3></div></div>
             <p class="qualitative-context">Ten participants (five male and five female) were interviewed about their everyday use of automotive center-stack interfaces. The interviews examined frequently used functions, typical interaction behaviors, and design-related concerns across navigation, multimedia, climate control, vehicle settings, and other functions.</p>
-            <figure class="qualitative-figure"><h4>In-depth Interview Findings — Usage Patterns and Design Concerns</h4><a :href="figures.interviewFindings.src" target="_blank" rel="noopener"><img :src="figures.interviewFindings.src" :alt="figures.interviewFindings.alt" loading="lazy" /></a><figcaption>Summary of self-reported center-stack function usage, frequently mentioned operations, and design-related concerns from ten historical interviews. Valid response counts vary between questionnaire items.</figcaption></figure>
+            <figure class="qualitative-figure"><h4>In-depth Interview Findings — Usage Patterns and Design Concerns</h4><img :src="figures.interviewFindings.src" :alt="figures.interviewFindings.alt" loading="lazy" /><figcaption>Summary of self-reported center-stack function usage, frequently mentioned operations, and design-related concerns from ten historical interviews. Valid response counts vary between questionnaire items.</figcaption></figure>
             <section class="qualitative-findings" aria-labelledby="interview-findings-title"><p class="mini-label">Key findings — In-depth interviews</p><h4 id="interview-findings-title">Interview Observations</h4><ol><li><span>01 · Function Usage Varied</span><p>Reported usage frequencies differed across center-stack functions. Climate control, rear-view camera, and music functions received relatively high recorded frequency scores, while navigation and vehicle settings were used less frequently in the retained responses.</p></li><li><span>02 · Familiar Operations Dominated</span><p>Commonly described interactions included playing music through a smartphone connection, switching tracks, adjusting volume, and using navigation services. Some participants relied on smartphones rather than the in-vehicle navigation interface.</p></li><li><span>03 · Design Concerns Extended Beyond Appearance</span><p>Open-ended responses highlighted concerns related to information accessibility, icon recognition, visual feedback, and text readability, suggesting that interface evaluation should consider both visual presentation and interaction demands.</p></li></ol><p class="qualitative-conclusion">The interviews revealed differences in how drivers engaged with automotive center-stack functions, alongside recurring concerns about information accessibility and interface readability. These observations provided contextual input for selecting realistic interaction tasks and visual design parameters in subsequent experiments.</p></section>
           </section>
 
           <section class="qualitative-part" aria-labelledby="focus-group-title">
             <div class="subsection-title"><span>02</span><div><p>Focus group</p><h3 id="focus-group-title">From Qualitative Findings to Experimental Decisions</h3></div></div>
             <p class="qualitative-context">Following the initial interviews, a focus-group evaluation was conducted to review proposed interface variations and refine the next stage of simulator-based experiments. Participants examined representative interface stimuli covering layout, typography, color, and iconography, followed by discussions about information acquisition, visual recognition, and interaction difficulty. The historical protocol used a 55-inch display to present interface examples for discussion.</p>
-            <figure class="qualitative-photo"><a :href="figures.focusGroup.src" target="_blank" rel="noopener"><img :src="figures.focusGroup.src" :alt="figures.focusGroup.alt" loading="lazy" /></a><figcaption><strong>Focus-group session.</strong> Participants reviewed interface variations and discussed the experimental tasks and design variables.</figcaption></figure>
+            <figure class="qualitative-photo"><img :src="figures.focusGroup.src" :alt="figures.focusGroup.alt" loading="lazy" /><figcaption><strong>Focus-group session.</strong> Participants reviewed interface variations and discussed the experimental tasks and design variables.</figcaption></figure>
             <figure class="decision-matrix-figure"><h4>From Qualitative Findings to Experimental Decisions</h4><table class="decision-matrix"><thead><tr><th scope="col">Qualitative Finding</th><th scope="col">Research Implication</th><th scope="col">Experimental Decision</th></tr></thead><tbody><tr><td data-label="Qualitative Finding">Drivers preferred using center-stack functions when road conditions were relatively stable and safe.</td><td data-label="Research Implication">Secondary-task conditions should reduce unnecessary driving-context variability.</td><td data-label="Experimental Decision">Use relatively stable urban-road scenarios, with interaction tasks assigned to straight-road segments and a target driving speed of 35–40 km/h.</td></tr><tr><td data-label="Qualitative Finding">Drivers often avoided reading lengthy information while moving but paid attention to vehicle warning messages.</td><td data-label="Research Implication">Text-reading tasks should reflect situations where drivers have a realistic need to inspect information.</td><td data-label="Experimental Decision">Use vehicle warning messages, including tire-pressure and engine-related alerts, as representative reading tasks.</td></tr><tr><td data-label="Qualitative Finding">Participants differentiated between finding information and completing an interface operation.</td><td data-label="Research Implication">Information acquisition and task execution should be evaluated as distinct aspects of interaction.</td><td data-label="Experimental Decision">Consider eye-tracking-based information acquisition measures alongside task-completion performance.</td></tr><tr><td data-label="Qualitative Finding">Icon size and spacing were discussed in relation to recognition and visual comfort, while icon-to-text spacing was particularly associated with visual appearance.</td><td data-label="Research Implication">Different icon-related parameters should be examined separately.</td><td data-label="Experimental Decision">Manipulate icon size, icon-to-icon spacing, and icon-to-text spacing as distinct experimental factors.</td></tr><tr><td data-label="Qualitative Finding">Alternative layouts involved trade-offs between information clarity, navigation depth, and interaction effort.</td><td data-label="Research Implication">Layout comparisons should control task demands to support meaningful interpretation.</td><td data-label="Experimental Decision">Compare primary and secondary layouts using matched functional tasks and consistent operation-step requirements.</td></tr></tbody></table><figcaption>Traceable relationships between retained qualitative findings, their research implications, and the experimental decisions documented for the simulator-based studies.</figcaption></figure>
             <section class="qualitative-findings" aria-labelledby="focus-group-findings-title"><p class="mini-label">Key findings — Focus group</p><h4 id="focus-group-findings-title">From Discussion to Experimental Design</h4><ol><li><span>01 · Scenario Refinement</span><p>Participants' descriptions of everyday driving behavior informed the selection of relatively stable driving conditions and the placement of secondary interaction tasks.</p></li><li><span>02 · Experimental Operationalization</span><p>Focus-group feedback helped translate broad interface concerns into more specific experimental manipulations, including typography parameters, icon dimensions, spacing, and layout alternatives.</p></li><li><span>03 · Differentiating Evaluation Outcomes</span><p>The discussions highlighted the importance of distinguishing visual recognition and information acquisition from the effort required to complete an interaction.</p></li></ol><p class="qualitative-conclusion">Qualitative inquiry informed the experimental program by grounding task selection in drivers' reported behavior, refining the driving context, and clarifying which interface parameters and outcome measures should be examined. This established a traceable connection between user research and the subsequent simulator-based evaluation.</p></section>
           </section>
@@ -256,31 +244,31 @@
           <ol class="procedure-sequence"><li><span>01</span>Participant introduction and familiarization</li><li><span>02</span>Simulator practice</li><li><span>03</span>Driving and secondary HMI tasks</li><li><span>04</span>Data collection</li><li><span>05</span>Post-task assessments and interviews</li></ol>
           <p class="protocol-note">Relevant protocols specified a target speed of approximately 35–40 km/h. Typography included moving and stationary conditions. Iconography and layout focused on driving. The color document retains a driving protocol, while earlier stationary-condition text appears as deleted draft material.</p>
           <div class="environment-figures">
-            <figure class="simulator-figure"><a :href="figures.route.src" target="_blank" rel="noopener"><img :src="figures.route.src" :alt="figures.route.alt" loading="lazy" /></a><figcaption><strong>Figure 1 — Campus Driving Route and Task Schedule.</strong> Historical simulator route showing typography tasks assigned to moving and stopped segments.</figcaption></figure>
-            <figure class="simulator-figure"><a :href="figures.simulatorEnvironment.src" target="_blank" rel="noopener"><img :src="figures.simulatorEnvironment.src" :alt="figures.simulatorEnvironment.alt" loading="lazy" /></a><figcaption><strong>Figure 2 — Driving Simulator Environment.</strong> The historical simulator setup used for the driving and secondary HMI tasks.</figcaption></figure>
+            <figure class="simulator-figure"><img :src="figures.route.src" :alt="figures.route.alt" loading="lazy" /><figcaption><strong>Figure 1 — Campus Driving Route and Task Schedule.</strong> Historical simulator route showing typography tasks assigned to moving and stopped segments.</figcaption></figure>
+            <figure class="simulator-figure"><img :src="figures.simulatorEnvironment.src" :alt="figures.simulatorEnvironment.alt" loading="lazy" /><figcaption><strong>Figure 2 — Driving Simulator Environment.</strong> The historical simulator setup used for the driving and secondary HMI tasks.</figcaption></figure>
           </div>
-          <figure class="simulator-figure simulator-figure--procedure"><a :href="figures.procedure.src" target="_blank" rel="noopener"><img :src="figures.procedure.src" :alt="figures.procedure.alt" loading="lazy" /></a><figcaption><strong>Figure 3 — Three-Column Experimental Procedure.</strong> Historical workflow coordinating the simulator, participant, and center-stack task sequence.</figcaption></figure>
+          <figure class="simulator-figure simulator-figure--procedure"><img :src="figures.procedure.src" :alt="figures.procedure.alt" loading="lazy" /><figcaption><strong>Figure 3 — Three-Column Experimental Procedure.</strong> Historical workflow coordinating the simulator, participant, and center-stack task sequence.</figcaption></figure>
         </section>
 
         <section class="protocol-block simulator-studies" aria-labelledby="simulator-studies-title">
           <div class="subsection-title"><span>03</span><div><p>Variables and stimuli</p><h3 id="simulator-studies-title">Experimental Conditions and Interface Stimuli</h3></div></div>
 
-          <article class="experiment-study"><div class="experiment-study__copy"><p class="mini-label">A · Typography Experiment</p><h4>Reading Vehicle-Status Messages</h4><p>The typography experiment manipulated line length, character spacing, and line spacing across landscape, widescreen, and portrait displays. Participants read vehicle-status messages during moving or stationary tasks, allowing the study to examine comprehension, usability, and workload.</p><dl><div><dt>Variables</dt><dd>Three typography variables, each with three planned levels</dd></div><div><dt>Context</dt><dd>Moving and stationary conditions</dd></div><div><dt>Planned sample</dt><dd>30 participants divided into three protocol groups; final valid sample not verified</dd></div></dl></div><div class="stimuli-grid stimuli-grid--three"><figure v-for="item in figures.typographyStimuli" :key="item.label"><a :href="item.src" target="_blank" rel="noopener"><img :src="item.src" :alt="item.alt" loading="lazy" /></a><figcaption>{{ item.label }}</figcaption></figure></div></article>
+          <article class="experiment-study"><div class="experiment-study__copy"><p class="mini-label">A · Typography Experiment</p><h4>Reading Vehicle-Status Messages</h4><p>The typography experiment manipulated line length, character spacing, and line spacing across landscape, widescreen, and portrait displays. Participants read vehicle-status messages during moving or stationary tasks, allowing the study to examine comprehension, usability, and workload.</p><dl><div><dt>Variables</dt><dd>Three typography variables, each with three planned levels</dd></div><div><dt>Context</dt><dd>Moving and stationary conditions</dd></div><div><dt>Planned sample</dt><dd>30 participants divided into three protocol groups; final valid sample not verified</dd></div></dl></div><div class="stimuli-grid stimuli-grid--three"><figure v-for="item in figures.typographyStimuli" :key="item.label"><img :src="item.src" :alt="item.alt" loading="lazy" /><figcaption>{{ item.label }}</figcaption></figure></div></article>
 
-          <article class="experiment-study"><div class="experiment-study__copy"><p class="mini-label">B · Color Experiment</p><h4>Recognizing Functional Color States</h4><p>The color experiment investigated hue, saturation, and brightness in relation to recognizing and interacting with center-stack controls. Historical stimuli varied interface colors while participants responded to functional prompts during simulated driving.</p><dl><div><dt>Variables</dt><dd>Hue, saturation, and brightness across alternative display formats</dd></div><div><dt>Context</dt><dd>Driving is retained in the revised protocol; stationary scenarios appear only in deleted draft text</dd></div><div><dt>Sample note</dt><dd>Conflicting calculations and revision marks prevent verification of a final participant count</dd></div></dl></div><div class="stimuli-grid stimuli-grid--three"><figure v-for="item in figures.colorStimuli" :key="item.label"><a :href="item.src" target="_blank" rel="noopener"><img :src="item.src" :alt="item.alt" loading="lazy" /></a><figcaption>{{ item.label }}</figcaption></figure></div></article>
+          <article class="experiment-study"><div class="experiment-study__copy"><p class="mini-label">B · Color Experiment</p><h4>Recognizing Functional Color States</h4><p>The color experiment investigated hue, saturation, and brightness in relation to recognizing and interacting with center-stack controls. Historical stimuli varied interface colors while participants responded to functional prompts during simulated driving.</p><dl><div><dt>Variables</dt><dd>Hue, saturation, and brightness across alternative display formats</dd></div><div><dt>Context</dt><dd>Driving is retained in the revised protocol; stationary scenarios appear only in deleted draft text</dd></div><div><dt>Sample note</dt><dd>Conflicting calculations and revision marks prevent verification of a final participant count</dd></div></dl></div><div class="stimuli-grid stimuli-grid--three"><figure v-for="item in figures.colorStimuli" :key="item.label"><img :src="item.src" :alt="item.alt" loading="lazy" /><figcaption>{{ item.label }}</figcaption></figure></div></article>
 
-          <article class="experiment-study"><div class="experiment-study__copy"><p class="mini-label">C · Iconography Experiment</p><h4>Navigating from the Home Interface</h4><p>The iconography experiment examined icon size, spacing between icons, and spacing between icons and text. Participants performed navigation tasks from the home interface while driving under simulated urban-road conditions.</p><dl><div><dt>Variables</dt><dd>Three icon variables, each with three planned levels; landscape, widescreen, and portrait formats</dd></div><div><dt>Tasks</dt><dd>Home to Multimedia, Navigation, and Vehicle Settings</dd></div><div><dt>Planned sample</dt><dd>30 participants divided into three protocol groups; final valid sample not verified</dd></div></dl></div><div class="stimuli-grid stimuli-grid--three"><figure v-for="item in figures.iconStimuli" :key="item.label"><a :href="item.src" target="_blank" rel="noopener"><img :src="item.src" :alt="item.alt" loading="lazy" /></a><figcaption>{{ item.label }}</figcaption></figure></div></article>
+          <article class="experiment-study"><div class="experiment-study__copy"><p class="mini-label">C · Iconography Experiment</p><h4>Navigating from the Home Interface</h4><p>The iconography experiment examined icon size, spacing between icons, and spacing between icons and text. Participants performed navigation tasks from the home interface while driving under simulated urban-road conditions.</p><dl><div><dt>Variables</dt><dd>Three icon variables, each with three planned levels; landscape, widescreen, and portrait formats</dd></div><div><dt>Tasks</dt><dd>Home to Multimedia, Navigation, and Vehicle Settings</dd></div><div><dt>Planned sample</dt><dd>30 participants divided into three protocol groups; final valid sample not verified</dd></div></dl></div><div class="stimuli-grid stimuli-grid--three"><figure v-for="item in figures.iconStimuli" :key="item.label"><img :src="item.src" :alt="item.alt" loading="lazy" /><figcaption>{{ item.label }}</figcaption></figure></div></article>
 
-          <article class="experiment-study"><div class="experiment-study__copy"><p class="mini-label">D · Layout Experiment</p><h4>Comparing Primary and Secondary Arrangements</h4><p>The layout experiment compared primary and secondary interface arrangements during navigation and multimedia interactions. Participants completed functional tasks while operating a simulated vehicle, allowing alternative layouts to be evaluated in relation to interaction performance and workload.</p><dl><div><dt>Variables</dt><dd>Primary and secondary layouts across alternative display formats</dd></div><div><dt>Tasks</dt><dd>Enter Multimedia, locate a specified song, and play or save content</dd></div><div><dt>Planned sample</dt><dd>20 participants divided into two protocol groups; final valid sample not verified</dd></div></dl></div><div class="stimuli-grid stimuli-grid--two"><figure v-for="item in figures.layoutStimuli" :key="item.label"><a :href="item.src" target="_blank" rel="noopener"><img :src="item.src" :alt="item.alt" loading="lazy" /></a><figcaption>{{ item.label }}</figcaption></figure></div></article>
+          <article class="experiment-study"><div class="experiment-study__copy"><p class="mini-label">D · Layout Experiment</p><h4>Comparing Primary and Secondary Arrangements</h4><p>The layout experiment compared primary and secondary interface arrangements during navigation and multimedia interactions. Participants completed functional tasks while operating a simulated vehicle, allowing alternative layouts to be evaluated in relation to interaction performance and workload.</p><dl><div><dt>Variables</dt><dd>Primary and secondary layouts across alternative display formats</dd></div><div><dt>Tasks</dt><dd>Enter Multimedia, locate a specified song, and play or save content</dd></div><div><dt>Planned sample</dt><dd>20 participants divided into two protocol groups; final valid sample not verified</dd></div></dl></div><div class="stimuli-grid stimuli-grid--two"><figure v-for="item in figures.layoutStimuli" :key="item.label"><img :src="item.src" :alt="item.alt" loading="lazy" /><figcaption>{{ item.label }}</figcaption></figure></div></article>
         </section>
 
         <section class="protocol-block simulator-results" aria-labelledby="simulator-results-title">
           <div class="subsection-title"><span>04</span><div><p>Formal experiment evidence</p><h3 id="simulator-results-title">Representative Experimental Results</h3></div></div>
-          <div class="result-group"><div class="result-group__intro"><p class="mini-label">A · Color Experiment</p><h4>Response Time Across Day–Night and Color Conditions</h4><p>Descriptive comparison of response-time patterns across daytime and nighttime driving scenes, different hue conditions, and target-to-background contrast ratios, reconstructed from historical post-experiment analysis figures.</p></div><figure class="simulator-figure simulator-figure--result"><a :href="figures.colorResponseTime.src" target="_blank" rel="noopener"><img :src="figures.colorResponseTime.src" :alt="figures.colorResponseTime.alt" loading="lazy" /></a><figcaption><strong>Figure 4 — Color Experiment Response-Time Results.</strong> Consolidated visual reconstruction from historical formal-experiment charts. Individual data points have not been independently checked against the original editable dataset.</figcaption></figure><p class="result-observation"><strong>Descriptive observation.</strong> Across the retained charts, response-time patterns varied between daytime and nighttime scenes and across color-contrast conditions. Nighttime conditions generally showed higher mean response times in the displayed comparisons, while the magnitude of variation differed across hue and contrast combinations.</p></div>
+          <div class="result-group"><div class="result-group__intro"><p class="mini-label">A · Color Experiment</p><h4>Response Time Across Day–Night and Color Conditions</h4><p>Descriptive comparison of response-time patterns across daytime and nighttime driving scenes, different hue conditions, and target-to-background contrast ratios, reconstructed from historical post-experiment analysis figures.</p></div><figure class="simulator-figure simulator-figure--result"><img :src="figures.colorResponseTime.src" :alt="figures.colorResponseTime.alt" loading="lazy" /><figcaption><strong>Figure 4 — Color Experiment Response-Time Results.</strong> Consolidated visual reconstruction from historical formal-experiment charts. Individual data points have not been independently checked against the original editable dataset.</figcaption></figure><p class="result-observation"><strong>Descriptive observation.</strong> Across the retained charts, response-time patterns varied between daytime and nighttime scenes and across color-contrast conditions. Nighttime conditions generally showed higher mean response times in the displayed comparisons, while the magnitude of variation differed across hue and contrast combinations.</p></div>
 
-          <div class="result-group"><div class="result-group__intro"><p class="mini-label">B · Supporting Measures</p><h4>Gaze-Related and Driving-Control Indicators</h4><p>In addition to response time, the formal analysis included gaze-related and driving-control indicators. These measures were examined alongside task performance to characterize driver behavior under different visual conditions.</p></div><div class="supporting-results"><figure v-for="item in figures.drivingMeasures" :key="item.src" class="simulator-figure"><a :href="item.src" target="_blank" rel="noopener"><img :src="item.src" :alt="item.alt" loading="lazy" /></a><figcaption>{{ item.caption }}</figcaption></figure></div></div>
+          <div class="result-group"><div class="result-group__intro"><p class="mini-label">B · Supporting Measures</p><h4>Gaze-Related and Driving-Control Indicators</h4><p>In addition to response time, the formal analysis included gaze-related and driving-control indicators. These measures were examined alongside task performance to characterize driver behavior under different visual conditions.</p></div><div class="supporting-results"><figure v-for="item in figures.drivingMeasures" :key="item.src" class="simulator-figure"><img :src="item.src" :alt="item.alt" loading="lazy" /><figcaption>{{ item.caption }}</figcaption></figure></div></div>
 
-          <div class="result-group"><div class="result-group__intro"><p class="mini-label">C · Layout Experiment</p><h4>Perceived Difficulty Across Screen Arrangements</h4><p>Historical results documented perceived difficulty across screen configurations and vertical interaction patterns, including vertical scrolling and page-based navigation. The scale definition and participant-level data have not been recovered, so the chart is presented descriptively.</p></div><figure class="simulator-figure simulator-figure--result"><a :href="figures.layoutDifficulty.src" target="_blank" rel="noopener"><img :src="figures.layoutDifficulty.src" :alt="figures.layoutDifficulty.alt" loading="lazy" /></a><figcaption><strong>Figure 7 — Layout Experiment Difficulty Ratings.</strong> Historical post-experiment chart comparing alternative display formats and vertical interaction patterns.</figcaption></figure></div>
+          <div class="result-group"><div class="result-group__intro"><p class="mini-label">C · Layout Experiment</p><h4>Perceived Difficulty Across Screen Arrangements</h4><p>Historical results documented perceived difficulty across screen configurations and vertical interaction patterns, including vertical scrolling and page-based navigation. The scale definition and participant-level data have not been recovered, so the chart is presented descriptively.</p></div><figure class="simulator-figure simulator-figure--result"><img :src="figures.layoutDifficulty.src" :alt="figures.layoutDifficulty.alt" loading="lazy" /><figcaption><strong>Figure 7 — Layout Experiment Difficulty Ratings.</strong> Historical post-experiment chart comparing alternative display formats and vertical interaction patterns.</figcaption></figure></div>
 
           <section class="simulator-conclusions" aria-labelledby="simulator-conclusions-title"><p class="mini-label">Research conclusions</p><h4 id="simulator-conclusions-title">Key Findings — Simulator-Based Evaluation</h4><ol class="color-findings__list"><li><span>01 · Evaluated in Driving Contexts</span><p>The research examined interface elements through practical driving and secondary-task scenarios rather than static visual comparison alone.</p></li><li><span>02 · Performance and Driver Behavior</span><p>The evaluation framework combined interaction performance, subjective measures, and driving-related indicators to investigate the broader consequences of HMI design variations.</p></li><li><span>03 · Outcomes Varied Across Conditions</span><p>The retained post-experiment figures document variation in response time and other recorded indicators across visual and driving conditions. These descriptive patterns support further examination but do not independently establish causal or statistically significant effects.</p></li></ol><p class="typography-conclusion">The simulator-based studies extended the cross-brand benchmarking research by examining selected interface design variables under controlled driving conditions. Combining experimental tasks with behavioral and subjective measures provided a broader basis for evaluating automotive HMI design decisions.</p></section>
         </section>
@@ -299,7 +287,7 @@
             <article><span>My role</span><h3>Student Project Lead</h3><p>I organized the benchmark, developed the synthesis structure, and translated the evidence into research and design guidance.</p></article>
             <article><span>Method reflection</span><h3>From visual questions to testable variables</h3><p>The project connected interface analysis with qualitative and simulator-based research methods.</p></article>
           </div>
-          <figure class="project-photo-figure"><div class="project-photo-grid"><a v-for="item in figures.headquartersVisit" :key="item.src" :href="item.src" target="_blank" rel="noopener"><img :src="item.src" :alt="item.alt" loading="lazy" /></a></div><figcaption><strong>Baidu headquarters presentation visit.</strong> Site documentation and the project presentation from the 2019 collaboration.</figcaption></figure>
+          <figure class="project-photo-figure"><div class="project-photo-grid"><img v-for="item in figures.headquartersVisit" :key="item.src" :src="item.src" :alt="item.alt" loading="lazy" /></div><figcaption><strong>Baidu headquarters presentation visit.</strong> Site documentation and the project presentation from the 2019 collaboration.</figcaption></figure>
           <p class="confidentiality-note"><strong>Public documentation.</strong> This portfolio reconstruction uses retained historical process materials and publicly shareable research documentation. The final client deliverables are not reproduced.</p>
         </div>
       </section>
@@ -352,7 +340,6 @@ const figures = {
   iconTypeSvg: { src: evidenceImage('automotive_icon_type_distribution.svg'), alt: 'Linear, filled, and hybrid icon-type distributions across five automotive interface functions' },
   iconTypePng: { src: evidenceImage('automotive_icon_type_distribution.png'), alt: 'Linear, filled, and hybrid icon-type distributions across five automotive interface functions' },
   iconDimensions: { src: evidenceImage('automotive_icon_dimensions.png'), alt: 'Normalized icon length and width scatter plots across five automotive interface functions' },
-  iconSpacingSvg: { src: evidenceImage('automotive_icon_spacing_distribution.svg'), alt: 'Icon-spacing frequency distributions across five automotive interface functions' },
   iconSpacingPng: { src: evidenceImage('automotive_icon_spacing_distribution.png'), alt: 'Icon-spacing frequency distributions across five automotive interface functions' },
   interviewFindings: { src: evidenceImage('automotive_indepth_interview_findings.svg'), alt: 'In-depth interview findings showing center-stack usage frequencies, reported operations, and design concerns' },
   focusGroup: { src: evidenceImage('focus-group-session.jpg'), alt: 'Historical focus-group session for the automotive HMI research' },
@@ -404,6 +391,9 @@ const figures = {
   --benchmark-text: var(--color-text);
   --benchmark-muted: var(--color-text-secondary);
   --benchmark-surface: var(--color-bg-secondary);
+  --divider-major: color-mix(in srgb, var(--benchmark-text) 24%, transparent);
+  --divider-subsection: color-mix(in srgb, var(--benchmark-text) 14%, transparent);
+  --divider-internal: color-mix(in srgb, var(--benchmark-text) 8%, transparent);
 }
 
 .hero { padding-top: 5.25rem; }
@@ -419,10 +409,10 @@ const figures = {
   grid-template-columns: minmax(230px, 4fr) minmax(0, 8fr);
   gap: 2rem clamp(3rem, 7vw, 7rem);
   align-items: start;
-  border-top: 1px solid var(--benchmark-line);
+  border-top: 1px solid var(--divider-major);
 }
 
-.section-surface { border-top: 1px solid var(--benchmark-line); background: var(--benchmark-surface); }
+.section-surface { border-top: 1px solid var(--divider-major); background: var(--benchmark-surface); }
 .case-study article > section.section-surface { padding-block: 0 !important; }
 .section-surface .editorial-section,
 .section-surface .outputs-section { border-top: 0; }
@@ -439,10 +429,10 @@ const figures = {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   list-style: none;
-  border-top: 1px solid var(--benchmark-line);
-  border-bottom: 1px solid var(--benchmark-line);
+  border-top: 1px solid var(--divider-internal);
+  border-bottom: 1px solid var(--divider-internal);
 }
-.method-strip li { min-height: 150px; padding: 1.35rem 1.5rem; display: grid; grid-template-columns: auto 1fr; gap: 1.25rem; border-right: 1px solid var(--benchmark-line); }
+.method-strip li { min-height: 150px; padding: 1.35rem 1.5rem; display: grid; grid-template-columns: auto 1fr; gap: 1.25rem; border-right: 1px solid var(--divider-internal); }
 .method-strip li:first-child { padding-left: 0; }
 .method-strip li:last-child { border-right: 0; }
 .method-strip span,
@@ -466,7 +456,7 @@ const figures = {
   display: grid;
   grid-template-columns: minmax(220px, 3fr) minmax(0, 9fr);
   gap: clamp(2rem, 5vw, 5rem);
-  border-top: 1px solid var(--benchmark-line);
+  border-top: 1px solid var(--divider-subsection);
 }
 .benchmark-scope__intro h3,
 .layout-summary h3 { margin: .55rem 0 .85rem; color: var(--benchmark-text); font-size: 1.25rem; line-height: 1.3; }
@@ -499,7 +489,9 @@ const figures = {
 :global(.light) .brand-gallery img { opacity: .68; filter: grayscale(1) brightness(0); }
 
 .evidence-block,
-.protocol-block { grid-column: 1 / -1; padding-top: 3.5rem; border-top: 1px solid var(--benchmark-line); }
+.protocol-block { grid-column: 1 / -1; padding-top: 3.5rem; }
+.evidence-block { border-top: 1px solid var(--divider-major); }
+.protocol-block { border-top: 1px solid var(--divider-subsection); }
 .evidence-block { display: grid; grid-template-columns: minmax(220px, 3fr) minmax(0, 9fr); gap: clamp(2rem, 5vw, 5rem); }
 .evidence-copy h3 { margin: .75rem 0 1rem; font-size: 1.25rem; }
 .evidence-copy p { color: var(--benchmark-muted); font-size: .88rem; line-height: 1.72; }
@@ -510,20 +502,19 @@ const figures = {
 .evidence-block--typography .evidence-copy { max-width: 760px; margin-bottom: 2.5rem; }
 .typography-analysis { display: grid; gap: 3.25rem; }
 .typography-figure { margin: 0; min-width: 0; }
-.typography-figure a { display: block; color: var(--benchmark-muted); }
 .typography-figure img { width: 100%; height: auto; display: block; border: 1px solid var(--benchmark-line); background: #0d1016; object-fit: contain; }
 .typography-figure figcaption { max-width: 860px; padding-top: .55rem; }
 .typography-figure figcaption strong { color: var(--benchmark-text); font-weight: 600; }
 
-.typography-findings { display: grid; grid-template-columns: minmax(220px, 3fr) minmax(0, 9fr); gap: 1.5rem clamp(2rem, 5vw, 5rem); padding-top: 2.75rem; border-top: 1px solid var(--benchmark-line); }
+.typography-findings { display: grid; grid-template-columns: minmax(220px, 3fr) minmax(0, 9fr); gap: 1.5rem clamp(2rem, 5vw, 5rem); padding-top: 2.75rem; border-top: 1px solid var(--divider-subsection); }
 .typography-findings h4 { margin: .55rem 0 0; color: var(--benchmark-text); font-size: 1.25rem; line-height: 1.25; }
 .typography-findings__note { max-width: 650px; color: var(--benchmark-muted); font-size: .78rem; line-height: 1.65; }
 .table-scroll,
 .typography-conclusion { grid-column: 1 / -1; }
-.table-scroll { overflow-x: auto; border-top: 1px solid var(--benchmark-line); border-bottom: 1px solid var(--benchmark-line); }
+.table-scroll { overflow-x: auto; border-top: 1px solid var(--divider-internal); border-bottom: 1px solid var(--divider-internal); }
 .typography-findings table { width: 100%; min-width: 760px; border-collapse: collapse; color: var(--benchmark-muted); font-size: .78rem; line-height: 1.55; }
 .typography-findings th,
-.typography-findings td { padding: 1rem 1.25rem; border-right: 1px solid var(--benchmark-line); border-bottom: 1px solid var(--benchmark-line); text-align: left; vertical-align: top; }
+.typography-findings td { padding: 1rem 1.25rem; border-right: 1px solid var(--divider-internal); border-bottom: 1px solid var(--divider-internal); text-align: left; vertical-align: top; }
 .typography-findings th:last-child,
 .typography-findings td:last-child { border-right: 0; }
 .typography-findings tbody tr:last-child th,
@@ -532,20 +523,20 @@ const figures = {
 .typography-findings tbody th { width: 20%; color: var(--benchmark-text); font-weight: 600; }
 .typography-conclusion { max-width: 900px; color: var(--benchmark-muted); font-size: .86rem; line-height: 1.72; }
 
-.character-length-analysis { display: grid; gap: 2.5rem; padding-top: 3.25rem; border-top: 1px solid var(--benchmark-line); }
+.character-length-analysis { display: grid; gap: 2.5rem; padding-top: 3.25rem; border-top: 1px solid var(--divider-subsection); }
 .character-length-analysis__intro { max-width: 820px; }
 .character-length-analysis__intro h4 { margin: .55rem 0 1rem; color: var(--benchmark-text); font-size: 1.25rem; line-height: 1.3; }
 .character-length-analysis__intro > p:last-child { color: var(--benchmark-muted); font-size: .88rem; line-height: 1.72; }
 .character-length-figure h5 { margin: 0 0 1rem; color: var(--benchmark-text); font-size: .9rem; line-height: 1.4; font-weight: 600; }
 .character-length-figure picture { display: block; }
-.character-length-findings__grid { grid-column: 1 / -1; margin: 0; border-top: 1px solid var(--benchmark-line); border-bottom: 1px solid var(--benchmark-line); }
-.character-length-findings__grid > div { display: grid; grid-template-columns: minmax(180px, 2fr) minmax(0, 8fr); border-bottom: 1px solid var(--benchmark-line); }
+.character-length-findings__grid { grid-column: 1 / -1; margin: 0; border-top: 1px solid var(--divider-internal); border-bottom: 1px solid var(--divider-internal); }
+.character-length-findings__grid > div { display: grid; grid-template-columns: minmax(180px, 2fr) minmax(0, 8fr); border-bottom: 1px solid var(--divider-internal); }
 .character-length-findings__grid > div:last-child { border-bottom: 0; }
 .character-length-findings dt,
 .character-length-findings dd { margin: 0; padding: 1rem 1.25rem; }
 .character-length-findings dt { color: var(--benchmark-text); font-weight: 600; }
-.character-length-findings dd { color: var(--benchmark-muted); border-left: 1px solid var(--benchmark-line); font-size: .78rem; line-height: 1.6; }
-.character-length-method { grid-column: 1 / -1; max-width: 900px; padding-top: 1.25rem; color: var(--benchmark-muted); border-top: 1px solid var(--benchmark-line); font-size: .72rem; line-height: 1.65; }
+.character-length-findings dd { color: var(--benchmark-muted); border-left: 1px solid var(--divider-internal); font-size: .78rem; line-height: 1.6; }
+.character-length-method { grid-column: 1 / -1; max-width: 900px; padding-top: 1.25rem; color: var(--benchmark-muted); border-top: 1px solid var(--divider-internal); font-size: .72rem; line-height: 1.65; }
 
 .evidence-block--color { display: block; }
 .evidence-block--color .evidence-copy { max-width: 820px; margin-bottom: 2.5rem; }
@@ -553,18 +544,18 @@ const figures = {
 .color-analysis { display: grid; gap: 3rem; }
 .color-figure h4 { margin: 0 0 1rem; color: var(--benchmark-text); font-size: 1.25rem; line-height: 1.3; }
 .color-figure figcaption { line-height: 1.65; }
-.color-findings__list { grid-column: 1 / -1; margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--benchmark-line); border-bottom: 1px solid var(--benchmark-line); }
-.color-findings__list li { display: grid; grid-template-columns: minmax(220px, 3fr) minmax(0, 9fr); border-bottom: 1px solid var(--benchmark-line); }
+.color-findings__list { grid-column: 1 / -1; margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--divider-internal); border-bottom: 1px solid var(--divider-internal); }
+.color-findings__list li { display: grid; grid-template-columns: minmax(220px, 3fr) minmax(0, 9fr); border-bottom: 1px solid var(--divider-internal); }
 .color-findings__list li:last-child { border-bottom: 0; }
 .color-findings__list span,
 .color-findings__list p { padding: 1rem 1.25rem; }
 .color-findings__list span { color: var(--benchmark-text); font-weight: 600; }
-.color-findings__list p { color: var(--benchmark-muted); border-left: 1px solid var(--benchmark-line); font-size: .78rem; line-height: 1.6; }
+.color-findings__list p { color: var(--benchmark-muted); border-left: 1px solid var(--divider-internal); font-size: .78rem; line-height: 1.6; }
 
 .evidence-block--iconography { display: block; }
 .evidence-block--iconography > .evidence-copy { max-width: 820px; margin-bottom: 2.5rem; }
 .iconography-analysis { display: grid; gap: 3.5rem; }
-.iconography-part { display: grid; gap: 2.5rem; padding-top: 3rem; border-top: 1px solid var(--benchmark-line); }
+.iconography-part { display: grid; gap: 2.5rem; padding-top: 3rem; border-top: 1px solid var(--divider-subsection); }
 .iconography-part__intro { max-width: 820px; }
 .iconography-part__intro h4,
 .iconography-synthesis h4 { margin: .55rem 0 1rem; color: var(--benchmark-text); font-size: 1.25rem; line-height: 1.3; }
@@ -572,24 +563,25 @@ const figures = {
 .iconography-synthesis > p:last-child { color: var(--benchmark-muted); font-size: .88rem; line-height: 1.72; }
 .iconography-figure picture { display: block; }
 .iconography-findings .table-scroll { grid-column: 1 / -1; }
-.iconography-synthesis { max-width: 900px; padding-top: 3rem; border-top: 1px solid var(--benchmark-line); }
+.iconography-synthesis { padding-top: 3rem; border-top: 1px solid var(--divider-subsection); }
+.iconography-synthesis > * { max-width: 900px; }
 
 .layout-summary {
   grid-column: 1 / -1;
-  max-width: 900px;
   padding-top: 2.75rem;
-  border-top: 1px solid var(--benchmark-line);
+  border-top: 1px solid var(--divider-major);
 }
 .layout-summary .evidence-copy { max-width: 900px; }
-.layout-summary__observation { margin-top: 1.4rem; padding-top: 1.4rem; border-top: 1px solid var(--benchmark-line); }
+.layout-summary__observation { margin-top: 1.4rem; padding-top: 1.4rem; border-top: 1px solid var(--divider-internal); }
 
 .integrity-note,
-.confidentiality-note { padding: 1.25rem 0 0; color: var(--benchmark-muted); border-top: 1px solid var(--benchmark-line); font-size: .78rem; line-height: 1.65; }
+.confidentiality-note { padding: 1.25rem 0 0; color: var(--benchmark-muted); font-size: .78rem; line-height: 1.65; }
+.confidentiality-note { border-top: 1px solid var(--divider-internal); }
 .integrity-note { grid-column: 1 / -1; }
 .integrity-note strong,
 .confidentiality-note strong { color: var(--benchmark-text); }
 
-.qualitative-part { grid-column: 1 / -1; padding-top: 3.5rem; display: grid; gap: 2.25rem; border-top: 1px solid var(--benchmark-line); }
+.qualitative-part { grid-column: 1 / -1; padding-top: 3.5rem; display: grid; gap: 2.25rem; border-top: 1px solid var(--divider-subsection); }
 .qualitative-context,
 .qualitative-conclusion { max-width: 900px; margin: 0; color: var(--benchmark-muted); font-size: .86rem; line-height: 1.72; }
 .qualitative-figure,
@@ -598,8 +590,6 @@ const figures = {
 .qualitative-figure h4,
 .decision-matrix-figure h4,
 .qualitative-findings h4 { margin: 0 0 1rem; color: var(--benchmark-text); font-size: 1.2rem; line-height: 1.35; }
-.qualitative-figure a,
-.qualitative-photo a { display: block; color: var(--benchmark-muted); }
 .qualitative-figure img,
 .qualitative-photo img { width: 100%; height: auto; display: block; }
 .qualitative-photo { max-width: 980px; }
@@ -608,18 +598,18 @@ const figures = {
 .decision-matrix-figure figcaption { padding-top: .65rem; color: var(--benchmark-muted); font-size: .72rem; line-height: 1.6; }
 .qualitative-photo figcaption strong { color: var(--benchmark-text); font-weight: 600; }
 
-.qualitative-findings { padding-top: 2.75rem; border-top: 1px solid var(--benchmark-line); }
-.qualitative-findings ol { margin: 1.5rem 0; padding: 0; list-style: none; border-top: 1px solid var(--benchmark-line); border-bottom: 1px solid var(--benchmark-line); }
-.qualitative-findings li { display: grid; grid-template-columns: minmax(220px, 3fr) minmax(0, 9fr); border-bottom: 1px solid var(--benchmark-line); }
+.qualitative-findings { padding-top: 2.75rem; border-top: 1px solid var(--divider-subsection); }
+.qualitative-findings ol { margin: 1.5rem 0; padding: 0; list-style: none; border-top: 1px solid var(--divider-internal); border-bottom: 1px solid var(--divider-internal); }
+.qualitative-findings li { display: grid; grid-template-columns: minmax(220px, 3fr) minmax(0, 9fr); border-bottom: 1px solid var(--divider-internal); }
 .qualitative-findings li:last-child { border-bottom: 0; }
 .qualitative-findings li > span,
 .qualitative-findings li > p { padding: 1rem 1.25rem; }
 .qualitative-findings li > span { color: var(--benchmark-text); font-weight: 600; }
-.qualitative-findings li > p { margin: 0; color: var(--benchmark-muted); border-left: 1px solid var(--benchmark-line); font-size: .78rem; line-height: 1.6; }
+.qualitative-findings li > p { margin: 0; color: var(--benchmark-muted); border-left: 1px solid var(--divider-internal); font-size: .78rem; line-height: 1.6; }
 
-.decision-matrix { width: 100%; table-layout: fixed; border-collapse: collapse; border-top: 1px solid var(--benchmark-line); border-bottom: 1px solid var(--benchmark-line); }
+.decision-matrix { width: 100%; table-layout: fixed; border-collapse: collapse; border-top: 1px solid var(--divider-internal); border-bottom: 1px solid var(--divider-internal); }
 .decision-matrix th,
-.decision-matrix td { padding: 1rem 1.25rem; text-align: left; vertical-align: top; border-right: 1px solid var(--benchmark-line); border-bottom: 1px solid var(--benchmark-line); }
+.decision-matrix td { padding: 1rem 1.25rem; text-align: left; vertical-align: top; border-right: 1px solid var(--divider-internal); border-bottom: 1px solid var(--divider-internal); }
 .decision-matrix th:last-child,
 .decision-matrix td:last-child { border-right: 0; }
 .decision-matrix tbody tr:last-child td { border-bottom: 0; }
@@ -683,7 +673,6 @@ const figures = {
 .environment-figures { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; align-items: start; }
 
 .simulator-figure { margin: 0; min-width: 0; }
-.simulator-figure a { display: block; color: var(--benchmark-muted); }
 .simulator-figure img { width: 100%; height: auto; display: block; border: 1px solid var(--benchmark-line); background: #0d1016; object-fit: contain; }
 .simulator-figure figcaption { padding-top: .65rem; color: var(--benchmark-muted); font-size: .72rem; line-height: 1.6; }
 .simulator-figure figcaption strong { color: var(--benchmark-text); font-weight: 600; }
@@ -707,7 +696,6 @@ const figures = {
 .stimuli-grid--three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .stimuli-grid--two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .stimuli-grid figure { margin: 0; min-width: 0; }
-.stimuli-grid a { display: block; }
 .stimuli-grid img { width: 100%; height: 210px; display: block; object-fit: contain; border: 1px solid var(--benchmark-line); background: #0d1016; }
 .stimuli-grid figcaption { padding-top: .55rem; color: var(--benchmark-muted); font: 500 .66rem/1.4 var(--font-mono); }
 
@@ -731,8 +719,7 @@ const figures = {
 .outputs-grid p { color: var(--benchmark-muted); font-size: .8rem; line-height: 1.6; }
 .project-photo-figure { grid-column: 1 / -1; margin: 0; }
 .project-photo-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .85rem; }
-.project-photo-grid a { display: block; min-width: 0; background: #0d1016; }
-.project-photo-grid img { width: 100%; aspect-ratio: 4 / 3; display: block; object-fit: contain; }
+.project-photo-grid img { width: 100%; min-width: 0; aspect-ratio: 4 / 3; display: block; background: #0d1016; object-fit: contain; }
 .project-photo-figure figcaption { padding-top: .65rem; color: var(--benchmark-muted); font-size: .72rem; line-height: 1.6; }
 .project-photo-figure figcaption strong { color: var(--benchmark-text); font-weight: 600; }
 
