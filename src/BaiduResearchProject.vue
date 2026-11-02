@@ -213,8 +213,10 @@
 
           <section class="qualitative-part" aria-labelledby="focus-group-title">
             <div class="subsection-title"><span>02</span><div><p>Focus group</p><h3 id="focus-group-title">From Qualitative Findings to Experimental Decisions</h3></div></div>
-            <p class="qualitative-context">Following the initial interviews, a focus-group evaluation was conducted to review proposed interface variations and refine the next stage of simulator-based experiments. Participants examined representative interface stimuli covering layout, typography, color, and iconography, followed by discussions about information acquisition, visual recognition, and interaction difficulty. The historical protocol used a 55-inch display to present interface examples for discussion.</p>
-            <figure class="qualitative-photo"><img :src="figures.focusGroup.src" :alt="figures.focusGroup.alt" loading="lazy" /><figcaption><strong>Focus-group session.</strong> Participants reviewed interface variations and discussed the experimental tasks and design variables.</figcaption></figure>
+            <div class="focus-group-overview">
+              <p class="qualitative-context">Following the initial interviews, a focus-group evaluation was conducted to review proposed interface variations and refine the next stage of simulator-based experiments. Participants examined representative interface stimuli covering layout, typography, color, and iconography, followed by discussions about information acquisition, visual recognition, and interaction difficulty. The historical protocol used a 55-inch display to present interface examples for discussion.</p>
+              <figure class="qualitative-photo"><img :src="figures.focusGroup.src" :alt="figures.focusGroup.alt" loading="lazy" /><figcaption><strong>Focus-group session.</strong> Participants reviewed interface variations and discussed the experimental tasks and design variables.</figcaption></figure>
+            </div>
             <figure class="decision-matrix-figure"><h4>From Qualitative Findings to Experimental Decisions</h4><table class="decision-matrix"><thead><tr><th scope="col">Qualitative Finding</th><th scope="col">Research Implication</th><th scope="col">Experimental Decision</th></tr></thead><tbody><tr><td data-label="Qualitative Finding">Drivers preferred using center-stack functions when road conditions were relatively stable and safe.</td><td data-label="Research Implication">Secondary-task conditions should reduce unnecessary driving-context variability.</td><td data-label="Experimental Decision">Use relatively stable urban-road scenarios, with interaction tasks assigned to straight-road segments and a target driving speed of 35–40 km/h.</td></tr><tr><td data-label="Qualitative Finding">Drivers often avoided reading lengthy information while moving but paid attention to vehicle warning messages.</td><td data-label="Research Implication">Text-reading tasks should reflect situations where drivers have a realistic need to inspect information.</td><td data-label="Experimental Decision">Use vehicle warning messages, including tire-pressure and engine-related alerts, as representative reading tasks.</td></tr><tr><td data-label="Qualitative Finding">Participants differentiated between finding information and completing an interface operation.</td><td data-label="Research Implication">Information acquisition and task execution should be evaluated as distinct aspects of interaction.</td><td data-label="Experimental Decision">Consider eye-tracking-based information acquisition measures alongside task-completion performance.</td></tr><tr><td data-label="Qualitative Finding">Icon size and spacing were discussed in relation to recognition and visual comfort, while icon-to-text spacing was particularly associated with visual appearance.</td><td data-label="Research Implication">Different icon-related parameters should be examined separately.</td><td data-label="Experimental Decision">Manipulate icon size, icon-to-icon spacing, and icon-to-text spacing as distinct experimental factors.</td></tr><tr><td data-label="Qualitative Finding">Alternative layouts involved trade-offs between information clarity, navigation depth, and interaction effort.</td><td data-label="Research Implication">Layout comparisons should control task demands to support meaningful interpretation.</td><td data-label="Experimental Decision">Compare primary and secondary layouts using matched functional tasks and consistent operation-step requirements.</td></tr></tbody></table><figcaption>Traceable relationships between retained qualitative findings, their research implications, and the experimental decisions documented for the simulator-based studies.</figcaption></figure>
             <section class="qualitative-findings" aria-labelledby="focus-group-findings-title"><p class="mini-label">Key findings — Focus group</p><h4 id="focus-group-findings-title">From Discussion to Experimental Design</h4><ol><li><span>01 · Scenario Refinement</span><p>Participants' descriptions of everyday driving behavior informed the selection of relatively stable driving conditions and the placement of secondary interaction tasks.</p></li><li><span>02 · Experimental Operationalization</span><p>Focus-group feedback helped translate broad interface concerns into more specific experimental manipulations, including typography parameters, icon dimensions, spacing, and layout alternatives.</p></li><li><span>03 · Differentiating Evaluation Outcomes</span><p>The discussions highlighted the importance of distinguishing visual recognition and information acquisition from the effort required to complete an interaction.</p></li></ol><p class="qualitative-conclusion">Qualitative inquiry informed the experimental program by grounding task selection in drivers' reported behavior, refining the driving context, and clarifying which interface parameters and outcome measures should be examined. This established a traceable connection between user research and the subsequent simulator-based evaluation.</p></section>
           </section>
@@ -592,7 +594,9 @@ const figures = {
 .qualitative-findings h4 { margin: 0 0 1rem; color: var(--benchmark-text); font-size: 1.2rem; line-height: 1.35; }
 .qualitative-figure img,
 .qualitative-photo img { width: 100%; height: auto; display: block; }
-.qualitative-photo { max-width: 980px; }
+.focus-group-overview { display: grid; grid-template-columns: minmax(260px, 4fr) minmax(0, 7fr); gap: clamp(1.5rem, 3vw, 3.5rem); align-items: start; }
+.focus-group-overview .qualitative-context { padding-top: .2rem; }
+.qualitative-photo img { aspect-ratio: 16 / 10; object-fit: cover; object-position: 50% 58%; }
 .qualitative-figure figcaption,
 .qualitative-photo figcaption,
 .decision-matrix-figure figcaption { padding-top: .65rem; color: var(--benchmark-muted); font-size: .72rem; line-height: 1.6; }
@@ -718,8 +722,9 @@ const figures = {
 .outputs-grid h3 { margin: 1.7rem 0 .55rem; }
 .outputs-grid p { color: var(--benchmark-muted); font-size: .8rem; line-height: 1.6; }
 .project-photo-figure { grid-column: 1 / -1; margin: 0; }
-.project-photo-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .85rem; }
-.project-photo-grid img { width: 100%; min-width: 0; aspect-ratio: 4 / 3; display: block; background: #0d1016; object-fit: contain; }
+.project-photo-grid { height: clamp(520px, 58vw, 760px); display: grid; grid-template-columns: minmax(220px, .72fr) minmax(0, 1.7fr); grid-template-rows: repeat(3, minmax(0, 1fr)); gap: .85rem; }
+.project-photo-grid img { width: 100%; min-width: 0; height: 100%; display: block; background: #0d1016; object-fit: cover; }
+.project-photo-grid img:nth-child(4) { grid-column: 2; grid-row: 1 / -1; object-position: center; }
 .project-photo-figure figcaption { padding-top: .65rem; color: var(--benchmark-muted); font-size: .72rem; line-height: 1.6; }
 .project-photo-figure figcaption strong { color: var(--benchmark-text); font-weight: 600; }
 
@@ -746,6 +751,7 @@ const figures = {
   .character-length-findings dd { padding-top: 0; border-left: 0; }
   .color-findings__list li { grid-template-columns: 1fr; }
   .color-findings__list p { padding-top: 0; border-left: 0; }
+  .focus-group-overview { grid-template-columns: 1fr; }
   .qualitative-findings li { grid-template-columns: 1fr; }
   .qualitative-findings li > p { padding-top: 0; border-left: 0; }
   .protocol-grid { grid-template-columns: 1fr; }
@@ -768,7 +774,9 @@ const figures = {
   .experiment-study { grid-template-columns: 1fr; }
   .stimuli-grid img { height: 180px; }
   .supporting-results { grid-template-columns: 1fr; }
-  .project-photo-grid { grid-template-columns: 1fr; }
+  .project-photo-grid { height: auto; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: auto; }
+  .project-photo-grid img { aspect-ratio: 4 / 3; }
+  .project-photo-grid img:nth-child(4) { grid-column: 1 / -1; grid-row: 1; aspect-ratio: 16 / 10; }
 }
 
 @media (max-width: 620px) {
