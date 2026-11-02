@@ -668,14 +668,17 @@ const figures = {
 .procedure-sequence li:first-child { padding-left: 0; }
 .procedure-sequence li:last-child { border-right: 0; }
 .procedure-sequence span { display: block; margin-bottom: 1.5rem; color: var(--benchmark-accent); font: 600 .68rem/1.4 var(--font-mono); }
-.environment-figures { display: grid; grid-template-columns: minmax(0, 7fr) minmax(260px, 5fr); gap: 1.5rem; align-items: start; }
+.environment-figures { display: grid; grid-template-columns: minmax(0, 1fr); gap: clamp(2rem, 4vw, 3.5rem); }
+.environment-figures .simulator-figure { width: 100%; margin-inline: auto; }
+.environment-figures .simulator-figure:first-child { max-width: 1040px; }
+.environment-figures .simulator-figure:nth-child(2) { max-width: 720px; }
 
 .simulator-figure { margin: 0; min-width: 0; }
 .simulator-figure a { display: block; color: var(--benchmark-muted); }
 .simulator-figure img { width: 100%; height: auto; display: block; border: 1px solid var(--benchmark-line); background: #0d1016; object-fit: contain; }
 .simulator-figure figcaption { padding-top: .65rem; color: var(--benchmark-muted); font-size: .72rem; line-height: 1.6; }
 .simulator-figure figcaption strong { color: var(--benchmark-text); font-weight: 600; }
-.simulator-figure--procedure { max-width: 760px; }
+.simulator-figure--procedure { width: 100%; }
 .simulator-figure--light img { background: #fff; }
 
 .simulator-studies { gap: 0; }
