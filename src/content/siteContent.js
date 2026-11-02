@@ -288,7 +288,7 @@ export const siteContent = {
         title: "Cross-Brand Benchmarking for Intelligent-Cockpit Interface Guidelines",
         description: "Compared intelligent-cockpit interfaces across 26 automotive brands and synthesized the findings into a 12,000-word internal white paper and UI/UX guidelines. I presented the research at Baidu headquarters, where Apollo Lab recognized its methodological rigor.",
         tags: ["Student Project Lead", "26 brands", "Design synthesis", "Industry collaboration"],
-        image: import.meta.env.BASE_URL + 'images/projects/project2-benchmark.svg',
+        image: import.meta.env.BASE_URL + 'images/projects/automotive-hmi-card-cover.jpg',
         link: import.meta.env.BASE_URL + 'research/automotive-benchmarking/',
       },
       {

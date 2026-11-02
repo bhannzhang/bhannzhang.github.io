@@ -13,7 +13,6 @@
         <div class="chips" aria-label="Project metadata">
           <span>Automotive HMI</span><span>Mixed-Method Research</span><span>Baidu Apollo Collaboration</span><span>2019</span>
         </div>
-        <BaiduEvidenceFigure :figure="figures.hero" size="hero" priority />
       </section>
 
       <section class="shell editorial-section">
@@ -305,15 +304,14 @@ import BaiduEvidenceFigure from './components/BaiduEvidenceFigure.vue'
 
 const homeUrl = import.meta.env.BASE_URL
 const evidenceImage = (filename) => `${homeUrl}images/research/automotive-benchmarking/${filename}`
-const pendingFigure = (filename, label, caption) => ({ src: '', expectedSrc: evidenceImage(filename), label, caption })
 
 const benchmarkBrands = [
   { name: 'BMW', logoSrc: evidenceImage('brands/bmw.svg') },
-  { name: 'Mercedes-Benz' },
+  { name: 'Mercedes-Benz', logoSrc: evidenceImage('brands/mercedes-benz.svg') },
   { name: 'GAC Trumpchi' },
   { name: 'Haval' },
   { name: 'Chery' },
-  { name: 'Geely' },
+  { name: 'Geely', logoSrc: evidenceImage('brands/geely.svg') },
   { name: 'Lynk & Co' },
   { name: 'Li Auto' },
   { name: 'Land Rover' },
@@ -323,7 +321,7 @@ const benchmarkBrands = [
   { name: 'Škoda', logoSrc: evidenceImage('brands/skoda.svg') },
   { name: 'Tesla', logoSrc: evidenceImage('brands/tesla.svg') },
   { name: 'WM Motor' },
-  { name: 'NIO' },
+  { name: 'NIO', logoSrc: evidenceImage('brands/nio.png') },
   { name: 'Volvo', logoSrc: evidenceImage('brands/volvo.svg') },
   { name: 'XPeng' },
   { name: 'Changan' },
@@ -332,7 +330,6 @@ const benchmarkBrands = [
 
 // Add verified historical files at the expected paths, then set `src` to `expectedSrc`.
 const figures = {
-  hero: pendingFigure('hero-research-documentation-collage.webp', 'Figure pending — Historical research-documentation collage', 'Planned collage of retained benchmarking pages, experimental materials, and project documentation.'),
   context: { src: evidenceImage('benchmarking-materials.jpg'), label: '', alt: 'Printed automotive HMI benchmarking materials from the Baidu Apollo collaboration', caption: 'Retained historical documentation from the automotive HMI benchmarking work.' },
   primaryTypography: { src: evidenceImage('automotive_primary_title_sizes.png'), alt: 'Primary title sizes across Home, Navigation, Multimedia, Vehicle Settings, and Voice Control interfaces' },
   secondaryTypography: { src: evidenceImage('automotive_secondary_title_sizes.png'), alt: 'Secondary title sizes across Home, Navigation, Multimedia, Vehicle Settings, and Voice Control interfaces' },
@@ -488,7 +485,7 @@ const figures = {
 }
 .brand-gallery li:hover img { opacity: .9; }
 .brand-gallery li:hover span { color: var(--benchmark-text); }
-:global(.light) .brand-gallery img { opacity: .68; filter: grayscale(1) brightness(0); }
+:global(.light .brand-gallery img) { opacity: .68; filter: grayscale(1) brightness(0); }
 
 .evidence-block,
 .protocol-block { grid-column: 1 / -1; padding-top: 3.5rem; }
