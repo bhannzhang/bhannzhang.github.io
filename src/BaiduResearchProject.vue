@@ -53,8 +53,19 @@
             <p>The benchmarking study examined center-stack interfaces across 26 vehicles, combining in-person inspections with online research to document visual and interaction patterns across automotive brands.</p>
           </div>
           <ul class="brand-gallery" aria-label="Twenty automotive brands and brand series represented in the benchmarking study">
-            <li v-for="brand in benchmarkBrands" :key="brand" :title="brand"><span>{{ brand }}</span></li>
+            <li v-for="brand in benchmarkBrands" :key="brand.name" :title="brand.name">
+              <img v-if="brand.logoSrc" :src="brand.logoSrc" :alt="brand.name" loading="lazy" />
+              <span v-else>{{ brand.name }}</span>
+            </li>
           </ul>
+        </section>
+        <section class="layout-summary" aria-labelledby="layout-summary-title">
+          <div class="evidence-copy">
+            <span>A</span>
+            <h3 id="layout-summary-title">Interface Layout &amp; Information Hierarchy</h3>
+            <p>The benchmarking study also examined primary and secondary interface layouts across automotive center-stack systems, focusing on information organization, functional hierarchy, and navigation structures.</p>
+            <p class="layout-summary__observation">Layout configurations varied in information density, navigation depth, and the visibility of functional entry points. These dimensions informed the subsequent comparison of alternative interface arrangements in simulator-based evaluations.</p>
+          </div>
         </section>
         <div class="evidence-block evidence-block--typography">
           <div class="evidence-copy"><span>B</span><h3>Typography — Title Size Distribution Across Interface Functions</h3><p>To examine typographic hierarchy across automotive center-stack interfaces, primary and secondary title sizes were compared across five functional contexts: Home, Navigation, Multimedia, Vehicle Settings, and Voice Control.</p><small>Source material · original benchmarking report, approximately pp. 9–20</small></div>
@@ -203,12 +214,6 @@
             <section class="iconography-synthesis" aria-labelledby="iconography-synthesis-title"><p class="mini-label">Closing Synthesis</p><h4 id="iconography-synthesis-title">Research Synthesis — Iconography</h4><p>Across the sampled automotive interfaces, iconography varied in visual style, normalized dimensions, and spacing. Linear icon styles were widespread, while relative icon sizes and spacing conventions differed between functional contexts. Together, these observations provided a descriptive basis for examining consistency and variation in automotive HMI icon design.</p></section>
           </div>
         </div>
-        <section class="layout-summary" aria-labelledby="layout-summary-title">
-          <p class="mini-label">04 / Interface Layout</p>
-          <h3 id="layout-summary-title">Interface Layout &amp; Information Hierarchy</h3>
-          <p>The benchmarking study also examined primary and secondary interface layouts across automotive center-stack systems, focusing on information organization, functional hierarchy, and navigation structures.</p>
-          <p class="layout-summary__observation">Layout configurations varied in information density, navigation depth, and the visibility of functional entry points. These dimensions informed the subsequent comparison of alternative interface arrangements in simulator-based evaluations.</p>
-        </section>
         <p class="integrity-note"><strong>Evidence boundary.</strong> Historical statistical inconsistencies will be checked against the original tables before any data visualization is reconstructed.</p>
       </section>
 
@@ -319,26 +324,26 @@ const evidenceImage = (filename) => `${homeUrl}images/research/automotive-benchm
 const pendingFigure = (filename, label, caption) => ({ src: '', expectedSrc: evidenceImage(filename), label, caption })
 
 const benchmarkBrands = [
-  'BMW',
-  'Mercedes-Benz',
-  'GAC Trumpchi',
-  'Haval',
-  'Chery',
-  'Geely',
-  'Lynk & Co',
-  'Li Auto',
-  'Land Rover',
-  'EXEED',
-  'Roewe',
-  'MAXUS',
-  'Škoda',
-  'Tesla',
-  'WM Motor',
-  'NIO',
-  'Volvo',
-  'XPeng',
-  'Changan',
-  'WEY',
+  { name: 'BMW', logoSrc: evidenceImage('brands/bmw.svg') },
+  { name: 'Mercedes-Benz' },
+  { name: 'GAC Trumpchi' },
+  { name: 'Haval' },
+  { name: 'Chery' },
+  { name: 'Geely' },
+  { name: 'Lynk & Co' },
+  { name: 'Li Auto' },
+  { name: 'Land Rover' },
+  { name: 'EXEED' },
+  { name: 'Roewe' },
+  { name: 'MAXUS' },
+  { name: 'Škoda', logoSrc: evidenceImage('brands/skoda.svg') },
+  { name: 'Tesla', logoSrc: evidenceImage('brands/tesla.svg') },
+  { name: 'WM Motor' },
+  { name: 'NIO' },
+  { name: 'Volvo', logoSrc: evidenceImage('brands/volvo.svg') },
+  { name: 'XPeng' },
+  { name: 'Changan' },
+  { name: 'WEY' },
 ]
 
 // Add verified historical files at the expected paths, then set `src` to `expectedSrc`.
@@ -465,34 +470,33 @@ const figures = {
 }
 .benchmark-scope__intro h3,
 .layout-summary h3 { margin: .55rem 0 .85rem; color: var(--benchmark-text); font-size: 1.25rem; line-height: 1.3; }
-.benchmark-scope__intro > p:last-child,
-.layout-summary > p:not(.mini-label) { margin: 0; color: var(--benchmark-muted); font-size: .84rem; line-height: 1.72; }
+.benchmark-scope__intro > p:last-child { margin: 0; color: var(--benchmark-muted); font-size: .84rem; line-height: 1.72; }
 .brand-gallery {
   margin: 0;
   padding: 0;
   display: grid;
   grid-template-columns: repeat(10, minmax(0, 1fr));
+  gap: .75rem 1rem;
   list-style: none;
-  border-top: 1px solid var(--benchmark-line);
-  border-left: 1px solid var(--benchmark-line);
 }
 .brand-gallery li {
   min-width: 0;
-  min-height: 64px;
-  padding: .65rem .4rem;
+  min-height: 58px;
+  padding: .45rem .25rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-right: 1px solid var(--benchmark-line);
-  border-bottom: 1px solid var(--benchmark-line);
   text-align: center;
 }
+.brand-gallery img { width: auto; max-width: 68px; height: auto; max-height: 27px; display: block; opacity: .64; filter: grayscale(1) brightness(0) invert(1); transition: opacity var(--transition-fast); }
 .brand-gallery span {
   color: var(--benchmark-muted);
   font: 600 clamp(.56rem, .72vw, .68rem)/1.25 var(--font-sans);
   letter-spacing: .015em;
 }
+.brand-gallery li:hover img { opacity: .9; }
 .brand-gallery li:hover span { color: var(--benchmark-text); }
+:global(.light) .brand-gallery img { opacity: .68; filter: grayscale(1) brightness(0); }
 
 .evidence-block,
 .protocol-block { grid-column: 1 / -1; padding-top: 3.5rem; border-top: 1px solid var(--benchmark-line); }
@@ -578,7 +582,8 @@ const figures = {
   padding-top: 2.75rem;
   border-top: 1px solid var(--benchmark-line);
 }
-.layout-summary__observation { margin-top: 1.4rem !important; padding-top: 1.4rem; border-top: 1px solid var(--benchmark-line); }
+.layout-summary .evidence-copy { max-width: 900px; }
+.layout-summary__observation { margin-top: 1.4rem; padding-top: 1.4rem; border-top: 1px solid var(--benchmark-line); }
 
 .integrity-note,
 .confidentiality-note { padding: 1.25rem 0 0; color: var(--benchmark-muted); border-top: 1px solid var(--benchmark-line); font-size: .78rem; line-height: 1.65; }
