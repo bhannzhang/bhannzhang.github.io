@@ -46,10 +46,16 @@
           <p>The benchmarking research documented interface characteristics across multiple vehicle systems, organizing observations by functional contexts such as navigation, multimedia, vehicle settings, and voice interaction.</p>
           <p>Interfaces were examined through four main dimensions: layout patterns, typography, color usage, and iconography. This structure helped identify recurring visual conventions and differences across products.</p>
         </div>
-        <div class="evidence-block">
-          <div class="evidence-copy"><span>A</span><h3>Layout Patterns</h3><p>The analysis categorized common center-stack layouts, including card-based, list-based, and divider-based arrangements, and compared their occurrence across major vehicle functions.</p><small>Source material · original benchmarking report, approximately pp. 3–8</small></div>
-          <BaiduEvidenceFigure :figure="figures.layout" size="wide" />
-        </div>
+        <section class="benchmark-scope" aria-labelledby="benchmark-scope-title">
+          <div class="benchmark-scope__intro">
+            <p class="mini-label">Cross-Brand HMI Benchmarking</p>
+            <h3 id="benchmark-scope-title">26 Vehicles Surveyed</h3>
+            <p>The benchmarking study examined center-stack interfaces across 26 vehicles, combining in-person inspections with online research to document visual and interaction patterns across automotive brands.</p>
+          </div>
+          <ul class="brand-gallery" aria-label="Twenty automotive brands and brand series represented in the benchmarking study">
+            <li v-for="brand in benchmarkBrands" :key="brand" :title="brand"><span>{{ brand }}</span></li>
+          </ul>
+        </section>
         <div class="evidence-block evidence-block--typography">
           <div class="evidence-copy"><span>B</span><h3>Typography — Title Size Distribution Across Interface Functions</h3><p>To examine typographic hierarchy across automotive center-stack interfaces, primary and secondary title sizes were compared across five functional contexts: Home, Navigation, Multimedia, Vehicle Settings, and Voice Control.</p><small>Source material · original benchmarking report, approximately pp. 9–20</small></div>
           <div class="typography-analysis">
@@ -197,20 +203,33 @@
             <section class="iconography-synthesis" aria-labelledby="iconography-synthesis-title"><p class="mini-label">Closing Synthesis</p><h4 id="iconography-synthesis-title">Research Synthesis — Iconography</h4><p>Across the sampled automotive interfaces, iconography varied in visual style, normalized dimensions, and spacing. Linear icon styles were widespread, while relative icon sizes and spacing conventions differed between functional contexts. Together, these observations provided a descriptive basis for examining consistency and variation in automotive HMI icon design.</p></section>
           </div>
         </div>
+        <section class="layout-summary" aria-labelledby="layout-summary-title">
+          <p class="mini-label">04 / Interface Layout</p>
+          <h3 id="layout-summary-title">Interface Layout &amp; Information Hierarchy</h3>
+          <p>The benchmarking study also examined primary and secondary interface layouts across automotive center-stack systems, focusing on information organization, functional hierarchy, and navigation structures.</p>
+          <p class="layout-summary__observation">Layout configurations varied in information density, navigation depth, and the visibility of functional entry points. These dimensions informed the subsequent comparison of alternative interface arrangements in simulator-based evaluations.</p>
+        </section>
         <p class="integrity-note"><strong>Evidence boundary.</strong> Historical statistical inconsistencies will be checked against the original tables before any data visualization is reconstructed.</p>
       </section>
 
       <section class="section-surface">
         <div class="shell editorial-section qualitative-section">
-          <div class="section-heading"><p class="kicker">04 · Qualitative Research</p><h2>Investigating Drivers’ Everyday Interaction Experiences</h2></div>
-          <div class="section-body prose">
-            <p>Focus group discussions and interview activities explored how drivers interpreted and interacted with in-vehicle interfaces. The discussion guide covered interface organization, text legibility, color-based state communication, and the recognition and operability of icons.</p>
-            <p>Questions were grounded in everyday vehicle-use scenarios, including navigation, multimedia control, vehicle settings, warning messages, and transitions between concurrent functions.</p>
-          </div>
-          <ul class="topic-grid" aria-label="Qualitative research topics">
-            <li><span>01</span>Layout and information organization</li><li><span>02</span>Typography and legibility</li><li><span>03</span>Color and interface state</li><li><span>04</span>Icon comprehension and operability</li>
-          </ul>
-          <BaiduEvidenceFigure class="section-figure" :figure="figures.focusGroup" size="wide" />
+          <div class="section-heading"><p class="kicker">04 · Qualitative Research</p><h2>Qualitative Research — Understanding Drivers and Refining Experiments</h2></div>
+          <div class="section-body prose"><p>Before conducting the simulator-based evaluations, qualitative research was used to understand drivers' everyday interactions with automotive center-stack interfaces and examine how proposed interface variations might affect information acquisition and operation. In-depth interviews documented usage patterns, while subsequent focus-group discussions helped refine the experimental tasks, scenarios, and design variables.</p></div>
+
+          <section class="qualitative-part" aria-labelledby="interview-research-title">
+            <div class="subsection-title"><span>01</span><div><p>In-depth interviews</p><h3 id="interview-research-title">Understanding Everyday Center-Stack Usage</h3></div></div>
+            <p class="qualitative-context">Ten participants (five male and five female) were interviewed about their everyday use of automotive center-stack interfaces. The interviews examined frequently used functions, typical interaction behaviors, and design-related concerns across navigation, multimedia, climate control, vehicle settings, and other functions.</p>
+            <figure class="qualitative-figure"><h4>In-depth Interview Findings — Usage Patterns and Design Concerns</h4><a :href="figures.interviewFindings.src" target="_blank" rel="noopener"><img :src="figures.interviewFindings.src" :alt="figures.interviewFindings.alt" loading="lazy" /><span>Open full-resolution figure ↗</span></a><figcaption>Summary of self-reported center-stack function usage, frequently mentioned operations, and design-related concerns from ten historical interviews. Valid response counts vary between questionnaire items.</figcaption></figure>
+            <section class="qualitative-findings" aria-labelledby="interview-findings-title"><p class="mini-label">Key findings — In-depth interviews</p><h4 id="interview-findings-title">Interview Observations</h4><ol><li><span>01 · Function Usage Varied</span><p>Reported usage frequencies differed across center-stack functions. Climate control, rear-view camera, and music functions received relatively high recorded frequency scores, while navigation and vehicle settings were used less frequently in the retained responses.</p></li><li><span>02 · Familiar Operations Dominated</span><p>Commonly described interactions included playing music through a smartphone connection, switching tracks, adjusting volume, and using navigation services. Some participants relied on smartphones rather than the in-vehicle navigation interface.</p></li><li><span>03 · Design Concerns Extended Beyond Appearance</span><p>Open-ended responses highlighted concerns related to information accessibility, icon recognition, visual feedback, and text readability, suggesting that interface evaluation should consider both visual presentation and interaction demands.</p></li></ol><p class="qualitative-conclusion">The interviews revealed differences in how drivers engaged with automotive center-stack functions, alongside recurring concerns about information accessibility and interface readability. These observations provided contextual input for selecting realistic interaction tasks and visual design parameters in subsequent experiments.</p></section>
+          </section>
+
+          <section class="qualitative-part" aria-labelledby="focus-group-title">
+            <div class="subsection-title"><span>02</span><div><p>Focus group</p><h3 id="focus-group-title">From Qualitative Findings to Experimental Decisions</h3></div></div>
+            <p class="qualitative-context">Following the initial interviews, a focus-group evaluation was conducted to review proposed interface variations and refine the next stage of simulator-based experiments. Participants examined representative interface stimuli covering layout, typography, color, and iconography, followed by discussions about information acquisition, visual recognition, and interaction difficulty. The historical protocol used a 55-inch display to present interface examples for discussion.</p>
+            <figure class="decision-matrix-figure"><h4>From Qualitative Findings to Experimental Decisions</h4><table class="decision-matrix"><thead><tr><th scope="col">Qualitative Finding</th><th scope="col">Research Implication</th><th scope="col">Experimental Decision</th></tr></thead><tbody><tr><td data-label="Qualitative Finding">Drivers preferred using center-stack functions when road conditions were relatively stable and safe.</td><td data-label="Research Implication">Secondary-task conditions should reduce unnecessary driving-context variability.</td><td data-label="Experimental Decision">Use relatively stable urban-road scenarios, with interaction tasks assigned to straight-road segments and a target driving speed of 35–40 km/h.</td></tr><tr><td data-label="Qualitative Finding">Drivers often avoided reading lengthy information while moving but paid attention to vehicle warning messages.</td><td data-label="Research Implication">Text-reading tasks should reflect situations where drivers have a realistic need to inspect information.</td><td data-label="Experimental Decision">Use vehicle warning messages, including tire-pressure and engine-related alerts, as representative reading tasks.</td></tr><tr><td data-label="Qualitative Finding">Participants differentiated between finding information and completing an interface operation.</td><td data-label="Research Implication">Information acquisition and task execution should be evaluated as distinct aspects of interaction.</td><td data-label="Experimental Decision">Consider eye-tracking-based information acquisition measures alongside task-completion performance.</td></tr><tr><td data-label="Qualitative Finding">Icon size and spacing were discussed in relation to recognition and visual comfort, while icon-to-text spacing was particularly associated with visual appearance.</td><td data-label="Research Implication">Different icon-related parameters should be examined separately.</td><td data-label="Experimental Decision">Manipulate icon size, icon-to-icon spacing, and icon-to-text spacing as distinct experimental factors.</td></tr><tr><td data-label="Qualitative Finding">Alternative layouts involved trade-offs between information clarity, navigation depth, and interaction effort.</td><td data-label="Research Implication">Layout comparisons should control task demands to support meaningful interpretation.</td><td data-label="Experimental Decision">Compare primary and secondary layouts using matched functional tasks and consistent operation-step requirements.</td></tr></tbody></table><figcaption>Traceable relationships between retained qualitative findings, their research implications, and the experimental decisions documented for the simulator-based studies.</figcaption></figure>
+            <section class="qualitative-findings" aria-labelledby="focus-group-findings-title"><p class="mini-label">Key findings — Focus group</p><h4 id="focus-group-findings-title">From Discussion to Experimental Design</h4><ol><li><span>01 · Scenario Refinement</span><p>Participants' descriptions of everyday driving behavior informed the selection of relatively stable driving conditions and the placement of secondary interaction tasks.</p></li><li><span>02 · Experimental Operationalization</span><p>Focus-group feedback helped translate broad interface concerns into more specific experimental manipulations, including typography parameters, icon dimensions, spacing, and layout alternatives.</p></li><li><span>03 · Differentiating Evaluation Outcomes</span><p>The discussions highlighted the importance of distinguishing visual recognition and information acquisition from the effort required to complete an interaction.</p></li></ol><p class="qualitative-conclusion">Qualitative inquiry informed the experimental program by grounding task selection in drivers' reported behavior, refining the driving context, and clarifying which interface parameters and outcome measures should be examined. This established a traceable connection between user research and the subsequent simulator-based evaluation.</p></section>
+          </section>
         </div>
       </section>
 
@@ -299,11 +318,33 @@ const projectImage = (filename) => `${homeUrl}images/projects/${filename}`
 const evidenceImage = (filename) => `${homeUrl}images/research/automotive-benchmarking/${filename}`
 const pendingFigure = (filename, label, caption) => ({ src: '', expectedSrc: evidenceImage(filename), label, caption })
 
+const benchmarkBrands = [
+  'BMW',
+  'Mercedes-Benz',
+  'GAC Trumpchi',
+  'Haval',
+  'Chery',
+  'Geely',
+  'Lynk & Co',
+  'Li Auto',
+  'Land Rover',
+  'EXEED',
+  'Roewe',
+  'MAXUS',
+  'Škoda',
+  'Tesla',
+  'WM Motor',
+  'NIO',
+  'Volvo',
+  'XPeng',
+  'Changan',
+  'WEY',
+]
+
 // Add verified historical files at the expected paths, then set `src` to `expectedSrc`.
 const figures = {
   hero: pendingFigure('hero-research-documentation-collage.webp', 'Figure pending — Historical research-documentation collage', 'Planned collage of retained benchmarking pages, experimental materials, and project documentation.'),
   context: { src: projectImage('project2.jpg'), label: '', alt: 'Printed automotive HMI benchmarking materials from the Baidu Apollo collaboration', caption: 'Retained historical documentation from the automotive HMI benchmarking work.' },
-  layout: pendingFigure('layout-pattern-classification.webp', 'Figure pending — Historical layout classification and frequency comparison', 'Layout patterns across navigation, multimedia, vehicle settings, and other center-stack functions.'),
   primaryTypography: { src: evidenceImage('automotive_primary_title_sizes.png'), alt: 'Primary title sizes across Home, Navigation, Multimedia, Vehicle Settings, and Voice Control interfaces' },
   secondaryTypography: { src: evidenceImage('automotive_secondary_title_sizes.png'), alt: 'Secondary title sizes across Home, Navigation, Multimedia, Vehicle Settings, and Voice Control interfaces' },
   characterLengthSvg: { src: evidenceImage('automotive_character_length_distribution.svg'), alt: 'Character-length distributions across Home, Navigation, Multimedia, Vehicle Settings, and Voice Control interfaces' },
@@ -314,7 +355,7 @@ const figures = {
   iconDimensions: { src: evidenceImage('automotive_icon_dimensions.png'), alt: 'Normalized icon length and width scatter plots across five automotive interface functions' },
   iconSpacingSvg: { src: evidenceImage('automotive_icon_spacing_distribution.svg'), alt: 'Icon-spacing frequency distributions across five automotive interface functions' },
   iconSpacingPng: { src: evidenceImage('automotive_icon_spacing_distribution.png'), alt: 'Icon-spacing frequency distributions across five automotive interface functions' },
-  focusGroup: pendingFigure('focus-group-session.webp', 'Figure pending — Focus group session photograph', 'Authentic documentation of the focus-group or interview activity will be added here.'),
+  interviewFindings: { src: evidenceImage('automotive_indepth_interview_findings.svg'), alt: 'In-depth interview findings showing center-stack usage frequencies, reported operations, and design concerns' },
   route: { src: evidenceImage('simulator-route.png'), alt: 'Campus driving-simulator route with moving and stopped typography tasks' },
   simulatorEnvironment: { src: evidenceImage('simulator-environment.png'), alt: 'Historical driving simulator environment used for the automotive HMI experiments' },
   procedure: { src: evidenceImage('simulator-procedure.png'), alt: 'Three-column historical experimental procedure for simulator, participant, and center-stack display' },
@@ -383,7 +424,6 @@ const figures = {
 .section-body { max-width: 720px; }
 .section-figure,
 .method-strip,
-.topic-grid,
 .outputs-grid,
 .confidentiality-note { grid-column: 1 / -1; }
 .section-figure { margin-top: 1rem; }
@@ -403,7 +443,6 @@ const figures = {
 .method-strip span,
 .evidence-copy > span,
 .subsection-title > span,
-.topic-grid span,
 .measure-list span,
 .outputs-grid article > span { color: var(--benchmark-accent); font: 600 .68rem/1.4 var(--font-mono); letter-spacing: .08em; text-transform: uppercase; }
 .method-strip h3 { margin: 0 0 .55rem; }
@@ -415,6 +454,45 @@ const figures = {
 .benchmark-section > .section-body,
 .simulator-section > .section-body,
 .outputs-section > .section-body { grid-column: 2; }
+
+.benchmark-scope {
+  grid-column: 1 / -1;
+  padding-top: 2.5rem;
+  display: grid;
+  grid-template-columns: minmax(220px, 3fr) minmax(0, 9fr);
+  gap: clamp(2rem, 5vw, 5rem);
+  border-top: 1px solid var(--benchmark-line);
+}
+.benchmark-scope__intro h3,
+.layout-summary h3 { margin: .55rem 0 .85rem; color: var(--benchmark-text); font-size: 1.25rem; line-height: 1.3; }
+.benchmark-scope__intro > p:last-child,
+.layout-summary > p:not(.mini-label) { margin: 0; color: var(--benchmark-muted); font-size: .84rem; line-height: 1.72; }
+.brand-gallery {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(10, minmax(0, 1fr));
+  list-style: none;
+  border-top: 1px solid var(--benchmark-line);
+  border-left: 1px solid var(--benchmark-line);
+}
+.brand-gallery li {
+  min-width: 0;
+  min-height: 64px;
+  padding: .65rem .4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid var(--benchmark-line);
+  border-bottom: 1px solid var(--benchmark-line);
+  text-align: center;
+}
+.brand-gallery span {
+  color: var(--benchmark-muted);
+  font: 600 clamp(.56rem, .72vw, .68rem)/1.25 var(--font-sans);
+  letter-spacing: .015em;
+}
+.brand-gallery li:hover span { color: var(--benchmark-text); }
 
 .evidence-block,
 .protocol-block { grid-column: 1 / -1; padding-top: 3.5rem; border-top: 1px solid var(--benchmark-line); }
@@ -494,24 +572,59 @@ const figures = {
 .iconography-findings .table-scroll { grid-column: 1 / -1; }
 .iconography-synthesis { max-width: 900px; padding-top: 3rem; border-top: 1px solid var(--benchmark-line); }
 
+.layout-summary {
+  grid-column: 1 / -1;
+  max-width: 900px;
+  padding-top: 2.75rem;
+  border-top: 1px solid var(--benchmark-line);
+}
+.layout-summary__observation { margin-top: 1.4rem !important; padding-top: 1.4rem; border-top: 1px solid var(--benchmark-line); }
+
 .integrity-note,
 .confidentiality-note { padding: 1.25rem 0 0; color: var(--benchmark-muted); border-top: 1px solid var(--benchmark-line); font-size: .78rem; line-height: 1.65; }
 .integrity-note { grid-column: 1 / -1; }
 .integrity-note strong,
 .confidentiality-note strong { color: var(--benchmark-text); }
 
-.topic-grid {
-  margin: 1rem 0 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  list-style: none;
-  border-top: 1px solid var(--benchmark-line);
-  border-bottom: 1px solid var(--benchmark-line);
-}
-.topic-grid li { min-height: 112px; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between; gap: 1.5rem; color: var(--benchmark-text); border-right: 1px solid var(--benchmark-line); font-size: .82rem; line-height: 1.5; }
-.topic-grid li:first-child { padding-left: 0; }
-.topic-grid li:last-child { border-right: 0; }
+.qualitative-part { grid-column: 1 / -1; padding-top: 3.5rem; display: grid; gap: 2.25rem; border-top: 1px solid var(--benchmark-line); }
+.qualitative-context,
+.qualitative-conclusion { max-width: 900px; margin: 0; color: var(--benchmark-muted); font-size: .86rem; line-height: 1.72; }
+.qualitative-figure,
+.decision-matrix-figure { margin: 0; min-width: 0; }
+.qualitative-figure h4,
+.decision-matrix-figure h4,
+.qualitative-findings h4 { margin: 0 0 1rem; color: var(--benchmark-text); font-size: 1.2rem; line-height: 1.35; }
+.qualitative-figure a { display: block; color: var(--benchmark-muted); }
+.qualitative-figure img { width: 100%; height: auto; display: block; }
+.qualitative-figure a > span { display: block; padding-top: .55rem; font: 500 .66rem/1.4 var(--font-mono); text-align: right; }
+.qualitative-figure a:hover > span { color: var(--benchmark-text); }
+.qualitative-figure figcaption,
+.decision-matrix-figure figcaption { padding-top: .65rem; color: var(--benchmark-muted); font-size: .72rem; line-height: 1.6; }
+
+.qualitative-findings { padding-top: 2.75rem; border-top: 1px solid var(--benchmark-line); }
+.qualitative-findings ol { margin: 1.5rem 0; padding: 0; list-style: none; border-top: 1px solid var(--benchmark-line); border-bottom: 1px solid var(--benchmark-line); }
+.qualitative-findings li { display: grid; grid-template-columns: minmax(220px, 3fr) minmax(0, 9fr); border-bottom: 1px solid var(--benchmark-line); }
+.qualitative-findings li:last-child { border-bottom: 0; }
+.qualitative-findings li > span,
+.qualitative-findings li > p { padding: 1rem 1.25rem; }
+.qualitative-findings li > span { color: var(--benchmark-text); font-weight: 600; }
+.qualitative-findings li > p { margin: 0; color: var(--benchmark-muted); border-left: 1px solid var(--benchmark-line); font-size: .78rem; line-height: 1.6; }
+
+.decision-matrix { width: 100%; table-layout: fixed; border-collapse: collapse; border-top: 1px solid var(--benchmark-line); border-bottom: 1px solid var(--benchmark-line); }
+.decision-matrix th,
+.decision-matrix td { padding: 1rem 1.25rem; text-align: left; vertical-align: top; border-right: 1px solid var(--benchmark-line); border-bottom: 1px solid var(--benchmark-line); }
+.decision-matrix th:last-child,
+.decision-matrix td:last-child { border-right: 0; }
+.decision-matrix tbody tr:last-child td { border-bottom: 0; }
+.decision-matrix th { color: var(--benchmark-accent); font: 600 .68rem/1.4 var(--font-mono); letter-spacing: .06em; text-transform: uppercase; }
+.decision-matrix th:nth-child(1),
+.decision-matrix td:nth-child(1),
+.decision-matrix th:nth-child(3),
+.decision-matrix td:nth-child(3) { width: 36%; }
+.decision-matrix th:nth-child(2),
+.decision-matrix td:nth-child(2) { width: 28%; }
+.decision-matrix td { color: var(--benchmark-muted); font-size: .76rem; line-height: 1.62; }
+.decision-matrix td:last-child { color: var(--benchmark-text); box-shadow: inset 2px 0 0 var(--benchmark-accent); }
 
 .protocol-block { display: grid; gap: 2rem; }
 .subsection-title { display: flex; align-items: flex-start; gap: 1rem; }
@@ -627,15 +740,16 @@ const figures = {
   .method-strip li { min-height: 0; padding: 1.1rem 0; border-right: 0; border-bottom: 1px solid var(--benchmark-line); }
   .method-strip li:last-child { border-bottom: 0; }
   .evidence-block { grid-template-columns: 1fr; }
+  .benchmark-scope { grid-template-columns: 1fr; }
+  .brand-gallery { grid-template-columns: repeat(5, minmax(0, 1fr)); }
   .typography-findings { grid-template-columns: 1fr; }
   .typography-findings__note { grid-column: 1; }
   .character-length-findings__grid > div { grid-template-columns: 1fr; }
   .character-length-findings dd { padding-top: 0; border-left: 0; }
   .color-findings__list li { grid-template-columns: 1fr; }
   .color-findings__list p { padding-top: 0; border-left: 0; }
-  .topic-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .topic-grid li:nth-child(2) { border-right: 0; }
-  .topic-grid li:nth-child(-n+2) { border-bottom: 1px solid var(--benchmark-line); }
+  .qualitative-findings li { grid-template-columns: 1fr; }
+  .qualitative-findings li > p { padding-top: 0; border-left: 0; }
   .protocol-grid { grid-template-columns: 1fr; }
   .protocol-grid article { min-height: 0; padding: 1.1rem 0; border-right: 0; border-bottom: 1px solid var(--benchmark-line); }
   .protocol-grid article > span { margin-bottom: 1rem; }
@@ -660,17 +774,35 @@ const figures = {
 
 @media (max-width: 620px) {
   .hero { padding-top: 3.5rem; }
+  .brand-gallery {
+    grid-template-columns: none;
+    grid-template-rows: repeat(2, 58px);
+    grid-auto-flow: column;
+    grid-auto-columns: 112px;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+  }
+  .brand-gallery li { min-height: 58px; }
   .figure-pair,
-  .topic-grid,
   .measure-list,
   .outputs-grid,
   .framework-variables,
   .procedure-sequence,
   .stimuli-grid { grid-template-columns: 1fr; }
-  .topic-grid li,
   .measure-list li { min-height: 0; padding: 1rem 0; border-right: 0; border-bottom: 1px solid var(--benchmark-line); }
-  .topic-grid li:last-child,
   .measure-list li:last-child { border-bottom: 0; }
+  .decision-matrix,
+  .decision-matrix thead,
+  .decision-matrix tbody,
+  .decision-matrix tr,
+  .decision-matrix td { display: block; width: 100%; }
+  .decision-matrix thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
+  .decision-matrix tr { padding: 1rem 0; border-bottom: 1px solid var(--benchmark-line); }
+  .decision-matrix tbody tr:last-child { border-bottom: 0; }
+  .decision-matrix td,
+  .decision-matrix td:nth-child(n) { width: 100%; padding: .45rem 0; border: 0; box-shadow: none; }
+  .decision-matrix td::before { display: block; margin-bottom: .25rem; content: attr(data-label); color: var(--benchmark-accent); font: 600 .62rem/1.4 var(--font-mono); letter-spacing: .06em; text-transform: uppercase; }
+  .decision-matrix td:last-child { padding-left: .75rem; border-left: 2px solid var(--benchmark-accent); }
   .outputs-grid article,
   .outputs-grid article:nth-child(even) { min-height: 0; padding: 1.25rem 0; border-right: 0; }
   .outputs-grid h3 { margin-top: 1rem; }
