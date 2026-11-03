@@ -28,12 +28,10 @@
           <article><span>RQ3</span><h3>Context</h3><p>Do responses change between encounter scenarios and participant samples in China and Germany?</p></article>
           <article><span>RQ4</span><h3>Embodiment</h3><p>How can speech, expression, light, sensing, and motion be combined in a physical platform?</p></article>
         </div>
-        <aside class="role-note"><p class="mini-label">My documented contribution</p><p>I led the early campus-delivery research, contributed as a Tongji University co-author to the intercultural study, and independently developed the later master’s thesis concept and physical prototype. The retained repository does not document the co-authors’ detailed division of labor, so the shared publication is presented as a collaborative output.</p></aside>
       </section>
 
       <section class="section-surface"><div class="section-shell editorial-section">
-        <header class="section-heading"><p class="kicker">02 · Research Evolution</p><h2>Three related studies, kept analytically separate</h2></header>
-        <div class="section-body prose"><p>The program developed across three stages. Each stage used a different research context and produced a different kind of evidence; their participant samples and outcomes are not combined.</p></div>
+        <header class="section-heading"><p class="kicker">02 · Research Evolution</p></header>
         <ol class="research-timeline" aria-label="Research program timeline">
           <li><span>Stage A</span><time>Early collaboration</time><h3>Campus delivery exploration</h3><p>Field-oriented Wizard-of-Oz work and early external-display concepts developed with the Mitsubishi campus-delivery collaboration.</p><small>Evidence retained: concept render and field-test photograph.</small></li>
           <li><span>Stage B</span><time>AutomotiveUI 2020</time><h3>Intercultural video study</h3><p>A China–Germany collaboration tested three communication strategies in crosswalk and street encounters.</p><small>Evidence retained: formal publication metadata and abstract.</small></li>
@@ -42,11 +40,7 @@
       </div></section>
 
       <section class="section-shell editorial-section">
-        <header class="section-heading"><p class="kicker">03 · Initial Research / Wizard-of-Oz Exploration</p><h2>Making street encounters observable before building the full system</h2></header>
-        <div class="section-body prose">
-          <p>The initial work used a small vehicle and pedestrian figures on a model street. This setup allowed the team to stage crossing and approach encounters without claiming that the model was already autonomous. The retained photograph confirms the physical setup; the original protocol, sample record, and coding sheet are not present in the repository.</p>
-          <p>The early study established the practical problem that carried into the later work: pedestrians needed to interpret both vehicle movement and an explicit request in situations where right-of-way could be uncertain or contested.</p>
-        </div>
+        <header class="section-heading"><p class="kicker">03 · Initial Research / Wizard-of-Oz Exploration</p></header>
         <figure class="evidence-figure evidence-figure--wide"><img :src="asset('wizard-of-oz-field.jpg')" alt="Small delivery-vehicle model and pedestrian figure on a model street used for early Wizard-of-Oz exploration" /><figcaption><strong>Retained field-study photograph.</strong> A small vehicle and pedestrian figure were used to stage road encounters. No participant count or outcome is inferred from this image.</figcaption></figure>
         <dl class="method-ledger">
           <div><dt>Research purpose</dt><dd>Explore how a delivery vehicle could request, yield, or negotiate movement around pedestrians.</dd></div>
@@ -89,7 +83,6 @@
           <div><p class="mini-label">Published findings</p><h3 id="published-findings-title">What the formal record supports</h3></div>
           <ol><li><span>01</span><p>The polite strategy increased compliance in the Chinese sample, but not in the German sample.</p></li><li><span>02</span><p>Polite communication positively affected trust and acceptance in both samples.</p></li><li><span>03</span><p>The results show that a communication strategy cannot be interpreted apart from scenario and cultural context.</p></li></ol>
         </section>
-        <aside class="evidence-boundary"><p class="mini-label">Interpretation boundary</p><p>This page reports only findings available in the publication abstract. It does not reproduce unverified effect sizes, significance tests, scale scores, or condition means. The study samples support a comparison within this experiment; they do not represent all pedestrians in either country.</p></aside>
       </section>
 
       <section class="section-surface"><div class="section-shell editorial-section">
@@ -108,31 +101,12 @@
         <header class="section-heading"><p class="kicker">07 · Physical Prototype &amp; Multimodal Interaction</p><h2>A working platform for sensing, expression, speech, light, and motion</h2></header>
         <div class="section-body prose">
           <p>The thesis prototype combined an Arduino-class controller with ultrasonic sensing, line following, drive wheels, a facial-expression display, a speaker, and an external speech module. The annotated image is the strongest retained evidence of the implemented hardware.</p>
-          <p>The architecture below is a system-level reconstruction from that image and the existing portfolio record. It does not claim timing, sensor accuracy, or control logic that cannot be checked against source code.</p>
         </div>
         <figure class="evidence-figure evidence-figure--wide prototype-hardware"><img :src="asset('arduino-prototype.png')" alt="Annotated physical autonomous-delivery prototype with ultrasonic sensors, expression display, line sensor, speaker, speech module, wheels, and chassis" /><figcaption><strong>Annotated physical prototype.</strong> Retained labels identify the ultrasonic sensing module, line-following module, expression display, speaker, speech module, wheels, and vehicle chassis.</figcaption></figure>
-        <div class="architecture" aria-label="Prototype system architecture">
-          <div class="architecture__group"><p class="mini-label">Inputs</p><span>Ultrasonic sensing</span><span>Line following</span></div><div class="architecture__bus" aria-hidden="true">→</div>
-          <div class="architecture__controller"><p class="mini-label">Control</p><strong>Arduino-based controller</strong></div><div class="architecture__bus" aria-hidden="true">→</div>
-          <div class="architecture__group"><p class="mini-label">Outputs</p><span>Facial expression</span><span>Speech / speaker</span><span>Lighting</span><span>Drive motion</span></div>
-        </div>
-        <div class="interaction-sequence"><div><p class="mini-label">Documented interaction sequence</p><h3>From environmental cue to coordinated vehicle response</h3></div><ol><li><span>01</span><p>Sense proximity or route position.</p></li><li><span>02</span><p>Select the relevant interaction state.</p></li><li><span>03</span><p>Coordinate expression, speech, light, and movement.</p></li><li><span>04</span><p>Observe pedestrian response and continue or stop.</p></li></ol><p class="method-caveat">Sequence reconstructed at system level. The repository contains no event log, state-machine file, or timing trace.</p></div>
+        <div class="interaction-sequence"><div><p class="mini-label">Documented interaction sequence</p><h3>From environmental cue to coordinated vehicle response</h3></div><ol><li><span>01</span><p>Sense proximity or route position.</p></li><li><span>02</span><p>Select the relevant interaction state.</p></li><li><span>03</span><p>Coordinate expression, speech, light, and movement.</p></li><li><span>04</span><p>Observe pedestrian response and continue or stop.</p></li></ol></div>
       </section>
 
-      <section class="section-surface"><div class="section-shell editorial-section evaluation-section">
-        <header class="section-heading"><p class="kicker">08 · Evaluation, Discussion &amp; Publications</p><h2>Separating published evidence from results that still need source files</h2></header>
-        <div class="section-body prose"><p>The intercultural study provides the strongest recoverable quantitative evidence because its authorship, sample, factors, outcomes, and headline findings are available through the formal publication record. The thesis stage is represented by authentic prototype evidence, but its participant file and analysis are not currently available in the repository.</p></div>
-        <div class="evidence-table-wrap"><table class="evidence-table"><thead><tr><th>Research stage</th><th>Evidence available</th><th>What this page claims</th><th>What remains open</th></tr></thead><tbody>
-          <tr><th>Campus exploration</th><td>Concept render; Wizard-of-Oz photograph</td><td>Problem framing and staged encounter method</td><td>Protocol, sample, interview data, coded findings</td></tr>
-          <tr><th>AutomotiveUI 2020</th><td>Formal paper metadata and abstract</td><td>N=56 China; N=34 Germany; 3 strategies; 2 scenarios; published headline findings</td><td>Full stimulus set, condition-level values, analysis files</td></tr>
-          <tr><th>Master’s thesis</th><td>Vehicle render; annotated hardware image; award listing in site record</td><td>Physical multimodal prototype and documented components</td><td>Thesis PDF, participant record, raw data, statistical analysis, source code</td></tr>
-        </tbody></table></div>
-        <div class="discussion-grid">
-          <article><span>01 · Finding</span><h3>Communication style matters</h3><p>Published results associate polite communication with higher trust and acceptance in both samples, while compliance varied by sample.</p></article>
-          <article><span>02 · Design implication</span><h3>Meaning is contextual</h3><p>A request that is socially acceptable in one encounter cannot be assumed to work identically in another context.</p></article>
-          <article><span>03 · Limitation</span><h3>Video response is not field behavior</h3><p>An online video study supports controlled comparison, but it cannot reproduce the risk, movement, or mutual adaptation of a live encounter.</p></article>
-          <article><span>04 · Next evidence</span><h3>Recover the thesis record</h3><p>The thesis PDF, code, stimuli, participant log, and analysis are required before any prototype-performance numbers should return to the page.</p></article>
-        </div>
+      <section class="section-surface"><div class="section-shell editorial-section">
         <section class="publications" aria-labelledby="publications-title">
           <div><p class="mini-label">Selected outputs</p><h3 id="publications-title">Publications and thesis record</h3></div>
           <ul>
@@ -182,39 +156,28 @@ figcaption strong { color: var(--research-text); font-weight: 600; }
 .question-grid,
 .research-timeline,
 .strategy-scale,
-.framework-grid,
-.discussion-grid { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-block: 1px solid var(--research-line); }
+.framework-grid { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-block: 1px solid var(--research-line); }
 
 .question-grid article,
 .research-timeline li,
 .strategy-scale article,
-.framework-grid article,
-.discussion-grid article { padding: 1.35rem; border-right: 1px solid var(--research-line); }
+.framework-grid article { padding: 1.35rem; border-right: 1px solid var(--research-line); }
 .question-grid article:last-child,
 .research-timeline li:last-child,
 .strategy-scale article:last-child,
-.framework-grid article:last-child,
-.discussion-grid article:last-child { border-right: 0; }
+.framework-grid article:last-child { border-right: 0; }
 .question-grid span,
 .research-timeline li > span,
 .strategy-scale span,
-.framework-grid span,
-.discussion-grid article > span { color: var(--research-accent); font: 600 .68rem/1.4 var(--font-mono); }
+.framework-grid span { color: var(--research-accent); font: 600 .68rem/1.4 var(--font-mono); }
 .question-grid h3,
 .research-timeline h3,
 .strategy-scale h3,
-.framework-grid h3,
-.discussion-grid h3 { margin: 1.25rem 0 .6rem; }
+.framework-grid h3 { margin: 1.25rem 0 .6rem; }
 .question-grid p,
 .research-timeline p,
 .strategy-scale p,
-.framework-grid p,
-.discussion-grid p { color: var(--research-muted); font-size: .8rem; line-height: 1.65; }
-
-.role-note,
-.evidence-boundary { grid-column: 2; padding: 1.2rem 0 0 1.25rem; border-left: 2px solid var(--research-accent); }
-.role-note > p:last-child,
-.evidence-boundary > p:last-child { margin-top: .55rem; color: var(--research-muted); font-size: .82rem; line-height: 1.7; }
+.framework-grid p { color: var(--research-muted); font-size: .8rem; line-height: 1.65; }
 
 .research-timeline { grid-template-columns: repeat(3, minmax(0, 1fr)); list-style: none; }
 .research-timeline time { display: block; margin-top: .4rem; color: var(--research-muted); font: 500 .68rem/1.4 var(--font-mono); }
@@ -266,28 +229,12 @@ figcaption strong { color: var(--research-text); font-weight: 600; }
 .prototype-form img { max-height: 610px; object-fit: contain; }
 .prototype-hardware img { max-height: none; object-fit: contain; background: #fff; }
 
-.architecture { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr auto 1fr auto 1.4fr; align-items: stretch; border-block: 1px solid var(--research-line); }
-.architecture__group,
-.architecture__controller { padding: 1.3rem; }
-.architecture__group span { display: block; margin-top: .75rem; color: var(--research-muted); font-size: .8rem; }
-.architecture__controller strong { display: block; margin-top: 1rem; font-size: .95rem; }
-.architecture__bus { display: grid; place-items: center; padding: .75rem; color: var(--research-accent); border-inline: 1px solid var(--research-line); }
-
 .interaction-sequence { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(220px, 4fr) minmax(0, 8fr); gap: 2rem; }
 .interaction-sequence h3 { margin-top: .5rem; }
 .interaction-sequence ol { list-style: none; border-top: 1px solid var(--research-line); }
 .interaction-sequence li { padding: .85rem 0; display: grid; grid-template-columns: 2.5rem 1fr; border-bottom: 1px solid var(--research-line); }
 .interaction-sequence li span { color: var(--research-accent); font: 600 .68rem var(--font-mono); }
 .interaction-sequence li p { color: var(--research-muted); font-size: .8rem; }
-.interaction-sequence .method-caveat { grid-column: 2; }
-
-.evidence-table-wrap { grid-column: 1 / -1; overflow-x: auto; }
-.evidence-table { width: 100%; min-width: 820px; border-collapse: collapse; }
-.evidence-table th,
-.evidence-table td { padding: 1rem; text-align: left; vertical-align: top; border-bottom: 1px solid var(--research-line); font-size: .76rem; line-height: 1.6; }
-.evidence-table thead th { color: var(--research-accent); font: 600 .68rem/1.4 var(--font-mono); text-transform: uppercase; letter-spacing: .06em; }
-.evidence-table tbody th { width: 16%; color: var(--research-text); font-weight: 600; }
-.evidence-table td { color: var(--research-muted); }
 
 .publications { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(220px, 4fr) minmax(0, 8fr); gap: 2rem; padding-top: 1rem; }
 .publications h3 { margin-top: .5rem; }
@@ -302,28 +249,22 @@ figcaption strong { color: var(--research-text); font-weight: 600; }
 @media (max-width: 900px) {
   .editorial-section { padding-block: 3.5rem; grid-template-columns: 1fr; gap: 1.75rem; }
   .section-heading,
-  .section-body,
-  .role-note,
-  .evidence-boundary { grid-column: 1; }
+  .section-body { grid-column: 1; }
   .section-heading h2 { max-width: 38rem; }
   .hero-figure { grid-template-columns: 1fr; }
   .hero-figure img { min-height: 300px; }
   .hero-figure figcaption { padding-left: 0; }
   .question-grid,
-  .framework-grid,
-  .discussion-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .framework-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .question-grid article:nth-child(2),
-  .framework-grid article:nth-child(2),
-  .discussion-grid article:nth-child(2) { border-right: 0; }
+  .framework-grid article:nth-child(2) { border-right: 0; }
   .question-grid article:nth-child(-n+2),
-  .framework-grid article:nth-child(-n+2),
-  .discussion-grid article:nth-child(-n+2) { border-bottom: 1px solid var(--research-line); }
+  .framework-grid article:nth-child(-n+2) { border-bottom: 1px solid var(--research-line); }
   .study-design { grid-template-columns: 1fr; }
   .study-design__arrow { min-height: 36px; transform: rotate(90deg); border-inline: 0; border-block: 1px solid var(--research-line); }
   .published-findings,
   .interaction-sequence,
   .publications { grid-template-columns: 1fr; }
-  .interaction-sequence .method-caveat,
   .publications .text-link { grid-column: 1; }
 }
 
@@ -332,23 +273,18 @@ figcaption strong { color: var(--research-text); font-weight: 600; }
   .question-grid,
   .strategy-scale,
   .framework-grid,
-  .discussion-grid,
   .method-ledger { grid-template-columns: 1fr; }
   .research-timeline li,
   .question-grid article,
   .strategy-scale article,
   .framework-grid article,
-  .discussion-grid article,
   .method-ledger > div { padding: 1rem 0; border-right: 0; border-bottom: 1px solid var(--research-line); }
   .research-timeline li:last-child,
   .question-grid article:last-child,
   .strategy-scale article:last-child,
   .framework-grid article:last-child,
-  .discussion-grid article:last-child,
   .method-ledger > div:last-child { border-bottom: 0; }
   .scenario-matrix { grid-template-columns: 7.5rem minmax(12rem, 1fr) minmax(12rem, 1fr); overflow-x: auto; }
-  .architecture { grid-template-columns: 1fr; }
-  .architecture__bus { min-height: 36px; transform: rotate(90deg); border-inline: 0; border-block: 1px solid var(--research-line); }
   .publications li { grid-template-columns: 1fr; gap: .4rem; }
   .prototype-form img { min-height: 300px; object-fit: cover; }
 }
