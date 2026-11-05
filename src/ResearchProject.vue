@@ -12,7 +12,6 @@
         </div>
         <figure class="hero-figure">
           <img :src="asset('autonomous-delivery-hero.jpg')" alt="Autonomous delivery vehicle traveling through a pedestrian-oriented urban campus" />
-          <figcaption>Autonomous delivery vehicle concept in a pedestrian-oriented campus setting.</figcaption>
         </figure>
       </section>
 
@@ -42,15 +41,28 @@
       <section class="section-shell editorial-section">
         <header class="section-heading"><p class="kicker">03 · Initial Research / Wizard-of-Oz Exploration</p></header>
         <div class="evidence-gallery evidence-gallery--wizard" aria-label="Wizard-of-Oz prototype and field exploration photographs">
-          <figure><img :src="asset('wizard-of-oz-field.jpg')" alt="Small delivery-vehicle model and pedestrian figure on a model street used for early Wizard-of-Oz exploration" /><figcaption>Early staged encounter study.</figcaption></figure>
-          <figure><img :src="asset('wizard-of-oz-prototype.png')" alt="Cardboard Wizard-of-Oz delivery vehicle prototype shown from the rear and front" /><figcaption>Full-scale Wizard-of-Oz prototype.</figcaption></figure>
-          <figure><img :src="asset('wizard-of-oz-campus-test.png')" alt="Covered Wizard-of-Oz delivery vehicle tested with pedestrians and a cyclist on a campus road" /><figcaption>Campus field exploration.</figcaption></figure>
+          <figure><img :src="asset('wizard-of-oz-field.jpg')" alt="Small delivery-vehicle model and pedestrian figure on a model street used for early Wizard-of-Oz exploration" /></figure>
+          <figure><img :src="asset('wizard-of-oz-prototype.png')" alt="Cardboard Wizard-of-Oz delivery vehicle prototype shown from the rear and front" /></figure>
+          <figure><img :src="asset('wizard-of-oz-campus-test.png')" alt="Covered Wizard-of-Oz delivery vehicle tested with pedestrians and a cyclist on a campus road" /></figure>
         </div>
         <dl class="method-ledger">
           <div><dt>Research purpose</dt><dd>Explore how a delivery vehicle could request, yield, or negotiate movement around pedestrians.</dd></div>
-          <div><dt>Method evidence</dt><dd>Wizard-of-Oz setup and scenario staging are supported by the retained photograph and existing project record.</dd></div>
-          <div><dt>Evidence boundary</dt><dd>The repository does not contain the original protocol, participant file, interview guide, or coded observations.</dd></div>
         </dl>
+        <div class="insight-intro"><p class="mini-label">Wizard of Oz insights</p><p>The campus exploration showed how people noticed, interpreted, and moved around the staged vehicle. These observations informed later decisions about state communication, timing, visibility, and route planning.</p></div>
+        <div class="insight-grid">
+          <article><span>01</span><h3>Children approached</h3><p>Children were especially curious; some watched, approached, or tried to touch the robot and its screen.</p></article>
+          <article><span>02</span><h3>Stillness looked like an obstacle</h3><p>Many pedestrians walked around a stationary robot, making a sudden restart potentially confusing or unsafe.</p></article>
+          <article><span>03</span><h3>People slowed to interpret</h3><p>Pedestrians often reduced their pace near the robot to observe it and infer its state.</p></article>
+          <article><span>04</span><h3>Routes created constraints</h3><p>Bottlenecks, obstacles, steps, and curb-like transitions complicated route planning.</p></article>
+          <article><span>05</span><h3>Approach direction mattered</h3><p>A robot approaching from behind was often noticed late; a head-on approach was easier to interpret.</p></article>
+          <article><span>06</span><h3>Awareness preceded yielding</h3><p>Most pedestrians yielded only after they had clearly noticed the robot.</p></article>
+          <article><span>07</span><h3>Slow motion was ambiguous</h3><p>At crossing-like situations, people could not always tell whether the robot had stopped or was still moving slowly.</p></article>
+          <article><span>08</span><h3>Prompts needed timing logic</h3><p>Delayed responses and prompts left active suggested a need for automatic timing and auto-close behavior.</p></article>
+        </div>
+        <aside class="design-implications">
+          <p class="mini-label">Design implications</p>
+          <ul><li>Communicate vehicle state clearly.</li><li>Time prompts carefully, especially from behind.</li><li>Treat head-on and crossing encounters differently.</li><li>Plan for bottlenecks and limited visibility.</li><li>Use audible or visual prompts when awareness is low.</li></ul>
+        </aside>
       </section>
 
       <section class="section-surface"><div class="section-shell editorial-section">
@@ -69,6 +81,14 @@
             <div class="stimulus-row"><strong>Neutral</strong><p><span lang="de">Warten Sie bitte.</span><span lang="zh-CN">请您稍等。</span></p></div>
             <div class="stimulus-row"><strong>Dominant</strong><p><span lang="de">Warten Sie!</span><span lang="zh-CN">稍等一下！</span></p></div>
           </article>
+        </div>
+        <div class="evidence-gallery evidence-gallery--scenarios" aria-label="Crossing and head-on scenario visualizations">
+          <figure><img :src="asset('scenario-crossing.png')" alt="Crossing scenario with an autonomous delivery vehicle approaching a pedestrian crossing" /></figure>
+          <figure><img :src="asset('scenario-head-on.png')" alt="Head-on scenario with an autonomous delivery vehicle approaching a pedestrian on the same street" /></figure>
+        </div>
+        <div class="evidence-gallery evidence-gallery--stimuli" aria-label="Examples of projected verbal communication stimuli">
+          <figure><img :src="asset('stimulus-crosswalk-polite-cn.png')" alt="Crosswalk polite-strategy stimulus in Chinese projected in front of the vehicle" /></figure>
+          <figure><img :src="asset('stimulus-street-dominant-de.png')" alt="Street dominant-strategy stimulus in German projected behind the vehicle" /></figure>
         </div>
       </div></section>
 
@@ -103,63 +123,41 @@
           <div><p class="mini-label">Published findings</p><h3 id="published-findings-title">What the formal record supports</h3></div>
           <ol><li><span>01</span><p>The polite strategy increased compliance in the Chinese sample, but not in the German sample.</p></li><li><span>02</span><p>Polite communication positively affected trust and acceptance in both samples.</p></li><li><span>03</span><p>The results show that a communication strategy cannot be interpreted apart from scenario and cultural context.</p></li></ol>
         </section>
+        <section class="data-results" aria-labelledby="data-results-title">
+          <header><p class="mini-label">Data analysis</p><h3 id="data-results-title">Strategy, scenario, and sample comparisons</h3></header>
+          <article><h3>Perceived politeness and dominance</h3><p>Mean ratings for three strategies across the crosswalk and street scenarios in the German (N=34) and Chinese (N=56) samples. Seven-point Likert scale; error bars show standard deviations.</p><figure><img :src="asset('results-strategy-ratings.png')" alt="Politeness and dominance ratings by strategy, scenario, and sample" /></figure></article>
+          <article><h3>Compliance</h3><p>Absolute and relative compliance frequencies by strategy and scenario for both samples. The polite strategy increased compliance.</p><figure><img :src="asset('results-compliance.png')" alt="Compliance frequencies by strategy, scenario, and sample" /></figure></article>
+          <article><h3>Acceptance</h3><p>Main effects on usefulness and satisfaction by strategy and scenario for both samples. Seven-point Likert scale; error bars show standard deviations.</p><figure><img :src="asset('results-acceptance.png')" alt="Usefulness and satisfaction ratings by strategy, scenario, and sample" /></figure></article>
+          <article><h3>Trust</h3><p>Main effects on trust by strategy and scenario for both samples. Seven-point Likert scale; error bars show standard deviations.</p><figure><img :src="asset('results-trust.png')" alt="Trust ratings by strategy, scenario, and sample" /></figure></article>
+        </section>
       </section>
-
-      <section class="section-surface"><div class="section-shell editorial-section">
-        <header class="section-heading"><p class="kicker">06 · Wizard of Oz Insights</p><h2>Observed behavior that shaped later interaction decisions</h2></header>
-        <div class="section-body prose"><p>The campus exploration showed how people noticed, interpreted, and moved around the staged vehicle. These observations informed later decisions about state communication, timing, visibility, and route planning.</p></div>
-        <div class="insight-grid">
-          <article><span>01</span><h3>Children approached</h3><p>Children were especially curious; some watched, approached, or tried to touch the robot and its screen.</p></article>
-          <article><span>02</span><h3>Stillness looked like an obstacle</h3><p>Many pedestrians walked around a stationary robot, making a sudden restart potentially confusing or unsafe.</p></article>
-          <article><span>03</span><h3>People slowed to interpret</h3><p>Pedestrians often reduced their pace near the robot to observe it and infer its state.</p></article>
-          <article><span>04</span><h3>Routes created constraints</h3><p>Bottlenecks, obstacles, steps, and curb-like transitions complicated route planning.</p></article>
-          <article><span>05</span><h3>Approach direction mattered</h3><p>A robot approaching from behind was often noticed late; a head-on approach was easier to interpret.</p></article>
-          <article><span>06</span><h3>Awareness preceded yielding</h3><p>Most pedestrians yielded only after they had clearly noticed the robot.</p></article>
-          <article><span>07</span><h3>Slow motion was ambiguous</h3><p>At crossing-like situations, people could not always tell whether the robot had stopped or was still moving slowly.</p></article>
-          <article><span>08</span><h3>Prompts needed timing logic</h3><p>Delayed responses and prompts left active suggested a need for automatic timing and auto-close behavior.</p></article>
-        </div>
-        <aside class="design-implications">
-          <p class="mini-label">Design implications</p>
-          <ul><li>Communicate vehicle state clearly.</li><li>Time prompts carefully, especially from behind.</li><li>Treat head-on and crossing encounters differently.</li><li>Plan for bottlenecks and limited visibility.</li><li>Use audible or visual prompts when awareness is low.</li></ul>
-        </aside>
-      </div></section>
 
       <section><div class="section-shell editorial-section">
         <header class="section-heading"><p class="kicker">Prototype Development · Design Framework &amp; Iteration</p><h2>Translating social findings into a new vehicle concept</h2></header>
-        <div class="section-body prose"><p>The master’s thesis phase reframed the project as an embodied interaction system. Instead of relying on a single text display, the new concept coordinated vehicle form with visual, auditory, and movement cues. The retained repository documents the final form direction and hardware platform, but not the intermediate sketch set or complete iteration log.</p></div>
-        <div class="framework-grid">
-          <article><span>01</span><h3>Intent before decoration</h3><p>Every output should clarify what the vehicle has detected, intends to do, or requests from the pedestrian.</p></article>
-          <article><span>02</span><h3>Coordinated modalities</h3><p>Expression, speech, light, and motion should reinforce the same interaction state.</p></article>
-          <article><span>03</span><h3>Social stance as a variable</h3><p>The vehicle’s tone changes the relationship implied by an otherwise similar request.</p></article>
-          <article><span>04</span><h3>Context-sensitive behavior</h3><p>Crossings and oncoming encounters create different expectations about priority and compliance.</p></article>
-        </div>
-        <div class="evidence-gallery evidence-gallery--concept" aria-label="Autonomous delivery vehicle concept views and details">
-          <figure><img :src="asset('delivery-concept-views.png')" alt="Autonomous delivery vehicle concept shown in perspective, rear, and side views" /><figcaption>Vehicle form and principal views.</figcaption></figure>
-          <figure><img :src="asset('delivery-concept-details.png')" alt="Autonomous delivery vehicle concept details showing the roof, sensor housing, and wheel" /><figcaption>Sensor, roof, and wheel details.</figcaption></figure>
-        </div>
+        <figure class="evidence-figure concept-figure"><img :src="asset('delivery-concept-full.png')" alt="Autonomous delivery vehicle concept shown in perspective, rear, and side views" /></figure>
       </div></section>
 
       <section class="section-surface"><div class="section-shell editorial-section">
         <header class="section-heading"><p class="kicker">07 · Pedestrian Behavior Analysis</p><h2>Decision paths in crossing and head-on encounters</h2></header>
         <div class="section-body prose"><p>The two analyses map how pedestrians detect an approaching vehicle, infer whether it is autonomous, look for acknowledgement, and negotiate who proceeds first. They separate crossing behavior from the simpler forward-looking checks used in a head-on encounter.</p></div>
         <div class="evidence-gallery evidence-gallery--behavior" aria-label="Pedestrian behavior flowcharts for crossing and head-on scenarios">
-          <figure><img :src="asset('pedestrian-behavior-crossing.png')" alt="Flowchart of pedestrian decisions in a crossing scenario" /><figcaption>Crossing scenario: detection, acknowledgement, and yielding decisions.</figcaption></figure>
-          <figure><img :src="asset('pedestrian-behavior-head-on.png')" alt="Flowchart of pedestrian decisions in a head-on road encounter" /><figcaption>Head-on scenario: forward awareness, acknowledgement, and priority.</figcaption></figure>
+          <figure><img :src="asset('pedestrian-behavior-crossing.png')" alt="Flowchart of pedestrian decisions in a crossing scenario" /></figure>
+          <figure><img :src="asset('pedestrian-behavior-head-on.png')" alt="Flowchart of pedestrian decisions in a head-on road encounter" /></figure>
         </div>
       </div></section>
 
       <section class="section-shell editorial-section">
         <header class="section-heading"><p class="kicker">08 · Expression Display Design</p><h2>Seven display states for intent and social feedback</h2></header>
         <div class="section-body prose"><p>The LED matrix used distinct facial and symbolic patterns to communicate normal operation, stopping, priority, maintenance, gratitude, and yielding. Prototype photographs connect each pattern to its implemented display state.</p></div>
-        <figure class="evidence-figure expression-display"><img :src="asset('expression-display-design.png')" alt="Seven LED matrix expression patterns, prototype displays, and their intended meanings" /><figcaption>Expression patterns, prototype output, and intended meanings.</figcaption></figure>
+        <figure class="evidence-figure expression-display"><img :src="asset('expression-display-design.png')" alt="Seven LED matrix expression patterns, prototype displays, and their intended meanings" /></figure>
       </section>
 
       <section class="section-shell editorial-section">
         <header class="section-heading"><p class="kicker">09 · Information Control Strategy Requirements</p><h2>Matching communication content to encounter stage</h2></header>
         <div class="section-body prose"><p>Each scenario was decomposed into driving, warning, noticing, and interaction stages. The diagrams connect those stages to regular driving information, pedestrian warnings, and explicit interaction messages.</p></div>
         <div class="evidence-gallery evidence-gallery--requirements" aria-label="Information control requirements for two encounter scenarios">
-          <figure><img :src="asset('info-control-crossing.png')" alt="Crossing scenario stages and information control parameters" /><figcaption>Crossing scenario: stage evolution and required information.</figcaption></figure>
-          <figure><img :src="asset('info-control-head-on.png')" alt="Head-on scenario stages and information control parameters" /><figcaption>Head-on scenario: stage evolution and required information.</figcaption></figure>
+          <figure><img :src="asset('info-control-crossing.png')" alt="Crossing scenario stages and information control parameters" /></figure>
+          <figure><img :src="asset('info-control-head-on.png')" alt="Head-on scenario stages and information control parameters" /></figure>
         </div>
       </section>
 
@@ -169,8 +167,8 @@
           <p>The thesis prototype combined an Arduino-class controller with ultrasonic sensing, line following, drive wheels, a facial-expression display, a speaker, and an external speech module. The annotated photographs document the implemented hardware and drive base.</p>
         </div>
         <div class="evidence-gallery evidence-gallery--hardware" aria-label="Annotated prototype hardware photographs">
-          <figure><img :src="asset('prototype-hardware-overview.png')" alt="Annotated prototype overview showing the ultrasonic sensor, screen, patrol module, speaker, speech module, wheels, and vehicle base" /><figcaption>Upper assembly and multimodal interface components.</figcaption></figure>
-          <figure><img :src="asset('prototype-drive-base.png')" alt="Annotated underside of the prototype showing the left and right DC motors and independent power supply" /><figcaption>Drive base, motors, and independent power supply.</figcaption></figure>
+          <figure><img :src="asset('prototype-hardware-overview.png')" alt="Annotated prototype overview showing the ultrasonic sensor, screen, patrol module, speaker, speech module, wheels, and vehicle base" /></figure>
+          <figure><img :src="asset('prototype-drive-base.png')" alt="Annotated underside of the prototype showing the left and right DC motors and independent power supply" /></figure>
         </div>
         <div class="interaction-sequence"><div><p class="mini-label">Documented interaction sequence</p><h3>From environmental cue to coordinated vehicle response</h3></div><ol><li><span>01</span><p>Sense proximity or route position.</p></li><li><span>02</span><p>Select the relevant interaction state.</p></li><li><span>03</span><p>Coordinate expression, speech, light, and movement.</p></li><li><span>04</span><p>Observe pedestrian response and continue or stop.</p></li></ol></div>
         <div class="code-showcase"><div><p class="mini-label">Arduino implementation</p><h3>Distance-triggered motion, speech, and expression control</h3><p>The retained controller code coordinates distance sensing, drive speed, audio playback, and LED-matrix states.</p></div><pre tabindex="0" aria-label="Arduino controller source code"><code>{{ controllerCode }}</code></pre></div>
@@ -218,7 +216,6 @@ const asset = (filename) => `${import.meta.env.BASE_URL}images/research/autonomo
 .section-body > p + p { margin-top: 1rem; }
 figure { margin: 0; }
 figure img { width: 100%; display: block; }
-figcaption { padding-top: .65rem; color: var(--research-muted); font-size: .7rem; line-height: 1.5; }
 
 .hero-figure { margin-top: 3rem; border-top: 1px solid var(--research-line); }
 .hero-figure img { min-height: 420px; object-fit: cover; image-rendering: auto; }
@@ -261,21 +258,25 @@ figcaption { padding-top: .65rem; color: var(--research-muted); font-size: .7rem
 .evidence-gallery img { height: 100%; border: 1px solid var(--research-line); background: var(--research-surface); object-fit: cover; }
 .evidence-gallery--wizard { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .evidence-gallery--wizard img { aspect-ratio: 4 / 3; }
-.evidence-gallery--concept { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-.evidence-gallery--concept img { aspect-ratio: 2.1 / 1; }
 .evidence-gallery--hardware,
 .evidence-gallery--behavior,
-.evidence-gallery--requirements { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.evidence-gallery--requirements,
+.evidence-gallery--scenarios,
+.evidence-gallery--stimuli { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .evidence-gallery--hardware img { aspect-ratio: 1.85 / 1; object-fit: contain; background: #fff; }
 .evidence-gallery--behavior img { height: min(72vw, 920px); object-fit: contain; object-position: top center; background: #0b0f14; }
 .evidence-gallery--requirements img { aspect-ratio: 1.78 / 1; object-fit: contain; background: #0b0f14; }
+.evidence-gallery--scenarios img { aspect-ratio: 1.72 / 1; }
+.evidence-gallery--stimuli img { aspect-ratio: 1.72 / 1; }
+.concept-figure img { aspect-ratio: 2.45 / 1; object-fit: contain; background: #d9d9d9; }
 .expression-display img { aspect-ratio: 1.92 / 1; object-fit: contain; background: #0b0f14; }
 
-.method-ledger { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-block: 1px solid var(--research-line); }
-.method-ledger > div { padding: 1.2rem; border-right: 1px solid var(--research-line); }
-.method-ledger > div:last-child { border-right: 0; }
+.method-ledger { grid-column: 1 / -1; border-block: 1px solid var(--research-line); }
+.method-ledger > div { padding: 1.2rem; }
 .method-ledger dt { color: var(--research-accent); font: 600 .68rem/1.4 var(--font-mono); text-transform: uppercase; letter-spacing: .08em; }
 .method-ledger dd { margin-top: .55rem; color: var(--research-muted); font-size: .8rem; line-height: 1.65; }
+.insight-intro { grid-column: 1 / -1; display: grid; grid-template-columns: 12rem 1fr; gap: 1.5rem; align-items: start; }
+.insight-intro p:last-child { max-width: 54rem; color: var(--research-muted); font-size: .8rem; line-height: 1.65; }
 
 .strategy-scale { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .stimulus-grid { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-block: 1px solid var(--research-line); }
@@ -340,6 +341,15 @@ figcaption { padding-top: .65rem; color: var(--research-muted); font-size: .7rem
 .published-findings li span { color: var(--research-accent); font: 600 .68rem var(--font-mono); }
 .published-findings li p { color: var(--research-muted); font-size: .82rem; line-height: 1.65; }
 
+.data-results { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.5rem .9rem; padding-top: 1.5rem; border-top: 1px solid var(--research-line); }
+.data-results > header { grid-column: 1 / -1; }
+.data-results > header h3 { margin-top: .45rem; }
+.data-results article { min-width: 0; }
+.data-results article h3 { font-size: .9rem; }
+.data-results article > p { min-height: 4.8em; margin: .5rem 0 1rem; color: var(--research-muted); font-size: .7rem; line-height: 1.6; }
+.data-results figure { border: 1px solid var(--research-line); background: #fff; }
+.data-results img { width: 100%; display: block; aspect-ratio: 1.57 / 1; object-fit: contain; }
+
 .prototype-hardware img { max-height: none; object-fit: contain; background: #fff; }
 .code-showcase { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(220px, 4fr) minmax(0, 8fr); gap: 2rem; padding-block: 1.2rem; border-block: 1px solid var(--research-line); }
 .code-showcase h3 { margin: .45rem 0; font-size: 1rem; }
@@ -382,6 +392,9 @@ figcaption { padding-top: .65rem; color: var(--research-muted); font-size: .7rem
   .interaction-sequence,
   .publications,
   .code-showcase { grid-template-columns: 1fr; }
+  .data-results { grid-template-columns: 1fr; }
+  .data-results article > p { min-height: 0; }
+  .insight-intro { grid-template-columns: 1fr; gap: .6rem; }
   .publications .text-link { grid-column: 1; }
   .procedure-flow { grid-template-columns: 1fr; }
   .procedure-step { min-height: 0; }
@@ -412,10 +425,11 @@ figcaption { padding-top: .65rem; color: var(--research-muted); font-size: .7rem
   .scenario-matrix { grid-template-columns: 7.5rem minmax(12rem, 1fr) minmax(12rem, 1fr); overflow-x: auto; }
   .publications li { grid-template-columns: 1fr; gap: .4rem; }
   .evidence-gallery--wizard,
-  .evidence-gallery--concept,
   .evidence-gallery--hardware,
   .evidence-gallery--behavior,
   .evidence-gallery--requirements,
+  .evidence-gallery--scenarios,
+  .evidence-gallery--stimuli,
   .stimulus-grid,
   .insight-grid { grid-template-columns: 1fr; }
   .stimulus-scenario + .stimulus-scenario { border-left: 0; border-top: 1px solid var(--research-line); }
