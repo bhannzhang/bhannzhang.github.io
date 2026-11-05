@@ -12,6 +12,7 @@
         </div>
         <figure class="hero-figure">
           <img :src="asset('autonomous-delivery-hero.jpg')" alt="Autonomous delivery vehicle traveling through a pedestrian-oriented urban campus" />
+          <figcaption>Autonomous delivery vehicle concept in a pedestrian-oriented campus setting.</figcaption>
         </figure>
       </section>
 
@@ -40,7 +41,11 @@
 
       <section class="section-shell editorial-section">
         <header class="section-heading"><p class="kicker">03 · Initial Research / Wizard-of-Oz Exploration</p></header>
-        <figure class="evidence-figure evidence-figure--wide"><img :src="asset('wizard-of-oz-field.jpg')" alt="Small delivery-vehicle model and pedestrian figure on a model street used for early Wizard-of-Oz exploration" /><figcaption><strong>Retained field-study photograph.</strong> A small vehicle and pedestrian figure were used to stage road encounters. No participant count or outcome is inferred from this image.</figcaption></figure>
+        <div class="evidence-gallery evidence-gallery--wizard" aria-label="Wizard-of-Oz prototype and field exploration photographs">
+          <figure><img :src="asset('wizard-of-oz-field.jpg')" alt="Small delivery-vehicle model and pedestrian figure on a model street used for early Wizard-of-Oz exploration" /><figcaption>Early staged encounter study.</figcaption></figure>
+          <figure><img :src="asset('wizard-of-oz-prototype.png')" alt="Cardboard Wizard-of-Oz delivery vehicle prototype shown from the rear and front" /><figcaption>Full-scale Wizard-of-Oz prototype.</figcaption></figure>
+          <figure><img :src="asset('wizard-of-oz-campus-test.png')" alt="Covered Wizard-of-Oz delivery vehicle tested with pedestrians and a cyclist on a campus road" /><figcaption>Campus field exploration.</figcaption></figure>
+        </div>
         <dl class="method-ledger">
           <div><dt>Research purpose</dt><dd>Explore how a delivery vehicle could request, yield, or negotiate movement around pedestrians.</dd></div>
           <div><dt>Method evidence</dt><dd>Wizard-of-Oz setup and scenario staging are supported by the retained photograph and existing project record.</dd></div>
@@ -49,26 +54,42 @@
       </section>
 
       <section class="section-surface"><div class="section-shell editorial-section">
-        <header class="section-heading"><p class="kicker">04 · Communication Strategy Design</p><h2>Varying the social force of the vehicle’s request</h2></header>
-        <div class="section-body prose"><p>The published study compared three communication strategies ranging from polite to dominant. This manipulation treated the vehicle’s request as a social act: the requested behavior could remain similar while the degree of deference or pressure changed.</p></div>
-        <div class="strategy-scale" aria-label="Communication strategy comparison">
-          <article><span>01</span><h3>Polite</h3><p>A deferential request that leaves more social agency with the pedestrian.</p></article>
-          <article><span>02</span><h3>Neutral</h3><p>A direct request without the additional deference or pressure of the other conditions.</p></article>
-          <article><span>03</span><h3>Dominant</h3><p>A more forceful request that places greater priority on the vehicle’s desired action.</p></article>
-        </div>
-        <p class="method-caveat">The local archive does not contain the final videos or exact message scripts. These descriptions therefore represent the published experimental factor, not a reconstruction of the stimulus wording.</p>
-        <div class="scenario-heading"><p class="mini-label">Scenario matrix</p><h3>Two encounter structures</h3></div>
-        <div class="scenario-matrix">
-          <div class="scenario-matrix__corner">Vehicle request</div><div class="scenario-matrix__head">Crosswalk</div><div class="scenario-matrix__head">Street encounter</div>
-          <div class="scenario-matrix__label">Pedestrian position</div><div>Pedestrian at a marked crossing</div><div>Pedestrian and vehicle meeting on the street</div>
-          <div class="scenario-matrix__label">Interaction question</div><div>Would the pedestrian comply when the vehicle requested priority?</div><div>Would the pedestrian make space for the approaching vehicle?</div>
+        <header class="section-heading"><p class="kicker">04 · Scenario / Communication Strategy Design</p><h2>Two encounters, three communication tones</h2></header>
+        <div class="section-body prose"><p>Two pedestrian–vehicle scenarios were tested, each with polite, neutral, and dominant communication tones. Every stimulus was presented in both German and Chinese.</p></div>
+        <div class="stimulus-grid" aria-label="German and Chinese communication stimuli">
+          <article class="stimulus-scenario">
+            <p class="mini-label">A · Head-on Scenario</p>
+            <div class="stimulus-row"><strong>Polite</strong><p><span lang="de">Könnten Sie bitte aus dem Weg gehen?</span><span lang="zh-CN">请您让开，好吗？</span></p></div>
+            <div class="stimulus-row"><strong>Neutral</strong><p><span lang="de">Gehen Sie bitte aus dem Weg.</span><span lang="zh-CN">请您让开。</span></p></div>
+            <div class="stimulus-row"><strong>Dominant</strong><p><span lang="de">Gehen Sie aus dem Weg!</span><span lang="zh-CN">让开！</span></p></div>
+          </article>
+          <article class="stimulus-scenario">
+            <p class="mini-label">B · Crossing Scenario</p>
+            <div class="stimulus-row"><strong>Polite</strong><p><span lang="de">Könnten Sie bitte warten?</span><span lang="zh-CN">请您稍等下，好吗？</span></p></div>
+            <div class="stimulus-row"><strong>Neutral</strong><p><span lang="de">Warten Sie bitte.</span><span lang="zh-CN">请您稍等。</span></p></div>
+            <div class="stimulus-row"><strong>Dominant</strong><p><span lang="de">Warten Sie!</span><span lang="zh-CN">稍等一下！</span></p></div>
+          </article>
         </div>
       </div></section>
 
       <section class="section-shell editorial-section intercultural-study">
-        <header class="section-heading"><p class="kicker">05 · Intercultural Study — China &amp; Germany</p><h2>A published online video study of strategy, scenario, and cultural context</h2></header>
-        <div class="section-body prose">
-          <p>The AutomotiveUI 2020 study evaluated the same three communication strategies in two pedestrian–vehicle scenarios. Participants watched scenario videos online and reported their responses. The published abstract identifies compliance, acceptance, and trust as the measured outcomes.</p>
+        <header class="section-heading"><p class="kicker">05 · Experimental Procedure</p><h2>From randomized video stimuli to interview</h2></header>
+        <div class="section-body prose"><p>Participants viewed six short clips in randomized order, completed a questionnaire after each clip, and finished with an open-ended interview. The complete session lasted approximately one hour.</p></div>
+        <div class="procedure-flow" aria-label="Experimental procedure">
+          <div class="procedure-step"><span>01</span><strong>Participant starts</strong></div>
+          <div class="procedure-arrow" aria-hidden="true">→</div>
+          <div class="procedure-step"><span>02</span><strong>Randomized video block</strong><small>2 scenarios × 3 strategies<br />6 clips · ~20 s each</small></div>
+          <div class="procedure-arrow" aria-hidden="true">→</div>
+          <div class="procedure-step"><span>03</span><strong>Questionnaire</strong><small>After each clip · 6–8 min</small></div>
+          <div class="procedure-arrow" aria-hidden="true">↻</div>
+          <div class="procedure-step"><span>04</span><strong>Complete all conditions</strong><small>Repeat until all 6 stimuli are reviewed</small></div>
+          <div class="procedure-arrow" aria-hidden="true">→</div>
+          <div class="procedure-step"><span>05</span><strong>Open-ended interview</strong><small>5–10 min</small></div>
+          <div class="procedure-arrow" aria-hidden="true">→</div>
+          <div class="procedure-step"><span>06</span><strong>End</strong><small>~1 hour total</small></div>
+        </div>
+        <p class="procedure-note"><span>Randomized order</span> The six video stimuli were shuffled to reduce order effects.</p>
+        <div class="section-body prose study-context">
           <p>The formal record reports a Chinese sample of 56 participants and a German sample of 34 participants. These 90 participants belong to this study only; they are not combined with the earlier exploration or the later thesis evaluation.</p>
         </div>
         <div class="study-design" role="img" aria-label="Study design: three strategies and two scenarios shown to Chinese and German samples, measuring compliance, acceptance, and trust">
@@ -85,7 +106,26 @@
       </section>
 
       <section class="section-surface"><div class="section-shell editorial-section">
-        <header class="section-heading"><p class="kicker">06 · Design Framework &amp; Iteration</p><h2>Translating social findings into a new vehicle concept</h2></header>
+        <header class="section-heading"><p class="kicker">06 · Wizard of Oz Insights</p><h2>Observed behavior that shaped later interaction decisions</h2></header>
+        <div class="section-body prose"><p>The campus exploration showed how people noticed, interpreted, and moved around the staged vehicle. These observations informed later decisions about state communication, timing, visibility, and route planning.</p></div>
+        <div class="insight-grid">
+          <article><span>01</span><h3>Children approached</h3><p>Children were especially curious; some watched, approached, or tried to touch the robot and its screen.</p></article>
+          <article><span>02</span><h3>Stillness looked like an obstacle</h3><p>Many pedestrians walked around a stationary robot, making a sudden restart potentially confusing or unsafe.</p></article>
+          <article><span>03</span><h3>People slowed to interpret</h3><p>Pedestrians often reduced their pace near the robot to observe it and infer its state.</p></article>
+          <article><span>04</span><h3>Routes created constraints</h3><p>Bottlenecks, obstacles, steps, and curb-like transitions complicated route planning.</p></article>
+          <article><span>05</span><h3>Approach direction mattered</h3><p>A robot approaching from behind was often noticed late; a head-on approach was easier to interpret.</p></article>
+          <article><span>06</span><h3>Awareness preceded yielding</h3><p>Most pedestrians yielded only after they had clearly noticed the robot.</p></article>
+          <article><span>07</span><h3>Slow motion was ambiguous</h3><p>At crossing-like situations, people could not always tell whether the robot had stopped or was still moving slowly.</p></article>
+          <article><span>08</span><h3>Prompts needed timing logic</h3><p>Delayed responses and prompts left active suggested a need for automatic timing and auto-close behavior.</p></article>
+        </div>
+        <aside class="design-implications">
+          <p class="mini-label">Design implications</p>
+          <ul><li>Communicate vehicle state clearly.</li><li>Time prompts carefully, especially from behind.</li><li>Treat head-on and crossing encounters differently.</li><li>Plan for bottlenecks and limited visibility.</li><li>Use audible or visual prompts when awareness is low.</li></ul>
+        </aside>
+      </div></section>
+
+      <section><div class="section-shell editorial-section">
+        <header class="section-heading"><p class="kicker">Prototype Development · Design Framework &amp; Iteration</p><h2>Translating social findings into a new vehicle concept</h2></header>
         <div class="section-body prose"><p>The master’s thesis phase reframed the project as an embodied interaction system. Instead of relying on a single text display, the new concept coordinated vehicle form with visual, auditory, and movement cues. The retained repository documents the final form direction and hardware platform, but not the intermediate sketch set or complete iteration log.</p></div>
         <div class="framework-grid">
           <article><span>01</span><h3>Intent before decoration</h3><p>Every output should clarify what the vehicle has detected, intends to do, or requests from the pedestrian.</p></article>
@@ -93,16 +133,47 @@
           <article><span>03</span><h3>Social stance as a variable</h3><p>The vehicle’s tone changes the relationship implied by an otherwise similar request.</p></article>
           <article><span>04</span><h3>Context-sensitive behavior</h3><p>Crossings and oncoming encounters create different expectations about priority and compliance.</p></article>
         </div>
-        <figure class="evidence-figure prototype-form"><img :src="asset('prototype-form.png')" alt="Spherical autonomous delivery vehicle form developed for the master's thesis" /><figcaption><strong>Thesis form development.</strong> The retained render documents the independently redesigned vehicle concept. Intermediate sketches and decision records are still needed to show the full iteration history.</figcaption></figure>
+        <div class="evidence-gallery evidence-gallery--concept" aria-label="Autonomous delivery vehicle concept views and details">
+          <figure><img :src="asset('delivery-concept-views.png')" alt="Autonomous delivery vehicle concept shown in perspective, rear, and side views" /><figcaption>Vehicle form and principal views.</figcaption></figure>
+          <figure><img :src="asset('delivery-concept-details.png')" alt="Autonomous delivery vehicle concept details showing the roof, sensor housing, and wheel" /><figcaption>Sensor, roof, and wheel details.</figcaption></figure>
+        </div>
       </div></section>
 
-      <section class="section-shell editorial-section physical-prototype">
-        <header class="section-heading"><p class="kicker">07 · Physical Prototype &amp; Multimodal Interaction</p><h2>A working platform for sensing, expression, speech, light, and motion</h2></header>
-        <div class="section-body prose">
-          <p>The thesis prototype combined an Arduino-class controller with ultrasonic sensing, line following, drive wheels, a facial-expression display, a speaker, and an external speech module. The annotated image is the strongest retained evidence of the implemented hardware.</p>
+      <section class="section-surface"><div class="section-shell editorial-section">
+        <header class="section-heading"><p class="kicker">07 · Pedestrian Behavior Analysis</p><h2>Decision paths in crossing and head-on encounters</h2></header>
+        <div class="section-body prose"><p>The two analyses map how pedestrians detect an approaching vehicle, infer whether it is autonomous, look for acknowledgement, and negotiate who proceeds first. They separate crossing behavior from the simpler forward-looking checks used in a head-on encounter.</p></div>
+        <div class="evidence-gallery evidence-gallery--behavior" aria-label="Pedestrian behavior flowcharts for crossing and head-on scenarios">
+          <figure><img :src="asset('pedestrian-behavior-crossing.png')" alt="Flowchart of pedestrian decisions in a crossing scenario" /><figcaption>Crossing scenario: detection, acknowledgement, and yielding decisions.</figcaption></figure>
+          <figure><img :src="asset('pedestrian-behavior-head-on.png')" alt="Flowchart of pedestrian decisions in a head-on road encounter" /><figcaption>Head-on scenario: forward awareness, acknowledgement, and priority.</figcaption></figure>
         </div>
-        <figure class="evidence-figure evidence-figure--wide prototype-hardware"><img :src="asset('arduino-prototype.png')" alt="Annotated physical autonomous-delivery prototype with ultrasonic sensors, expression display, line sensor, speaker, speech module, wheels, and chassis" /><figcaption><strong>Annotated physical prototype.</strong> Retained labels identify the ultrasonic sensing module, line-following module, expression display, speaker, speech module, wheels, and vehicle chassis.</figcaption></figure>
+      </div></section>
+
+      <section class="section-shell editorial-section">
+        <header class="section-heading"><p class="kicker">08 · Expression Display Design</p><h2>Seven display states for intent and social feedback</h2></header>
+        <div class="section-body prose"><p>The LED matrix used distinct facial and symbolic patterns to communicate normal operation, stopping, priority, maintenance, gratitude, and yielding. Prototype photographs connect each pattern to its implemented display state.</p></div>
+        <figure class="evidence-figure expression-display"><img :src="asset('expression-display-design.png')" alt="Seven LED matrix expression patterns, prototype displays, and their intended meanings" /><figcaption>Expression patterns, prototype output, and intended meanings.</figcaption></figure>
+      </section>
+
+      <section class="section-shell editorial-section">
+        <header class="section-heading"><p class="kicker">09 · Information Control Strategy Requirements</p><h2>Matching communication content to encounter stage</h2></header>
+        <div class="section-body prose"><p>Each scenario was decomposed into driving, warning, noticing, and interaction stages. The diagrams connect those stages to regular driving information, pedestrian warnings, and explicit interaction messages.</p></div>
+        <div class="evidence-gallery evidence-gallery--requirements" aria-label="Information control requirements for two encounter scenarios">
+          <figure><img :src="asset('info-control-crossing.png')" alt="Crossing scenario stages and information control parameters" /><figcaption>Crossing scenario: stage evolution and required information.</figcaption></figure>
+          <figure><img :src="asset('info-control-head-on.png')" alt="Head-on scenario stages and information control parameters" /><figcaption>Head-on scenario: stage evolution and required information.</figcaption></figure>
+        </div>
+      </section>
+
+      <section class="section-shell editorial-section physical-prototype">
+        <header class="section-heading"><p class="kicker">10 · Arduino Implementation</p><h2>A working platform for sensing, expression, speech, light, and motion</h2></header>
+        <div class="section-body prose">
+          <p>The thesis prototype combined an Arduino-class controller with ultrasonic sensing, line following, drive wheels, a facial-expression display, a speaker, and an external speech module. The annotated photographs document the implemented hardware and drive base.</p>
+        </div>
+        <div class="evidence-gallery evidence-gallery--hardware" aria-label="Annotated prototype hardware photographs">
+          <figure><img :src="asset('prototype-hardware-overview.png')" alt="Annotated prototype overview showing the ultrasonic sensor, screen, patrol module, speaker, speech module, wheels, and vehicle base" /><figcaption>Upper assembly and multimodal interface components.</figcaption></figure>
+          <figure><img :src="asset('prototype-drive-base.png')" alt="Annotated underside of the prototype showing the left and right DC motors and independent power supply" /><figcaption>Drive base, motors, and independent power supply.</figcaption></figure>
+        </div>
         <div class="interaction-sequence"><div><p class="mini-label">Documented interaction sequence</p><h3>From environmental cue to coordinated vehicle response</h3></div><ol><li><span>01</span><p>Sense proximity or route position.</p></li><li><span>02</span><p>Select the relevant interaction state.</p></li><li><span>03</span><p>Coordinate expression, speech, light, and movement.</p></li><li><span>04</span><p>Observe pedestrian response and continue or stop.</p></li></ol></div>
+        <div class="code-showcase"><div><p class="mini-label">Arduino implementation</p><h3>Distance-triggered motion, speech, and expression control</h3><p>The retained controller code coordinates distance sensing, drive speed, audio playback, and LED-matrix states.</p></div><pre tabindex="0" aria-label="Arduino controller source code"><code>{{ controllerCode }}</code></pre></div>
       </section>
 
       <section class="section-surface"><div class="section-shell editorial-section">
@@ -124,6 +195,7 @@
 
 <script setup>
 import ResearchPageTopbar from './components/ResearchPageTopbar.vue'
+import controllerCode from './autonomous-delivery-controller.txt?raw'
 
 const homeUrl = import.meta.env.BASE_URL
 const asset = (filename) => `${import.meta.env.BASE_URL}images/research/autonomous-delivery/${filename}`
@@ -146,7 +218,7 @@ const asset = (filename) => `${import.meta.env.BASE_URL}images/research/autonomo
 .section-body > p + p { margin-top: 1rem; }
 figure { margin: 0; }
 figure img { width: 100%; display: block; }
-figcaption strong { color: var(--research-text); font-weight: 600; }
+figcaption { padding-top: .65rem; color: var(--research-muted); font-size: .7rem; line-height: 1.5; }
 
 .hero-figure { margin-top: 3rem; border-top: 1px solid var(--research-line); }
 .hero-figure img { min-height: 420px; object-fit: cover; image-rendering: auto; }
@@ -183,8 +255,21 @@ figcaption strong { color: var(--research-text); font-weight: 600; }
 
 .evidence-figure { grid-column: 1 / -1; }
 .evidence-figure img { border: 1px solid var(--research-line); background: var(--research-surface); object-fit: cover; }
-.evidence-figure figcaption { padding-top: .8rem; }
 .evidence-figure--wide img { max-height: 680px; object-position: center; }
+.evidence-gallery { grid-column: 1 / -1; display: grid; gap: .75rem; }
+.evidence-gallery figure { min-width: 0; }
+.evidence-gallery img { height: 100%; border: 1px solid var(--research-line); background: var(--research-surface); object-fit: cover; }
+.evidence-gallery--wizard { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.evidence-gallery--wizard img { aspect-ratio: 4 / 3; }
+.evidence-gallery--concept { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.evidence-gallery--concept img { aspect-ratio: 2.1 / 1; }
+.evidence-gallery--hardware,
+.evidence-gallery--behavior,
+.evidence-gallery--requirements { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.evidence-gallery--hardware img { aspect-ratio: 1.85 / 1; object-fit: contain; background: #fff; }
+.evidence-gallery--behavior img { height: min(72vw, 920px); object-fit: contain; object-position: top center; background: #0b0f14; }
+.evidence-gallery--requirements img { aspect-ratio: 1.78 / 1; object-fit: contain; background: #0b0f14; }
+.expression-display img { aspect-ratio: 1.92 / 1; object-fit: contain; background: #0b0f14; }
 
 .method-ledger { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-block: 1px solid var(--research-line); }
 .method-ledger > div { padding: 1.2rem; border-right: 1px solid var(--research-line); }
@@ -193,6 +278,37 @@ figcaption strong { color: var(--research-text); font-weight: 600; }
 .method-ledger dd { margin-top: .55rem; color: var(--research-muted); font-size: .8rem; line-height: 1.65; }
 
 .strategy-scale { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.stimulus-grid { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-block: 1px solid var(--research-line); }
+.stimulus-scenario { padding: 1.25rem; }
+.stimulus-scenario + .stimulus-scenario { border-left: 1px solid var(--research-line); }
+.stimulus-row { display: grid; grid-template-columns: 5.5rem minmax(0, 1fr); gap: 1rem; padding: 1rem 0; border-bottom: 1px solid color-mix(in srgb, var(--research-line) 70%, transparent); }
+.stimulus-row:last-child { border-bottom: 0; }
+.stimulus-row strong { color: var(--research-accent); font: 600 .68rem/1.5 var(--font-mono); text-transform: uppercase; }
+.stimulus-row p { margin: 0; }
+.stimulus-row span { display: block; color: var(--research-text); font-size: .82rem; line-height: 1.55; }
+.stimulus-row span + span { margin-top: .28rem; color: var(--research-muted); }
+
+.procedure-flow { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr auto 1.25fr auto 1fr auto 1.2fr auto 1fr auto .7fr; align-items: stretch; border-block: 1px solid var(--research-line); }
+.procedure-step { padding: 1rem .85rem; min-height: 8.5rem; }
+.procedure-step > span { display: block; color: var(--research-accent); font: 600 .66rem var(--font-mono); }
+.procedure-step strong { display: block; margin-top: 1.25rem; font-size: .78rem; line-height: 1.4; }
+.procedure-step small { display: block; margin-top: .45rem; color: var(--research-muted); font-size: .66rem; line-height: 1.5; }
+.procedure-arrow { display: grid; place-items: center; width: 1.5rem; color: var(--research-accent); border-inline: 1px solid var(--research-line); }
+.procedure-note { grid-column: 1 / -1; margin: 0; color: var(--research-muted); font-size: .72rem; }
+.procedure-note span { margin-right: .65rem; color: var(--research-accent); font: 600 .66rem var(--font-mono); text-transform: uppercase; }
+.study-context { grid-column: 1 / -1; max-width: 54rem; }
+
+.insight-grid { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-block: 1px solid var(--research-line); }
+.insight-grid article { padding: 1.1rem; border-right: 1px solid var(--research-line); border-bottom: 1px solid var(--research-line); }
+.insight-grid article:nth-child(4n) { border-right: 0; }
+.insight-grid article:nth-last-child(-n+4) { border-bottom: 0; }
+.insight-grid span { color: var(--research-accent); font: 600 .66rem var(--font-mono); }
+.insight-grid h3 { margin: .8rem 0 .4rem; font-size: .88rem; }
+.insight-grid p { color: var(--research-muted); font-size: .72rem; line-height: 1.55; }
+.design-implications { grid-column: 1 / -1; display: grid; grid-template-columns: 12rem 1fr; gap: 1.5rem; align-items: start; }
+.design-implications ul { display: flex; flex-wrap: wrap; gap: .55rem 1.5rem; list-style: none; }
+.design-implications li { color: var(--research-muted); font-size: .74rem; line-height: 1.5; }
+.design-implications li::before { content: '→'; margin-right: .45rem; color: var(--research-accent); }
 .method-caveat { grid-column: 1 / -1; margin: 0; color: var(--research-muted); font-size: .72rem; line-height: 1.6; }
 .scenario-heading { grid-column: 1 / -1; margin-top: 1.5rem; }
 .scenario-heading h3 { margin-top: .45rem; font-size: 1.15rem; }
@@ -224,8 +340,12 @@ figcaption strong { color: var(--research-text); font-weight: 600; }
 .published-findings li span { color: var(--research-accent); font: 600 .68rem var(--font-mono); }
 .published-findings li p { color: var(--research-muted); font-size: .82rem; line-height: 1.65; }
 
-.prototype-form img { max-height: 610px; object-fit: contain; }
 .prototype-hardware img { max-height: none; object-fit: contain; background: #fff; }
+.code-showcase { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(220px, 4fr) minmax(0, 8fr); gap: 2rem; padding-block: 1.2rem; border-block: 1px solid var(--research-line); }
+.code-showcase h3 { margin: .45rem 0; font-size: 1rem; }
+.code-showcase p:last-child { color: var(--research-muted); font-size: .76rem; line-height: 1.6; }
+.code-showcase pre { max-height: 30rem; margin: 0; padding: 1.1rem; overflow: auto; overscroll-behavior: contain; border: 1px solid var(--research-line); background: color-mix(in srgb, var(--research-surface) 78%, #000); color: var(--research-text); font: 500 .7rem/1.65 var(--font-mono); tab-size: 2; white-space: pre; }
+.code-showcase pre:focus-visible { outline: 1px solid var(--research-accent); outline-offset: 2px; }
 
 .interaction-sequence { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(220px, 4fr) minmax(0, 8fr); gap: 2rem; }
 .interaction-sequence h3 { margin-top: .5rem; }
@@ -260,8 +380,17 @@ figcaption strong { color: var(--research-text); font-weight: 600; }
   .study-design__arrow { min-height: 36px; transform: rotate(90deg); border-inline: 0; border-block: 1px solid var(--research-line); }
   .published-findings,
   .interaction-sequence,
-  .publications { grid-template-columns: 1fr; }
+  .publications,
+  .code-showcase { grid-template-columns: 1fr; }
   .publications .text-link { grid-column: 1; }
+  .procedure-flow { grid-template-columns: 1fr; }
+  .procedure-step { min-height: 0; }
+  .procedure-arrow { width: auto; min-height: 2rem; transform: rotate(90deg); border-inline: 0; border-block: 1px solid var(--research-line); }
+  .insight-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .insight-grid article:nth-child(4n) { border-right: 1px solid var(--research-line); }
+  .insight-grid article:nth-child(2n) { border-right: 0; }
+  .insight-grid article:nth-last-child(-n+4) { border-bottom: 1px solid var(--research-line); }
+  .insight-grid article:nth-last-child(-n+2) { border-bottom: 0; }
 }
 
 @media (max-width: 620px) {
@@ -282,6 +411,20 @@ figcaption strong { color: var(--research-text); font-weight: 600; }
   .method-ledger > div:last-child { border-bottom: 0; }
   .scenario-matrix { grid-template-columns: 7.5rem minmax(12rem, 1fr) minmax(12rem, 1fr); overflow-x: auto; }
   .publications li { grid-template-columns: 1fr; gap: .4rem; }
-  .prototype-form img { min-height: 300px; object-fit: cover; }
+  .evidence-gallery--wizard,
+  .evidence-gallery--concept,
+  .evidence-gallery--hardware,
+  .evidence-gallery--behavior,
+  .evidence-gallery--requirements,
+  .stimulus-grid,
+  .insight-grid { grid-template-columns: 1fr; }
+  .stimulus-scenario + .stimulus-scenario { border-left: 0; border-top: 1px solid var(--research-line); }
+  .insight-grid article,
+  .insight-grid article:nth-child(2n),
+  .insight-grid article:nth-child(4n),
+  .insight-grid article:nth-last-child(-n+4) { border-right: 0; border-bottom: 1px solid var(--research-line); }
+  .insight-grid article:last-child { border-bottom: 0; }
+  .design-implications { grid-template-columns: 1fr; gap: .8rem; }
+  .evidence-gallery--behavior img { height: auto; max-height: none; }
 }
 </style>

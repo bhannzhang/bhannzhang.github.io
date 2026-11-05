@@ -1,0 +1,225 @@
+#include <DFRobot_MAX.h>
+DFRobot_MAX myMax;
+int randomNum, getValue;
+#define RED 1
+#define GREEN 2
+#define YELLOW 3
+#define BLUE 4
+
+unsigned char sendbuf[] = {0x7E, 0xFF, 0x06, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xEF};
+
+
+static int8_t Emoticons5[128] = {//2
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, //0
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, //1
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, //2
+  0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, //3
+  0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, //4
+  0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, //6
+  0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, //7
+};
+static int8_t Emoticons4[128] = { //1
+  0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, //0
+  0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 0, 1, 0, 0, 0, //1
+  0, 0, 0, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, //2
+  0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, //3
+  0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, //4
+  0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, //6
+  0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, //7
+};
+static int8_t Emoticons3[128] = { //1
+  0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, //0
+  0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, //1
+  0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, //2
+  0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, //3
+  0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, //4
+  0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, //6
+  0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, //7
+};
+int rangxin=0;
+long timer1=0;
+int mp3paly=0;
+int keyjs=0;
+int mode=0;
+void setup()
+{
+  Serial.begin (9600);
+  mp3_set_volume (30);
+  delay(1);
+ // mp3play(2);
+
+  myMax.begin();
+  myMax.clearScreen();
+  myMax.showFace(22, 1); // 22 XX  16.2
+  delay(1000);
+  myMax.showFace(16, 2); //  16.2
+  delay(1000);
+  myMax.customFace(Emoticons3, 1); //+号
+  delay(1000);
+  myMax.customFace(Emoticons4, 1); //心
+  delay(1000);
+  myMax.customFace(Emoticons5, GREEN); //对号
+  delay(1000);
+  myMax.showFace(8, 4);// 8大眼
+  delay(1000);
+  myMax.forward(100, 100);
+  delay(1000);
+  myMax.forward(0, 0);
+  delay(1000);
+}
+
+void loop() {
+  getValue = myMax.distanceValue();
+  Serial.println(getValue);
+  keyjs=0;
+  while( myMax.buttonValue() == 1 && keyjs<100)
+  {
+     
+     keyjs++;
+     delay(10);
+  }
+  if(keyjs>1 && keyjs<50)
+  {  
+     mode++;
+     if(mode>1)
+     mode=0;
+     Serial.println(" mode=" + String(mode));
+  }
+  if(keyjs>50)
+  {  
+     mode=2;
+     Serial.println(" mode=" + String(mode));
+  } 
+  while( myMax.buttonValue() == 1); 
+  if(millis()-timer1>3000)
+  {
+     timer1=millis();
+     mp3paly=0;
+  }  
+  if(mode==1)
+  {
+      if(getValue>35)
+      {
+         if(rangxin==1)
+         {
+            rangxin=0;
+            mp3play(4);//谢谢
+            myMax.customFace(Emoticons4, 1); //心  
+            myMax.showFace(16, 2); //  16.2    
+         }         
+         myMax.forward(120, 120);
+         delay(100);
+      }
+      else if(getValue>15 && getValue<=35)
+      {
+         if(mp3paly==0)
+         {
+            mp3paly=1;
+            timer1=millis();
+            mp3play(3);//我来了
+            myMax.showFace(8, 4);// 8大眼
+         }  
+         myMax.forward(90, 90);
+         delay(100);    
+      }
+      else if(getValue<=15 )
+      {
+         if(mp3paly==0)
+         {
+            mp3paly=1;
+            timer1=millis();
+            mp3play(1);//哎呀哎呀
+            myMax.showFace(22, 1); // 22 XX 
+         }    
+         rangxin=1;
+         myMax.forward(0, 0);
+         delay(100);    
+      }  
+  }
+  else if(mode==2)
+  {
+      if(getValue>35)
+      {
+         if(mp3paly==0)
+         {
+            mp3paly=1;
+            timer1=millis();
+            mp3play(5);//医疗物资让我先行
+            myMax.customFace(Emoticons3, 1); //+号
+         }        
+         myMax.forward(120, 120);
+         delay(100);
+      }  
+      else if(getValue>15 && getValue<=35)
+      {
+         if(mp3paly==0)
+         {
+            mp3paly=1;
+            timer1=millis();
+            mp3play(3);//我来了
+            myMax.showFace(8, 4);// 8大眼
+         }
+         myMax.forward(90, 90);
+         delay(100);    
+      }
+      else if(getValue<=15 )
+      {
+         if(mp3paly==0)
+         {
+            mp3paly=1;
+            timer1=millis();
+            mp3play(1);//哎呀哎呀
+            myMax.showFace(22, 1); // 22 XX 
+         }    
+         rangxin=1;
+         myMax.forward(0, 0);
+         delay(100);    
+      }  
+  }
+  else
+  {
+     if(mp3paly==0)
+     {
+        mp3paly=1;
+        timer1=millis();
+        mp3play(2);//你先走吧
+        myMax.customFace(Emoticons5, GREEN); //对号
+     }     
+     myMax.forward(0, 0);   
+     delay(100);  
+   }
+}
+
+void sendfunc () {
+  for (int i = 0; i < 10; i++) {
+    Serial.write (sendbuf[i]);
+  }
+}
+uint16_t mp3getchecksum (uint8_t *thebuf)
+{
+  uint16_t sum = 0;
+  for (int i = 1; i < 7; i++) {
+    sum += thebuf[i];
+  }
+  return -sum;
+}
+void mp3fillchecksum () {
+  uint16_t checksum = mp3getchecksum (sendbuf);
+  filluint16bigend (sendbuf + 7, checksum);
+}
+void filluint16bigend (uint8_t *thebuf, uint16_t data) {
+  *thebuf = (uint8_t)(data >> 8);
+  *(thebuf + 1) = (uint8_t)data;
+}
+void mp3sendcmd (uint8_t cmd, uint16_t arg) {
+  sendbuf[3] = cmd;
+  filluint16bigend ((sendbuf + 5), arg);
+  mp3fillchecksum ();
+  sendfunc ();
+}
+void mp3play(uint16_t num) {
+  mp3sendcmd (0x12, num);
+}
+void mp3_set_volume (uint16_t volume) {
+  mp3sendcmd (0x06, volume);
+}
