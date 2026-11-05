@@ -279,7 +279,7 @@ export const siteContent = {
         title: "Social Acceptance and External Communication for Autonomous Delivery Vehicles",
         description: "Led research that began with a Mitsubishi Electric campus-delivery collaboration and developed into a published China–Germany video study with Ulm University, followed by an independently redesigned multimodal thesis prototype.",
         tags: ["Project Lead", "Cross-cultural HRI", "Multimodal eHMI", "56 China + 34 Germany"],
-        image: import.meta.env.BASE_URL + 'images/projects/project1.jpg',
+        image: import.meta.env.BASE_URL + 'images/research/autonomous-delivery/autonomous-delivery-hero.jpg',
         link: import.meta.env.BASE_URL + 'research/autonomous-delivery/',
       },
       {

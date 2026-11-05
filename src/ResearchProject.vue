@@ -11,8 +11,7 @@
           <span>Campus field exploration</span><span>China–Germany study</span><span>Physical eHMI prototype</span><span>AutomotiveUI 2020</span>
         </div>
         <figure class="hero-figure">
-          <img :src="asset('campus-delivery-concept.jpg')" alt="Early Mitsubishi autonomous campus-delivery vehicle concept" />
-          <figcaption><strong>Early vehicle concept.</strong> The retained image documents the Mitsubishi campus-delivery collaboration that preceded the published intercultural study and the later thesis prototype.</figcaption>
+          <img :src="asset('autonomous-delivery-hero.jpg')" alt="Autonomous delivery vehicle traveling through a pedestrian-oriented urban campus" />
         </figure>
       </section>
 
@@ -149,9 +148,8 @@ figure { margin: 0; }
 figure img { width: 100%; display: block; }
 figcaption strong { color: var(--research-text); font-weight: 600; }
 
-.hero-figure { margin-top: 3rem; display: grid; grid-template-columns: minmax(0, 8fr) minmax(230px, 4fr); border-top: 1px solid var(--research-line); }
+.hero-figure { margin-top: 3rem; border-top: 1px solid var(--research-line); }
 .hero-figure img { min-height: 420px; object-fit: cover; image-rendering: auto; }
-.hero-figure figcaption { padding: 1.2rem 0 0 1.5rem; }
 
 .question-grid,
 .research-timeline,
@@ -251,9 +249,7 @@ figcaption strong { color: var(--research-text); font-weight: 600; }
   .section-heading,
   .section-body { grid-column: 1; }
   .section-heading h2 { max-width: 38rem; }
-  .hero-figure { grid-template-columns: 1fr; }
   .hero-figure img { min-height: 300px; }
-  .hero-figure figcaption { padding-left: 0; }
   .question-grid,
   .framework-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .question-grid article:nth-child(2),
