@@ -134,7 +134,10 @@
 
       <section><div class="section-shell editorial-section">
         <header class="section-heading"><p class="kicker">Prototype Development · Design Framework &amp; Iteration</p><h2>Translating social findings into a new vehicle concept</h2></header>
-        <figure class="evidence-figure concept-figure"><img :src="asset('delivery-concept-full.png')" alt="Autonomous delivery vehicle concept shown in perspective, rear, and side views" /></figure>
+        <div class="evidence-gallery evidence-gallery--concept" aria-label="Autonomous delivery vehicle concept views">
+          <figure><img :src="asset('delivery-concept-full.png')" alt="Autonomous delivery vehicle concept shown in perspective, rear, and side views" /></figure>
+          <figure><img :src="asset('delivery-concept-details.png')" alt="Autonomous delivery vehicle roof, sensor, and wheel details" /></figure>
+        </div>
       </div></section>
 
       <section class="section-surface"><div class="section-shell editorial-section">
@@ -262,13 +265,14 @@ figure img { width: 100%; display: block; }
 .evidence-gallery--behavior,
 .evidence-gallery--requirements,
 .evidence-gallery--scenarios,
-.evidence-gallery--stimuli { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.evidence-gallery--stimuli,
+.evidence-gallery--concept { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .evidence-gallery--hardware img { aspect-ratio: 1.85 / 1; object-fit: contain; background: #fff; }
 .evidence-gallery--behavior img { height: min(72vw, 920px); object-fit: contain; object-position: top center; background: #0b0f14; }
 .evidence-gallery--requirements img { aspect-ratio: 1.78 / 1; object-fit: contain; background: #0b0f14; }
 .evidence-gallery--scenarios img { aspect-ratio: 1.72 / 1; }
 .evidence-gallery--stimuli img { aspect-ratio: 1.72 / 1; }
-.concept-figure img { aspect-ratio: 2.45 / 1; object-fit: contain; background: #d9d9d9; }
+.evidence-gallery--concept img { aspect-ratio: 2 / 1; object-fit: contain; background: #d9d9d9; }
 .expression-display img { aspect-ratio: 1.92 / 1; object-fit: contain; background: #0b0f14; }
 
 .method-ledger { grid-column: 1 / -1; border-block: 1px solid var(--research-line); }
@@ -430,6 +434,7 @@ figure img { width: 100%; display: block; }
   .evidence-gallery--requirements,
   .evidence-gallery--scenarios,
   .evidence-gallery--stimuli,
+  .evidence-gallery--concept,
   .stimulus-grid,
   .insight-grid { grid-template-columns: 1fr; }
   .stimulus-scenario + .stimulus-scenario { border-left: 0; border-top: 1px solid var(--research-line); }
