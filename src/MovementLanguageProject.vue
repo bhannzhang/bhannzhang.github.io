@@ -254,13 +254,152 @@ const labLimits = [
         <div class="shell limits-grid"><div><p class="kicker">18 · Limits of the current Movement Lab</p><h2>Participant-created movements expanded the design space</h2><p>Participant-created movements extended beyond the researcher-defined parameter space, adding pause timing, frequency changes, relational motion, and multi-stage sequences.</p></div><ul><li v-for="item in labLimits" :key="item">{{ item }}</li></ul></div>
       </section>
 
-      <section class="shell status-section">
-        <div><p class="kicker">19 · Current status</p><h2>Pausing the pilot to refine the research direction</h2></div>
-        <div><p>The current pilot is paused while I synthesize its findings into a preliminary movement–meaning design space and identify questions for future embodied experiments.</p><span>Exploratory pilot · synthesis in progress</span></div>
+      <section class="extension-section transition-section">
+        <div class="shell extension-layout">
+          <div><p class="kicker">19 · From Findings to Design Exploration</p><h2>From Understanding Movement to Designing Intention</h2></div>
+          <div class="extension-copy">
+            <p>The exploratory studies revealed that movement features differed in both perceptual salience and semantic specificity. Pauses and reversals frequently supported interpretations of hesitation, while curved trajectories were noticeable but did not consistently communicate avoidance.</p>
+            <p>The comparison between movement perception and movement production also suggested that designing an intended expression does not guarantee that observers will interpret it as expected.</p>
+            <p>These findings motivate a shift from understanding how movement is perceived toward exploring how movement can be deliberately composed to communicate intention.</p>
+            <ol class="research-transition" aria-label="Research transition from perception to design">
+              <li><span>01</span><strong>Movement Perception</strong></li><li aria-hidden="true">→</li>
+              <li><span>02</span><strong>Movement–Meaning Mapping</strong></li><li aria-hidden="true">→</li>
+              <li><span>03</span><strong>Intentional Movement Design</strong></li>
+            </ol>
+          </div>
+        </div>
       </section>
 
-      <section class="next-section">
-        <div class="shell next-grid"><div><p class="kicker">20 · Possible next direction</p><h2>Point → object → physical non-anthropomorphic agent</h2></div><div><p>The next question is whether these movement patterns remain legible when transferred from a screen-based point to a physical robotic body.</p><ul><li>relational motion</li><li>object-relative inspection</li><li>target distance</li><li>event-triggered behavior</li></ul></div></div>
+      <section class="extension-section extension-section--surface embodiment-section">
+        <div class="shell">
+          <div class="extension-layout">
+            <div><p class="kicker">20 · From Abstract to Embodied Movement</p><h2>What Changes When Movement Has a Body?</h2></div>
+            <div class="extension-copy">
+              <p>The initial Movement Lab used a single abstract point to isolate the expressive properties of motion. While this abstraction helped investigate velocity, timing, trajectory, and reversal, it did not account for how a physical body might change the interpretation of movement.</p>
+              <p>The next stage introduces a non-anthropomorphic robotic body constructed from two Sony toio robots connected by a flexible silicone bellows.</p>
+              <p>Unlike a single moving point, this structure allows movement to be expressed through both the trajectory of the whole robot and changes in its internal body configuration.</p>
+              <p>This extension explores whether bodily deformation can provide additional communicative cues beyond the movement of a single entity.</p>
+            </div>
+          </div>
+          <div class="embodiment-comparison">
+            <article>
+              <svg viewBox="0 0 360 150" role="img" aria-label="Abstract point moving along a trajectory"><path d="M34 104 C112 104 116 46 196 46 S278 104 326 104"/><circle cx="34" cy="104" r="11"/><circle class="comparison-target" cx="326" cy="104" r="8"/></svg>
+              <h3>Abstract Point</h3>
+              <ul><li>Single moving entity</li><li>Trajectory</li><li>Speed and acceleration</li><li>Pause and reversal</li></ul>
+            </article>
+            <article>
+              <svg viewBox="0 0 360 150" role="img" aria-label="Two mobile units connected by a flexible articulated body"><rect x="48" y="72" width="72" height="48" rx="5"/><rect x="240" y="46" width="72" height="48" rx="5"/><path class="comparison-body" d="M120 94 C150 55 208 111 240 70"/><circle cx="70" cy="124" r="8"/><circle cx="99" cy="124" r="8"/><circle cx="261" cy="98" r="8"/><circle cx="290" cy="98" r="8"/></svg>
+              <h3>Articulated Physical Body</h3>
+              <ul><li>Two coordinated mobile units</li><li>Whole-body trajectory</li><li>Relative movement</li><li>Extension and contraction</li><li>Bending and reconfiguration</li></ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="extension-section prototype-stage">
+        <div class="shell">
+          <div class="extension-layout">
+            <div><p class="kicker">21 · Physical Prototype</p><h2>Building an Articulated Robotic Body</h2></div>
+            <div class="extension-copy"><p>To investigate embodied movement, the project introduces a minimal physical configuration consisting of two Sony toio robots connected by a horizontally oriented silicone bellows.</p><p>The two units will be enclosed in symmetrical, non-anthropomorphic shells. Their coordinated movement is intended to create a single articulated robotic body capable of translating, extending, contracting, and bending.</p><p>The structure is designed to explore movement-based expression without relying on facial features, anthropomorphic gestures, or conventional social signals.</p></div>
+          </div>
+
+          <div class="extension-subsection">
+            <div class="subsection-heading"><span>21.1</span><h3>System Configuration</h3></div>
+            <div class="structural-grid">
+              <article><span>01</span><h3>Mobile Units</h3><p>Two Sony toio robots provide independent locomotion.</p></article>
+              <article><span>02</span><h3>Symmetrical Shells</h3><p>Lightweight 3D-printed enclosures create a visually unified body without an explicit head–tail distinction.</p></article>
+              <article><span>03</span><h3>Flexible Connection</h3><p>A horizontal silicone bellows connects the two units and enables visible changes in body configuration.</p></article>
+            </div>
+            <div class="research-placeholder research-placeholder--wide" role="img" aria-label="Placeholder for a two-toio articulated robot overall rendering"><span>[IMAGE PLACEHOLDER — Two-toio articulated robot, overall rendering]</span></div>
+          </div>
+
+          <div class="extension-subsection">
+            <div class="subsection-heading"><span>21.2</span><h3>Mechanical Exploration</h3></div>
+            <div class="capability-list">
+              <article><h3>Translation</h3><p>Both units move together while maintaining approximately the same relative configuration.</p></article>
+              <article><h3>Extension / contraction</h3><p>Relative distance changes, deforming the bellows.</p></article>
+              <article><h3>Bending</h3><p>Relative position and orientation change, producing a curved body configuration.</p></article>
+              <article><h3>Local probing</h3><p>One unit advances or retreats relative to the other.</p></article>
+            </div>
+            <p class="integrity-note">These are intended capabilities, not validated performance claims.</p>
+            <div class="placeholder-grid placeholder-grid--four">
+              <div class="research-placeholder" role="img" aria-label="Placeholder for translation movement"><span>[PLACEHOLDER — Translation]</span></div>
+              <div class="research-placeholder" role="img" aria-label="Placeholder for extension and contraction movement"><span>[PLACEHOLDER — Extension / Contraction]</span></div>
+              <div class="research-placeholder" role="img" aria-label="Placeholder for bending movement"><span>[PLACEHOLDER — Bending]</span></div>
+              <div class="research-placeholder" role="img" aria-label="Placeholder for local probing movement"><span>[PLACEHOLDER — Local Probing]</span></div>
+            </div>
+          </div>
+
+          <div class="extension-subsection">
+            <div class="subsection-heading"><span>21.3</span><h3>Prototype Development</h3></div>
+            <ul class="documentation-list"><li>CAD development</li><li>3D-printed shell iterations</li><li>Bellows selection</li><li>Mechanical connection details</li><li>Physical motion testing</li></ul>
+            <div class="research-placeholder research-placeholder--wide" role="img" aria-label="Placeholder for future prototype development documentation"><span>[IMAGE PLACEHOLDER — Prototype development overview]</span></div>
+            <div class="placeholder-grid placeholder-grid--two"><div class="research-placeholder" role="img" aria-label="Placeholder for shell and connection iteration"><span>[IMAGE PLACEHOLDER — Shell and connection iteration]</span></div><div class="research-placeholder" role="img" aria-label="Placeholder for physical motion testing"><span>[IMAGE PLACEHOLDER — Physical motion testing]</span></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="extension-section extension-section--surface expression-stage">
+        <div class="shell">
+          <div class="extension-layout">
+            <div><p class="kicker">22 · Expressive Movement Design</p><h2>Designing Hesitation Through Body Movement</h2></div>
+            <div class="extension-copy"><p>The previous studies suggested that hesitation can emerge from sequences of interruption, reversal, and resumption rather than from a single movement parameter.</p><p>The physical prototype extends this investigation by introducing body configuration as an additional design material.</p><p>Hesitation is selected as the initial design case because it offers an opportunity to investigate how temporal patterns, spatial trajectories, and relative body movements can be composed into an expressive sequence.</p></div>
+          </div>
+
+          <div class="extension-subsection">
+            <div class="subsection-heading"><span>22.1</span><h3>Three Design Dimensions</h3></div>
+            <div class="dimension-grid"><article><h3>Temporal Cues</h3><p>Speed variation, interruption, pause, reversal, and resumption.</p></article><article><h3>Embodied Cues</h3><p>Relative displacement, body extension, contraction, and bending.</p></article><article><h3>Spatial Cues</h3><p>Approach, directional probing, trajectory deviation, and target-relative movement.</p></article></div>
+            <p class="integrity-note">These dimensions are conceptual design categories and are not assumed to be physically or experimentally independent.</p>
+          </div>
+
+          <div class="extension-subsection">
+            <div class="subsection-heading"><span>22.2</span><h3>Candidate Movement Expressions</h3></div>
+            <div class="candidate-grid">
+              <article><span>H1</span><h3>Temporal-Dominant</h3><p>Hesitation expressed primarily through deceleration, interruption, and resumption.</p><div class="research-placeholder research-placeholder--animation" role="img" aria-label="Animation placeholder for H1"><span>[ANIMATION PLACEHOLDER — H1]</span></div><small>Future design notes</small></article>
+              <article><span>H2</span><h3>Embodied-Dominant</h3><p>Hesitation explored through relative movement and visible body deformation.</p><div class="research-placeholder research-placeholder--animation" role="img" aria-label="Animation placeholder for H2"><span>[ANIMATION PLACEHOLDER — H2]</span></div><small>Future design notes</small></article>
+              <article><span>H3</span><h3>Spatial-Dominant</h3><p>Hesitation explored through directional probing and trajectory adjustment.</p><div class="research-placeholder research-placeholder--animation" role="img" aria-label="Animation placeholder for H3"><span>[ANIMATION PLACEHOLDER — H3]</span></div><small>Future design notes</small></article>
+              <article><span>H4</span><h3>Combined Expression</h3><p>A sequence integrating temporal, embodied, and spatial cues.</p><div class="research-placeholder research-placeholder--animation" role="img" aria-label="Animation placeholder for H4"><span>[ANIMATION PLACEHOLDER — H4]</span></div><small>Future design notes</small></article>
+            </div>
+            <p class="integrity-note">These are planned design explorations, not completed experiments or validated design solutions.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="extension-section evaluation-stage">
+        <div class="shell">
+          <div class="extension-layout">
+            <div><p class="kicker">23 · Planned Evaluation</p><h2>How Might People Interpret Embodied Hesitation?</h2></div>
+            <div class="extension-copy"><p>This section describes a proposed evaluation rather than completed research.</p><p>A subsequent evaluation will examine how observers interpret candidate movement expressions and which movement cues contribute to their interpretations.</p><p>The study will investigate whether bodily deformation changes the perceived meaning of movement and whether intended hesitation is distinguished from alternative interpretations.</p></div>
+          </div>
+          <div class="extension-subsection">
+            <div class="subsection-heading"><span>23.1</span><h3>Proposed Evaluation Focus</h3></div>
+            <div class="evaluation-grid"><article><h3>Perceived Intention</h3><p>Do observers interpret the movement as hesitation?</p></article><article><h3>Semantic Ambiguity</h3><p>Is the movement instead interpreted as waiting, avoidance, mechanical failure, or another state?</p></article><article><h3>Movement Cues</h3><p>Which temporal, embodied, or spatial features do observers refer to when explaining their interpretations?</p></article><article><h3>Expressive Quality</h3><p>How natural, coherent, or understandable does the movement appear?</p></article></div>
+            <div class="research-placeholder research-placeholder--wide" role="img" aria-label="Placeholder for the physical evaluation setup"><span>[IMAGE PLACEHOLDER — Physical evaluation setup]</span></div>
+            <div class="research-placeholder research-placeholder--wide research-placeholder--data" role="img" aria-label="Placeholder for future evaluation results"><span>[DATA VISUALIZATION PLACEHOLDER — Evaluation results]</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="extension-section extension-section--surface framework-stage">
+        <div class="shell">
+          <div class="extension-layout">
+            <div><p class="kicker">24 · Toward a Design Framework</p><h2>Toward an Intent-to-Movement Design Framework</h2></div>
+            <div class="extension-copy"><p>The long-term objective is to connect movement perception, participant-generated expressions, physical prototyping, and evaluation into a preliminary approach for designing communicative robotic movement.</p><p>Rather than assuming a fixed correspondence between movement parameters and meanings, the framework will consider how movement cues can be selected, sequenced, embodied, and evaluated in context.</p><span class="framework-status">Preliminary framework — under development</span></div>
+          </div>
+          <div class="extension-subsection">
+            <div class="subsection-heading"><span>24.1</span><h3>Proposed Design Process</h3></div>
+            <ol class="design-process"><li><span>01</span><h3>Define Intention</h3><p>Identify the intended state or communicative purpose.</p></li><li><span>02</span><h3>Select Movement Cues</h3><p>Draw on movement–meaning evidence and relevant expressive features.</p></li><li><span>03</span><h3>Compose Movement</h3><p>Organize temporal, embodied, and spatial cues into a coherent sequence.</p></li><li><span>04</span><h3>Situate in Context</h3><p>Consider targets, obstacles, and environmental relationships.</p></li><li><span>05</span><h3>Evaluate Interpretation</h3><p>Compare intended meanings with observer interpretations and iterate.</p></li></ol>
+            <p class="integrity-note">This is a proposed design process, not a validated framework.</p>
+            <div class="research-placeholder research-placeholder--wide" role="img" aria-label="Placeholder for the intent-to-movement design framework"><span>[DIAGRAM PLACEHOLDER — Intent-to-Movement Design Framework]</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="extension-section reflection-stage">
+        <div class="shell extension-layout">
+          <div><p class="kicker">25 · Reflection &amp; Future Work</p><h2>What Embodiment Might Add to Movement as a Language</h2></div>
+          <div class="extension-copy"><p>The transition from an abstract point to an articulated robotic body introduces a new question: whether movement meaning is communicated only through the trajectory of an agent, or also through how its body changes during movement.</p><p>The two-toio prototype provides an opportunity to investigate the relationship between whole-body motion, internal deformation, temporal sequencing, and environmental context.</p><p>Future work will examine the interpretability of these expressions, the constraints introduced by physical embodiment, and the potential transfer of the design approach to other intentions such as avoidance.</p><p>This project remains an ongoing research exploration. Findings from the physical stage will be documented as prototyping and evaluation progress.</p></div>
+        </div>
       </section>
     </article>
 
@@ -310,9 +449,279 @@ const labLimits = [
 .status-section { padding-block: 3rem; }
 .next-grid > div:last-child > p { color: var(--research-muted); }
 
+.extension-section {
+  padding-block: 6rem;
+  color: var(--research-text);
+  background: var(--research-bg);
+  border-top: 1px solid var(--research-line);
+}
+.extension-section--surface { background: var(--research-surface); }
+.extension-layout {
+  display: grid;
+  grid-template-columns: minmax(230px, 4fr) minmax(0, 8fr);
+  gap: clamp(3rem, 7vw, 7rem);
+  align-items: start;
+}
+.extension-copy {
+  color: var(--research-muted);
+  font-size: .94rem;
+  line-height: 1.78;
+}
+.extension-copy p + p { margin-top: 1rem; }
+.research-transition {
+  margin: 2rem 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr auto 1.2fr auto 1fr;
+  gap: .65rem;
+  align-items: center;
+  list-style: none;
+}
+.research-transition li:not([aria-hidden]) {
+  min-height: 110px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid var(--research-line);
+}
+.research-transition li[aria-hidden] {
+  color: var(--research-accent);
+  text-align: center;
+}
+.research-transition span,
+.structural-grid article > span,
+.candidate-grid article > span,
+.design-process span,
+.subsection-heading > span {
+  color: var(--research-accent);
+  font: 700 .68rem/1.4 var(--font-mono);
+}
+.research-transition strong { font-size: .86rem; }
+.embodiment-comparison {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-block: 1px solid var(--research-line);
+}
+.embodiment-comparison article {
+  padding: 1.3rem;
+  border-right: 1px solid var(--research-line);
+}
+.embodiment-comparison article:last-child { border-right: 0; }
+.embodiment-comparison svg {
+  width: 100%;
+  max-height: 180px;
+  display: block;
+  fill: var(--research-bg);
+  stroke: var(--research-accent);
+  stroke-width: 2;
+}
+.embodiment-comparison svg path { fill: none; }
+.embodiment-comparison .comparison-body {
+  stroke-width: 8;
+  stroke-linecap: round;
+}
+.embodiment-comparison .comparison-target { fill: none; }
+.embodiment-comparison h3 { margin-top: 1.2rem; }
+.embodiment-comparison ul {
+  margin-top: 1rem;
+  padding-left: 1rem;
+  color: var(--research-muted);
+  font-size: .82rem;
+  line-height: 1.8;
+}
+.extension-subsection {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--research-line);
+}
+.subsection-heading {
+  display: flex;
+  gap: 1rem;
+  align-items: baseline;
+}
+.structural-grid,
+.dimension-grid {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-block: 1px solid var(--research-line);
+}
+.structural-grid article,
+.dimension-grid article {
+  min-height: 170px;
+  padding: 1.1rem;
+  border-right: 1px solid var(--research-line);
+}
+.structural-grid article:last-child,
+.dimension-grid article:last-child { border-right: 0; }
+.structural-grid h3,
+.design-process h3 { margin-top: 2.5rem; }
+.structural-grid p,
+.dimension-grid p,
+.capability-list p,
+.candidate-grid p,
+.evaluation-grid p,
+.design-process p {
+  margin-top: .65rem;
+  color: var(--research-muted);
+  font-size: .8rem;
+  line-height: 1.65;
+}
+.research-placeholder {
+  aspect-ratio: 4 / 3;
+  padding: 1rem;
+  display: grid;
+  place-items: center;
+  border: 1px dashed var(--research-line);
+  background: var(--research-surface);
+  text-align: center;
+}
+.research-placeholder > span {
+  max-width: 90%;
+  color: var(--research-muted);
+  font: 700 .64rem/1.55 var(--font-mono);
+  letter-spacing: .04em;
+}
+.research-placeholder--wide {
+  margin-top: 1rem;
+  aspect-ratio: 16 / 9;
+}
+.research-placeholder--animation {
+  margin-top: 1rem;
+  aspect-ratio: 16 / 10;
+}
+.research-placeholder--data { margin-top: 1rem; }
+.placeholder-grid {
+  margin-top: 1rem;
+  display: grid;
+  gap: 1rem;
+}
+.placeholder-grid--four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.placeholder-grid--two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.capability-list {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid var(--research-line);
+}
+.capability-list article {
+  padding: 1rem;
+  border-right: 1px solid var(--research-line);
+  border-bottom: 1px solid var(--research-line);
+}
+.capability-list article:last-child { border-right: 0; }
+.documentation-list {
+  margin: 1.5rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  border-top: 1px solid var(--research-line);
+}
+.documentation-list li {
+  margin-right: 1rem;
+  padding: .8rem 1rem .8rem 0;
+  color: var(--research-muted);
+  font-size: .76rem;
+}
+.integrity-note {
+  margin-top: 1rem;
+  padding-left: 1rem;
+  color: var(--research-muted);
+  border-left: 2px solid var(--research-accent);
+  font-size: .76rem;
+  line-height: 1.6;
+}
+.candidate-grid,
+.evaluation-grid {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid var(--research-line);
+}
+.candidate-grid article,
+.evaluation-grid article {
+  padding: 1.1rem;
+  border-right: 1px solid var(--research-line);
+  border-bottom: 1px solid var(--research-line);
+}
+.candidate-grid article:nth-child(even),
+.evaluation-grid article:nth-child(even) { border-right: 0; }
+.candidate-grid small {
+  margin-top: 1rem;
+  padding-top: .8rem;
+  display: block;
+  color: var(--research-muted);
+  border-top: 1px solid var(--research-line);
+}
+.framework-status {
+  margin-top: 1.5rem;
+  padding: .55rem .75rem;
+  display: inline-block;
+  color: var(--research-accent);
+  border: 1px solid var(--research-accent);
+  font: 700 .66rem/1.4 var(--font-mono);
+}
+.design-process {
+  margin-top: 1.5rem;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  list-style: none;
+  border-block: 1px solid var(--research-line);
+}
+.design-process li {
+  min-height: 210px;
+  padding: 1rem;
+  border-right: 1px solid var(--research-line);
+}
+.design-process li:last-child { border-right: 0; }
+
 @media (max-width: 900px) {
   .limits-grid,
   .status-section,
   .next-grid { padding-block: 2.5rem; }
+  .extension-section { padding-block: 4rem; }
+  .extension-layout { grid-template-columns: 1fr; gap: 2rem; }
+  .research-transition { grid-template-columns: 1fr; }
+  .research-transition li[aria-hidden] { transform: rotate(90deg); }
+  .embodiment-comparison,
+  .structural-grid,
+  .dimension-grid { grid-template-columns: 1fr; }
+  .embodiment-comparison article,
+  .structural-grid article,
+  .dimension-grid article {
+    min-height: 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--research-line);
+  }
+  .embodiment-comparison article:last-child,
+  .structural-grid article:last-child,
+  .dimension-grid article:last-child { border-bottom: 0; }
+  .capability-list,
+  .placeholder-grid--four { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .capability-list article:nth-child(even) { border-right: 0; }
+  .design-process { grid-template-columns: 1fr; }
+  .design-process li {
+    min-height: 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--research-line);
+  }
+  .design-process li:last-child { border-bottom: 0; }
+  .design-process h3 { margin-top: 1rem; }
+}
+
+@media (max-width: 560px) {
+  .capability-list,
+  .placeholder-grid--four,
+  .placeholder-grid--two,
+  .candidate-grid,
+  .evaluation-grid { grid-template-columns: 1fr; }
+  .capability-list article,
+  .candidate-grid article,
+  .evaluation-grid article { border-right: 0; }
+  .research-placeholder--wide { aspect-ratio: 4 / 3; }
 }
 </style>
