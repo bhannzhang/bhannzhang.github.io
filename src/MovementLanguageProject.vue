@@ -258,9 +258,8 @@ const labLimits = [
         <div class="shell extension-layout">
           <div><p class="kicker">19 · From Findings to Design Exploration</p><h2>From Understanding Movement to Designing Intention</h2></div>
           <div class="extension-copy">
-            <p>The exploratory studies revealed that movement features differed in both perceptual salience and semantic specificity. Pauses and reversals frequently supported interpretations of hesitation, while curved trajectories were noticeable but did not consistently communicate avoidance.</p>
-            <p>The comparison between movement perception and movement production also suggested that designing an intended expression does not guarantee that observers will interpret it as expected.</p>
-            <p>These findings motivate a shift from understanding how movement is perceived toward exploring how movement can be deliberately composed to communicate intention.</p>
+            <p>Pauses and reversals were often read as hesitation, while curved paths did not consistently convey avoidance.</p>
+            <p>The gap between intended and perceived meaning shifts the project toward composing movement around a specific intention.</p>
             <ol class="research-transition" aria-label="Research transition from perception to design">
               <li><span>01</span><strong>Movement Perception</strong></li><li aria-hidden="true">→</li>
               <li><span>02</span><strong>Movement–Meaning Mapping</strong></li><li aria-hidden="true">→</li>
@@ -275,10 +274,8 @@ const labLimits = [
           <div class="extension-layout">
             <div><p class="kicker">20 · From Abstract to Embodied Movement</p><h2>What Changes When Movement Has a Body?</h2></div>
             <div class="extension-copy">
-              <p>The initial Movement Lab used a single abstract point to isolate the expressive properties of motion. While this abstraction helped investigate velocity, timing, trajectory, and reversal, it did not account for how a physical body might change the interpretation of movement.</p>
-              <p>The next stage introduces a non-anthropomorphic robotic body constructed from two Sony toio robots connected by a flexible silicone bellows.</p>
-              <p>Unlike a single moving point, this structure allows movement to be expressed through both the trajectory of the whole robot and changes in its internal body configuration.</p>
-              <p>This extension explores whether bodily deformation can provide additional communicative cues beyond the movement of a single entity.</p>
+              <p>Movement Lab isolated timing and trajectory through a single abstract point.</p>
+              <p>The next stage asks how an articulated body, formed by two connected mobile robots, changes what movement communicates.</p>
             </div>
           </div>
           <div class="embodiment-comparison">
@@ -300,17 +297,17 @@ const labLimits = [
         <div class="shell">
           <div class="extension-layout">
             <div><p class="kicker">21 · Physical Prototype</p><h2>Building an Articulated Robotic Body</h2></div>
-            <div class="extension-copy"><p>To investigate embodied movement, the project introduces a minimal physical configuration consisting of two Sony toio robots connected by a horizontally oriented silicone bellows.</p><p>The two units will be enclosed in symmetrical, non-anthropomorphic shells. Their coordinated movement is intended to create a single articulated robotic body capable of translating, extending, contracting, and bending.</p><p>The structure is designed to explore movement-based expression without relying on facial features, anthropomorphic gestures, or conventional social signals.</p></div>
+            <div class="extension-copy"><p>The planned prototype connects two mobile robots with a horizontal silicone bellows.</p><p>Their coordinated motion will produce translation, extension, contraction, and bending without facial or anthropomorphic cues.</p></div>
           </div>
 
           <div class="extension-subsection">
             <div class="subsection-heading"><span>21.1</span><h3>System Configuration</h3></div>
             <div class="structural-grid">
-              <article><span>01</span><h3>Mobile Units</h3><p>Two Sony toio robots provide independent locomotion.</p></article>
+              <article><span>01</span><h3>Mobile Units</h3><p>Two mobile robots provide independent locomotion.</p></article>
               <article><span>02</span><h3>Symmetrical Shells</h3><p>Lightweight 3D-printed enclosures create a visually unified body without an explicit head–tail distinction.</p></article>
               <article><span>03</span><h3>Flexible Connection</h3><p>A horizontal silicone bellows connects the two units and enables visible changes in body configuration.</p></article>
             </div>
-            <div class="research-placeholder research-placeholder--wide" role="img" aria-label="Placeholder for a two-toio articulated robot overall rendering"><span>[IMAGE PLACEHOLDER — Two-toio articulated robot, overall rendering]</span></div>
+            <div class="research-placeholder research-placeholder--wide" role="img" aria-label="Placeholder for an articulated mobile robot overall rendering"><span>[IMAGE PLACEHOLDER — Articulated mobile robot, overall rendering]</span></div>
           </div>
 
           <div class="extension-subsection">
@@ -343,7 +340,7 @@ const labLimits = [
         <div class="shell">
           <div class="extension-layout">
             <div><p class="kicker">22 · Expressive Movement Design</p><h2>Designing Hesitation Through Body Movement</h2></div>
-            <div class="extension-copy"><p>The previous studies suggested that hesitation can emerge from sequences of interruption, reversal, and resumption rather than from a single movement parameter.</p><p>The physical prototype extends this investigation by introducing body configuration as an additional design material.</p><p>Hesitation is selected as the initial design case because it offers an opportunity to investigate how temporal patterns, spatial trajectories, and relative body movements can be composed into an expressive sequence.</p></div>
+            <div class="extension-copy"><p>Earlier studies linked hesitation to sequences of interruption, reversal, and resumption.</p><p>The physical prototype tests how these timing cues interact with trajectory and changes in body configuration.</p></div>
           </div>
 
           <div class="extension-subsection">
@@ -355,12 +352,12 @@ const labLimits = [
           <div class="extension-subsection">
             <div class="subsection-heading"><span>22.2</span><h3>Candidate Movement Expressions</h3></div>
             <div class="candidate-grid">
-              <article><span>H1</span><h3>Temporal-Dominant</h3><p>Hesitation expressed primarily through deceleration, interruption, and resumption.</p><div class="research-placeholder research-placeholder--animation" role="img" aria-label="Animation placeholder for H1"><span>[ANIMATION PLACEHOLDER — H1]</span></div><small>Future design notes</small></article>
-              <article><span>H2</span><h3>Embodied-Dominant</h3><p>Hesitation explored through relative movement and visible body deformation.</p><div class="research-placeholder research-placeholder--animation" role="img" aria-label="Animation placeholder for H2"><span>[ANIMATION PLACEHOLDER — H2]</span></div><small>Future design notes</small></article>
-              <article><span>H3</span><h3>Spatial-Dominant</h3><p>Hesitation explored through directional probing and trajectory adjustment.</p><div class="research-placeholder research-placeholder--animation" role="img" aria-label="Animation placeholder for H3"><span>[ANIMATION PLACEHOLDER — H3]</span></div><small>Future design notes</small></article>
-              <article><span>H4</span><h3>Combined Expression</h3><p>A sequence integrating temporal, embodied, and spatial cues.</p><div class="research-placeholder research-placeholder--animation" role="img" aria-label="Animation placeholder for H4"><span>[ANIMATION PLACEHOLDER — H4]</span></div><small>Future design notes</small></article>
+              <article><span>H1</span><h3>Temporal-Dominant</h3><p>Uses deceleration, interruption, and resumption as the main cues for hesitation.</p><div class="research-placeholder research-placeholder--animation" role="img" aria-label="Animation placeholder for H1"><span>[ANIMATION PLACEHOLDER — H1]</span></div><small>Future design notes</small></article>
+              <article><span>H2</span><h3>Embodied-Dominant</h3><p>Uses relative movement and visible body deformation to explore hesitation.</p><div class="research-placeholder research-placeholder--animation" role="img" aria-label="Animation placeholder for H2"><span>[ANIMATION PLACEHOLDER — H2]</span></div><small>Future design notes</small></article>
+              <article><span>H3</span><h3>Spatial-Dominant</h3><p>Uses directional probing and changes in trajectory to explore hesitation.</p><div class="research-placeholder research-placeholder--animation" role="img" aria-label="Animation placeholder for H3"><span>[ANIMATION PLACEHOLDER — H3]</span></div><small>Future design notes</small></article>
+              <article><span>H4</span><h3>Combined Expression</h3><p>Combines temporal, embodied, and spatial cues in one sequence.</p><div class="research-placeholder research-placeholder--animation" role="img" aria-label="Animation placeholder for H4"><span>[ANIMATION PLACEHOLDER — H4]</span></div><small>Future design notes</small></article>
             </div>
-            <p class="integrity-note">These are planned design explorations, not completed experiments or validated design solutions.</p>
+            <p class="integrity-note">These candidates are plans for design exploration. They have not yet been tested or validated.</p>
           </div>
         </div>
       </section>
@@ -369,7 +366,7 @@ const labLimits = [
         <div class="shell">
           <div class="extension-layout">
             <div><p class="kicker">23 · Planned Evaluation</p><h2>How Might People Interpret Embodied Hesitation?</h2></div>
-            <div class="extension-copy"><p>This section describes a proposed evaluation rather than completed research.</p><p>A subsequent evaluation will examine how observers interpret candidate movement expressions and which movement cues contribute to their interpretations.</p><p>The study will investigate whether bodily deformation changes the perceived meaning of movement and whether intended hesitation is distinguished from alternative interpretations.</p></div>
+            <div class="extension-copy"><p>A future study will examine how people interpret each candidate and which cues shape their reading.</p><p>It will test whether body deformation helps distinguish hesitation from waiting, avoidance, or mechanical failure.</p></div>
           </div>
           <div class="extension-subsection">
             <div class="subsection-heading"><span>23.1</span><h3>Proposed Evaluation Focus</h3></div>
@@ -384,12 +381,12 @@ const labLimits = [
         <div class="shell">
           <div class="extension-layout">
             <div><p class="kicker">24 · Toward a Design Framework</p><h2>Toward an Intent-to-Movement Design Framework</h2></div>
-            <div class="extension-copy"><p>The long-term objective is to connect movement perception, participant-generated expressions, physical prototyping, and evaluation into a preliminary approach for designing communicative robotic movement.</p><p>Rather than assuming a fixed correspondence between movement parameters and meanings, the framework will consider how movement cues can be selected, sequenced, embodied, and evaluated in context.</p><span class="framework-status">Preliminary framework — under development</span></div>
+            <div class="extension-copy"><p>An initial framework will connect findings on movement perception with physical prototyping and evaluation.</p><p>It will guide how movement cues are selected, composed, situated, and tested.</p><span class="framework-status">Preliminary framework — under development</span></div>
           </div>
           <div class="extension-subsection">
             <div class="subsection-heading"><span>24.1</span><h3>Proposed Design Process</h3></div>
             <ol class="design-process"><li><span>01</span><h3>Define Intention</h3><p>Identify the intended state or communicative purpose.</p></li><li><span>02</span><h3>Select Movement Cues</h3><p>Draw on movement–meaning evidence and relevant expressive features.</p></li><li><span>03</span><h3>Compose Movement</h3><p>Organize temporal, embodied, and spatial cues into a coherent sequence.</p></li><li><span>04</span><h3>Situate in Context</h3><p>Consider targets, obstacles, and environmental relationships.</p></li><li><span>05</span><h3>Evaluate Interpretation</h3><p>Compare intended meanings with observer interpretations and iterate.</p></li></ol>
-            <p class="integrity-note">This is a proposed design process, not a validated framework.</p>
+            <p class="integrity-note">The process is a working proposal and has not been validated.</p>
             <div class="research-placeholder research-placeholder--wide" role="img" aria-label="Placeholder for the intent-to-movement design framework"><span>[DIAGRAM PLACEHOLDER — Intent-to-Movement Design Framework]</span></div>
           </div>
         </div>
@@ -398,7 +395,7 @@ const labLimits = [
       <section class="extension-section reflection-stage">
         <div class="shell extension-layout">
           <div><p class="kicker">25 · Reflection &amp; Future Work</p><h2>What Embodiment Might Add to Movement as a Language</h2></div>
-          <div class="extension-copy"><p>The transition from an abstract point to an articulated robotic body introduces a new question: whether movement meaning is communicated only through the trajectory of an agent, or also through how its body changes during movement.</p><p>The two-toio prototype provides an opportunity to investigate the relationship between whole-body motion, internal deformation, temporal sequencing, and environmental context.</p><p>Future work will examine the interpretability of these expressions, the constraints introduced by physical embodiment, and the potential transfer of the design approach to other intentions such as avoidance.</p><p>This project remains an ongoing research exploration. Findings from the physical stage will be documented as prototyping and evaluation progress.</p></div>
+          <div class="extension-copy"><p>The articulated prototype asks whether meaning comes from an agent’s path, changes in its body, or both.</p><p>Next steps are to build the expressions, study how people read them, and document the constraints of the physical system.</p></div>
         </div>
       </section>
     </article>
