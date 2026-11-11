@@ -441,41 +441,77 @@ const cueResults = [
         <aside class="shell physical-rationale"><span>Design rationale</span><p>The enclosure separates the removable upper shell from the electronics base, allowing the ESP32 and IMU to remain accessible during iteration.</p></aside>
       </section>
 
-      <section class="future-directions section-mid">
-        <div class="shell future-heading">
-          <p class="kicker">11 · Future Directions</p>
-          <h2>Next steps for the current study</h2>
-          <p>The pilot established a working embodied–swarm interaction loop. The next step is to expand both the interaction vocabulary and the autonomy being interpreted.</p>
+      <section class="translation-stage section-mid">
+        <div class="shell post-study-heading">
+          <p class="kicker">11 · From Research Insight to Physical System</p>
+          <h2>Translating Collective Legibility into Physical Space</h2>
+          <p>The simulation provided a controlled environment for comparing different ways of communicating collective intent. Rather than repeating the experiment with physical robots, I used the strongest design insight from the pilot — group-level explanation — as the basis for a physical implementation.</p>
         </div>
-
-        <ol class="shell future-grid">
-          <li>
-            <header><span>01</span><h3>Richer Embodied Input</h3></header>
-            <dl><div><dt>Current limitation</dt><dd>The controller intentionally constrains interaction to five repeatable single-hand gestures.</dd></div><div><dt>Next step</dt><dd>I will explore coordinated two-hand input, continuous motion, or compound gestures.</dd></div></dl>
-            <blockquote>How does a richer embodied vocabulary affect the way users form mental models of collective behavior?</blockquote>
-          </li>
-          <li>
-            <header><span>02</span><h3>Physical Swarm Deployment</h3></header>
-            <dl><div><dt>Current limitation</dt><dd>The current experiments use a simulated swarm to maintain repeatable collective dynamics.</dd></div><div><dt>Next step</dt><dd>I will transfer the same interaction logic to a small physical robot swarm.</dd></div></dl>
-            <blockquote>How does mental-model formation change when collective behavior becomes spatial, noisy, and physically embodied?</blockquote>
-          </li>
-          <li>
-            <header><span>03</span><h3>Adaptive Collective Explanations</h3></header>
-            <dl><div><dt>Current limitation</dt><dd>Experiment B compares only two explanatory levels: global collective intent and local relational behavior.</dd></div><div><dt>Next step</dt><dd>I will explore adaptive or multimodal explanations that change according to swarm uncertainty, user confidence, or collective state.</dd></div></dl>
-            <blockquote>When should a swarm explain the collective, and when should it explain individual behavior?</blockquote>
-          </li>
-          <li>
-            <header><span>04</span><h3>Stronger Mental-Model Measures</h3></header>
-            <dl><div><dt>Current limitation</dt><dd>The PRE / POST icon-mapping task produced a ceiling effect and was not sensitive enough to capture learning differences.</dd></div><div><dt>Next step</dt><dd>I will use richer probes such as trajectory prediction, explanation generation, transfer to unseen swarm behaviors, and confidence calibration.</dd></div></dl>
-            <blockquote>How can changes in users’ mental models be measured beyond simple mapping accuracy?</blockquote>
-          </li>
+        <ol class="shell research-to-design" aria-label="Research-to-design transition">
+          <li><span>Simulation Study</span><strong>No Cue vs Global Cue vs Local Cue</strong></li><i>→</i>
+          <li><span>Design Insight</span><strong>Global Cue showed the strongest descriptive pattern</strong></li><i>→</i>
+          <li><span>Design Principle</span><strong>Explain the swarm at the collective level</strong></li><i>→</i>
+          <li><span>Physical Translation</span><strong>7 physical robots + spatial AR visualization</strong></li>
         </ol>
+        <aside class="shell translation-statement">Simulation was used to compare explanation strategies.<br>The physical system applies the selected strategy.</aside>
+      </section>
 
-        <aside class="shell limitations-note">
-          <span>Current limitations</span>
-          <ul><li>n = 6 exploratory pilot</li><li>Simulated rather than physical swarm</li><li>Autonomy tested in one constrained routing scenario</li><li>PRE / POST mapping instrument showed a ceiling effect</li></ul>
-        </aside>
+      <section class="physical-swarm-stage section-dark">
+        <div class="shell post-study-heading">
+          <p class="kicker">12 · Physical Swarm Implementation</p>
+          <h2>From Simulated Agents to Seven Physical Robots</h2>
+          <p>I translated the simulated swarm into a tabletop system using seven Sony toio robots. Each robot carries a visual marker so its identity and motion can be tracked from recorded overhead video.</p>
+        </div>
+        <figure class="shell editorial-placeholder editorial-placeholder--large">
+          <div><span>Physical Swarm Setup</span><strong>Image forthcoming</strong></div>
+          <figcaption>Seven marker-tracked toio robots navigate a segmented tabletop obstacle field.</figcaption>
+        </figure>
+        <div class="shell physical-system-grid">
+          <article>
+            <span>Physical setup</span>
+            <ul><li>7 Sony toio robots</li><li>Unique visual markers</li><li>Separate start and target markers</li><li>Segmented obstacle wall</li><li>Overhead video recording</li><li>No toio mat</li></ul>
+          </article>
+          <article><span>Why physical embodiment?</span><p>Moving from simulation to physical robots introduces spatial distribution, individual embodiment, motion noise, and visible group heterogeneity. The goal is not to re-test the same cue comparison, but to examine how the selected group-level explanation can be situated around a real moving collective.</p></article>
+        </div>
+        <div class="shell tracking-block">
+          <div><p class="mini-label">Tracking architecture</p><h3>From recorded motion to collective state</h3><p>I am developing a post-processing pipeline in which each robot’s unique marker ID can provide its position and orientation frame by frame.</p></div>
+          <ol><li>Recorded Overhead Video</li><i>→</i><li>Marker Detection</li><i>→</i><li>7 Robot Poses</li><i>→</i><li>Collective State</li><i>→</i><li>AR Overlay</li></ol>
+        </div>
+        <div class="shell placeholder-pair">
+          <div class="editorial-placeholder"><span>Marker-based tracking</span><strong>Implementation in progress</strong></div>
+          <div class="editorial-placeholder"><span>Computer-vision frame</span><strong>Asset forthcoming</strong></div>
+        </div>
+      </section>
 
+      <section class="ar-stage section-mid">
+        <div class="shell post-study-heading">
+          <p class="kicker">13 · Spatial AR Explanation</p>
+          <h2>Making Collective Intent Visible Around the Physical Swarm</h2>
+          <p>The simulator suggested that group-level cues were more promising than local relational cues for anticipating collective behavior. I therefore translated the Global Cue into a spatial visualization surrounding the physical robots.</p>
+        </div>
+        <figure class="shell editorial-placeholder editorial-placeholder--large">
+          <div><span>AR Overlay</span><strong>Final visual forthcoming</strong></div>
+          <figcaption>The planned AR-style overlay will be generated from tracked physical swarm motion rather than manually composited frame by frame.</figcaption>
+        </figure>
+        <div class="shell ar-elements"><span>Collective hull</span><span>Aggregate direction</span><span>Target indication</span><span>Planned route / tendency</span><span>Group-state annotation</span></div>
+        <div class="shell translation-comparison">
+          <article><span>Simulator</span><ul><li>Virtual agents</li><li>Collective hull</li><li>Aggregate direction</li><li>Controlled swarm dynamics</li></ul></article>
+          <div><strong>Global Cue</strong><i>→</i><strong>Spatial Global Cue</strong></div>
+          <article><span>Physical Translation</span><ul><li>7 toio robots</li><li>Marker-based tracking</li><li>Spatial collective hull</li><li>Movement-aligned direction cue</li></ul></article>
+        </div>
+        <div class="shell editorial-placeholder editorial-placeholder--comparison"><span>Simulator → Physical Comparison</span><strong>Visual forthcoming</strong></div>
+      </section>
+
+      <section class="outcome-stage section-dark">
+        <div class="shell post-study-heading">
+          <p class="kicker">14 · Outcome</p>
+          <h2>From Controlled Simulation to Physical Demonstrator</h2>
+          <p>This project progressed from a controlled simulator for studying mental-model formation and collective legibility to a physical seven-robot demonstrator that applies the most promising explanatory strategy through spatial AR visualization.</p>
+        </div>
+        <ol class="shell final-process"><li>Embodied Input</li><i>→</i><li>Simulated Swarm</li><i>→</i><li>User Study</li><i>→</i><li>Global Cue Insight</li><i>→</i><li>Physical Swarm</li><i>→</i><li>AR Translation</li></ol>
+        <div class="shell editorial-placeholder editorial-placeholder--final"><span>Final System / Demonstrator</span><strong>Documentation forthcoming</strong></div>
+        <blockquote class="shell final-reflection">The final stage does not reproduce the simulator experiment. It translates a research finding into a physical interaction system.</blockquote>
+        <p class="shell optional-note">Further work could evaluate the physical AR implementation with a larger participant sample.</p>
       </section>
 
     </article>
@@ -972,4 +1008,130 @@ const cueResults = [
 .experiment-b-findings .cue-measure { border: 0; }
 
 .swarm-validation .flocking-model { border: 0; }
+
+.translation-stage,
+.physical-swarm-stage,
+.ar-stage,
+.outcome-stage { padding-block: 6rem; }
+
+.post-study-heading { max-width: 980px; }
+.post-study-heading h2 {
+  margin: 0;
+  font-size: clamp(2.5rem, 5vw, 4.8rem);
+  line-height: .98;
+  letter-spacing: -.055em;
+}
+.post-study-heading > p:last-child {
+  max-width: 850px;
+  margin-top: 1.35rem;
+  color: var(--muted);
+  line-height: 1.75;
+}
+.research-to-design,
+.final-process {
+  margin-top: 3.5rem;
+  padding: 0;
+  display: grid;
+  align-items: stretch;
+  list-style: none;
+}
+.research-to-design { grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr; }
+.research-to-design li,
+.final-process li {
+  padding: 1.2rem;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.research-to-design span,
+.physical-system-grid article > span,
+.translation-comparison article > span,
+.editorial-placeholder span {
+  color: var(--teal);
+  font-size: .67rem;
+  font-weight: 800;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+}
+.research-to-design strong { display: block; margin-top: 2rem; font-size: .82rem; line-height: 1.5; }
+.research-to-design i,
+.final-process i { align-self: center; padding: .7rem; color: var(--ochre); font-style: normal; }
+.translation-statement,
+.final-reflection {
+  margin-top: 1.2rem;
+  padding: 1.15rem 1.4rem;
+  color: #dce8e4;
+  border-left: 2px solid var(--teal);
+  background: rgba(67, 200, 197, .07);
+  font-size: .9rem;
+  line-height: 1.7;
+}
+.editorial-placeholder {
+  min-height: 220px;
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px dashed #426168;
+  background: rgba(7, 17, 22, .28);
+}
+.editorial-placeholder--large { min-height: 480px; margin-top: 3.5rem; }
+.editorial-placeholder div { display: flex; flex-direction: column; justify-content: space-between; flex: 1; }
+.editorial-placeholder strong { color: var(--muted); font-size: clamp(1.2rem, 2vw, 1.8rem); font-weight: 500; }
+.editorial-placeholder figcaption { padding-top: 1rem; color: var(--muted); font-size: .72rem; }
+.physical-system-grid {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid var(--line);
+}
+.physical-system-grid article { padding: 1.5rem 1.5rem 1.5rem 0; border-bottom: 1px solid var(--line); }
+.physical-system-grid article + article { padding-left: 1.5rem; border-left: 1px solid var(--line); }
+.physical-system-grid ul { margin: 1.2rem 0 0; padding-left: 1rem; columns: 2; color: var(--muted); font-size: .78rem; line-height: 1.8; }
+.physical-system-grid p { margin-top: 1.2rem; color: var(--muted); font-size: .82rem; line-height: 1.7; }
+.tracking-block { margin-top: 3.5rem; display: grid; grid-template-columns: .7fr 1.3fr; gap: 3rem; align-items: end; }
+.tracking-block h3 { margin: .6rem 0 .8rem; font-size: 1.5rem; }
+.tracking-block p:last-child { color: var(--muted); font-size: .8rem; line-height: 1.7; }
+.tracking-block ol { padding: 0; display: grid; grid-template-columns: repeat(9, auto); align-items: center; list-style: none; }
+.tracking-block li { padding: .85rem .55rem; color: #dce8e4; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); font-size: .67rem; text-align: center; }
+.tracking-block i { padding: .4rem; color: var(--teal); font-style: normal; }
+.placeholder-pair { margin-top: 1rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.ar-elements { margin-top: 1rem; display: flex; flex-wrap: wrap; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.ar-elements span { padding: .9rem 1.2rem .9rem 0; margin-right: 1.2rem; color: var(--muted); font-size: .7rem; }
+.translation-comparison { margin-top: 3.5rem; display: grid; grid-template-columns: 1fr auto 1fr; align-items: stretch; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.translation-comparison article { padding: 1.4rem; }
+.translation-comparison article:last-child { border-left: 1px solid var(--line); }
+.translation-comparison ul { margin: 1.4rem 0 0; padding-left: 1rem; color: var(--muted); font-size: .76rem; line-height: 1.8; }
+.translation-comparison > div { padding: 1.4rem 2rem; display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--teal); border-left: 1px solid var(--line); }
+.translation-comparison i { margin: .6rem 0; color: var(--ochre); font-style: normal; transform: rotate(90deg); }
+.editorial-placeholder--comparison,
+.editorial-placeholder--final { min-height: 260px; margin-top: 1rem; }
+.final-process { grid-template-columns: repeat(11, auto); margin-top: 3.5rem; }
+.final-process li { color: var(--teal); font-size: .68rem; font-weight: 700; text-align: center; }
+.final-reflection { margin-bottom: 0; }
+.optional-note { margin-top: 1rem; color: var(--muted); font-size: .72rem; }
+
+@media (max-width: 900px) {
+  .research-to-design,
+  .tracking-block,
+  .translation-comparison { grid-template-columns: 1fr; }
+  .research-to-design i { text-align: center; transform: rotate(90deg); }
+  .tracking-block ol { grid-template-columns: 1fr; }
+  .tracking-block i { text-align: center; transform: rotate(90deg); }
+  .translation-comparison article:last-child,
+  .translation-comparison > div { border-left: 0; border-top: 1px solid var(--line); }
+  .final-process { grid-template-columns: 1fr; }
+  .final-process i { text-align: center; transform: rotate(90deg); }
+}
+
+@media (max-width: 640px) {
+  .translation-stage,
+  .physical-swarm-stage,
+  .ar-stage,
+  .outcome-stage { padding-block: 4.5rem; }
+  .editorial-placeholder--large { min-height: 340px; }
+  .physical-system-grid,
+  .placeholder-pair { grid-template-columns: 1fr; }
+  .physical-system-grid article + article { padding-left: 0; border-left: 0; }
+  .physical-system-grid ul { columns: 1; }
+}
 </style>

@@ -257,11 +257,11 @@ export const siteContent = {
       },
       {
         category: "Current Independent Research · Swarm HRI",
-        status: "In Progress",
+        status: "Completed",
         title: "Embodied Swarm Interaction",
         description: "A two-part exploratory study examining how embodied input shapes mental models and the legibility of collective behavior in a 55–60-agent autonomous swarm.",
         tags: ["Independent Research", "n=6 pilot", "ESP32 + IMU", "Processing"],
-        image: import.meta.env.BASE_URL + 'images/research/embodied-swarm/swarm-card-cover.webp',
+        image: import.meta.env.BASE_URL + 'images/research/embodied-swarm/swarm-card-cover-new.png',
         link: import.meta.env.BASE_URL + 'research/embodied-swarm/',
       },
       {
@@ -270,7 +270,7 @@ export const siteContent = {
         title: "Movement as a Language",
         description: "An exploratory study using controlled variations in movement to examine how people perceive state, intention, and agency in non-anthropomorphic agents.",
         tags: ["Research Exploration", "n=6 pilot", "Movement perception", "Processing"],
-        image: import.meta.env.BASE_URL + 'images/research/movement-language/movement-language-cover.png',
+        image: import.meta.env.BASE_URL + 'images/research/movement-language/movement-language-card-cover.png',
         link: import.meta.env.BASE_URL + 'research/movement-language/',
       },
       {
