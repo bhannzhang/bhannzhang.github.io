@@ -443,18 +443,26 @@ const cueResults = [
 
       <section class="physical-swarm-stage section-dark">
         <div class="shell post-study-heading">
-          <p class="kicker">12 · Physical Swarm Implementation</p>
+          <p class="kicker">11 · Physical Swarm Implementation</p>
           <h2>From Simulated Agents to Seven Physical Robots</h2>
         </div>
-        <div class="shell media-placeholder" role="img" aria-label="Placeholder for a future physical swarm video"></div>
+        <div class="shell physical-swarm-gallery">
+          <img :src="homeUrl + 'images/research/embodied-swarm/physical-swarm-01.png'" alt="Seven physical swarm robots positioned at the start point beside a segmented obstacle wall" loading="lazy">
+          <img :src="homeUrl + 'images/research/embodied-swarm/physical-swarm-02.png'" alt="Seven physical swarm robots beginning to move toward the obstacle wall" loading="lazy">
+          <img :src="homeUrl + 'images/research/embodied-swarm/physical-swarm-03.png'" alt="Seven physical swarm robots approaching the segmented obstacle wall" loading="lazy">
+          <img :src="homeUrl + 'images/research/embodied-swarm/physical-swarm-04.png'" alt="Seven physical swarm robots bypassing the segmented obstacle wall" loading="lazy">
+        </div>
       </section>
 
       <section class="ar-stage section-mid">
         <div class="shell post-study-heading">
-          <p class="kicker">13 · Spatial AR Explanation</p>
+          <p class="kicker">12 · Spatial AR Explanation</p>
           <h2>AR-Based Visualization of Collective Intent</h2>
         </div>
-        <div class="shell media-placeholder" role="img" aria-label="Placeholder for a future AR collective-intent visualization"></div>
+        <figure class="shell ar-visual">
+          <img :src="homeUrl + 'images/research/embodied-swarm/ar-collective-intent.png'" alt="AR-style visualization of collective swarm state, direction, target, and individual movement differences" loading="lazy">
+          <figcaption>I used Luma Ultra to prototype an AR-style visualization over the physical swarm scene. The overlay communicates the group’s collective state, overall direction, and relationship to the target while preserving the physical context of the robots and obstacle field.</figcaption>
+        </figure>
       </section>
 
     </article>
@@ -1094,5 +1102,30 @@ const cueResults = [
   margin-top: 3rem;
   border: 1px dashed var(--research-line);
   background: var(--research-bg);
+}
+
+.physical-swarm-gallery {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+.physical-swarm-gallery img,
+.ar-visual img {
+  width: 100%;
+  display: block;
+  border: 1px solid var(--research-line);
+}
+.ar-visual { margin-top: 3rem; }
+.ar-visual figcaption {
+  max-width: 880px;
+  padding-top: 1rem;
+  color: var(--research-muted);
+  font-size: .78rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 640px) {
+  .physical-swarm-gallery { grid-template-columns: 1fr; }
 }
 </style>
