@@ -277,17 +277,14 @@ const labLimits = [
               <p>Movement Lab isolated timing and trajectory through a single abstract point. The next stage asks how an articulated body changes what movement communicates.</p>
             </div>
           </div>
-          <div class="embodiment-comparison">
-            <article>
-              <svg viewBox="0 0 360 150" role="img" aria-label="Abstract point moving along a trajectory"><path d="M34 104 C112 104 116 46 196 46 S278 104 326 104"/><circle cx="34" cy="104" r="11"/><circle class="comparison-target" cx="326" cy="104" r="8"/></svg>
-              <h3>Abstract Point</h3>
-              <ul><li>Single moving entity</li><li>Trajectory</li><li>Speed and acceleration</li><li>Pause and reversal</li></ul>
-            </article>
-            <article>
-              <svg viewBox="0 0 360 150" role="img" aria-label="Two mobile units connected by a flexible articulated body"><rect x="48" y="72" width="72" height="48" rx="5"/><rect x="240" y="46" width="72" height="48" rx="5"/><path class="comparison-body" d="M120 94 C150 55 208 111 240 70"/><circle cx="70" cy="124" r="8"/><circle cx="99" cy="124" r="8"/><circle cx="261" cy="98" r="8"/><circle cx="290" cy="98" r="8"/></svg>
-              <h3>Articulated Physical Body</h3>
-              <ul><li>Two coordinated mobile units</li><li>Whole-body trajectory</li><li>Relative movement</li><li>Extension and contraction</li><li>Bending and reconfiguration</li></ul>
-            </article>
+          <figure class="embodiment-figure">
+            <img :src="homeUrl + 'images/research/movement-language/abstract-vs-embodied.png'" alt="Comparison between abstract point movement and embodied movement" loading="lazy">
+          </figure>
+          <div class="embodiment-attributes" role="table" aria-label="Abstract point and embodied robot movement comparison">
+            <div class="embodiment-attributes__head" role="row"><strong role="columnheader">Abstract Point</strong><strong role="columnheader">Embodied Robot</strong></div>
+            <div role="row"><span role="cell">Whole-body displacement</span><span role="cell">Whole-body displacement</span></div>
+            <div role="row"><span role="cell">Speed and timing</span><span role="cell">Speed and timing</span></div>
+            <div role="row"><span role="cell">No internal configuration</span><span role="cell">Relative movement and deformation</span></div>
           </div>
         </div>
       </section>
@@ -330,9 +327,8 @@ const labLimits = [
 
       <section class="extension-section extension-section--surface expression-stage">
         <div class="shell">
-          <div class="extension-layout">
-            <div><p class="kicker">22 · Designing Embodied Hesitation</p><h2>From Movement–Meaning Findings to Physical Expressions</h2></div>
-            <div class="extension-copy"><p>Studies A and B associated hesitation with changes in speed, interruption, reversal, and resumed motion. Two preliminary conditions translate those findings into movement sequences for a deformable body made from two Sony toio mobile robots and a white accordion-folded connection.</p></div>
+          <div class="extension-layout extension-layout--solo">
+            <div><p class="kicker">22 · Designing Embodied Hesitation</p><h2>Expressing Hesitation Through Two Movement Conditions</h2></div>
           </div>
 
           <div class="extension-subsection">
@@ -365,71 +361,14 @@ const labLimits = [
                 <figure class="condition-media" data-media-path="images/research/movement-language/c2-embodied-hesitation.mp4"><div class="research-placeholder research-placeholder--animation" role="img" aria-label="Video or GIF placeholder for C2 Embodied Hesitation"><span>[VIDEO / GIF PLACEHOLDER · C2 EMBODIED HESITATION]</span></div><figcaption>Recorded C2 demonstration pending.</figcaption></figure>
               </article>
             </div>
-            <p class="integrity-note">C1 and C2 are preliminary physical motion designs. They differ in timing, whole-body displacement, and final configuration as well as deformation, so the comparison does not isolate deformation.</p>
           </div>
 
           <div class="extension-subsection">
-            <div class="subsection-heading"><span>22.2</span><h3>Editable motion parameters</h3></div>
-            <div class="table-wrap">
-              <table class="motion-parameter-table">
-                <thead><tr><th>Parameter</th><th>C1</th><th>C2</th><th>Current evidence</th></tr></thead>
-                <tbody>
-                  <tr><td>Baseline synchronized forward command</td><td>Speed 25; 800 ms</td><td>Speed 25; 800 ms</td><td>Value in the retained <code>synchronized_forward</code> helper; final condition value not confirmed</td></tr>
-                  <tr><td>Gradual deceleration</td><td>Curve and duration TBD</td><td>Not used</td><td>No retained C1 implementation value</td></tr>
-                  <tr><td>Relative compression reference</td><td>Not used</td><td>Speed 30; 500 ms; 1.0 s pause</td><td>Early two-robot contraction test only; both robots move, so this is not the final C2 sequence</td></tr>
-                  <tr><td>C2 front-robot retreat</td><td>Not used</td><td>Speed and duration TBD</td><td>C2-specific implementation value not yet documented</td></tr>
-                  <tr><td>Stop and resume timing</td><td>TBD</td><td>TBD</td><td>To be fixed before evaluation</td></tr>
-                </tbody>
-              </table>
+            <div class="subsection-heading"><span>22.2</span><h3>Implementation Code</h3></div>
+            <div class="code-placeholder-grid">
+              <article><header><span>C1</span><h3>Kinematic Hesitation</h3></header><pre><code>[CODE PLACEHOLDER · C1]</code></pre></article>
+              <article><header><span>C2</span><h3>Embodied Hesitation</h3></header><pre><code>[CODE PLACEHOLDER · C2]</code></pre></article>
             </div>
-            <p class="integrity-note">Numeric values are copied from retained prototype utilities where available. They are implementation references, not measured trajectories or final experimental settings.</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="extension-section evaluation-stage">
-        <div class="shell">
-          <div class="extension-layout">
-            <div><p class="kicker">23 · Experimental Design</p><h2>Comparing Kinematic and Embodied Expressions of Hesitation</h2></div>
-            <div class="extension-copy"><p>The proposed study compares how observers interpret the two motion sequences. It is designed to expose ambiguity, including readings such as waiting, avoidance, and mechanical failure.</p></div>
-          </div>
-
-          <div class="extension-subsection">
-            <div class="subsection-heading"><span>23.1</span><h3>Research Question &amp; Exploratory Expectations</h3></div>
-            <blockquote class="research-question">How does internal body deformation influence observers' interpretation of hesitation in a non-anthropomorphic robot?</blockquote>
-            <div class="expectation-grid"><article><h3>C1</h3><p>Deceleration, stopping, and resuming may support a hesitation reading through timing alone.</p></article><article><h3>C2</h3><p>Compression may add a visible cue, but observers may read it as avoidance, waiting, or a mechanical problem.</p></article></div>
-            <p class="integrity-note">These are exploratory expectations. The conditions are not yet matched closely enough to attribute any difference to deformation alone.</p>
-          </div>
-
-          <div class="extension-subsection">
-            <div class="subsection-heading"><span>23.2</span><h3>Experimental Conditions &amp; Controls</h3></div>
-            <div class="control-grid"><article><span>Planned controls</span><ul><li>The same two robots and accordion body</li><li>The same starting position and orientation</li><li>The same recording viewpoint and environment</li><li>The same participant instructions and response format</li></ul></article><article><span>Differences still unresolved</span><ul><li>Pause timing and total duration</li><li>Whole-body displacement</li><li>Deceleration versus relative retreat</li><li>Final body configuration</li></ul></article></div>
-            <p class="integrity-note">Until these differences are matched or modeled explicitly, the study compares two complete expressions rather than isolating one deformation variable.</p>
-          </div>
-
-          <div class="extension-subsection">
-            <div class="subsection-heading"><span>23.3</span><h3>Proposed Evaluation Procedure</h3></div>
-            <ol class="procedure-list"><li><span>01</span><p>Each participant views both conditions in a within-subject comparison.</p></li><li><span>02</span><p>Presentation order is counterbalanced across participants.</p></li><li><span>03</span><p>After each condition, an open-ended question asks what the robot appeared to be doing or communicating.</p></li><li><span>04</span><p>A follow-up prompt asks which movement cues shaped that interpretation.</p></li><li><span>05</span><p>An optional clarity rating records how clearly the movement communicated its perceived state.</p></li></ol>
-            <div class="research-placeholder research-placeholder--wide" data-media-path="images/research/movement-language/proposed-evaluation-setup.jpg" role="img" aria-label="Placeholder for proposed evaluation setup"><span>[MEDIA PLACEHOLDER · PROPOSED EVALUATION SETUP]</span></div>
-            <p class="integrity-note">Evaluation is proposed and has not been conducted.</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="extension-section extension-section--surface framework-stage">
-        <div class="shell">
-          <div class="extension-layout">
-            <div><p class="kicker">24 · Evaluation &amp; Findings</p><h2>Understanding How Body Deformation Changes Interpretation</h2></div>
-            <div class="extension-copy"><p>Future analysis will compare what people think each condition communicates, which cues they notice, and where interpretations diverge.</p><span class="evaluation-status">Evaluation pending</span></div>
-          </div>
-          <div class="extension-subsection">
-            <div class="subsection-heading"><span>24.1</span><h3>Future result areas</h3></div>
-            <div class="result-grid">
-              <article><span>01</span><h3>Interpretation Distribution</h3><p>How often each condition is described as hesitation, waiting, avoidance, mechanical failure, or another state.</p><div class="result-placeholder" data-media-path="images/research/movement-language/results-interpretation-distribution.svg">[PLOT PLACEHOLDER · INTERPRETATION DISTRIBUTION]</div></article>
-              <article><span>02</span><h3>Perceived Movement Cues</h3><p>Which changes in speed, stopping, retreat, or body configuration participants mention in their explanations.</p><div class="result-placeholder">[PARTICIPANT QUOTATION PLACEHOLDER]</div><div class="result-placeholder">[CODED CUE ANALYSIS PLACEHOLDER]</div></article>
-              <article><span>03</span><h3>Cross-condition Comparison</h3><p>Where interpretations and cited cues differ between C1 and C2 without treating deformation as an isolated cause.</p><div class="result-placeholder" data-media-path="images/research/movement-language/results-cross-condition.svg">[COMPARISON PLOT PLACEHOLDER]</div><div class="result-placeholder">[ANALYSIS PLACEHOLDER]</div></article>
-            </div>
-            <p class="integrity-note">No participant data, statistics, quotations, or conclusions are reported because the evaluation has not yet been run.</p>
           </div>
         </div>
       </section>
@@ -437,7 +376,7 @@ const labLimits = [
       <section class="extension-section reflection-stage">
         <div class="shell">
           <div class="extension-layout">
-            <div><p class="kicker">25 · Reflection &amp; Design Implications</p><h2>What Does a Deformable Body Add to Movement Communication?</h2></div>
+            <div><p class="kicker">23 · Reflection &amp; Design Implications</p><h2>What Does a Deformable Body Add to Movement Communication?</h2></div>
             <div class="extension-copy"><p>The prototype creates an observable change inside the robot's body, but its communicative value remains open. Evidence is needed to separate what observers learn from deformation from what they infer from timing and displacement.</p></div>
           </div>
           <div class="reflection-grid">
@@ -509,6 +448,7 @@ const labLimits = [
   gap: clamp(3rem, 7vw, 7rem);
   align-items: start;
 }
+.extension-layout--solo { grid-template-columns: 1fr; }
 .extension-copy {
   color: var(--research-muted);
   font-size: .94rem;
@@ -540,47 +480,34 @@ const labLimits = [
 .structural-grid article > span,
 .condition-card header > span,
 .motion-timeline > li > span,
-.procedure-list span,
-.result-grid article > span,
 .reflection-grid article > span,
 .subsection-heading > span {
   color: var(--research-accent);
   font: 700 .68rem/1.4 var(--font-mono);
 }
 .research-transition strong { font-size: .86rem; }
-.embodiment-comparison {
+.embodiment-figure {
   margin-top: 3rem;
+  border: 1px solid var(--research-line);
+  background: #000;
+}
+.embodiment-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.embodiment-attributes { margin-top: 1rem; border-top: 1px solid var(--research-line); }
+.embodiment-attributes > div {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  border-block: 1px solid var(--research-line);
+  border-bottom: 1px solid var(--research-line);
 }
-.embodiment-comparison article {
-  padding: 1.3rem;
-  border-right: 1px solid var(--research-line);
-}
-.embodiment-comparison article:last-child { border-right: 0; }
-.embodiment-comparison svg {
-  width: 100%;
-  max-height: 180px;
-  display: block;
-  fill: var(--research-bg);
-  stroke: var(--research-accent);
-  stroke-width: 2;
-}
-.embodiment-comparison svg path { fill: none; }
-.embodiment-comparison .comparison-body {
-  stroke-width: 8;
-  stroke-linecap: round;
-}
-.embodiment-comparison .comparison-target { fill: none; }
-.embodiment-comparison h3 { margin-top: 1.2rem; }
-.embodiment-comparison ul {
-  margin-top: 1rem;
-  padding-left: 1rem;
-  color: var(--research-muted);
-  font-size: .82rem;
-  line-height: 1.8;
-}
+.embodiment-attributes strong,
+.embodiment-attributes span { padding: 1rem 0; }
+.embodiment-attributes strong:last-child,
+.embodiment-attributes span:last-child { padding-left: 1rem; }
+.embodiment-attributes span { color: var(--research-muted); }
+.embodiment-attributes__head { font-size: 1.05rem; }
 .extension-subsection {
   margin-top: 3rem;
   padding-top: 1.5rem;
@@ -604,13 +531,10 @@ const labLimits = [
 }
 .structural-grid article:last-child { border-right: 0; }
 .structural-grid h3,
-.result-grid h3,
 .reflection-grid h3 { margin-top: 2.5rem; }
 .structural-grid p,
 .capability-list p,
 .condition-card p,
-.expectation-grid p,
-.result-grid p,
 .reflection-grid p {
   margin-top: .65rem;
   color: var(--research-muted);
@@ -702,8 +626,7 @@ const labLimits = [
   line-height: 1.6;
 }
 .condition-grid,
-.expectation-grid,
-.control-grid {
+.code-placeholder-grid {
   margin-top: 1.5rem;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -773,110 +696,44 @@ const labLimits = [
   color: var(--research-muted);
   font-size: .68rem;
 }
-.table-wrap {
-  margin-top: 1.5rem;
-  overflow-x: auto;
+.code-placeholder-grid article {
+  padding: 1.1rem;
   border-top: 2px solid var(--research-accent);
-}
-.motion-parameter-table {
-  width: 100%;
-  min-width: 850px;
-  border-collapse: collapse;
-  font-size: .72rem;
-}
-.motion-parameter-table th,
-.motion-parameter-table td {
-  padding: .85rem;
-  border-right: 1px solid var(--research-line);
-  border-bottom: 1px solid var(--research-line);
-  text-align: left;
-  vertical-align: top;
-  line-height: 1.55;
-}
-.motion-parameter-table th { color: var(--research-accent); }
-.motion-parameter-table td { color: var(--research-muted); }
-.motion-parameter-table td:first-child { color: var(--research-text); }
-.motion-parameter-table code { color: var(--research-text); }
-.research-question {
-  margin: 1.5rem 0 0;
-  padding: 1.2rem;
-  border-left: 3px solid var(--research-accent);
-  background: var(--research-surface);
-  color: var(--research-text);
-  font-size: clamp(1rem, 2vw, 1.3rem);
-  line-height: 1.55;
-}
-.expectation-grid article,
-.control-grid article {
-  padding: 1.1rem;
-  border-top: 1px solid var(--research-line);
-  background: var(--research-surface);
-}
-.control-grid article > span {
-  color: var(--research-accent);
-  font: 700 .68rem/1.4 var(--font-mono);
-}
-.control-grid ul {
-  margin: 1rem 0 0;
-  padding-left: 1rem;
-  color: var(--research-muted);
-  font-size: .78rem;
-  line-height: 1.8;
-}
-.procedure-list {
-  margin: 1.5rem 0 0;
-  padding: 0;
-  list-style: none;
-  border-top: 1px solid var(--research-line);
-}
-.procedure-list li {
-  padding: .9rem 0;
-  display: grid;
-  grid-template-columns: 3rem 1fr;
-  border-bottom: 1px solid var(--research-line);
-}
-.procedure-list p {
-  color: var(--research-muted);
-  font-size: .8rem;
-  line-height: 1.6;
-}
-.evaluation-status {
-  margin-top: 1.5rem;
-  padding: .55rem .75rem;
-  display: inline-block;
-  color: var(--research-accent);
-  border: 1px solid var(--research-accent);
-  font: 700 .66rem/1.4 var(--font-mono);
-}
-.result-grid {
-  margin-top: 1.5rem;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
-}
-.result-grid article,
-.reflection-grid article {
-  padding: 1.1rem;
-  border-top: 1px solid var(--research-line);
   background: var(--research-bg);
 }
-.result-placeholder {
-  min-height: 120px;
-  margin-top: 1rem;
+.code-placeholder-grid header {
+  display: flex;
+  align-items: baseline;
+  gap: .8rem;
+}
+.code-placeholder-grid header span { color: var(--research-accent); font: 700 .68rem/1.4 var(--font-mono); }
+.code-placeholder-grid pre {
+  min-height: 240px;
+  margin: 1rem 0 0;
   padding: 1rem;
-  display: grid;
-  place-items: center;
+  overflow: auto;
   border: 1px dashed var(--research-line);
   color: var(--research-muted);
-  font: 700 .62rem/1.5 var(--font-mono);
-  text-align: center;
+  background: var(--research-surface);
+  font: 700 .68rem/1.6 var(--font-mono);
 }
 .reflection-grid {
   margin-top: 3rem;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
+  grid-template-columns: 1fr;
+  gap: .75rem;
 }
+.reflection-grid article {
+  padding: 1.2rem 1.35rem;
+  display: grid;
+  grid-template-columns: 3rem minmax(220px, .7fr) 1fr;
+  gap: 1rem;
+  align-items: center;
+  border: 1px solid rgba(139, 92, 246, .32);
+  background: rgba(139, 92, 246, .16);
+}
+.reflection-grid h3,
+.reflection-grid p { margin: 0; }
 
 @media (max-width: 900px) {
   .limits-grid,
@@ -886,33 +743,29 @@ const labLimits = [
   .extension-layout { grid-template-columns: 1fr; gap: 2rem; }
   .research-transition { grid-template-columns: 1fr; }
   .research-transition li[aria-hidden] { transform: rotate(90deg); }
-  .embodiment-comparison,
   .structural-grid { grid-template-columns: 1fr; }
-  .embodiment-comparison article,
   .structural-grid article {
     min-height: 0;
     border-right: 0;
     border-bottom: 1px solid var(--research-line);
   }
-  .embodiment-comparison article:last-child,
   .structural-grid article:last-child { border-bottom: 0; }
   .capability-list,
   .placeholder-grid--four { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .capability-list article:nth-child(even) { border-right: 0; }
   .condition-grid,
-  .result-grid { grid-template-columns: 1fr; }
+  .code-placeholder-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 560px) {
   .capability-list,
   .placeholder-grid--four,
-  .placeholder-grid--two,
-  .expectation-grid,
-  .control-grid,
-  .reflection-grid { grid-template-columns: 1fr; }
+  .placeholder-grid--two { grid-template-columns: 1fr; }
   .capability-list article { border-right: 0; }
   .motion-timeline li { grid-template-columns: 1.7rem 4.2rem 1fr; }
   .condition-spec div { grid-template-columns: 1fr; gap: .25rem; }
+  .reflection-grid article { grid-template-columns: 2rem 1fr; }
+  .reflection-grid article p { grid-column: 2; }
   .research-placeholder--wide { aspect-ratio: 4 / 3; }
 }
 </style>
