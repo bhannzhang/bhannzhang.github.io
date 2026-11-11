@@ -16,7 +16,7 @@
         <div class="hero__copy">
           <p class="eyebrow">Current Independent Research · Social HRI · 2026</p>
           <h1>OYI: Embodied Companion Robot for Social Interaction</h1>
-          <p class="lede">An independent mixed-method research project exploring how physical embodiment, persistent dialogue, and ambient light feedback shape companionship and social presence.</p>
+          <p class="lede">This independent mixed-method study examines how physical embodiment, persistent dialogue, and ambient light feedback affect companionship and social presence.</p>
           <div class="chips"><span>Independent Research Lead</span><span>32 participants</span><span>5-day study</span><span>Voice + light</span></div>
         </div>
         <figure class="hero__visual">
@@ -27,13 +27,13 @@
 
       <section class="shell two-column">
         <div><p class="kicker">Research question</p><h2>How can a conversational robot build a sense of social presence?</h2></div>
-        <div class="prose"><p>OYI extends my earlier research on legible multimodal communication from autonomous mobility toward embodied social interaction. The project asks how a small physical robot can establish continuity across repeated conversations without relying on human-like appearance.</p><p>The study focuses on embodiment, conversational memory, structured guidance, and researcher-controlled light as an additional social signal.</p></div>
+        <div class="prose"><p>Building on my earlier work on legible multimodal communication in autonomous mobility, OYI shifts the focus to embodied social interaction. I examine how a small physical robot can sustain continuity across repeated conversations without a human-like appearance.</p><p>The study examines embodiment, conversational memory, structured guidance, and researcher-controlled light as a social signal.</p></div>
       </section>
 
       <section class="metrics-band"><div class="shell metric-grid"><div><strong>32</strong><span>participants</span></div><div><strong>5 days</strong><span>longitudinal interaction</span></div><div><strong>16 + 16</strong><span>experimental and control groups</span></div><div><strong>Mixed methods</strong><span>scales, interaction records, and interviews</span></div></div></section>
 
       <section class="shell implementation">
-        <div class="section-intro"><p class="kicker">Embodied implementation</p><h2>Building the robot and study as one system</h2><p class="prose">I developed the form, physical enclosure, interaction behavior, and study protocol as one connected research system. The articulated arms are part of the physical construction; the evaluated interaction concentrated on voice dialogue and ambient light feedback.</p></div>
+        <div class="section-intro"><p class="kicker">Embodied implementation</p><h2>Building the robot alongside the study</h2><p class="prose">I developed the form, enclosure, interaction behavior, and study protocol together. The prototype has articulated arms, while the study evaluated voice dialogue and ambient light feedback.</p></div>
         <div class="evidence-grid">
           <figure><img :src="asset('physical-prototype.jpg')" alt="Front view of the 3D-printed OYI physical prototype" /><figcaption><strong>Physical form.</strong> A 3D-printed body with a black face panel and articulated arm joints.</figcaption></figure>
           <figure><img :src="asset('light-feedback.jpg')" alt="OYI physical prototype illuminated with green ambient light" /><figcaption><strong>Multimodal feedback.</strong> Internal RGB lighting turns the body into an ambient social signal.</figcaption></figure>
@@ -54,7 +54,7 @@
       </div></section>
 
       <section class="shell design-language">
-        <div class="section-intro"><p class="kicker">Design development</p><h2>From a friendly non-humanoid form to a research prototype</h2><p class="prose">The visual language explored a rounded body, cat-like cues, expressive face states, and movable arms. The functional prototype implemented the physical form, articulated arms, voice dialogue, memory, and ambient light used in the study.</p></div>
+        <div class="section-intro"><p class="kicker">Design development</p><h2>Developing a friendly, non-humanoid research prototype</h2><p class="prose">I explored a rounded body, cat-like cues, expressive face states, and movable arms. The functional prototype combined this form and its articulated arms with voice dialogue, memory, and the ambient light used in the study.</p></div>
         <div class="design-crops">
           <figure class="design-crop"><svg viewBox="820 70 860 980" preserveAspectRatio="xMidYMid slice"><image :href="asset('design-development.jpg')" width="3368" height="1190" /></svg><figcaption>Form exploration</figcaption></figure>
           <figure class="design-crop design-crop--render"><img :src="asset('hero-clean-v2.png')" alt="Refined OYI companion robot concept" /><figcaption>Refined concept</figcaption></figure>
@@ -62,10 +62,10 @@
       </section>
 
       <section class="multimodal-section"><div class="shell multimodal-inner">
-        <div class="section-intro"><p class="kicker">Multimodal strategy</p><h2>Each channel had a defined role</h2><p class="prose">The broader concept included movement, facial display, touch, and temperature. The study focused on voice dialogue and researcher-controlled ambient light.</p></div>
+        <div class="section-intro"><p class="kicker">Multimodal strategy</p><h2>Each channel had a defined role</h2><p class="prose">The broader concept considered movement, facial display, touch, and temperature. This study focused on voice dialogue and researcher-controlled ambient light.</p></div>
         <div class="modality-grid">
           <article><span>Voice</span><strong>Guide the exchange</strong><p>Active openings, reflective follow-up, reframing prompts, and session summaries.</p><small>Experimental and control</small></article>
-          <article><span>Memory</span><strong>Maintain continuity</strong><p>Earlier conversation details could be recalled across all five days.</p><small>Experimental and control</small></article>
+          <article><span>Memory</span><strong>Maintain continuity</strong><p>OYI recalled earlier conversation details across all five days.</p><small>Experimental and control</small></article>
           <article><span>Physical form</span><strong>Create object presence</strong><p>A compact 3D-printed body situated the conversation in a shared physical space.</p><small>Experimental and control</small></article>
           <article><span>Ambient light</span><strong>Make state visible</strong><p>Colour, brightness, and transitions supplemented the spoken response. The researcher controlled these cues during the study.</p><small>Experimental only · researcher controlled</small></article>
         </div>
@@ -83,12 +83,12 @@
       </section>
 
       <section class="demo-section"><div class="shell demo-grid">
-        <div><p class="kicker">Interaction demo</p><h2>Mandarin voice dialogue with responsive light feedback</h2><p class="prose">The original interaction was developed and studied in Mandarin. The video shows the implemented sequence: the user speaks, OYI responds, and the body light changes as an additional interaction cue.</p></div>
+        <div><p class="kicker">Interaction demo</p><h2>Mandarin voice dialogue with responsive light feedback</h2><p class="prose">I developed and studied the interaction in Mandarin. In the video, the user speaks, OYI responds, and the body light changes to reinforce the interaction state.</p></div>
         <figure class="video-frame"><video controls playsinline preload="metadata" :poster="asset('light-feedback.jpg')"><source :src="media('oyi-interaction-demo.mp4')" type="video/mp4" />Your browser does not support embedded video.</video><figcaption>Functional OYI prototype interaction demo</figcaption></figure>
       </div></section>
 
       <section class="shell study">
-        <div><p class="kicker">Study design</p><h2>Two parallel conditions across five days</h2><p class="prose">Thirty-two participants were assigned to two groups of 16. The comparison evaluated the combined effect of structured guidance, active initiation, deeper follow-up, and researcher-controlled light.</p></div>
+        <div><p class="kicker">Study design</p><h2>Two parallel conditions across five days</h2><p class="prose">Thirty-two participants were assigned to two groups of 16. The study compared the combined effect of structured guidance, active initiation, deeper follow-up, and researcher-controlled light.</p></div>
         <div>
           <div class="shared-baseline"><span>Held constant in both groups</span><p>16 participants · same OYI body and voice hardware · persistent memory · one daily topic · at least 10 minutes per day · five consecutive days</p></div>
           <div class="study-grid">
@@ -112,10 +112,10 @@
         <div class="result-grid">
           <article><span class="result-label">Negative affect</span><strong>18.44 → 16.50</strong><p>Experimental-group mean decreased while the control-group mean increased from 19.38 to 20.56.</p><small>Time × condition interaction · p = .047</small></article>
           <article><span class="result-label">Perceived empathy</span><strong>61.44 vs 54.38</strong><p>Participants in the integrated condition rated OYI higher on perceived empathy.</p><small>RoPE · p = .024 · Hedges’ g = .83</small></article>
-          <article><span class="result-label">Social presence</span><strong>55.13 vs 42.19</strong><p>The integrated condition produced a stronger sense that OYI was socially present in the interaction.</p><small>p = .012</small></article>
+          <article><span class="result-label">Social presence</span><strong>55.13 vs 42.19</strong><p>Participants in the integrated condition reported a stronger sense of OYI’s social presence.</p><small>p = .012</small></article>
         </div>
         <p class="results-boundary"><strong>Other measures.</strong> The study found no significant condition-specific change in positive affect or the adapted self-regulation skills measure, and no significant usability difference. After correction, only the facilitating-conditions dimension of the trust scale differed; overall trust did not.</p>
-        <div class="results-conclusion"><span>Conclusion</span><p>The integrated condition was associated with lower negative affect and stronger perceived empathy and social presence after five days. Because the features were evaluated together, the observed differences reflect the combined interaction.</p></div>
+        <div class="results-conclusion"><span>Conclusion</span><p>Structured guidance, active prompting, and light feedback were evaluated together, so the results cannot attribute these differences to any one feature.</p></div>
       </div></section>
 
       <section class="shell participant-insights">
@@ -126,9 +126,9 @@
         </div>
       </section>
 
-      <section class="analysis"><div class="shell analysis__inner"><div><p class="kicker">Analytical focus</p><h2>From interface performance toward social HRI questions</h2></div><div class="analysis-list"><p><span>Companionship</span>When does a robot move from being perceived as a device to a social partner?</p><p><span>Continuity</span>How does remembered context affect relationship-building across repeated sessions?</p><p><span>Embodiment</span>What does a physical body add beyond a general conversational AI interface?</p><p><span>Multimodality</span>How do voice and researcher-controlled ambient light work together as social cues?</p></div></div></section>
+      <section class="analysis"><div class="shell analysis__inner"><div><p class="kicker">Analytical focus</p><h2>Social HRI questions beyond interface performance</h2></div><div class="analysis-list"><p><span>Companionship</span>When does a robot move from being perceived as a device to a social partner?</p><p><span>Continuity</span>How does remembered context affect relationship-building across repeated sessions?</p><p><span>Embodiment</span>What does a physical body add beyond a general conversational AI interface?</p><p><span>Multimodality</span>How do voice and researcher-controlled ambient light work together as social cues?</p></div></div></section>
 
-      <section class="limitation"><div class="shell limitation__inner"><div><p class="kicker">Limitations and next steps</p><h2>Questions for a longer-term study</h2></div><div class="limitation-list"><p><strong>Short duration.</strong> Five days captured the beginning of a relationship; longer studies are needed to examine sustained use and lasting change.</p><p><strong>Focused sample.</strong> The 32 participants were primarily students in everyday, low-risk settings.</p><p><strong>Integrated condition.</strong> Structured dialogue, active prompting, and light feedback were evaluated together, so their individual contributions remain unresolved.</p><p><strong>Supervised light.</strong> The researcher controlled the ambient light during the study.</p><p><strong>Future interaction.</strong> Longer studies and multi-user settings could examine shared attention, turn-taking, and relationship continuity.</p></div></div></section>
+      <section class="limitation"><div class="shell limitation__inner"><div><p class="kicker">Limitations and next steps</p><h2>Questions for a longer-term study</h2></div><div class="limitation-list"><p><strong>Short duration.</strong> Five days captured only the beginning of a relationship. A longer study is needed to examine sustained use and lasting change.</p><p><strong>Focused sample.</strong> The 32 participants were primarily students in everyday, low-risk settings.</p><p><strong>Integrated condition.</strong> Structured dialogue, active prompting, and light feedback were evaluated together, so their individual contributions remain unresolved.</p><p><strong>Supervised light.</strong> The researcher controlled the ambient light during the study.</p><p><strong>Future interaction.</strong> Longer studies and multi-user settings could examine shared attention, turn-taking, and relationship continuity.</p></div></div></section>
     </article>
 
     <footer class="footer shell"><p>Interested in this research?</p><a href="mailto:Zhangbihan621@outlook.com">Zhangbihan621@outlook.com</a><a class="back-link" :href="homeUrl">Return to Bihan Zhang’s academic website</a></footer>
