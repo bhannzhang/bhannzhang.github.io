@@ -266,11 +266,11 @@ export const siteContent = {
       },
       {
         category: "Current Independent Research · Movement HRI",
-        status: "In Progress",
+        status: "Completed",
         title: "Movement as a Language",
         description: "An exploratory study using controlled variations in movement to examine how people perceive state, intention, and agency in non-anthropomorphic agents.",
         tags: ["Research Exploration", "n=6 pilot", "Movement perception", "Processing"],
-        image: import.meta.env.BASE_URL + 'images/research/movement-language/movement-card-placeholder.svg',
+        image: import.meta.env.BASE_URL + 'images/research/movement-language/movement-language-cover.png',
         link: import.meta.env.BASE_URL + 'research/movement-language/',
       },
       {

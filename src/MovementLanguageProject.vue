@@ -122,18 +122,9 @@ const labLimits = [
           <p class="lede">Exploring how abstract movement communicates state, intention, and agency in non-anthropomorphic agents.</p>
           <div class="chips"><span>HRI / HCI</span><span>Movement perception</span><span>Research-through-design</span><span>Exploratory pilot</span></div>
         </div>
-        <div class="hero__visual" aria-label="Conceptual trajectories for direct, interrupted, reversed, curved, and oscillating movement">
-          <svg viewBox="0 0 620 420" role="img">
-            <title>Abstract movement trajectory study</title>
-            <g class="guide"><line x1="45" y1="92" x2="575" y2="92"/><line x1="45" y1="208" x2="575" y2="208"/><line x1="45" y1="326" x2="575" y2="326"/></g>
-            <path class="trace trace--quiet" d="M45 92 L575 92"/>
-            <path class="trace" d="M45 208 C135 45 225 365 315 208 S485 55 575 208"/>
-            <path class="trace trace--secondary" d="M45 326 L330 326 L245 326 L575 326"/>
-            <circle class="agent" cx="315" cy="208" r="14"/>
-            <circle class="target" cx="575" cy="208" r="10"/>
-          </svg>
-          <p>Conceptual overview used to frame the project.</p>
-        </div>
+        <figure class="hero__visual">
+          <img :src="homeUrl + 'images/research/movement-language/movement-language-cover.png'" alt="Movement as a Language project cover showing a hand reaching toward two accordion-bodied mobile robot prototypes">
+        </figure>
       </section>
 
       <section class="question-band">
@@ -936,4 +927,45 @@ if __name__ == "__main__":
   .reflection-grid article p { grid-column: 2; }
   .research-placeholder--wide { aspect-ratio: 4 / 3; }
 }
+
+/* Movement project palette */
+.case-study {
+  --accent: #8b5cf6;
+  --accent-soft: #c4b5fd;
+  --paper: #f4f1ff;
+}
+.hero__visual { padding: 0; }
+.hero__visual img { aspect-ratio: 2964 / 2122; }
+.parameter-grid article,
+.data-counts article,
+.audit-note,
+.asset-placeholder--image,
+.space-legend article { border-color: var(--research-accent); }
+.parameter-grid span,
+.preset-head span,
+.meaning-grid article > span,
+.coding-flow span,
+.space-legend span,
+.grammar-grid article > span,
+.data-pipeline .kicker,
+.data-stage-grid span { color: var(--research-accent); }
+.asset-placeholder,
+.study-meta strong,
+.study-meta span,
+.mapping-diagram article,
+.status-section > div:last-child > span,
+.evidence-matrix td span,
+.parameter-audit,
+.evidence-figure--dark img,
+.probe-atlas img { border-color: rgba(139, 92, 246, .38); }
+.asset-placeholder { background: rgba(139, 92, 246, .05); }
+.study-a,
+.coding blockquote,
+.questions aside { background: #171221; }
+.mapping-section { background: #15111d; }
+.mapping-center { background: #261a3d; }
+.next-section { background: #7c3aed; color: #fff; }
+.next-section .kicker,
+.next-grid > div:last-child > p { color: #ede9fe; }
+.next-grid li { border-color: rgba(255, 255, 255, .35); }
 </style>
