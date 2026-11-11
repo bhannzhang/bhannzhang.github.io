@@ -1123,6 +1123,9 @@ const cueResults = [
 .ar-demo {
   margin-top: 2rem;
   display: block;
+  width: min(1240px, calc(100% - 3rem));
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
   border: 1px solid var(--research-line);
   background: #000;
 }
