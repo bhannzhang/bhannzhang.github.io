@@ -463,6 +463,9 @@ const cueResults = [
           <img :src="homeUrl + 'images/research/embodied-swarm/ar-collective-intent.png'" alt="AR-style visualization of collective swarm state, direction, target, and individual movement differences" loading="lazy">
           <figcaption>I used Luma Ultra to prototype an AR-style visualization over the physical swarm scene. The overlay communicates the group’s collective state, overall direction, and relationship to the target while preserving the physical context of the robots and obstacle field.</figcaption>
         </figure>
+        <video class="shell ar-demo" controls playsinline preload="metadata" aria-label="AR-based collective-intent visualization demonstration">
+          <source :src="homeUrl + 'images/research/embodied-swarm/ar-collective-intent-demo.mp4'" type="video/mp4">
+        </video>
       </section>
 
     </article>
@@ -1117,6 +1120,12 @@ const cueResults = [
   border: 1px solid var(--research-line);
 }
 .ar-visual { margin-top: 3rem; }
+.ar-demo {
+  margin-top: 2rem;
+  display: block;
+  border: 1px solid var(--research-line);
+  background: #000;
+}
 .ar-visual figcaption {
   max-width: 880px;
   padding-top: 1rem;
