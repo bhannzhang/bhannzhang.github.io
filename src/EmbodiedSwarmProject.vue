@@ -441,77 +441,20 @@ const cueResults = [
         <aside class="shell physical-rationale"><span>Design rationale</span><p>The enclosure separates the removable upper shell from the electronics base, allowing the ESP32 and IMU to remain accessible during iteration.</p></aside>
       </section>
 
-      <section class="translation-stage section-mid">
-        <div class="shell post-study-heading">
-          <p class="kicker">11 · From Research Insight to Physical System</p>
-          <h2>Translating Collective Legibility into Physical Space</h2>
-          <p>The simulation provided a controlled environment for comparing different ways of communicating collective intent. Rather than repeating the experiment with physical robots, I used the strongest design insight from the pilot — group-level explanation — as the basis for a physical implementation.</p>
-        </div>
-        <ol class="shell research-to-design" aria-label="Research-to-design transition">
-          <li><span>Simulation Study</span><strong>No Cue vs Global Cue vs Local Cue</strong></li><i>→</i>
-          <li><span>Design Insight</span><strong>Global Cue showed the strongest descriptive pattern</strong></li><i>→</i>
-          <li><span>Design Principle</span><strong>Explain the swarm at the collective level</strong></li><i>→</i>
-          <li><span>Physical Translation</span><strong>7 physical robots + spatial AR visualization</strong></li>
-        </ol>
-        <aside class="shell translation-statement">Simulation was used to compare explanation strategies.<br>The physical system applies the selected strategy.</aside>
-      </section>
-
       <section class="physical-swarm-stage section-dark">
         <div class="shell post-study-heading">
           <p class="kicker">12 · Physical Swarm Implementation</p>
           <h2>From Simulated Agents to Seven Physical Robots</h2>
-          <p>I translated the simulated swarm into a tabletop system using seven Sony toio robots. Each robot carries a visual marker so its identity and motion can be tracked from recorded overhead video.</p>
         </div>
-        <figure class="shell editorial-placeholder editorial-placeholder--large">
-          <div><span>Physical Swarm Setup</span><strong>Image forthcoming</strong></div>
-          <figcaption>Seven marker-tracked toio robots navigate a segmented tabletop obstacle field.</figcaption>
-        </figure>
-        <div class="shell physical-system-grid">
-          <article>
-            <span>Physical setup</span>
-            <ul><li>7 Sony toio robots</li><li>Unique visual markers</li><li>Separate start and target markers</li><li>Segmented obstacle wall</li><li>Overhead video recording</li><li>No toio mat</li></ul>
-          </article>
-          <article><span>Why physical embodiment?</span><p>Moving from simulation to physical robots introduces spatial distribution, individual embodiment, motion noise, and visible group heterogeneity. The goal is not to re-test the same cue comparison, but to examine how the selected group-level explanation can be situated around a real moving collective.</p></article>
-        </div>
-        <div class="shell tracking-block">
-          <div><p class="mini-label">Tracking architecture</p><h3>From recorded motion to collective state</h3><p>I am developing a post-processing pipeline in which each robot’s unique marker ID can provide its position and orientation frame by frame.</p></div>
-          <ol><li>Recorded Overhead Video</li><i>→</i><li>Marker Detection</li><i>→</i><li>7 Robot Poses</li><i>→</i><li>Collective State</li><i>→</i><li>AR Overlay</li></ol>
-        </div>
-        <div class="shell placeholder-pair">
-          <div class="editorial-placeholder"><span>Marker-based tracking</span><strong>Implementation in progress</strong></div>
-          <div class="editorial-placeholder"><span>Computer-vision frame</span><strong>Asset forthcoming</strong></div>
-        </div>
+        <div class="shell media-placeholder" role="img" aria-label="Placeholder for a future physical swarm video"></div>
       </section>
 
       <section class="ar-stage section-mid">
         <div class="shell post-study-heading">
           <p class="kicker">13 · Spatial AR Explanation</p>
-          <h2>Making Collective Intent Visible Around the Physical Swarm</h2>
-          <p>The simulator suggested that group-level cues were more promising than local relational cues for anticipating collective behavior. I therefore translated the Global Cue into a spatial visualization surrounding the physical robots.</p>
+          <h2>AR-Based Visualization of Collective Intent</h2>
         </div>
-        <figure class="shell editorial-placeholder editorial-placeholder--large">
-          <div><span>AR Overlay</span><strong>Final visual forthcoming</strong></div>
-          <figcaption>The planned AR-style overlay will be generated from tracked physical swarm motion rather than manually composited frame by frame.</figcaption>
-        </figure>
-        <div class="shell ar-elements"><span>Collective hull</span><span>Aggregate direction</span><span>Target indication</span><span>Planned route / tendency</span><span>Group-state annotation</span></div>
-        <div class="shell translation-comparison">
-          <article><span>Simulator</span><ul><li>Virtual agents</li><li>Collective hull</li><li>Aggregate direction</li><li>Controlled swarm dynamics</li></ul></article>
-          <div><strong>Global Cue</strong><i>→</i><strong>Spatial Global Cue</strong></div>
-          <article><span>Physical Translation</span><ul><li>7 toio robots</li><li>Marker-based tracking</li><li>Spatial collective hull</li><li>Movement-aligned direction cue</li></ul></article>
-        </div>
-        <div class="shell editorial-placeholder editorial-placeholder--comparison"><span>Simulator → Physical Comparison</span><strong>Visual forthcoming</strong></div>
-      </section>
-
-      <section class="outcome-stage section-dark">
-        <div class="shell post-study-heading">
-          <p class="kicker">14 · Outcome</p>
-          <h2>From Controlled Simulation to Physical Demonstrator</h2>
-          <p>This project progressed from a controlled simulator for studying mental-model formation and collective legibility to a physical seven-robot demonstrator that applies the most promising explanatory strategy through spatial AR visualization.</p>
-        </div>
-        <ol class="shell final-process"><li>Embodied Input</li><i>→</i><li>Simulated Swarm</li><i>→</i><li>User Study</li><i>→</i><li>Global Cue Insight</li><i>→</i><li>Physical Swarm</li><i>→</i><li>AR Translation</li></ol>
-        <div class="shell editorial-placeholder editorial-placeholder--final"><span>Final System / Demonstrator</span><strong>Documentation forthcoming</strong></div>
-        <blockquote class="shell final-reflection">The final stage does not reproduce the simulator experiment. It translates a research finding into a physical interaction system.</blockquote>
-        <p class="shell optional-note">Further work could evaluate the physical AR implementation with a larger participant sample.</p>
+        <div class="shell media-placeholder" role="img" aria-label="Placeholder for a future AR collective-intent visualization"></div>
       </section>
 
     </article>
@@ -1133,5 +1076,23 @@ const cueResults = [
   .placeholder-pair { grid-template-columns: 1fr; }
   .physical-system-grid article + article { padding-left: 0; border-left: 0; }
   .physical-system-grid ul { columns: 1; }
+}
+
+.reflection-heading,
+.physical-heading,
+.post-study-heading { max-width: none; }
+
+.post-study-heading h2 {
+  margin: .65rem 0 0;
+  font-size: clamp(1.65rem, 2.7vw, 2.25rem);
+  line-height: 1.16;
+  letter-spacing: -.03em;
+}
+
+.media-placeholder {
+  aspect-ratio: 16 / 9;
+  margin-top: 3rem;
+  border: 1px dashed var(--research-line);
+  background: var(--research-bg);
 }
 </style>
