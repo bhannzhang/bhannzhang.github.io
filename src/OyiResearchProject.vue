@@ -69,17 +69,16 @@
           <article><span>Physical form</span><strong>Create object presence</strong><p>A compact 3D-printed body situated the conversation in a shared physical space.</p><small>Experimental and control</small></article>
           <article><span>Ambient light</span><strong>Make state visible</strong><p>Colour, brightness, and transitions supplemented the spoken response. The researcher controlled these cues during the study.</p><small>Experimental only · researcher controlled</small></article>
         </div>
-        <p class="scope-note"><strong>Outside this evaluation:</strong> autonomous movement, touch feedback, temperature change, expressive face behaviour, and automatic emotion recognition.</p>
       </div></section>
 
       <section class="shell principles">
         <div><p class="kicker">Design principles</p><h2>Five principles derived from the study</h2></div>
         <ol class="principle-list">
-          <li><span>01</span><p><strong>Clarify before advising.</strong> Reflect the situation and help users articulate what they think before offering suggestions.</p></li>
-          <li><span>02</span><p><strong>Guide gradually and preserve exit points.</strong> Active prompts should deepen reflection without turning into repeated questioning.</p></li>
-          <li><span>03</span><p><strong>Synchronise the modalities.</strong> Voice and light should communicate the same interaction state at the same moment.</p></li>
-          <li><span>04</span><p><strong>Use memory as relationship continuity.</strong> Recall supports continuity when it enables relevant follow-up.</p></li>
-          <li><span>05</span><p><strong>Pair social cues with clear boundaries.</strong> A companion-like form should not obscure system limits, privacy, or data use.</p></li>
+          <li><span>01</span><p><strong>Make emotional support responsive, not prescriptive.</strong> Respond to users' expressed needs through attentive dialogue rather than assuming what kind of support they require.</p></li>
+          <li><span>02</span><p><strong>Balance initiative with user control.</strong> Use gentle, context-sensitive prompts to encourage interaction while allowing users to pause, redirect, or disengage.</p></li>
+          <li><span>03</span><p><strong>Coordinate embodied and conversational cues.</strong> Align voice, movement, and light to communicate consistent interaction states and social responses.</p></li>
+          <li><span>04</span><p><strong>Build continuity through contextual memory.</strong> Use relevant information from previous interactions to support meaningful follow-up and a sense of continuity over time.</p></li>
+          <li><span>05</span><p><strong>Communicate companionship without overstating capability.</strong> Use social and expressive cues to create an approachable experience while maintaining clear boundaries around the system's abilities and data use.</p></li>
         </ol>
       </section>
 
@@ -128,8 +127,6 @@
       </section>
 
       <section class="analysis"><div class="shell analysis__inner"><div><p class="kicker">Analytical focus</p><h2>From interface performance toward social HRI questions</h2></div><div class="analysis-list"><p><span>Companionship</span>When does a robot move from being perceived as a device to a social partner?</p><p><span>Continuity</span>How does remembered context affect relationship-building across repeated sessions?</p><p><span>Embodiment</span>What does a physical body add beyond a general conversational AI interface?</p><p><span>Multimodality</span>How do voice and researcher-controlled ambient light work together as social cues?</p></div></div></section>
-
-      <section class="disclosure"><div class="shell disclosure__inner"><strong>Study scope</strong><p>This page documents an independent five-day study and distinguishes concept imagery from the functional prototype. OYI used model-enabled dialogue configuration, persistent memory, and researcher-controlled light feedback. Foundation-model training and automated emotion recognition were outside the implementation.</p></div></section>
 
       <section class="limitation"><div class="shell limitation__inner"><div><p class="kicker">Limitations and next steps</p><h2>Questions for a longer-term study</h2></div><div class="limitation-list"><p><strong>Short duration.</strong> Five days captured the beginning of a relationship; longer studies are needed to examine sustained use and lasting change.</p><p><strong>Focused sample.</strong> The 32 participants were primarily students in everyday, low-risk settings.</p><p><strong>Integrated condition.</strong> Structured dialogue, active prompting, and light feedback were evaluated together, so their individual contributions remain unresolved.</p><p><strong>Supervised light.</strong> The researcher controlled the ambient light during the study.</p><p><strong>Future interaction.</strong> Longer studies and multi-user settings could examine shared attention, turn-taking, and relationship continuity.</p></div></div></section>
     </article>

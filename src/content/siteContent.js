@@ -174,9 +174,9 @@ export const siteContent = {
     // 研究问题（斜体显示）
     // Research questions (italicized)
     researchQuestions: [
-      "How do people interpret and coordinate with autonomous systems in shared social spaces?",
-      "How can multimodal behavior make robots and autonomous vehicles legible without overloading attention?",
-      "How do culture, embodiment, and group context shape trust and interaction with intelligent systems?",
+      "How do people understand, trust, and coordinate with intelligent agents in shared environments?",
+      "How can embodied and multimodal behaviors communicate an agent's state and intent while supporting human awareness?",
+      "How do repeated interactions, social dynamics, and cultural contexts shape human–AI relationships over time?",
     ],
   },
 
@@ -269,7 +269,7 @@ export const siteContent = {
         status: "Completed",
         title: "Movement as a Language",
         description: "An exploratory study using controlled variations in movement to examine how people perceive state, intention, and agency in non-anthropomorphic agents.",
-        tags: ["Movement Perception", "Non-Anthropomorphic Agents", "Processing", "Physical Robot"],
+        tags: ["Movement Perception", "Non-Anthropomorphic Agents", "Physical Robot"],
         image: import.meta.env.BASE_URL + 'images/research/movement-language/movement-language-card-cover.png',
         link: import.meta.env.BASE_URL + 'research/movement-language/',
       },
