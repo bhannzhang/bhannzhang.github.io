@@ -344,7 +344,7 @@ const labLimits = [
                   <li><span>04</span><strong>Resume</strong><small>Both robots continue forward together.</small></li>
                 </ol>
                 <dl class="condition-spec"><div><dt>Movement relation</dt><dd>Coordinated whole-body motion</dd></div><div><dt>Expected configuration</dt><dd>Approximately constant body length and orientation</dd></div></dl>
-                <figure class="condition-media" data-media-path="images/research/movement-language/c1-kinematic-hesitation.mp4"><div class="research-placeholder research-placeholder--animation" role="img" aria-label="Video or GIF placeholder for C1 Kinematic Hesitation"><span>[VIDEO / GIF PLACEHOLDER · C1 KINEMATIC HESITATION]</span></div><figcaption>Recorded C1 demonstration pending.</figcaption></figure>
+                <figure class="condition-media"><video controls playsinline preload="metadata" aria-label="C1 Kinematic Hesitation demonstration"><source :src="homeUrl + 'images/research/movement-language/c1-kinematic-hesitation.mp4'" type="video/mp4"></video><figcaption>C1 · Kinematic Hesitation</figcaption></figure>
               </article>
 
               <article class="condition-card">
@@ -358,7 +358,7 @@ const labLimits = [
                   <li><span>05</span><strong>Resume</strong><small>Both robots continue forward.</small></li>
                 </ol>
                 <dl class="condition-spec"><div><dt>Movement relation</dt><dd>Whole-body motion followed by relative movement</dd></div><div><dt>Expected configuration</dt><dd>Compressed body during the pause</dd></div></dl>
-                <figure class="condition-media" data-media-path="images/research/movement-language/c2-embodied-hesitation.mp4"><div class="research-placeholder research-placeholder--animation" role="img" aria-label="Video or GIF placeholder for C2 Embodied Hesitation"><span>[VIDEO / GIF PLACEHOLDER · C2 EMBODIED HESITATION]</span></div><figcaption>Recorded C2 demonstration pending.</figcaption></figure>
+                <figure class="condition-media"><video controls playsinline preload="metadata" aria-label="C2 Embodied Hesitation demonstration"><source :src="homeUrl + 'images/research/movement-language/c2-embodied-hesitation.mp4'" type="video/mp4"></video><figcaption>C2 · Embodied Hesitation</figcaption></figure>
               </article>
             </div>
           </div>
@@ -366,8 +366,170 @@ const labLimits = [
           <div class="extension-subsection">
             <div class="subsection-heading"><span>22.2</span><h3>Implementation Code</h3></div>
             <div class="code-placeholder-grid">
-              <article><header><span>C1</span><h3>Kinematic Hesitation</h3></header><pre><code>[CODE PLACEHOLDER · C1]</code></pre></article>
-              <article><header><span>C2</span><h3>Embodied Hesitation</h3></header><pre><code>[CODE PLACEHOLDER · C2]</code></pre></article>
+              <article><header><span>C1</span><h3>Kinematic Hesitation</h3></header><pre><code>import asyncio
+from toio import MultipleToioCoreCubes
+
+NORMAL_SPEED = 30
+BASELINE_TIME = 1.5
+RESUME_TIME = 1.0
+
+async def move(a, b, speed, duration):
+    await asyncio.gather(
+        a.api.motor.motor_control(
+            speed, speed, round(duration * 1000)
+        ),
+        b.api.motor.motor_control(
+            speed, speed, round(duration * 1000)
+        )
+    )
+    await asyncio.sleep(duration)
+
+async def stop(a, b):
+    await asyncio.gather(
+        a.api.motor.motor_control(0, 0),
+        b.api.motor.motor_control(0, 0)
+    )
+
+async def c1(a, b):
+    print("Baseline: Forward")
+    await move(a, b, NORMAL_SPEED, BASELINE_TIME)
+
+    print("Deceleration 1")
+    await move(a, b, 24, 0.2)
+
+    print("Deceleration 2")
+    await move(a, b, 18, 0.2)
+
+    print("Deceleration 3")
+    await move(a, b, 12, 0.2)
+
+    print("Pause")
+    await stop(a, b)
+    await asyncio.sleep(0.8)
+
+    print("Resume")
+    await move(a, b, NORMAL_SPEED, RESUME_TIME)
+    await stop(a, b)
+
+async def main():
+    print("\nC1 - Kinematic Hesitation")
+    print("Connecting to two toio robots...")
+
+    async with MultipleToioCoreCubes(cubes=2) as cubes:
+        a = cubes[0]
+        b = cubes[1]
+
+        print("Two toio robots connected.")
+        input("按回车开始 C1...")
+
+        try:
+            await c1(a, b)
+        finally:
+            await stop(a, b)
+
+    print("C1 finished.")
+
+if __name__ == "__main__":
+    asyncio.run(main())</code></pre></article>
+              <article><header><span>C2</span><h3>Embodied Hesitation</h3></header><pre><code>import asyncio
+from toio import MultipleToioCoreCubes
+
+NORMAL_SPEED = 30
+BASELINE_TIME = 1.5
+RESUME_TIME = 1.0
+CONTRACTION_SPEED = 30
+CONTRACTION_TIME = 0.4
+
+async def move(a, b, speed_a, speed_b, duration):
+    await asyncio.gather(
+        a.api.motor.motor_control(
+            speed_a, speed_a, round(duration * 1000)
+        ),
+        b.api.motor.motor_control(
+            speed_b, speed_b, round(duration * 1000)
+        )
+    )
+    await asyncio.sleep(duration)
+
+async def stop(a, b):
+    await asyncio.gather(
+        a.api.motor.motor_control(0, 0),
+        b.api.motor.motor_control(0, 0)
+    )
+
+async def c2(a, b):
+    print("Baseline: Forward")
+    await move(
+        a, b,
+        NORMAL_SPEED, NORMAL_SPEED,
+        BASELINE_TIME
+    )
+
+    print("Pause")
+    await stop(a, b)
+    await asyncio.sleep(0.6)
+
+    print("Body Contraction")
+    await move(
+        a, b,
+        -CONTRACTION_SPEED, 0,
+        CONTRACTION_TIME
+    )
+
+    print("Hold Contraction")
+    await stop(a, b)
+    await asyncio.sleep(0.4)
+
+    print("Resume")
+    await move(
+        a, b,
+        NORMAL_SPEED, NORMAL_SPEED,
+        RESUME_TIME
+    )
+    await stop(a, b)
+
+async def identify(cube):
+    await cube.api.motor.motor_control(20, 20, 150)
+    await asyncio.sleep(0.2)
+    await cube.api.motor.motor_control(0, 0)
+
+async def main():
+    print("\nC2 - Embodied Hesitation")
+    print("Connecting to two toio robots...")
+
+    async with MultipleToioCoreCubes(cubes=2) as cubes:
+        a = cubes[0]
+        b = cubes[1]
+
+        print("Two toio robots connected.")
+        print("请将两台机器人车头朝向相同。")
+
+        input("按回车识别第一台机器人...")
+        await identify(a)
+
+        answer = input(
+            "刚才移动的是前端机器人吗？(y/n): "
+        ).strip().lower()
+
+        if answer == "n":
+            a, b = b, a
+        elif answer != "y":
+            print("Cancelled")
+            return
+
+        print("A = Front robot")
+        print("B = Rear robot")
+        input("按回车开始 C2...")
+
+        try:
+            await c2(a, b)
+        finally:
+            await stop(a, b)
+
+    print("C2 finished.")
+
+if __name__ == "__main__":
+    asyncio.run(main())</code></pre></article>
             </div>
           </div>
         </div>
@@ -690,7 +852,13 @@ const labLimits = [
   font-size: .72rem;
 }
 .condition-media { margin: 1rem 0 0; }
-.condition-media .research-placeholder { margin-top: 0; }
+.condition-media video {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  display: block;
+  object-fit: contain;
+  background: #000;
+}
 .condition-media figcaption {
   padding-top: .55rem;
   color: var(--research-muted);
@@ -708,7 +876,7 @@ const labLimits = [
 }
 .code-placeholder-grid header span { color: var(--research-accent); font: 700 .68rem/1.4 var(--font-mono); }
 .code-placeholder-grid pre {
-  min-height: 240px;
+  height: 420px;
   margin: 1rem 0 0;
   padding: 1rem;
   overflow: auto;
