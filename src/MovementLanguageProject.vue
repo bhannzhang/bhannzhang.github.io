@@ -312,17 +312,17 @@ const labLimits = [
           <div class="extension-subsection">
             <div class="subsection-heading"><span>21.2</span><h3>Mechanical Exploration</h3></div>
             <div class="capability-list">
-              <article><h3>Translation</h3><p>Both units move together while maintaining approximately the same relative configuration.</p></article>
-              <article><h3>Extension / contraction</h3><p>Relative distance changes, deforming the bellows.</p></article>
+              <article><h3>Contraction</h3><p>The units move toward each other, shortening and compressing the accordion body.</p></article>
+              <article><h3>Extension</h3><p>The units move apart, lengthening the accordion body.</p></article>
               <article><h3>Bending</h3><p>Relative position and orientation change, producing a curved body configuration.</p></article>
-              <article><h3>Local probing</h3><p>One unit advances or retreats relative to the other.</p></article>
+              <article><h3>Local Probing</h3><p>One unit advances or retreats while the other remains stationary.</p></article>
             </div>
             <p class="integrity-note">These are intended capabilities, not validated performance claims.</p>
             <div class="placeholder-grid placeholder-grid--four">
-              <div class="research-placeholder" role="img" aria-label="Placeholder for translation movement"><span>[PLACEHOLDER — Translation]</span></div>
-              <figure class="prototype-figure"><img :src="homeUrl + 'images/research/movement-language/extension-contraction.png'" alt="Two mobile robots contracting the flexible connecting body" loading="lazy"></figure>
-              <figure class="prototype-figure"><img :src="homeUrl + 'images/research/movement-language/bending.png'" alt="Two mobile robots bending the flexible connecting body along a curved path" loading="lazy"></figure>
-              <div class="research-placeholder" role="img" aria-label="Placeholder for local probing movement"><span>[PLACEHOLDER — Local Probing]</span></div>
+              <figure class="prototype-figure"><img :src="homeUrl + 'images/research/movement-language/contraction.png'" alt="Two mobile robots moving toward each other to contract the accordion body" loading="lazy"></figure>
+              <figure class="prototype-figure"><img :src="homeUrl + 'images/research/movement-language/extension.png'" alt="Two mobile robots moving apart to extend the accordion body" loading="lazy"></figure>
+              <figure class="prototype-figure"><img :src="homeUrl + 'images/research/movement-language/bending-motion.png'" alt="Two mobile robots bending the accordion body along a curved path" loading="lazy"></figure>
+              <figure class="prototype-figure"><img :src="homeUrl + 'images/research/movement-language/local-probing.png'" alt="One mobile robot moving while the other remains stationary" loading="lazy"></figure>
             </div>
           </div>
         </div>
