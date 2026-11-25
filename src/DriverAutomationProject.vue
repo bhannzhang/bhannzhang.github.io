@@ -45,13 +45,13 @@
       <section class="shell approach">
         <p class="kicker">02 · Research pipeline</p>
         <h2>From observed driving to interface decisions</h2>
-        <ol class="steps">
-          <li><span>01</span><div><h3>Natural driving</h3><p>Extract recurring and safety-relevant situations from real driving records.</p></div></li>
-          <li><span>02</span><div><h3>Scenario definition</h3><p>Organize ACC and lane-assistance states, transitions, and boundaries.</p></div></li>
-          <li><span>03</span><div><h3>Vehicle benchmark</h3><p>Compare control behavior and interface feedback in production vehicles.</p></div></li>
-          <li><span>04</span><div><h3>Driver behavior</h3><p>Study braking, monitoring, and interpretation around critical events.</p></div></li>
-          <li><span>05</span><div><h3>HMI concepts</h3><p>Map system state and driver needs to cluster and HUD feedback.</p></div></li>
-          <li><span>06</span><div><h3>Evaluation setup</h3><p>Develop task scripts and a simulator protocol for repeatable comparison.</p></div></li>
+        <ol class="steps" aria-label="Six-stage research and design workflow">
+          <li><span>01</span><div><h3>China-FOT naturalistic driving data analysis</h3><p>Examine recorded driving behavior and vehicle context.</p></div></li>
+          <li><span>02</span><div><h3>Scenario and hazardous-condition extraction</h3><p>Identify routine transitions, critical events, and automation boundaries.</p></div></li>
+          <li><span>03</span><div><h3>Vehicle benchmarking</h3><p>Tesla Model X · Volvo S90 · SAIC engineering vehicle</p></div></li>
+          <li><span>04</span><div><h3>Driver behavior and vehicle-control analysis</h3><p>Connect driver monitoring and intervention with control responses.</p></div></li>
+          <li><span>05</span><div><h3>HMI information architecture and prototype design</h3><p>Structure mode, target, guidance, and warning information.</p></div></li>
+          <li><span>06</span><div><h3>Real-vehicle experience and simulator validation</h3><p>Road-test observations and a proposed simulator evaluation protocol.</p></div></li>
         </ol>
       </section>
 
@@ -131,9 +131,6 @@
         </div>
       </section>
 
-      <section class="disclosure">
-        <div class="shell disclosure__inner"><strong>Public research summary</strong><p>Participant recordings, raw datasets, partner-specific parameters, and internal deliverables are omitted. Prototype images will be added after a suitable public version is selected.</p></div>
-      </section>
     </article>
 
     <footer class="footer shell">
@@ -190,11 +187,12 @@ figcaption { margin-top: .75rem; color: #938c89; font-size: .8rem; line-height: 
 .metric-grid strong { font-size: clamp(1.5rem, 3vw, 2.6rem); letter-spacing: -.055em; }
 .metric-grid span { color: #685852; font-size: .8rem; }
 .approach { padding: 6rem 0; }
-.steps { margin-top: 3rem; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); }
-.steps li { min-height: 245px; padding: 1.25rem; border-top: 1px solid #754835; border-right: 1px solid rgba(255,255,255,.09); }
-.steps li > span, .lens-grid article > span { color: var(--accent); font: 600 .8rem var(--font-mono); }
-.steps h3, .lens-grid h3 { margin: 2.8rem 0 .55rem; font-size: 1rem; }
-.steps p, .lens-grid p { color: #96908e; font-size: .85rem; line-height: 1.65; }
+.steps { max-width: 880px; margin: 3rem auto 0; padding: 0; list-style: none; display: grid; gap: 1.6rem; }
+.steps li { position: relative; display: grid; grid-template-columns: 3.5rem 1fr; align-items: center; min-height: 105px; padding: 1.25rem 1.5rem; border: 1px solid rgba(255,141,102,.32); border-radius: .75rem; background: #171417; }
+.steps li:not(:last-child)::after { content: '↓'; position: absolute; left: 50%; bottom: -1.5rem; transform: translateX(-50%); color: var(--accent); font-size: 1.25rem; line-height: 1; }
+.steps li > span { color: var(--accent); font: 600 .8rem var(--font-mono); }
+.steps h3 { margin: 0 0 .35rem; font-size: 1rem; }
+.steps p { margin: 0; color: #aaa3a0; font-size: .85rem; line-height: 1.65; }
 .scenario-section { padding: 6rem 0; background: #151317; }
 .roadmap { margin-top: 3rem; display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid #6b4031; border-left: 1px solid rgba(255,255,255,.08); }
 .scenario { min-height: 190px; padding: 1.2rem; display: flex; flex-direction: column; border-right: 1px solid rgba(255,255,255,.08); border-bottom: 1px solid rgba(255,255,255,.08); }
@@ -231,10 +229,6 @@ figcaption { margin-top: .75rem; color: #938c89; font-size: .8rem; line-height: 
 .simulator-figure img { aspect-ratio: 16 / 8; object-fit: cover; border-radius: 1rem; }
 .implication-list p { padding: 1rem 0; display: grid; grid-template-columns: 7rem 1fr; gap: 1rem; border-top: 1px solid rgba(255,255,255,.11); color: #bbb4b1; line-height: 1.65; }
 .implication-list span { color: var(--accent-soft); font-size: .76rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
-.disclosure { padding: 2.5rem 0; background: #171619; }
-.disclosure__inner { display: grid; grid-template-columns: .45fr 1.55fr; gap: 2rem; }
-.disclosure__inner strong { color: var(--accent-soft); }
-.disclosure__inner p { color: #aaa3a0; }
 .footer { padding: 4rem 0; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; border-top: 1px solid rgba(255,255,255,.1); }
 .footer > p { color: #8f8886; }
 .footer > a:not(.back-link) { font-size: clamp(1.4rem, 3vw, 2.4rem); font-weight: 700; letter-spacing: -.04em; }
@@ -244,21 +238,20 @@ figcaption { margin-top: .75rem; color: #938c89; font-size: .8rem; line-height: 
   .topbar { min-height: 68px; }
   .hero { padding: 4.5rem 0 3.5rem; }
   .two-column, .implications, .evidence, .evaluation__inner { padding: 4rem 0; grid-template-columns: 1fr; gap: 2rem; }
-  .metric-grid, .steps, .roadmap, .method-grid { grid-template-columns: 1fr 1fr; }
+  .metric-grid, .roadmap, .method-grid { grid-template-columns: 1fr 1fr; }
   .metric-grid div { min-height: 105px; border-right: 0; border-bottom: 1px solid rgba(33,23,19,.14); }
   .metric-grid div:last-child { border-bottom: 0; }
   .approach, .scenario-section, .evaluation { padding: 4rem 0; }
-  .steps li { min-height: 190px; }
-  .steps h3 { margin-top: 1.25rem; }
   .scenario { min-height: 160px; }
   .prototype-section .media-placeholder { grid-column: auto; }
-  .disclosure__inner, .footer { grid-template-columns: 1fr; }
+  .footer { grid-template-columns: 1fr; }
   .footer .back-link { grid-column: auto; }
 }
 @media (max-width: 560px) {
-  .metric-grid, .steps, .roadmap, .event-strip, .method-grid, .requirement-list p { grid-template-columns: 1fr; }
+  .metric-grid, .roadmap, .event-strip, .method-grid, .requirement-list p { grid-template-columns: 1fr; }
   .metric-grid div, .scenario, .event-strip div { border-right: 0; }
   .steps li, .scenario, .event-strip div { min-height: auto; }
+  .steps li { grid-template-columns: 2.5rem 1fr; padding: 1rem; }
   .requirement-list p { gap: .4rem; }
   .simulator-figure img { aspect-ratio: 4 / 3; }
 }
