@@ -49,14 +49,13 @@
           <div class="workflow-chart__inner">
             <div class="workflow-axis"><span>Research workstream</span><span v-for="(stage, index) in workflowStages" :key="stage.phase">{{ String(index + 1).padStart(2, '0') }}<small>{{ stage.phase }}</small></span></div>
             <ol class="workflow-steps">
-              <li v-for="(stage, index) in workflowStages" :key="stage.title" :style="{ '--stage-column': index + 2 }">
-                <div class="workflow-task"><h3>{{ stage.title }}</h3><p>{{ stage.detail }}</p></div>
-                <span class="workflow-bar" :aria-label="`Phase ${index + 1}: ${stage.title}`">{{ String(index + 1).padStart(2, '0') }}</span>
+              <li v-for="(stage, index) in workflowStages" :key="stage.title" :style="{ '--stage-offset': `${index * 14.5}%` }">
+                <div class="workflow-task"><p>{{ stage.detail }}</p></div>
+                <span class="workflow-bar"><small>{{ String(index + 1).padStart(2, '0') }}</small><strong>{{ stage.title }}</strong></span>
               </li>
             </ol>
           </div>
         </div>
-        <p class="workflow-note">Research phases are shown in sequence, not to calendar scale.</p>
       </section>
 
       <section class="scenario-section">
@@ -67,6 +66,7 @@
           <div class="roadmap" aria-label="Four families of ACC and lane-assistance scenarios">
             <div v-for="(scenario, index) in scenarios" :key="scenario.title" class="scenario">
               <span>{{ String(index + 1).padStart(2, '0') }}</span><strong>{{ scenario.title }}</strong><p>{{ scenario.examples }}</p>
+              <img :src="asset(scenario.image)" :alt="scenario.alt" loading="lazy" decoding="async" />
             </div>
           </div>
           <p class="scenario-note"><strong>Two linked systems:</strong> ACC scenarios followed speed, distance, and target selection. LKA/LDW scenarios followed lane position, departure, guidance, and intentional lane changes.</p>
@@ -168,10 +168,10 @@ import ResearchPageTopbar from './components/ResearchPageTopbar.vue'
 const homeUrl = import.meta.env.BASE_URL
 const asset = (filename) => `${import.meta.env.BASE_URL}images/research/driver-automation/${filename}`
 const scenarios = [
-  { title: 'Routine operation', examples: 'Activation · steady following · lane keeping' },
-  { title: 'Target transitions', examples: 'Cut-in · cut-out · target acceleration' },
-  { title: 'System boundaries', examples: 'Curves · congestion · obstacles · unavailable states' },
-  { title: 'Driver intervention', examples: 'Braking · lane change · steering override' },
+  { title: 'Routine operation', examples: 'Activation · steady following · lane keeping', image: 'routine-operation.jpg', alt: 'Activation, deactivation, stable car-following, and lane keeping scenarios' },
+  { title: 'Target transitions', examples: 'Cut-in · cut-out · target acceleration', image: 'target-transitions.jpg', alt: 'Cut-in, cut-out, target change, and target moving away scenarios' },
+  { title: 'System boundaries', examples: 'Curves · congestion · obstacles · unavailable states', image: 'system-boundaries.jpg', alt: 'Low-speed driving, curves, slopes, congestion, and unavailable-system scenarios' },
+  { title: 'Driver intervention', examples: 'Braking · lane change · steering override', image: 'driver-intervention.jpg', alt: 'Lane change, braking, steering, and takeover scenarios' },
 ]
 const workflowStages = [
   { phase: 'Evidence', title: 'China-FOT naturalistic driving data analysis', detail: 'Recorded driving and vehicle context' },
@@ -269,7 +269,7 @@ figcaption { margin-top: .75rem; color: #938c89; font-size: .8rem; line-height: 
 .metric-grid span { color: #685852; font-size: .8rem; }
 .approach { padding: 6rem 0; }
 .workflow-chart { margin-top: 3rem; overflow-x: auto; border: 1px solid rgba(255,255,255,.12); border-radius: .75rem; }
-.workflow-chart__inner { min-width: 850px; }
+.workflow-chart__inner { min-width: 1120px; }
 .workflow-axis, .workflow-steps li { display: grid; grid-template-columns: minmax(260px, 2fr) repeat(6, minmax(0, 1fr)); }
 .workflow-axis { background: #252024; }
 .workflow-axis > span { padding: .9rem .7rem; border-right: 1px solid rgba(255,255,255,.12); color: var(--accent-soft); font: 600 .78rem var(--font-mono); text-align: center; }
@@ -278,16 +278,17 @@ figcaption { margin-top: .75rem; color: #938c89; font-size: .8rem; line-height: 
 .workflow-steps { display: block; margin: 0; padding: 0; list-style: none; }
 .workflow-steps li { min-height: 94px; border-top: 1px solid rgba(255,255,255,.1); background: #141215; }
 .workflow-task { padding: .9rem 1rem; border-right: 1px solid rgba(255,255,255,.12); }
-.workflow-task h3 { margin: 0 0 .25rem; font-size: .88rem; line-height: 1.3; }
 .workflow-task p { margin: 0; color: #aaa3a0; font-size: .75rem; line-height: 1.4; }
-.workflow-bar { grid-column: var(--stage-column); align-self: center; display: flex; align-items: center; min-height: 42px; margin: .4rem .25rem; padding: .6rem .8rem; clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 50%, calc(100% - 12px) 100%, 0 100%); background: rgba(255,141,102,.7); color: #211713; font: 700 .8rem var(--font-mono); }
-.workflow-note { margin: .7rem 0 0; color: #96908e; font-size: .75rem; }
+.workflow-bar { grid-column: 2 / -1; align-self: center; display: flex; align-items: center; gap: .6rem; box-sizing: border-box; width: 27%; min-height: 72px; margin-left: var(--stage-offset); padding: .65rem 1.35rem .65rem .7rem; clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 50%, calc(100% - 12px) 100%, 0 100%); background: rgba(255,141,102,.75); color: #211713; }
+.workflow-bar small { font: 700 .68rem var(--font-mono); }
+.workflow-bar strong { font-size: .72rem; line-height: 1.3; }
 .scenario-section { padding: 6rem 0; background: #151317; }
-.roadmap { margin-top: 3rem; display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid #6b4031; border-left: 1px solid rgba(255,255,255,.08); }
-.scenario { min-height: 190px; padding: 1.2rem; display: flex; flex-direction: column; border-right: 1px solid rgba(255,255,255,.08); border-bottom: 1px solid rgba(255,255,255,.08); }
+.roadmap { margin-top: 3rem; display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid #6b4031; border-left: 1px solid rgba(255,255,255,.08); }
+.scenario { padding: 1.2rem; display: flex; flex-direction: column; border-right: 1px solid rgba(255,255,255,.08); border-bottom: 1px solid rgba(255,255,255,.08); }
 .scenario span { color: var(--accent); font: 600 .72rem var(--font-mono); }
-.scenario strong { margin-top: 2rem; font-size: 1rem; }
+.scenario strong { margin-top: 1rem; font-size: 1rem; }
 .scenario p { color: #aaa3a0; font-size: .8rem; line-height: 1.6; }
+.scenario img { display: block; width: 100%; height: auto; margin-top: auto; border-radius: .55rem; }
 .scenario-note { max-width: 850px; margin-top: 2rem; color: #aaa3a0; line-height: 1.7; }
 .scenario-note strong { color: #f8f6f4; }
 .scenario-maps { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; margin-top: 3rem; }
