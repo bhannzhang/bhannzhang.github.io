@@ -102,11 +102,19 @@
           </p>
           <p class="prose">Time headway (THW) and time to collision (TTC) described longitudinal situations. Distance and time to the lane line (DTLC and TTLC) described lateral ones.</p>
         </div>
+        <figure class="benchmark-photo">
+          <img :src="asset('benchmark-road-test.png')" alt="Two vehicles positioned together during on-road benchmarking" width="546" height="358" loading="lazy" decoding="async" />
+          <figcaption>Vehicles used in the on-road comparison.</figcaption>
+        </figure>
         <div class="event-strip" aria-label="Sequence of a vehicle cut-in event">
           <div><span>01</span><strong>Traffic event</strong><small>A vehicle enters the lane</small></div>
           <div><span>02</span><strong>System response</strong><small>Target and control state change</small></div>
           <div><span>03</span><strong>HMI feedback</strong><small>The driver sees the new state</small></div>
           <div><span>04</span><strong>Driver response</strong><small>Monitoring or intervention</small></div>
+        </div>
+        <div class="benchmark-captures">
+          <figure><img :src="asset('benchmark-tesla.png')" alt="Tesla Model X synchronized video and vehicle-data review" width="630" height="340" loading="lazy" decoding="async" /><figcaption>Tesla Model X · synchronized video and vehicle-data review</figcaption></figure>
+          <figure><img :src="asset('benchmark-volvo.png')" alt="Volvo S90 synchronized video and vehicle-data review" width="634" height="340" loading="lazy" decoding="async" /><figcaption>Volvo S90 · synchronized video and vehicle-data review</figcaption></figure>
         </div>
       </section>
 
@@ -307,12 +315,16 @@ figcaption { margin-top: .75rem; color: #938c89; font-size: .8rem; line-height: 
 .evidence { padding: 6rem 0; display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(3rem, 7vw, 6rem); }
 .evidence .prose { margin-top: 1.5rem; }
 .benchmark { grid-template-columns: .85fr 1.15fr; }
-.event-strip { display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid var(--accent); }
+.event-strip { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--accent); }
 .event-strip div { min-height: 130px; padding: 1.2rem; display: flex; flex-direction: column; border-right: 1px solid rgba(255,255,255,.1); border-bottom: 1px solid rgba(255,255,255,.1); }
-.event-strip div:nth-child(2n) { border-right: 0; }
+.event-strip div:last-child { border-right: 0; }
 .event-strip span { color: var(--accent); font: 600 .75rem var(--font-mono); }
 .event-strip strong { margin-top: 1rem; }
 .event-strip small { margin-top: .4rem; color: #aaa3a0; }
+.benchmark-photo { min-width: 0; }
+.benchmark-photo img, .benchmark-captures img { display: block; width: 100%; height: auto; border: 1px solid rgba(255,255,255,.12); border-radius: .65rem; }
+.benchmark-captures { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.benchmark-captures figure { min-width: 0; }
 .evaluation { padding: 6rem 0; background: #f2e5df; color: #211713; }
 .evaluation .kicker { color: #9b482d; }
 .evaluation__inner { display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(3rem, 7vw, 6rem); }
@@ -347,12 +359,15 @@ figcaption { margin-top: .75rem; color: #938c89; font-size: .8rem; line-height: 
   .approach, .scenario-section, .evaluation { padding: 4rem 0; }
   .scenario { min-height: 160px; }
   .scenario-maps { grid-template-columns: 1fr; }
+  .event-strip { grid-template-columns: repeat(2, 1fr); }
+  .event-strip div:nth-child(2n) { border-right: 0; }
   .prototype-section .media-placeholder { grid-column: auto; }
   .footer { grid-template-columns: 1fr; }
   .footer .back-link { grid-column: auto; }
 }
 @media (max-width: 560px) {
   .metric-grid, .roadmap, .event-strip, .method-grid, .requirement-list p { grid-template-columns: 1fr; }
+  .benchmark-captures { grid-template-columns: 1fr; }
   .metric-grid div, .scenario, .event-strip div { border-right: 0; }
   .scenario, .event-strip div { min-height: auto; }
   .requirement-list p { gap: .4rem; }
