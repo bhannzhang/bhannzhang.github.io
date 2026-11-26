@@ -60,33 +60,56 @@
 
       <section class="scenario-section">
         <div class="shell">
-          <p class="kicker">03 · Scenario taxonomy</p>
-          <h2>Organizing the moments that change driver attention</h2>
-          <p class="scenario-note">A ten-task ACC record captured representative experiences. The broader ACC and LKA maps also covered target transitions, complex traffic, road geometry, and driver intervention.</p>
+          <p class="kicker">03 · Test task sequence</p>
+          <h2>Following the ACC and LKA test tasks in order</h2>
+          <p class="scenario-note">The task plan moves from highway driving to urban roads. Select ACC or LKA, then open a step to read its instructions and measurement channels.</p>
           <div class="roadmap" aria-label="Four families of ACC and lane-assistance scenarios">
             <div v-for="(scenario, index) in scenarios" :key="scenario.title" class="scenario">
               <span>{{ String(index + 1).padStart(2, '0') }}</span><strong>{{ scenario.title }}</strong><p>{{ scenario.examples }}</p>
               <img :src="asset(scenario.image)" :alt="scenario.alt" loading="lazy" decoding="async" />
             </div>
           </div>
-          <p class="scenario-note"><strong>Two linked systems:</strong> ACC scenarios followed speed, distance, and target selection. LKA/LDW scenarios followed lane position, departure, guidance, and intentional lane changes.</p>
-          <div class="scenario-maps">
-            <article v-for="map in scenarioMaps" :key="map.system" class="scenario-map">
-              <header><span>{{ map.system }}</span><h3>{{ map.title }}</h3></header>
-              <div class="scenario-branch">
-                <h4>Highway</h4>
-                <ul><li v-for="item in map.highway" :key="item">{{ item }}</li></ul>
-              </div>
-              <div class="scenario-branch">
-                <h4>Urban roads</h4>
-                <ul><li v-for="item in map.urban" :key="item">{{ item }}</li></ul>
-                <div class="scenario-subbranch">
-                  <h5>Complex-area variations</h5>
-                  <p v-if="map.complexNote">{{ map.complexNote }}</p>
-                  <ul><li v-for="item in map.complex" :key="item">{{ item }}</li></ul>
-                </div>
-              </div>
-            </article>
+          <div class="test-flow">
+            <div class="test-flow__tabs" role="group" aria-label="Test task system">
+              <button v-for="system in ['ACC', 'LKA']" :id="`test-tab-${system}`" :key="system" type="button" :aria-pressed="selectedFlow === system" :aria-controls="`test-panel-${system}`" @click="selectedFlow = system">
+                {{ system }} <span>{{ testTasks[system].length }} tasks</span>
+              </button>
+            </div>
+            <div v-for="system in ['ACC', 'LKA']" v-show="selectedFlow === system" :id="`test-panel-${system}`" :key="system" role="region" :aria-labelledby="`test-tab-${system}`" class="test-flow__panel">
+              <section v-for="group in testGroups[system]" :key="group.name" class="test-flow__group">
+                <h3>{{ group.name }} <span>{{ String(group.tasks[0].number).padStart(2, '0') }}–{{ String(group.tasks[group.tasks.length - 1].number).padStart(2, '0') }}</span></h3>
+                <ol :start="group.tasks[0].number" class="test-flow__list">
+                  <li v-for="task in group.tasks" :key="task.number">
+                    <details class="test-task">
+                      <summary>
+                        <span class="test-task__number">{{ String(task.number).padStart(2, '0') }}</span>
+                        <span class="test-task__thumbs">
+                          <img v-for="(filename, index) in task.images" :key="filename" :src="asset(`tasks/${filename}`)" :alt="`${system} task ${task.number} diagram${task.images.length > 1 ? ` ${index + 1}` : ''}`" loading="lazy" decoding="async" />
+                        </span>
+                        <strong>{{ task.title }}</strong>
+                        <span class="test-task__toggle" aria-hidden="true">+</span>
+                      </summary>
+                      <div class="test-task__detail">
+                        <div class="test-task__images">
+                          <img v-for="(filename, index) in task.images" :key="filename" :src="asset(`tasks/${filename}`)" :alt="`${system} task ${task.number} scenario illustration${task.images.length > 1 ? ` ${index + 1}` : ''}`" loading="lazy" decoding="async" />
+                        </div>
+                        <div class="test-task__copy">
+                          <h4>Task instruction</h4>
+                          <p>{{ task.instruction }}</p>
+                          <template v-if="task.hmi"><h4>HMI design note</h4><p>{{ task.hmi }}</p></template>
+                          <h4>Measurement channels</h4>
+                          <dl>
+                            <div v-if="task.realVehicle"><dt>Real vehicle</dt><dd>{{ task.realVehicle }}</dd></div>
+                            <div v-if="task.simulator"><dt>Simulator</dt><dd>{{ task.simulator }}</dd></div>
+                            <div v-if="task.participant"><dt>Participant</dt><dd>{{ task.participant }}</dd></div>
+                          </dl>
+                        </div>
+                      </div>
+                    </details>
+                  </li>
+                </ol>
+              </section>
+            </div>
           </div>
         </div>
       </section>
@@ -179,7 +202,9 @@
 </template>
 
 <script setup>
+import { ref } from 'vue'
 import ResearchPageTopbar from './components/ResearchPageTopbar.vue'
+import testTasks from './data/driverTestTasks.json'
 
 const homeUrl = import.meta.env.BASE_URL
 const asset = (filename) => `${import.meta.env.BASE_URL}images/research/driver-automation/${filename}`
@@ -197,57 +222,13 @@ const workflowStages = [
   { phase: 'Design', title: 'HMI information architecture and prototype design', detail: 'Mode, target, guidance, and warnings' },
   { phase: 'Evaluation', title: 'Real-vehicle experience and simulator validation', detail: 'Road observations and proposed simulator protocol' },
 ]
-const scenarioMaps = [
-  {
-    system: 'ACC', title: 'Adaptive Cruise Control',
-    highway: [
-      'Activate ACC while driving on a highway',
-      'No lead vehicle ahead',
-      'Lead vehicle ahead',
-      'With no lead target, a vehicle cuts in from an adjacent lane (straight-road or lane-change setting)',
-      'With no lead target, approach a slower vehicle ahead',
-      'Lead vehicle cuts out, leaving no lead target (straight-road or lane-change setting)',
-      'Lead vehicle accelerates away',
-      'Toll plaza ahead',
-      'Switch ACC off while driving on a highway',
-    ],
-    urban: [
-      'Enter a congested road segment',
-      'Drive through a curve',
-      'Drive on a slope',
-      'Adjacent vehicle cuts in, changing the lead target',
-      'Lead vehicle cuts out, changing the lead target',
-    ],
-    complex: [
-      'Pedestrians, non-motorized vehicles, or cars ahead',
-      'Obstacle ahead',
-      'Traffic signal or sign ahead',
-      'Ego vehicle changes lanes while a vehicle approaches from behind',
-    ],
-  },
-  {
-    system: 'LKA', title: 'Lane Keeping Assistance',
-    highway: [
-      'Activate LKA while driving on a highway',
-      'Drift left or right on a straight road',
-      'Drift left or right, then decide to change lanes',
-      'Change lanes without activating LKA',
-      'Switch LKA off while driving on a highway',
-    ],
-    urban: [
-      'Drift left or right on a curved road',
-      'Drift left or right on a curve, then decide to change lanes',
-      'Change lanes on a curve without activating LKA',
-    ],
-    complexNote: 'Each context appears with left/right lane drift on both straight and curved roads.',
-    complex: [
-      'Pedestrians, non-motorized vehicles, or cars ahead',
-      'Obstacle ahead',
-      'Traffic signal or sign ahead',
-      'Vehicle approaching from behind',
-    ],
-  },
-]
+const selectedFlow = ref('ACC')
+const testGroups = Object.fromEntries(
+  Object.entries(testTasks).map(([system, tasks]) => [
+    system,
+    ['Highway', 'Urban roads'].map(name => ({ name, tasks: tasks.filter(task => task.category === name) })),
+  ]),
+)
 </script>
 
 <style lang="scss" scoped>
@@ -307,19 +288,38 @@ figcaption { margin-top: .75rem; color: #938c89; font-size: .8rem; line-height: 
 .scenario img { display: block; width: 100%; height: auto; margin-top: auto; border-radius: .55rem; }
 .scenario-note { max-width: 850px; margin-top: 2rem; color: #aaa3a0; line-height: 1.7; }
 .scenario-note strong { color: #f8f6f4; }
-.scenario-maps { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; margin-top: 3rem; }
-.scenario-map { padding: 1.5rem; border: 1px solid rgba(255,141,102,.25); border-radius: 1rem; background: #1c191d; }
-.scenario-map header { display: flex; align-items: baseline; gap: 1rem; padding-bottom: 1.2rem; border-bottom: 1px solid rgba(255,255,255,.12); }
-.scenario-map header span { color: var(--accent); font: 700 1.5rem var(--font-mono); }
-.scenario-map h3 { margin: 0; font-size: 1.15rem; }
-.scenario-branch { margin: 1.4rem 0 0 .35rem; padding: 0 0 0 1.2rem; border-left: 1px solid rgba(255,141,102,.5); }
-.scenario-branch h4, .scenario-subbranch h5 { position: relative; margin: 0 0 .6rem; color: var(--accent-soft); font-size: .84rem; letter-spacing: .05em; text-transform: uppercase; }
-.scenario-branch h4::before, .scenario-subbranch h5::before { content: ''; position: absolute; left: -1.55rem; top: .3rem; width: .55rem; height: .55rem; border-radius: 50%; background: var(--accent); }
-.scenario-branch ul { margin: 0; padding: 0; list-style: none; }
-.scenario-branch li { padding: .55rem 0; border-bottom: 1px solid rgba(255,255,255,.08); color: #c5bfbc; font-size: .84rem; line-height: 1.5; }
-.scenario-subbranch { margin-top: 1rem; padding: .9rem 0 0 1rem; border-left: 1px solid rgba(255,141,102,.3); }
-.scenario-subbranch h5::before { left: -1.35rem; width: .4rem; height: .4rem; }
-.scenario-subbranch p { margin: 0 0 .3rem; color: #96908e; font-size: .78rem; line-height: 1.5; }
+.test-flow { margin-top: 3rem; }
+.test-flow__tabs { display: flex; gap: .6rem; margin-bottom: 2rem; }
+.test-flow__tabs button { padding: .85rem 1.1rem; border: 1px solid rgba(255,255,255,.18); border-radius: .55rem; background: #1c191d; color: #bbb4b1; font: 700 .95rem var(--font-mono); cursor: pointer; }
+.test-flow__tabs button[aria-pressed="true"] { border-color: var(--accent); background: rgba(255,141,102,.13); color: #fff; }
+.test-flow__tabs button:focus-visible, .test-task summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.test-flow__tabs span { margin-left: .5rem; color: #aaa3a0; font-size: .75rem; font-weight: 400; }
+.test-flow__group + .test-flow__group { margin-top: 2.5rem; }
+.test-flow__group h3 { display: flex; justify-content: space-between; margin: 0 0 1rem; padding-bottom: .7rem; border-bottom: 1px solid rgba(255,141,102,.5); font-size: 1.2rem; }
+.test-flow__group h3 span { color: var(--accent); font: 600 .8rem var(--font-mono); }
+.test-flow__list { margin: 0; padding: 0; list-style: none; }
+.test-flow__list > li + li { margin-top: .6rem; }
+.test-task { border: 1px solid rgba(255,255,255,.12); border-radius: .65rem; background: #1c191d; overflow: hidden; }
+.test-task[open] { border-color: rgba(255,141,102,.42); }
+.test-task summary { display: grid; grid-template-columns: 2.4rem 132px minmax(0, 1fr) 1.4rem; align-items: center; gap: 1rem; min-height: 116px; padding: .7rem 1rem; cursor: pointer; list-style: none; }
+.test-task summary::-webkit-details-marker { display: none; }
+.test-task__number { align-self: start; padding-top: .45rem; color: var(--accent); font: 700 .8rem var(--font-mono); }
+.test-task__thumbs { display: flex; width: 132px; height: 100px; gap: .2rem; overflow: hidden; border-radius: .35rem; background: #d5d5d5; }
+.test-task__thumbs img { width: 100%; min-width: 0; object-fit: contain; }
+.test-task__thumbs:has(img + img) img { width: 50%; }
+.test-task summary strong { font-size: .95rem; line-height: 1.45; }
+.test-task__toggle { color: var(--accent); font-size: 1.5rem; text-align: center; }
+.test-task[open] .test-task__toggle { transform: rotate(45deg); }
+.test-task__detail { display: grid; grid-template-columns: minmax(180px, .8fr) minmax(0, 1.5fr); gap: 1.5rem; padding: 1.5rem; border-top: 1px solid rgba(255,255,255,.1); }
+.test-task__images { display: flex; align-items: flex-start; gap: .5rem; }
+.test-task__images img { display: block; width: 100%; min-width: 0; max-height: 380px; object-fit: contain; border-radius: .4rem; background: #d5d5d5; }
+.test-task__images:has(img + img) img { width: 50%; }
+.test-task__copy h4 { margin: 0 0 .45rem; color: var(--accent-soft); font-size: .74rem; letter-spacing: .08em; text-transform: uppercase; }
+.test-task__copy h4:not(:first-child) { margin-top: 1.3rem; }
+.test-task__copy p, .test-task__copy dd { margin: 0; color: #d0cac7; font-size: .86rem; line-height: 1.65; white-space: pre-line; }
+.test-task__copy dl { margin: 0; }
+.test-task__copy dl div { display: grid; grid-template-columns: 6.5rem 1fr; gap: .75rem; padding: .6rem 0; border-top: 1px solid rgba(255,255,255,.1); }
+.test-task__copy dt { color: #aaa3a0; font-size: .78rem; line-height: 1.5; }
 .evidence { padding: 6rem 0; display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(3rem, 7vw, 6rem); }
 .evidence .prose { margin-top: 1.5rem; }
 .benchmark { grid-template-columns: .85fr 1.15fr; }
@@ -366,7 +366,8 @@ figcaption { margin-top: .75rem; color: #938c89; font-size: .8rem; line-height: 
   .metric-grid div:last-child { border-bottom: 0; }
   .approach, .scenario-section, .evaluation { padding: 4rem 0; }
   .scenario { min-height: 160px; }
-  .scenario-maps { grid-template-columns: 1fr; }
+  .test-task__detail { grid-template-columns: 1fr; }
+  .test-task__images img { max-height: 320px; }
   .event-strip { grid-template-columns: repeat(2, 1fr); }
   .event-strip div:nth-child(2n) { border-right: 0; }
   .footer { grid-template-columns: 1fr; }
@@ -378,6 +379,11 @@ figcaption { margin-top: .75rem; color: #938c89; font-size: .8rem; line-height: 
   .prototype-media-grid { grid-template-columns: 1fr; }
   .metric-grid div, .scenario, .event-strip div { border-right: 0; }
   .scenario, .event-strip div { min-height: auto; }
+  .test-task summary { grid-template-columns: 1.6rem 84px minmax(0, 1fr) 1rem; gap: .55rem; min-height: 85px; padding: .5rem; }
+  .test-task__thumbs { width: 84px; height: 72px; }
+  .test-task summary strong { font-size: .78rem; }
+  .test-task__detail { padding: 1rem; }
+  .test-task__copy dl div { grid-template-columns: 1fr; gap: .2rem; }
   .requirement-list p { gap: .4rem; }
   .simulator-figure img { aspect-ratio: 4 / 3; }
 }

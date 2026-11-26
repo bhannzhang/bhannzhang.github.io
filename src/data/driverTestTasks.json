@@ -1,0 +1,451 @@
+{
+  "ACC": [
+    {
+      "number": 1,
+      "category": "Highway",
+      "title": "Highway driving: activate ACC and change the stored speed",
+      "hmi": null,
+      "instruction": "Simulate realistic driving. Reach 70 km/h and manually activate ACC. The previous stored speed is 75 km/h; set the cruise speed to 80 km/h. Rate the interactions for activating ACC and changing the stored speed.",
+      "images": [
+        "acc-01.png"
+      ],
+      "realVehicle": "Stalk or steering-wheel buttons / instrument cluster / center display / HUD / AR / accelerator / brake pedal",
+      "simulator": "Steering-wheel buttons / accelerator / brake pedal",
+      "participant": "Eye-tracking data / ACC activation behavior / task completion time / satisfaction"
+    },
+    {
+      "number": 2,
+      "category": "Highway",
+      "title": "No lead vehicle ahead",
+      "hmi": null,
+      "instruction": "You are driving on a highway with no vehicle ahead. Your vehicle cruises at the set speed of 80 km/h. Complete the questionnaire about the in-vehicle HMI for this scenario.",
+      "images": [
+        "acc-02.png"
+      ],
+      "realVehicle": "Instrument cluster / center display / HUD / AR / accelerator / brake pedal",
+      "simulator": "Speed / steering angle / acceleration / braking",
+      "participant": "Physiological and psychological measures / actions / satisfaction"
+    },
+    {
+      "number": 3,
+      "category": "Highway",
+      "title": "Lead vehicle ahead",
+      "hmi": null,
+      "instruction": "You are driving on a highway at 80 km/h behind a vehicle traveling at 70 km/h. Switch from fixed-speed cruise control to ACC. Your vehicle brakes to maintain the preset time gap. Complete the questionnaire about the in-vehicle HMI for this scenario.",
+      "images": [
+        "acc-03.png"
+      ],
+      "realVehicle": "Instrument cluster / center display / HUD / AR / accelerator / brake pedal",
+      "simulator": "Speed / steering angle / acceleration / braking",
+      "participant": "Physiological and psychological measures / actions / satisfaction"
+    },
+    {
+      "number": 4,
+      "category": "Highway",
+      "title": "No lead vehicle; an adjacent vehicle cuts in (ramp or lane change)",
+      "hmi": null,
+      "instruction": "You are driving on a highway at 80 km/h. A vehicle in the adjacent lane, traveling at 90 km/h, cuts in from the left or right. Your vehicle acquires it as the lead target and follows at the preset time gap. Complete the questionnaire about the in-vehicle HMI for this scenario.",
+      "images": [
+        "acc-04.png"
+      ],
+      "realVehicle": "Instrument cluster / center display / HUD / AR / accelerator / brake pedal / voice prompt",
+      "simulator": "Speed / steering angle / acceleration / braking",
+      "participant": "Physiological and psychological measures / actions / satisfaction"
+    },
+    {
+      "number": 5,
+      "category": "Highway",
+      "title": "No lead vehicle; approaching a slower vehicle ahead",
+      "hmi": null,
+      "instruction": "ACC is active as you drive on a highway at 80 km/h. A vehicle traveling at 70 km/h appears ahead. Your vehicle enters adaptive following and brakes to maintain the preset following distance. Complete the questionnaire about the in-vehicle HMI for this scenario.",
+      "images": [
+        "acc-05.png"
+      ],
+      "realVehicle": "Instrument cluster / center display / HUD / AR / accelerator / brake pedal / voice prompt",
+      "simulator": "Speed / steering angle / acceleration / braking",
+      "participant": "Physiological and psychological measures / actions / satisfaction"
+    },
+    {
+      "number": 6,
+      "category": "Highway",
+      "title": "Lead vehicle exits the lane (ramp or lane change); no target remains",
+      "hmi": null,
+      "instruction": "You are using ACC on a highway at 80 km/h. The lead vehicle exits left or right, leaving no vehicle ahead. Your vehicle resumes cruising at the stored speed of 70 km/h. Complete the questionnaire about the in-vehicle HMI for this scenario.",
+      "images": [
+        "acc-06.png"
+      ],
+      "realVehicle": "Instrument cluster / center display / HUD / AR / accelerator / brake pedal / voice prompt",
+      "simulator": "Speed / steering angle / acceleration / braking",
+      "participant": "Physiological and psychological measures / actions / satisfaction"
+    },
+    {
+      "number": 7,
+      "category": "Highway",
+      "title": "Lead vehicle accelerates away",
+      "hmi": null,
+      "instruction": "You are driving on a highway at 80 km/h. The lead vehicle accelerates and the gap widens. Your vehicle releases the following target and cruises at the stored speed of 70 km/h. Complete the questionnaire about the in-vehicle HMI for this scenario.",
+      "images": [
+        "acc-07.png"
+      ],
+      "realVehicle": "Instrument cluster / center display / HUD / AR / accelerator / brake pedal / voice prompt",
+      "simulator": "Speed / steering angle / acceleration / braking",
+      "participant": "Physiological and psychological measures / actions / satisfaction"
+    },
+    {
+      "number": 8,
+      "category": "Highway",
+      "title": "Approaching a highway toll plaza",
+      "hmi": null,
+      "instruction": "You are using ACC on a highway at 80 km/h. As you approach a toll plaza, the lead vehicle brakes and your vehicle also brakes to maintain the preset time gap. Complete the questionnaire about the in-vehicle HMI for this scenario.",
+      "images": [
+        "acc-08.png"
+      ],
+      "realVehicle": "Instrument cluster / center display / HUD / AR / accelerator / brake pedal / voice prompt",
+      "simulator": "Speed / steering angle / acceleration / braking",
+      "participant": "Physiological and psychological measures / actions / satisfaction"
+    },
+    {
+      "number": 9,
+      "category": "Highway",
+      "title": "Highway driving: deactivate ACC",
+      "hmi": null,
+      "instruction": "You are driving on a highway at 70 km/h and manually deactivate ACC. Rate the interaction for turning ACC off.",
+      "images": [
+        "acc-09.png"
+      ],
+      "realVehicle": "Stalk or steering-wheel buttons / instrument cluster / center display / HUD / AR / accelerator / brake pedal",
+      "simulator": "Steering-wheel buttons / speed / steering angle / acceleration / braking",
+      "participant": "Eye-tracking data / ACC deactivation behavior / task completion time / satisfaction"
+    },
+    {
+      "number": 10,
+      "category": "Urban roads",
+      "title": "Entering congested traffic",
+      "hmi": null,
+      "instruction": "You are using ACC at 10 km/h on a congested urban road. Your vehicle brakes and accelerates according to the preset time gap. Complete the questionnaire about the in-vehicle HMI for this scenario.",
+      "images": [
+        "acc-10.png"
+      ],
+      "realVehicle": "Instrument cluster / center display / HUD / AR / accelerator / brake pedal / voice prompt",
+      "simulator": "Speed / steering angle / acceleration / braking",
+      "participant": "Physiological and psychological measures / actions / satisfaction"
+    },
+    {
+      "number": 11,
+      "category": "Urban roads",
+      "title": "Driving through a curve",
+      "hmi": null,
+      "instruction": "You are driving through a curve on an urban road at 40 km/h. The lead vehicle disappears from radar range, ACC enters standby, and you take control. Complete the questionnaire about the in-vehicle HMI for this scenario.",
+      "images": [
+        "acc-11.png"
+      ],
+      "realVehicle": "Instrument cluster / center display / HUD / AR / accelerator / brake pedal / voice prompt",
+      "simulator": "Speed / steering angle / acceleration / braking",
+      "participant": "Physiological and psychological measures / actions / satisfaction"
+    },
+    {
+      "number": 12,
+      "category": "Urban roads",
+      "title": "Driving on a slope",
+      "hmi": null,
+      "instruction": "You are driving on an urban road at 40 km/h. On a steep slope, the lead vehicle disappears from radar range, ACC enters standby, and you take control. Complete the questionnaire about the in-vehicle HMI for this scenario.",
+      "images": [
+        "acc-12.png"
+      ],
+      "realVehicle": "Instrument cluster / center display / HUD / AR / accelerator / brake pedal / voice prompt",
+      "simulator": "Speed / steering angle / acceleration / braking",
+      "participant": "Physiological and psychological measures / actions / satisfaction"
+    },
+    {
+      "number": 13,
+      "category": "Urban roads",
+      "title": "Lead vehicle ahead; an adjacent vehicle cuts in and becomes the new target",
+      "hmi": null,
+      "instruction": "You are driving on an urban road at 40 km/h with a lead vehicle ahead. A vehicle merges into your lane from the left or right. The radar detects and locks onto the new lead vehicle. Your vehicle slows to the preset time gap, then continues under ACC. Complete the questionnaire about the in-vehicle HMI for this scenario.",
+      "images": [
+        "acc-13.png"
+      ],
+      "realVehicle": "Instrument cluster / center display / HUD / AR / accelerator / brake pedal / voice prompt",
+      "simulator": "Speed / steering angle / acceleration / braking",
+      "participant": "Physiological and psychological measures / actions / satisfaction"
+    },
+    {
+      "number": 14,
+      "category": "Urban roads",
+      "title": "Lead vehicle changes lanes; a new target is selected",
+      "hmi": null,
+      "instruction": "You are driving on an urban road at 40 km/h. The lead vehicle suddenly moves into another lane to the left or right. The radar detects the vehicle ahead, your vehicle selects it as the new target, and ACC continues. Complete the questionnaire about the in-vehicle HMI for this scenario.",
+      "images": [
+        "acc-14.png"
+      ],
+      "realVehicle": "Instrument cluster / center display / HUD / AR / accelerator / brake pedal / voice prompt",
+      "simulator": "Speed / steering angle / acceleration / braking",
+      "participant": "Physiological and psychological measures / actions / satisfaction"
+    },
+    {
+      "number": 15,
+      "category": "Urban roads",
+      "title": "Complex area: a pedestrian, cyclist, or vehicle appears ahead",
+      "hmi": "ACC+FCW",
+      "instruction": "You are driving on an urban road at 30 km/h with a lead vehicle ahead. A pedestrian, cyclist, or vehicle suddenly appears in front of you. Complete the questionnaire about the in-vehicle HMI for this scenario.",
+      "images": [
+        "acc-15.png"
+      ],
+      "realVehicle": "Instrument cluster / center display / HUD / AR / accelerator / brake pedal / voice prompt",
+      "simulator": "Speed / steering angle / acceleration / braking",
+      "participant": "Physiological and psychological measures / actions / satisfaction"
+    },
+    {
+      "number": 16,
+      "category": "Urban roads",
+      "title": "Complex area: an obstacle appears ahead",
+      "hmi": null,
+      "instruction": "You are driving on an urban road at 30 km/h with a lead vehicle ahead. An obstacle suddenly appears in front of that vehicle. It briefly leaves your lane, and you take control of your vehicle. Complete the questionnaire about the in-vehicle HMI for this scenario.",
+      "images": [
+        "acc-16.png"
+      ],
+      "realVehicle": "Instrument cluster / center display / HUD / AR / accelerator / brake pedal / voice prompt",
+      "simulator": "Speed / steering angle / acceleration / braking",
+      "participant": "Physiological and psychological measures / actions / satisfaction"
+    },
+    {
+      "number": 17,
+      "category": "Urban roads",
+      "title": "Complex area: traffic signals or signs ahead",
+      "hmi": "ACC+TSR",
+      "instruction": "You are driving on an urban road at 30 km/h with a lead vehicle ahead. A traffic signal or sign appears ahead. Complete the questionnaire about the in-vehicle HMI for this scenario.",
+      "images": [
+        "acc-17.png"
+      ],
+      "realVehicle": "Instrument cluster / center display / HUD / AR / accelerator / brake pedal / voice prompt",
+      "simulator": "Speed / steering angle / acceleration / braking",
+      "participant": "Physiological and psychological measures / actions / satisfaction"
+    },
+    {
+      "number": 18,
+      "category": "Urban roads",
+      "title": "Complex area: driver-initiated lane change",
+      "hmi": "ACC+BSD",
+      "instruction": "You are driving on an urban road at 30 km/h with a lead vehicle ahead. You decide to change lanes and activate the left turn signal while another vehicle approaches from behind in the left lane. The HMI issues a warning. Complete the questionnaire about the in-vehicle HMI for this scenario.",
+      "images": [
+        "acc-18.png"
+      ],
+      "realVehicle": "Instrument cluster / center display / HUD / AR / accelerator / brake pedal / voice prompt",
+      "simulator": "Speed / steering angle / acceleration / braking",
+      "participant": "Physiological and psychological measures / actions / satisfaction"
+    }
+  ],
+  "LKA": [
+    {
+      "number": 1,
+      "category": "Highway",
+      "title": "Highway driving: activate LKA",
+      "hmi": null,
+      "instruction": "Simulate realistic driving. Start the vehicle, activate LKA, and drive straight within the current lane. Rate the interaction for activating LKA.",
+      "images": [
+        "lka-01-1.png",
+        "lka-01-2.png"
+      ],
+      "realVehicle": "Stalk or steering-wheel buttons / instrument cluster / center display / HUD / AR / accelerator / brake pedal",
+      "simulator": "Steering-wheel buttons / accelerator / brake pedal",
+      "participant": "Eye-tracking data / LKA activation behavior / task completion time / satisfaction"
+    },
+    {
+      "number": 2,
+      "category": "Highway",
+      "title": "Drift left or right on a straight road",
+      "hmi": null,
+      "instruction": "Continue straight on the highway. Fatigue causes you to drift left or right out of your lane, and the vehicle automatically corrects its path. Complete the questionnaire about the in-vehicle HMI for this scenario.",
+      "images": [
+        "lka-02.png"
+      ],
+      "realVehicle": "Instrument cluster / center display / HUD / AR / steering wheel",
+      "simulator": "Speed / steering angle / acceleration / braking",
+      "participant": "Physiological and psychological measures / actions / satisfaction"
+    },
+    {
+      "number": 3,
+      "category": "Highway",
+      "title": "Drift left or right, then decide to change lanes",
+      "hmi": null,
+      "instruction": "While driving straight on the highway, fatigue causes you to drift left or right. You then decide to change lanes and activate the turn signal, or your steering torque exceeds the threshold. LKA is interrupted. Complete the questionnaire about the in-vehicle HMI for this scenario.",
+      "images": [
+        "lka-03.png"
+      ],
+      "realVehicle": "Instrument cluster / center display / HUD / AR / steering wheel",
+      "simulator": "Speed / steering angle / acceleration / braking",
+      "participant": "Physiological and psychological measures / actions / satisfaction"
+    },
+    {
+      "number": 4,
+      "category": "Highway",
+      "title": "Change lanes on a straight road without activating LKA",
+      "hmi": null,
+      "instruction": "You are driving straight on the highway and decide to change lanes. You activate the turn signal in time, so LKA does not engage. Complete the questionnaire about the in-vehicle HMI for this scenario.",
+      "images": [
+        "lka-04.png"
+      ],
+      "realVehicle": "Instrument cluster / center display / HUD / AR / steering wheel",
+      "simulator": "Speed / steering angle / acceleration / braking",
+      "participant": "Physiological and psychological measures / actions / satisfaction"
+    },
+    {
+      "number": 5,
+      "category": "Highway",
+      "title": "Highway driving: deactivate LKA",
+      "hmi": null,
+      "instruction": "You are driving on a road and manually deactivate LKA. Rate the interaction for turning LKA off.",
+      "images": [
+        "lka-05.png"
+      ],
+      "realVehicle": "Instrument cluster / center display / HUD / AR / steering wheel",
+      "simulator": "Steering-wheel buttons / speed / steering angle / acceleration / braking",
+      "participant": "Eye-tracking data / LKA deactivation behavior / task completion time / satisfaction"
+    },
+    {
+      "number": 6,
+      "category": "Urban roads",
+      "title": "Drift left or right on a curve",
+      "hmi": null,
+      "instruction": "While driving through a curve, fatigue causes you to drift left or right out of your lane. The vehicle automatically corrects its path. Complete the questionnaire about the in-vehicle HMI for this scenario.",
+      "images": [
+        "lka-06-1.png",
+        "lka-06-2.png"
+      ],
+      "realVehicle": "Instrument cluster / center display / HUD / AR / steering wheel",
+      "simulator": "Speed / steering angle / acceleration / braking",
+      "participant": "Physiological and psychological measures / actions / satisfaction"
+    },
+    {
+      "number": 7,
+      "category": "Urban roads",
+      "title": "Drift on a curve, then decide to change lanes",
+      "hmi": null,
+      "instruction": "While driving through a curve, fatigue causes you to drift left or right. You then decide to change lanes and activate the turn signal, or your steering torque exceeds the threshold. LKA is interrupted. Complete the questionnaire about the in-vehicle HMI for this scenario.",
+      "images": [
+        "lka-07.png"
+      ],
+      "realVehicle": "Instrument cluster / center display / HUD / AR / steering wheel",
+      "simulator": "Speed / steering angle / acceleration / braking",
+      "participant": "Physiological and psychological measures / actions / satisfaction"
+    },
+    {
+      "number": 8,
+      "category": "Urban roads",
+      "title": "Change lanes on a curve without activating LKA",
+      "hmi": null,
+      "instruction": "You are driving through a curve and decide to change lanes. You activate the turn signal in time, so LKA does not engage. Complete the questionnaire about the in-vehicle HMI for this scenario.",
+      "images": [
+        "lka-08.png"
+      ],
+      "realVehicle": "Instrument cluster / center display / HUD / AR / steering wheel",
+      "simulator": "Speed / steering angle / acceleration / braking",
+      "participant": "Physiological and psychological measures / actions / satisfaction"
+    },
+    {
+      "number": 9,
+      "category": "Urban roads",
+      "title": "Complex area: drift on a straight road; a pedestrian, cyclist, or vehicle appears ahead",
+      "hmi": "LKA+FCW",
+      "instruction": "On a straight urban road, fatigue causes you to drift left or right while a pedestrian, cyclist, or vehicle appears ahead. Complete the questionnaire about the in-vehicle HMI for this scenario.",
+      "images": [
+        "lka-09.png"
+      ],
+      "realVehicle": "Instrument cluster / center display / HUD / AR / steering wheel",
+      "simulator": "Speed / steering angle / acceleration / braking",
+      "participant": "Physiological and psychological measures / actions / satisfaction"
+    },
+    {
+      "number": 10,
+      "category": "Urban roads",
+      "title": "Complex area: drift on a straight road; an obstacle appears ahead",
+      "hmi": null,
+      "instruction": "On a straight urban road, fatigue causes you to drift left or right while an obstacle appears ahead. Complete the questionnaire about the in-vehicle HMI for this scenario.",
+      "images": [
+        "lka-10.png"
+      ],
+      "realVehicle": "Instrument cluster / center display / HUD / AR / steering wheel",
+      "simulator": "Speed / steering angle / acceleration / braking",
+      "participant": "Physiological and psychological measures / actions / satisfaction"
+    },
+    {
+      "number": 11,
+      "category": "Urban roads",
+      "title": "Complex area: drift on a straight road; traffic signals or signs ahead",
+      "hmi": "LKA+TSR",
+      "instruction": "On a straight urban road, fatigue causes you to drift left or right while a traffic signal or sign appears ahead. Complete the questionnaire about the in-vehicle HMI for this scenario.",
+      "images": [
+        "lka-11.png"
+      ],
+      "realVehicle": "Instrument cluster / center display / HUD / AR / steering wheel",
+      "simulator": "Speed / steering angle / acceleration / braking",
+      "participant": "Physiological and psychological measures / actions / satisfaction"
+    },
+    {
+      "number": 12,
+      "category": "Urban roads",
+      "title": "Complex area: drift on a straight road; a vehicle approaches from behind",
+      "hmi": "LKA+BSD",
+      "instruction": "On a straight urban road, fatigue causes you to drift left or right while another vehicle approaches from behind on the side toward which you are drifting. Complete the questionnaire about the in-vehicle HMI for this scenario.",
+      "images": [
+        "lka-12.png"
+      ],
+      "realVehicle": "Instrument cluster / center display / HUD / AR / steering wheel",
+      "simulator": "Speed / steering angle / acceleration / braking",
+      "participant": "Physiological and psychological measures / actions / satisfaction"
+    },
+    {
+      "number": 13,
+      "category": "Urban roads",
+      "title": "Complex area: drift on a curve; a pedestrian, cyclist, or vehicle appears ahead",
+      "hmi": "LKA+FCW",
+      "instruction": "On a curved urban road, fatigue causes you to drift left or right while a pedestrian, cyclist, or vehicle appears ahead. Complete the questionnaire about the in-vehicle HMI for this scenario.",
+      "images": [
+        "lka-13-1.png",
+        "lka-13-2.png"
+      ],
+      "realVehicle": "Instrument cluster / center display / HUD / AR / steering wheel",
+      "simulator": "Speed / steering angle / acceleration / braking",
+      "participant": "Physiological and psychological measures / actions / satisfaction"
+    },
+    {
+      "number": 14,
+      "category": "Urban roads",
+      "title": "Complex area: drift on a curve; an obstacle appears ahead",
+      "hmi": null,
+      "instruction": "On a curved urban road, fatigue causes you to drift left or right while an obstacle appears ahead. Complete the questionnaire about the in-vehicle HMI for this scenario.",
+      "images": [
+        "lka-14.png"
+      ],
+      "realVehicle": "Instrument cluster / center display / HUD / AR / steering wheel",
+      "simulator": "Speed / steering angle / acceleration / braking",
+      "participant": "Physiological and psychological measures / actions / satisfaction"
+    },
+    {
+      "number": 15,
+      "category": "Urban roads",
+      "title": "Complex area: drift on a curve; traffic signals or signs ahead",
+      "hmi": "LKA+TSR",
+      "instruction": "On a curved urban road, fatigue causes you to drift left or right while a traffic signal or sign appears ahead. Complete the questionnaire about the in-vehicle HMI for this scenario.",
+      "images": [
+        "lka-15.png"
+      ],
+      "realVehicle": "Instrument cluster / center display / HUD / AR / steering wheel",
+      "simulator": "Speed / steering angle / acceleration / braking",
+      "participant": "Physiological and psychological measures / actions / satisfaction"
+    },
+    {
+      "number": 16,
+      "category": "Urban roads",
+      "title": "Complex area: drift on a curve; a vehicle approaches from behind",
+      "hmi": "LKA+BSD",
+      "instruction": "On a curved urban road, fatigue causes you to drift left or right while another vehicle approaches from behind on the side toward which you are drifting. Complete the questionnaire about the in-vehicle HMI for this scenario.",
+      "images": [
+        "lka-16.png"
+      ],
+      "realVehicle": "Instrument cluster / center display / HUD / AR / steering wheel",
+      "simulator": "Speed / steering angle / acceleration / braking",
+      "participant": "Physiological and psychological measures / actions / satisfaction"
+    }
+  ]
+}
