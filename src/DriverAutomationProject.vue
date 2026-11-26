@@ -143,11 +143,11 @@
             </div>
             <div v-for="system in ['ACC', 'LKA']" v-show="selectedFlow === system" :key="system" class="test-matrix__scroll" :aria-label="`${system} test tasks in sequence`" tabindex="0">
               <table>
-                <colgroup><col class="col-road" /><col class="col-number" /><col class="col-title" /><col class="col-hmi" /><col class="col-instruction" /><col class="col-image" /><col class="col-measure" /><col class="col-measure" /><col class="col-measure" /></colgroup>
-                <thead><tr><th scope="col">Road</th><th scope="col">No.</th><th scope="col">Test task</th><th scope="col">HMI design note</th><th scope="col">Task instruction</th><th scope="col">Scenario image</th><th scope="col">Real vehicle</th><th scope="col">Simulator</th><th scope="col">Participant</th></tr></thead>
+                <colgroup><col class="col-road" /><col class="col-number" /><col class="col-title" /><col class="col-instruction" /><col class="col-image" /><col class="col-measure" /><col class="col-measure" /><col class="col-measure" /></colgroup>
+                <thead><tr><th scope="col">Road</th><th scope="col">No.</th><th scope="col">Test task</th><th scope="col">Task instruction</th><th scope="col">Scenario image</th><th scope="col">Real vehicle</th><th scope="col">Simulator</th><th scope="col">Participant</th></tr></thead>
                 <tbody>
                   <tr v-for="(task, index) in testTasks[system]" :key="task.number" :class="{ 'test-matrix__section-start': index > 0 && task.category !== testTasks[system][index - 1].category }">
-                    <td>{{ task.category }}</td><td>{{ String(task.number).padStart(2, '0') }}</td><th scope="row">{{ task.title }}</th><td>{{ task.hmi || '—' }}</td><td>{{ task.instruction }}</td>
+                    <td>{{ task.category }}</td><td>{{ String(task.number).padStart(2, '0') }}</td><th scope="row">{{ task.title }}</th><td>{{ task.instruction }}</td>
                     <td><div class="test-matrix__images"><img v-for="(filename, imageIndex) in task.images" :key="filename" :src="asset(`tasks/${filename}`)" :alt="`${system} task ${task.number} diagram${task.images.length > 1 ? ` ${imageIndex + 1}` : ''}`" loading="lazy" decoding="async" /></div></td>
                     <td>{{ task.realVehicle || '—' }}</td><td>{{ task.simulator || '—' }}</td><td>{{ task.participant || '—' }}</td>
                   </tr>
@@ -259,21 +259,20 @@ figcaption { margin-top: .75rem; color: #938c89; font-size: .8rem; line-height: 
 .scenario img { display: block; width: 100%; height: auto; margin-top: auto; border-radius: .55rem; }
 .scenario-note { max-width: 850px; margin-top: 2rem; color: #aaa3a0; line-height: 1.7; }
 .scenario-note strong { color: #f8f6f4; }
-.test-matrix { position: relative; left: 50%; width: min(1500px, calc(100vw - 3rem)); margin-top: 3rem; transform: translateX(-50%); }
+.test-matrix { margin-top: 3rem; }
 .test-matrix h3 { margin-bottom: 1rem; font-size: 1.35rem; }
 .test-matrix__switch { display: flex; gap: .6rem; margin-bottom: 1rem; }
 .test-matrix__switch button { padding: .75rem 1rem; border: 1px solid rgba(255,255,255,.18); border-radius: .5rem; background: #1c191d; color: #bbb4b1; font: 700 .85rem var(--font-mono); cursor: pointer; }
 .test-matrix__switch button[aria-pressed="true"] { border-color: var(--accent); background: rgba(255,141,102,.13); color: #fff; }
 .test-matrix__switch button:focus-visible, .test-matrix__scroll:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 .test-matrix__scroll { height: 680px; overflow: auto; border: 1px solid rgba(255,255,255,.16); border-radius: .7rem; background: #1c191d; }
-.test-matrix table { width: 1550px; table-layout: fixed; border-collapse: separate; border-spacing: 0; font-size: .78rem; line-height: 1.45; }
+.test-matrix table { width: 1340px; table-layout: fixed; border-collapse: separate; border-spacing: 0; font-size: .78rem; line-height: 1.45; }
 .test-matrix .col-road { width: 80px; }
 .test-matrix .col-number { width: 50px; }
-.test-matrix .col-title { width: 190px; }
-.test-matrix .col-hmi { width: 140px; }
-.test-matrix .col-instruction { width: 300px; }
-.test-matrix .col-image { width: 160px; }
-.test-matrix .col-measure { width: 210px; }
+.test-matrix .col-title { width: 185px; }
+.test-matrix .col-instruction { width: 280px; }
+.test-matrix .col-image { width: 145px; }
+.test-matrix .col-measure { width: 200px; }
 .test-matrix th, .test-matrix td { padding: .85rem; border-right: 1px solid rgba(255,255,255,.1); border-bottom: 1px solid rgba(255,255,255,.1); text-align: left; vertical-align: top; white-space: pre-line; overflow-wrap: anywhere; }
 .test-matrix thead th { position: sticky; top: 0; z-index: 1; background: #30262a; color: var(--accent-soft); font-size: .72rem; letter-spacing: .04em; }
 .test-matrix tbody tr:nth-child(even) { background: rgba(255,255,255,.025); }
