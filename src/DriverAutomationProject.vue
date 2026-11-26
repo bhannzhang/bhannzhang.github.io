@@ -133,8 +133,16 @@
 
       <section class="shell evidence prototype-section">
         <div><p class="kicker">06 · Interface concept</p><h2>Coordinating state, target, and warning cues</h2></div>
-        <div class="prose"><p>The ACC and lane-assistance concepts brought activation, target status, guidance, warning, and unavailable states into a shared visual language across the cluster and HUD. The design explored how feedback could prepare a driver for a system response.</p><p>Detailed iteration boards and partner-specific interface screens are being reviewed for a public-safe excerpt.</p></div>
-        <figure class="media-placeholder"><div role="img" aria-label="Reserved space for an approved and translated HMI prototype excerpt"><span>HMI prototype excerpt</span><strong>Image pending review</strong><small>Approved crop or masked version · English labels</small></div><figcaption>Reserved for a selected ACC or lane-assistance state sequence.</figcaption></figure>
+        <div class="prose"><p>The ACC and lane-assistance concepts brought activation, target status, guidance, warning, and unavailable states into a shared visual language across the cluster and HUD. The design explored how feedback could prepare a driver for a system response.</p></div>
+        <figure class="prototype-development"><img :src="asset('hmi-development.png')" alt="Kanzi Studio development workspace showing an ACC interface preview" width="1871" height="1034" loading="lazy" decoding="async" /><figcaption>Interface development in Kanzi Studio.</figcaption></figure>
+        <div class="prototype-media-grid">
+          <figure><img :src="asset('hmi-normal-distance.jpg')" alt="ACC dashboard concept showing a normal following distance in blue" width="1920" height="720" loading="lazy" decoding="async" /><figcaption>ACC concept · normal following distance</figcaption></figure>
+          <figure><img :src="asset('hmi-warning-distance.jpg')" alt="ACC dashboard concept showing a short warning distance in red" width="1920" height="720" loading="lazy" decoding="async" /><figcaption>ACC concept · warning distance</figcaption></figure>
+        </div>
+        <div class="prototype-media-grid">
+          <figure><video :src="asset('acc-demo.mp4')" :poster="asset('acc-demo-poster.jpg')" controls preload="metadata" playsinline width="640" height="336" aria-label="ACC interface demonstration" /><figcaption>ACC interface demonstration</figcaption></figure>
+          <figure><video :src="asset('curve-ldw-demo.mp4')" :poster="asset('curve-ldw-demo-poster.jpg')" controls preload="metadata" playsinline width="640" height="336" aria-label="Lane-departure warning demonstration on a curve" /><figcaption>Curve LDW interface demonstration</figcaption></figure>
+        </div>
       </section>
 
       <section class="scenario-section methods-section">
@@ -330,11 +338,11 @@ figcaption { margin-top: .75rem; color: #938c89; font-size: .8rem; line-height: 
 .evaluation__inner { display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(3rem, 7vw, 6rem); }
 .requirement-list p { display: grid; grid-template-columns: .8fr 1.2fr; gap: 1rem; margin: 0; padding: 1rem 0; border-top: 1px solid rgba(33,23,19,.18); line-height: 1.6; }
 .requirement-list span { color: #675954; }
-.prototype-section .media-placeholder { grid-column: 1 / -1; }
-.media-placeholder > div { min-height: 320px; padding: 2rem; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; border: 1px dashed rgba(255,200,181,.4); border-radius: 1rem; background: linear-gradient(135deg, #221b1c, #151417); }
-.media-placeholder span { color: var(--accent); font: 600 .72rem var(--font-mono); letter-spacing: .12em; text-transform: uppercase; }
-.media-placeholder strong { margin: 1rem 0 .5rem; font-size: clamp(1.5rem, 3vw, 2.5rem); }
-.media-placeholder small { color: #aaa3a0; }
+.prototype-development, .prototype-media-grid { grid-column: 1 / -1; }
+.prototype-media-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.prototype-media-grid figure { min-width: 0; }
+.prototype-section img, .prototype-section video { display: block; width: 100%; height: auto; border: 1px solid rgba(255,255,255,.12); border-radius: .65rem; }
+.prototype-section video { aspect-ratio: 40 / 21; background: #080808; }
 .method-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 3rem; }
 .method-grid article { padding: 1.4rem; border: 1px solid rgba(255,255,255,.1); border-radius: 1rem; background: rgba(255,255,255,.025); }
 .method-grid span { color: var(--accent); font: 600 .75rem var(--font-mono); text-transform: uppercase; }
@@ -361,13 +369,13 @@ figcaption { margin-top: .75rem; color: #938c89; font-size: .8rem; line-height: 
   .scenario-maps { grid-template-columns: 1fr; }
   .event-strip { grid-template-columns: repeat(2, 1fr); }
   .event-strip div:nth-child(2n) { border-right: 0; }
-  .prototype-section .media-placeholder { grid-column: auto; }
   .footer { grid-template-columns: 1fr; }
   .footer .back-link { grid-column: auto; }
 }
 @media (max-width: 560px) {
   .metric-grid, .roadmap, .event-strip, .method-grid, .requirement-list p { grid-template-columns: 1fr; }
   .benchmark-captures { grid-template-columns: 1fr; }
+  .prototype-media-grid { grid-template-columns: 1fr; }
   .metric-grid div, .scenario, .event-strip div { border-right: 0; }
   .scenario, .event-strip div { min-height: auto; }
   .requirement-list p { gap: .4rem; }
